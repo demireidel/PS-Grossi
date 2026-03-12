@@ -77,7 +77,7 @@
 
 @theme inline {
   --font-sans: var(--font-sans, 'Inter'), 'Inter', system-ui, sans-serif;
-  --font-serif: var(--font-serif, 'Playfair Display'), 'Playfair Display', Georgia, serif;
+  --font-serif: var(--font-serif, 'Cormorant Garamond'), 'Cormorant Garamond', Georgia, serif;
   --font-mono: 'Geist Mono', 'Geist Mono Fallback';
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -227,4 +227,110 @@
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+}
+
+/* Premium text rendering */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Premium hover transitions */
+.hover-lift {
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+              box-shadow 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.15);
+}
+
+/* Elegant line animations */
+.line-reveal {
+  position: relative;
+}
+
+.line-reveal::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--secondary);
+  transition: width 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.line-reveal:hover::after {
+  width: 100%;
+}
+
+/* Premium focus states */
+:focus-visible {
+  outline: 2px solid oklch(0.48 0.08 55);
+  outline-offset: 4px;
+}
+
+/* Elegant image treatment */
+.image-premium {
+  filter: contrast(1.02) brightness(0.98);
+  transition: filter 0.8s ease;
+}
+
+.image-premium:hover {
+  filter: contrast(1.05) brightness(1);
+}
+
+/* Luxurious spacing helpers */
+.section-spacing {
+  padding-top: clamp(5rem, 10vw, 12rem);
+  padding-bottom: clamp(5rem, 10vw, 12rem);
+}
+
+/* Subtle parallax effect */
+@media (prefers-reduced-motion: no-preference) {
+  .parallax-subtle {
+    will-change: transform;
+    transition: transform 0.1s linear;
+  }
+}
+
+/* Premium border treatment */
+.border-premium {
+  border: 1px solid oklch(0.90 0.008 75);
+  transition: border-color 0.5s ease;
+}
+
+.border-premium:hover {
+  border-color: oklch(0.48 0.08 55 / 0.5);
+}
+
+/* Elegant shadow */
+.shadow-premium {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03),
+              0 10px 15px -3px rgba(0, 0, 0, 0.05),
+              0 20px 25px -5px rgba(0, 0, 0, 0.03);
+}
+
+/* Shimmer animation for loading states */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    oklch(0.96 0.005 75) 0%,
+    oklch(0.98 0.003 75) 50%,
+    oklch(0.96 0.005 75) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s ease-in-out infinite;
 }
