@@ -103,31 +103,45 @@ export function WithEverybodySection() {
           ref={contentAnim.ref}
           className="grid lg:grid-cols-12 gap-20 mb-40"
         >
-          {/* Left Column - Sticky Image */}
+          {/* Left Column - Dual Images */}
           <div className={`lg:col-span-5 transition-all duration-1200 ${contentAnim.inView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}>
-            <div className="lg:sticky lg:top-32">
-              <div className="relative aspect-[3/4] overflow-hidden film-grain">
-                <div className="absolute inset-0 slow-pan">
-                  <Image
-                    src="/images/global-engagement.jpg"
-                    alt="Global diplomatic engagement"
-                    fill
-                    className="object-cover color-grade-warm"
-                    sizes="(max-width: 1024px) 100vw, 40vw"
-                  />
+            <div className="lg:sticky lg:top-32 space-y-6">
+              {/* Image 1 - With Zelensky */}
+              <div className="relative aspect-[4/3] overflow-hidden group">
+                <Image
+                  src="/images/global-engagement.jpg"
+                  alt="Rafael Grossi meeting with President Zelensky"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                <div className="absolute bottom-6 left-6 right-6">
+                  <p className="text-[10px] uppercase tracking-[0.3em] text-white/50 mb-1">Ukraine</p>
+                  <p className="text-sm text-white/90 font-medium">With President Zelensky</p>
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-foreground/20" />
-                <div className="absolute inset-0 vignette opacity-50" />
               </div>
               
-              {/* Frame elements */}
-              <div className="absolute -bottom-6 -right-6 w-1/2 h-1/2 border border-secondary/20" />
-              
-              {/* Caption */}
-              <div className="absolute bottom-8 left-8 right-8">
-                <p className="text-[10px] uppercase tracking-[0.3em] text-white/50">Building Bridges</p>
-                <p className="text-sm mt-1 text-white/80">Across Every Divide</p>
+              {/* Image 2 - With Putin */}
+              <div className="relative aspect-[4/3] overflow-hidden group">
+                <Image
+                  src="/images/with-putin.jpg"
+                  alt="Rafael Grossi meeting with President Putin"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                <div className="absolute bottom-6 left-6 right-6">
+                  <p className="text-[10px] uppercase tracking-[0.3em] text-white/50 mb-1">Russia</p>
+                  <p className="text-sm text-white/90 font-medium">With President Putin</p>
+                </div>
               </div>
+              
+              {/* Caption below both */}
+              <p className="text-center text-muted-foreground text-sm italic mt-4">
+                Diplomacy means talking to everyone.
+              </p>
             </div>
           </div>
 
