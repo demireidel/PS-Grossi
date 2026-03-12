@@ -28,31 +28,27 @@ const commitments = [
 ]
 
 const documents = [
-  { title: "Vision Statement", type: "PDF", size: "2.4 MB" },
-  { title: "Governance Reform Proposal", type: "PDF", size: "1.8 MB" },
-  { title: "Financial Disclosure", type: "PDF", size: "0.9 MB" },
-  { title: "Career Summary", type: "PDF", size: "0.5 MB" },
-]
-
-const priorities = [
-  { num: "1", text: "Clear strategic priorities, publicly stated" },
-  { num: "2", text: "Reduced duplication across agencies" },
-  { num: "3", text: "Faster crisis response mechanisms" },
+  { title: "Vision Statement", type: "PDF", date: "2025" },
+  { title: "Governance Reform Proposal", type: "PDF", date: "2025" },
+  { title: "Financial Disclosure", type: "PDF", date: "2025" },
+  { title: "Career Summary", type: "PDF", date: "2025" },
 ]
 
 const metrics = [
-  { label: "Speed", detail: "Response time to emerging crises" },
-  { label: "Reach", detail: "Access to all parties in all conflicts" },
-  { label: "Results", detail: "Tangible outcomes for people and states" },
+  { label: "Speed", description: "Response time to emerging crises" },
+  { label: "Reach", description: "Access to all parties in all conflicts" },
+  { label: "Results", description: "Tangible outcomes for people and states" },
 ]
 
-function useInView(threshold = 0.2) {
+function useInView(threshold = 0.15) {
   const ref = useRef<HTMLDivElement>(null)
   const [inView, setInView] = useState(false)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setInView(true) },
+      ([entry]) => {
+        if (entry.isIntersecting) setInView(true)
+      },
       { threshold }
     )
     if (ref.current) observer.observe(ref.current)
@@ -64,194 +60,218 @@ function useInView(threshold = 0.2) {
 
 export function TransparencySection() {
   const headerAnim = useInView()
-  const imageAnim = useInView(0.3)
-  const commitmentsAnim = useInView()
-  const mgmtAnim = useInView()
+  const imageAnim = useInView(0.2)
+  const commitAnim = useInView()
+  const disciplineAnim = useInView()
   const cultureAnim = useInView()
   const metricsAnim = useInView()
 
   return (
     <section id="transparency" className="relative bg-background overflow-hidden">
-      {/* Top accent */}
-      <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent" />
-
-      <div className="container mx-auto px-6 lg:px-16 py-32 lg:py-44">
+      <div className="container mx-auto px-6 lg:px-20 py-40 lg:py-56">
         {/* Section Header */}
         <div 
           ref={headerAnim.ref}
-          className={`max-w-5xl mb-24 transition-all duration-1000 ${headerAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
+          className={`max-w-6xl mb-24 transition-all duration-1200 ${headerAnim.inView ? 'opacity-100' : 'opacity-0'}`}
         >
-          <div className="flex items-center gap-4 mb-8">
-            <span className="w-16 h-px bg-secondary" />
-            <p className="text-secondary uppercase tracking-[0.3em] text-[11px] font-medium">
-              Section 05 &mdash; The Standard
+          <div className="flex items-center gap-6 mb-10">
+            <span className={`h-px bg-secondary transition-all duration-1000 delay-300 ${headerAnim.inView ? 'w-20' : 'w-0'}`} />
+            <p className="text-secondary uppercase tracking-[0.4em] text-[10px] font-medium">
+              Section 05
+            </p>
+            <span className="text-secondary/30">/</span>
+            <p className="text-muted-foreground uppercase tracking-[0.2em] text-[10px]">
+              The Standard
             </p>
           </div>
-          <h2 className="font-serif text-5xl md:text-6xl lg:text-7xl text-foreground mb-10 leading-[1.1] tracking-tight">
-            Open to Everybody
-          </h2>
-          <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl font-light">
-            How he would run the institution with transparency, discipline, and accountability.
+          
+          <div className="overflow-hidden">
+            <h2 className={`font-serif text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-foreground leading-[0.9] tracking-tight transition-all duration-1000 delay-200 ${headerAnim.inView ? 'translate-y-0' : 'translate-y-full'}`}>
+              Open to
+              <span className="block text-secondary italic">Everybody</span>
+            </h2>
+          </div>
+          
+          <p className={`text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mt-12 font-light transition-all duration-1000 delay-500 ${headerAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            How he would run the institution with transparency and discipline.
           </p>
         </div>
 
-        {/* Hero Image */}
+        {/* Cinematic Hero Image */}
         <div 
           ref={imageAnim.ref}
-          className={`relative mb-32 transition-all duration-1000 ${imageAnim.inView ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
+          className={`relative mb-40 transition-all duration-1500 ${imageAnim.inView ? 'opacity-100' : 'opacity-0'}`}
         >
-          <div className="relative aspect-[21/9] overflow-hidden">
-            <Image
-              src="/images/transparency-governance.jpg"
-              alt="Press conference and transparent governance"
-              fill
-              className="object-cover"
-              sizes="100vw"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-foreground/20 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-r from-foreground/50 via-transparent to-foreground/30" />
+          <div className="relative aspect-cinema overflow-hidden film-grain vignette">
+            <div className="absolute inset-0 ken-burns">
+              <Image
+                src="/images/transparency-governance.jpg"
+                alt="Press conference and transparent governance"
+                fill
+                className="object-cover color-grade-cool"
+                sizes="100vw"
+              />
+            </div>
+            
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/40" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/40" />
+            
+            {/* Letterbox */}
+            <div className="absolute top-0 left-0 right-0 h-[8%] bg-black" />
+            <div className="absolute bottom-0 left-0 right-0 h-[8%] bg-black" />
           </div>
           
-          <div className="absolute bottom-0 left-0 right-0 p-10 lg:p-16">
+          {/* Quote overlay */}
+          <div className="absolute bottom-[14%] left-0 right-0 px-8 lg:px-20">
             <div className="flex items-center gap-4 mb-4">
               <div className="w-12 h-px bg-secondary" />
-              <span className="text-white/60 text-[11px] uppercase tracking-[0.2em]">Accountability</span>
+              <span className="text-white/50 text-[10px] uppercase tracking-[0.3em]">Accountability</span>
             </div>
-            <p className="text-white text-xl md:text-2xl font-serif italic max-w-2xl leading-relaxed">
-              &ldquo;Accountability is not a constraint on leadership. It is what gives leadership legitimacy.&rdquo;
+            <p className="text-white text-xl md:text-2xl lg:text-3xl font-light max-w-3xl leading-relaxed">
+              Accountability is not a constraint on leadership. It is what gives leadership legitimacy.
             </p>
           </div>
 
-          <div className="absolute top-6 left-6 w-20 h-20 border-l-2 border-t-2 border-white/20" />
-          <div className="absolute bottom-6 right-6 w-20 h-20 border-r-2 border-b-2 border-white/20" />
+          {/* Frame accents */}
+          <div className="absolute top-[12%] left-8 w-16 h-16 border-l-2 border-t-2 border-white/20" />
+          <div className="absolute top-[12%] right-8 w-16 h-16 border-r-2 border-t-2 border-white/20" />
         </div>
 
         {/* Transparency Commitments */}
-        <div 
-          ref={commitmentsAnim.ref}
-          className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-36"
-        >
-          {commitments.map((item, index) => (
-            <div
-              key={item.title}
-              className={`group relative p-10 bg-card border border-border hover:border-secondary/40 transition-all duration-500 hover-lift ${commitmentsAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
-              style={{ transitionDelay: commitmentsAnim.inView ? `${index * 100}ms` : '0ms' }}
-            >
-              <div className="w-12 h-12 bg-secondary/10 flex items-center justify-center mb-8 group-hover:bg-secondary transition-colors duration-500">
-                <item.icon className="w-5 h-5 text-secondary group-hover:text-secondary-foreground transition-colors duration-500" />
+        <div ref={commitAnim.ref} className="mb-40">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-1">
+            {commitments.map((item, index) => (
+              <div
+                key={item.title}
+                className={`group p-10 lg:p-12 bg-card border border-border hover:bg-secondary hover:border-secondary transition-all duration-700 ${commitAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'}`}
+                style={{ transitionDelay: commitAnim.inView ? `${index * 100}ms` : '0ms' }}
+              >
+                <item.icon className="w-10 h-10 text-secondary group-hover:text-secondary-foreground mb-8 transition-colors duration-500" />
+                <h4 className="font-serif text-xl text-foreground group-hover:text-secondary-foreground mb-4 transition-colors duration-500">
+                  {item.title}
+                </h4>
+                <p className="text-muted-foreground group-hover:text-secondary-foreground/70 text-sm leading-relaxed transition-colors duration-500">
+                  {item.description}
+                </p>
               </div>
-              <h4 className="font-serif text-lg text-foreground mb-4">
-                {item.title}
-              </h4>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                {item.description}
-              </p>
-              
-              <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-500 group-hover:w-full" />
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         {/* Management Discipline + Document Hub */}
         <div 
-          ref={mgmtAnim.ref}
-          className="grid lg:grid-cols-2 gap-20 items-start mb-36"
+          ref={disciplineAnim.ref}
+          className="grid lg:grid-cols-12 gap-20 items-start mb-40"
         >
-          <div className={`transition-all duration-1000 ${mgmtAnim.inView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}>
-            <h3 className="font-serif text-3xl md:text-4xl text-foreground mb-8 leading-snug gold-line">
-              Management Discipline
-            </h3>
-            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed mb-12">
-              <p>
-                The UN system is vast, complex, and often duplicative. The next
-                Secretary-General must be willing to set clear priorities, reduce
-                overlap, improve coordination, and accelerate response times.
-              </p>
-              <p>
-                This is not about bureaucratic tinkering. It is about making the
-                system capable of matching the speed and scale of modern crises.
-              </p>
+          <div className={`lg:col-span-6 transition-all duration-1000 ${disciplineAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+            <div className="relative mb-8">
+              <span className="text-[150px] font-serif text-foreground/[0.03] absolute -top-20 -left-4 leading-none select-none">05</span>
+              <h3 className="font-serif text-4xl md:text-5xl text-foreground leading-[1.1] relative">
+                Management
+                <span className="block text-secondary/70">Discipline</span>
+              </h3>
             </div>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+              The UN system is vast, complex, and often duplicative. The next
+              Secretary-General must be willing to set clear priorities, reduce
+              overlap, improve coordination, and accelerate response times.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-10">
+              This is not about bureaucratic tinkering. It is about making the
+              system capable of matching the speed and scale of modern crises.
+            </p>
             
             <div className="space-y-4">
-              {priorities.map((item, index) => (
+              {[
+                "Clear strategic priorities, publicly stated",
+                "Reduced duplication across agencies",
+                "Faster crisis response mechanisms"
+              ].map((item, i) => (
                 <div 
-                  key={item.num}
-                  className={`flex items-center gap-6 transition-all duration-500 ${mgmtAnim.inView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}
-                  style={{ transitionDelay: mgmtAnim.inView ? `${index * 100 + 400}ms` : '0ms' }}
+                  key={i}
+                  className={`flex items-center gap-5 p-5 bg-muted transition-all duration-500 ${disciplineAnim.inView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}
+                  style={{ transitionDelay: disciplineAnim.inView ? `${i * 100 + 300}ms` : '0ms' }}
                 >
-                  <span className="w-14 h-14 bg-secondary/10 flex items-center justify-center text-secondary font-serif text-xl flex-shrink-0">
-                    {item.num}
+                  <span className="w-12 h-12 bg-secondary/10 flex items-center justify-center text-secondary font-serif text-xl flex-shrink-0">
+                    {i + 1}
                   </span>
-                  <span className="text-foreground">{item.text}</span>
+                  <span className="text-foreground">{item}</span>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Document Hub */}
-          <div className={`transition-all duration-1000 delay-200 ${mgmtAnim.inView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
-            <div className="bg-muted p-10 lg:p-12">
-              <div className="flex items-center gap-4 mb-4">
+          <div className={`lg:col-span-6 transition-all duration-1200 delay-300 ${disciplineAnim.inView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
+            <div className="bg-muted p-10 lg:p-14">
+              <div className="flex items-center gap-4 mb-8">
                 <span className="w-8 h-px bg-secondary" />
-                <span className="text-secondary text-[11px] uppercase tracking-[0.2em] font-medium">
-                  Documents
-                </span>
+                <h4 className="font-serif text-2xl text-foreground">
+                  Transparency Hub
+                </h4>
               </div>
-              <h4 className="font-serif text-2xl text-foreground mb-3">
-                Transparency Hub
-              </h4>
               <p className="text-muted-foreground mb-10">
                 Access key documents, speeches, and disclosures.
               </p>
               <div className="space-y-3">
                 {documents.map((doc, index) => (
-                  <button
+                  <div
                     key={doc.title}
-                    className={`w-full flex items-center justify-between p-5 bg-card border border-border hover:border-secondary/40 transition-all duration-500 hover-lift group ${mgmtAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-                    style={{ transitionDelay: mgmtAnim.inView ? `${index * 100 + 500}ms` : '0ms' }}
+                    className="group flex items-center justify-between p-5 bg-card border border-border hover:border-secondary hover:bg-secondary/5 transition-all duration-300 cursor-pointer"
+                    style={{ transitionDelay: `${index * 50}ms` }}
                   >
                     <div className="flex items-center gap-4">
                       <FileText className="w-5 h-5 text-muted-foreground group-hover:text-secondary transition-colors" />
-                      <span className="text-foreground text-left">{doc.title}</span>
+                      <span className="text-foreground group-hover:text-secondary transition-colors">{doc.title}</span>
                     </div>
-                    <div className="flex items-center gap-4">
-                      <span className="text-xs text-muted-foreground">{doc.size}</span>
+                    <div className="flex items-center gap-3">
+                      <span className="text-xs text-muted-foreground uppercase tracking-wider">
+                        {doc.type}
+                      </span>
                       <Download className="w-4 h-4 text-muted-foreground group-hover:text-secondary transition-colors" />
                     </div>
-                  </button>
+                  </div>
                 ))}
               </div>
+              
+              <a href="#" className="group inline-flex items-center gap-3 mt-8 text-secondary font-medium text-sm uppercase tracking-wider">
+                <span>View All Documents</span>
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </a>
             </div>
           </div>
         </div>
 
-        {/* Institutional Culture */}
+        {/* Institutional Culture - Cinematic Block */}
         <div 
           ref={cultureAnim.ref}
-          className={`relative mb-36 transition-all duration-1000 ${cultureAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
+          className={`relative mb-40 transition-all duration-1200 ${cultureAnim.inView ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
         >
-          <div className="bg-foreground text-background p-16 lg:p-24 relative overflow-hidden">
-            <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)', backgroundSize: '24px 24px' }} />
+          <div className="bg-foreground text-background p-16 lg:p-28 relative overflow-hidden film-grain">
+            <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)', backgroundSize: '40px 40px' }} />
             
             <div className="relative max-w-4xl">
-              <span className="text-secondary text-[11px] uppercase tracking-[0.3em] font-medium mb-6 block">
-                Institutional Culture
+              <span className="inline-flex items-center gap-4 text-secondary text-[10px] uppercase tracking-[0.4em] font-medium mb-10">
+                <span className="w-8 h-px bg-secondary" />
+                The Culture
               </span>
-              <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl mb-10 leading-tight">
-                Institutional Culture and Merit
+              
+              <h3 className="font-serif text-4xl md:text-5xl lg:text-6xl mb-12 leading-[1.1]">
+                Institutional Culture
+                <span className="block text-secondary">and Merit</span>
               </h3>
-              <p className="text-xl leading-relaxed opacity-80 mb-12 max-w-3xl">
+              
+              <p className="text-xl md:text-2xl leading-relaxed opacity-80 mb-16 max-w-3xl font-light">
                 A Secretary-General sets the tone for the entire UN system.
                 Grossi&apos;s commitment: integrity over politics, seriousness
                 over performance, inclusion over tokenism, and standards that
                 apply equally to everyone.
               </p>
-              <blockquote className="relative pl-8 border-l-2 border-secondary">
-                <p className="text-2xl md:text-3xl font-serif italic leading-snug">
+              
+              <blockquote className="relative pl-10 border-l-2 border-secondary">
+                <p className="text-3xl md:text-4xl font-serif italic leading-[1.3]">
                   &ldquo;The UN belongs to its member states. But it must be run as
-                  if every staff member&apos;s dignity depends on it &mdash; because
-                  it does.&rdquo;
+                  if every staff member&apos;s dignity depends on it—because it does.&rdquo;
                 </p>
               </blockquote>
             </div>
@@ -263,8 +283,9 @@ export function TransparencySection() {
           ref={metricsAnim.ref}
           className={`text-center max-w-4xl mx-auto transition-all duration-1000 ${metricsAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
         >
-          <h3 className="font-serif text-3xl md:text-4xl text-foreground mb-6">
-            How a Better-Run UN Should Be Judged
+          <span className="text-secondary text-[10px] uppercase tracking-[0.4em] font-medium mb-6 block">The Measure</span>
+          <h3 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-8 leading-[1.1]">
+            How a Better-Run UN<br />Should Be Judged
           </h3>
           <p className="text-lg text-muted-foreground leading-relaxed mb-16 max-w-2xl mx-auto">
             Not by the number of meetings held, but by crises averted. Not by
@@ -272,30 +293,22 @@ export function TransparencySection() {
             but by outcomes delivered.
           </p>
           
-          <div className="grid sm:grid-cols-3 gap-8">
-            {metrics.map((item, index) => (
+          <div className="grid sm:grid-cols-3 gap-1">
+            {metrics.map((metric, index) => (
               <div 
-                key={item.label}
-                className={`group p-10 border border-border hover:border-secondary/40 transition-all duration-500 hover-lift ${metricsAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
+                key={metric.label}
+                className={`p-12 bg-muted hover:bg-secondary group transition-all duration-500 ${metricsAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                 style={{ transitionDelay: metricsAnim.inView ? `${index * 100 + 200}ms` : '0ms' }}
               >
-                <p className="text-5xl font-serif text-secondary mb-4 group-hover:scale-110 transition-transform duration-500">
-                  {item.label}
+                <p className="text-5xl md:text-6xl font-serif text-secondary group-hover:text-secondary-foreground mb-4 transition-colors duration-500">
+                  {metric.label}
                 </p>
-                <p className="text-muted-foreground text-sm">
-                  {item.detail}
+                <p className="text-muted-foreground group-hover:text-secondary-foreground/70 text-sm transition-colors duration-500">
+                  {metric.description}
                 </p>
               </div>
             ))}
           </div>
-          
-          <a 
-            href="#vision" 
-            className="inline-flex items-center gap-3 mt-16 text-secondary font-medium text-sm uppercase tracking-wider group"
-          >
-            <span>Return to Vision</span>
-            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-          </a>
         </div>
       </div>
     </section>

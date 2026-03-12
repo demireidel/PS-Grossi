@@ -2,52 +2,52 @@
 
 import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
-import { Heart, Users2, Leaf, Stethoscope, ArrowUpRight } from "lucide-react"
+import { Heart, Users2, Leaf, Stethoscope } from "lucide-react"
 
 const deliveryAreas = [
   {
     icon: Stethoscope,
     title: "Cancer Care Initiative",
-    description: "Rays of Hope: bringing cancer diagnosis and treatment to over 40 countries with no access to radiation therapy.",
+    description:
+      "Rays of Hope: bringing cancer diagnosis and treatment to over 40 countries with no access to radiation therapy.",
     stat: "40+",
     statLabel: "Countries Reached",
   },
   {
     icon: Heart,
     title: "Food Security",
-    description: "Technical cooperation on nuclear applications for agriculture, helping nations feed their populations sustainably.",
+    description:
+      "Technical cooperation on nuclear applications for agriculture, helping nations feed their populations sustainably.",
     stat: "160",
     statLabel: "Projects Active",
   },
   {
     icon: Leaf,
     title: "Climate & Environment",
-    description: "Clean energy support and environmental monitoring, helping countries navigate the energy transition.",
+    description:
+      "Clean energy support and environmental monitoring, helping countries navigate the energy transition.",
     stat: "30%",
     statLabel: "Emissions Focus",
   },
   {
     icon: Users2,
     title: "Gender Equality",
-    description: "Achieved gender parity in senior positions. Launched the Marie Sklodowska-Curie Fellowship Programme.",
+    description:
+      "Achieved gender parity in senior positions. Launched the Marie Sklodowska-Curie Fellowship Programme.",
     stat: "50%",
     statLabel: "Senior Leadership",
   },
 ]
 
-const achievements = [
-  "50% women in senior management",
-  "100+ fellows annually from underrepresented nations",
-  "First IAEA Director General to prioritize gender as strategic",
-]
-
-function useInView(threshold = 0.2) {
+function useInView(threshold = 0.15) {
   const ref = useRef<HTMLDivElement>(null)
   const [inView, setInView] = useState(false)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setInView(true) },
+      ([entry]) => {
+        if (entry.isIntersecting) setInView(true)
+      },
       { threshold }
     )
     if (ref.current) observer.observe(ref.current)
@@ -59,192 +59,207 @@ function useInView(threshold = 0.2) {
 
 export function ForEverybodySection() {
   const headerAnim = useInView()
-  const imageAnim = useInView(0.3)
-  const cardsAnim = useInView()
+  const imageAnim = useInView(0.2)
+  const gridAnim = useInView()
   const genderAnim = useInView()
   const ctaAnim = useInView()
 
   return (
     <section id="for-everybody" className="relative bg-muted overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background opacity-40" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background opacity-30" />
 
-      <div className="relative container mx-auto px-6 lg:px-16 py-32 lg:py-44">
+      <div className="relative container mx-auto px-6 lg:px-20 py-40 lg:py-56">
         {/* Section Header */}
         <div 
           ref={headerAnim.ref}
-          className={`max-w-5xl mb-24 transition-all duration-1000 ${headerAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
+          className={`max-w-6xl mb-24 transition-all duration-1200 ${headerAnim.inView ? 'opacity-100' : 'opacity-0'}`}
         >
-          <div className="flex items-center gap-4 mb-8">
-            <span className="w-16 h-px bg-secondary" />
-            <p className="text-secondary uppercase tracking-[0.3em] text-[11px] font-medium">
-              Section 04 &mdash; The Impact
+          <div className="flex items-center gap-6 mb-10">
+            <span className={`h-px bg-secondary transition-all duration-1000 delay-300 ${headerAnim.inView ? 'w-20' : 'w-0'}`} />
+            <p className="text-secondary uppercase tracking-[0.4em] text-[10px] font-medium">
+              Section 04
+            </p>
+            <span className="text-secondary/30">/</span>
+            <p className="text-muted-foreground uppercase tracking-[0.2em] text-[10px]">
+              The Impact
             </p>
           </div>
-          <h2 className="font-serif text-5xl md:text-6xl lg:text-7xl text-foreground mb-10 leading-[1.1] tracking-tight">
-            For Everybody
-          </h2>
-          <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl font-light">
-            Leadership is judged by what it delivers for people &mdash; not by process, but by outcomes.
+          
+          <div className="overflow-hidden">
+            <h2 className={`font-serif text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-foreground leading-[0.9] tracking-tight transition-all duration-1000 delay-200 ${headerAnim.inView ? 'translate-y-0' : 'translate-y-full'}`}>
+              For
+              <span className="block text-secondary italic">Everybody</span>
+            </h2>
+          </div>
+          
+          <p className={`text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mt-12 font-light transition-all duration-1000 delay-500 ${headerAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            How leadership is judged by what it delivers for people.
           </p>
         </div>
 
-        {/* Hero Image */}
+        {/* Cinematic Hero Image */}
         <div 
           ref={imageAnim.ref}
-          className={`relative mb-32 transition-all duration-1000 ${imageAnim.inView ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
+          className={`relative mb-40 transition-all duration-1500 ${imageAnim.inView ? 'opacity-100' : 'opacity-0'}`}
         >
-          <div className="relative aspect-[2/1] overflow-hidden">
-            <Image
-              src="/images/humanitarian-delivery.jpg"
-              alt="Humanitarian engagement"
-              fill
-              className="object-cover"
-              sizes="100vw"
-            />
-            {/* Premium overlays */}
-            <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/40 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent" />
+          <div className="relative aspect-wide overflow-hidden film-grain vignette">
+            <div className="absolute inset-0 ken-burns">
+              <Image
+                src="/images/humanitarian-delivery.jpg"
+                alt="Humanitarian engagement"
+                fill
+                className="object-cover color-grade-warm"
+                sizes="100vw"
+              />
+            </div>
+            
+            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30" />
+            
+            {/* Letterbox */}
+            <div className="absolute top-0 left-0 right-0 h-[6%] bg-black" />
+            <div className="absolute bottom-0 left-0 right-0 h-[6%] bg-black" />
           </div>
           
           {/* Content overlay */}
-          <div className="absolute bottom-0 left-0 p-10 lg:p-16 max-w-2xl">
-            <div className="flex items-center gap-4 mb-4">
-              <div className="w-12 h-px bg-secondary" />
-              <span className="text-white/60 text-[11px] uppercase tracking-[0.2em]">Human Dignity</span>
+          <div className="absolute inset-0 flex items-center px-8 lg:px-20">
+            <div className="max-w-2xl">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-px bg-secondary" />
+                <span className="text-white/50 text-[10px] uppercase tracking-[0.3em]">Human Dignity</span>
+              </div>
+              <h3 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mb-6">
+                Human Dignity
+                <span className="block text-secondary/80 italic">as Purpose</span>
+              </h3>
+              <p className="text-white/70 text-lg md:text-xl leading-relaxed max-w-xl">
+                The UN must be judged by what it protects and improves. Not by
+                resolutions passed, but by lives changed.
+              </p>
             </div>
-            <h3 className="font-serif text-3xl md:text-4xl text-white mb-4 leading-snug">
-              Human Dignity as Purpose
-            </h3>
-            <p className="text-white/80 text-lg leading-relaxed">
-              The UN must be judged by what it protects and improves. Not by
-              resolutions passed, but by lives changed.
-            </p>
           </div>
 
-          {/* Frame */}
-          <div className="absolute top-6 right-6 w-20 h-20 border-r-2 border-t-2 border-white/20" />
+          {/* Frame accents */}
+          <div className="absolute top-[10%] left-8 w-16 h-16 border-l-2 border-t-2 border-white/20" />
+          <div className="absolute bottom-[10%] right-8 w-16 h-16 border-r-2 border-b-2 border-white/20" />
         </div>
 
-        {/* Delivery Areas */}
-        <div 
-          ref={cardsAnim.ref}
-          className="grid md:grid-cols-2 gap-6 mb-36"
-        >
-          {deliveryAreas.map((area, index) => (
-            <div
-              key={area.title}
-              className={`group relative p-10 lg:p-12 bg-card border border-border hover:border-secondary/40 transition-all duration-500 hover-lift overflow-hidden ${cardsAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
-              style={{ transitionDelay: cardsAnim.inView ? `${index * 100}ms` : '0ms' }}
-            >
-              <div className="flex items-start justify-between mb-8">
-                <div className="w-14 h-14 bg-secondary/10 flex items-center justify-center group-hover:bg-secondary transition-colors duration-500">
-                  <area.icon className="w-7 h-7 text-secondary group-hover:text-secondary-foreground transition-colors duration-500" />
+        {/* Delivery Areas Grid */}
+        <div ref={gridAnim.ref} className="mb-40">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-1">
+            {deliveryAreas.map((area, index) => (
+              <div
+                key={area.title}
+                className={`group p-10 lg:p-12 bg-card border border-border hover:bg-foreground transition-all duration-700 ${gridAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'}`}
+                style={{ transitionDelay: gridAnim.inView ? `${index * 100}ms` : '0ms' }}
+              >
+                <div className="flex items-start justify-between mb-8">
+                  <area.icon className="w-10 h-10 text-secondary group-hover:text-secondary transition-colors duration-500" />
+                  <div className="text-right">
+                    <p className="text-4xl font-serif text-secondary group-hover:text-secondary transition-colors duration-500">
+                      {area.stat}
+                    </p>
+                    <p className="text-xs text-muted-foreground group-hover:text-background/60 transition-colors duration-500 uppercase tracking-wider">
+                      {area.statLabel}
+                    </p>
+                  </div>
                 </div>
-                <div className="text-right">
-                  <p className="text-5xl font-serif text-secondary mb-1">
-                    {area.stat}
-                  </p>
-                  <p className="text-xs text-muted-foreground uppercase tracking-wider">
-                    {area.statLabel}
-                  </p>
-                </div>
+                <h4 className="font-serif text-xl text-foreground group-hover:text-background mb-4 transition-colors duration-500">
+                  {area.title}
+                </h4>
+                <p className="text-muted-foreground group-hover:text-background/70 leading-relaxed text-sm transition-colors duration-500">
+                  {area.description}
+                </p>
               </div>
-              <h4 className="font-serif text-2xl text-foreground mb-4">
-                {area.title}
-              </h4>
-              <p className="text-muted-foreground leading-relaxed">
-                {area.description}
-              </p>
-              
-              {/* Hover line */}
-              <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-500 group-hover:w-full" />
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         {/* Gender as Proof */}
         <div 
           ref={genderAnim.ref}
-          className={`grid lg:grid-cols-2 gap-20 items-center mb-36 transition-all duration-1000 ${genderAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
+          className="grid lg:grid-cols-12 gap-20 items-center mb-40"
         >
-          <div>
-            <h3 className="font-serif text-3xl md:text-4xl text-foreground mb-8 leading-snug gold-line">
-              Gender as Proof of Leadership
-            </h3>
-            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed mb-10">
-              <p>
-                Talk is easy. Results are hard. Under Grossi&apos;s leadership,
-                the IAEA achieved something most international organizations only
-                promise: true gender parity at senior levels.
-              </p>
-              <p>
-                The Marie Sklodowska-Curie Fellowship Programme now brings women
-                scientists from developing countries into nuclear fields
-                worldwide, building capacity that will last generations.
-              </p>
+          <div className={`lg:col-span-6 transition-all duration-1000 ${genderAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+            <div className="relative mb-8">
+              <span className="text-[150px] font-serif text-foreground/[0.03] absolute -top-20 -left-4 leading-none select-none">04</span>
+              <h3 className="font-serif text-4xl md:text-5xl text-foreground leading-[1.1] relative">
+                Gender as Proof
+                <span className="block text-secondary/70">of Leadership</span>
+              </h3>
             </div>
-            <ul className="space-y-4">
-              {achievements.map((item, index) => (
+            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+              Talk is easy. Results are hard. Under Grossi&apos;s leadership,
+              the IAEA achieved something most international organizations only
+              promise: true gender parity at senior levels.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-10">
+              The Marie Sklodowska-Curie Fellowship Programme now brings women
+              scientists from developing countries into nuclear fields
+              worldwide, building capacity that will last generations.
+            </p>
+            
+            <ul className="space-y-5">
+              {[
+                "50% women in senior management",
+                "100+ fellows annually from underrepresented nations",
+                "First IAEA Director General to prioritize gender as strategic"
+              ].map((item, i) => (
                 <li 
-                  key={index}
+                  key={i} 
                   className={`flex items-center gap-4 text-foreground transition-all duration-500 ${genderAnim.inView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}
-                  style={{ transitionDelay: genderAnim.inView ? `${index * 100 + 400}ms` : '0ms' }}
+                  style={{ transitionDelay: genderAnim.inView ? `${i * 100 + 300}ms` : '0ms' }}
                 >
-                  <span className="w-2 h-2 bg-secondary flex-shrink-0" />
-                  {item}
+                  <span className="w-3 h-3 bg-secondary" />
+                  <span>{item}</span>
                 </li>
               ))}
             </ul>
           </div>
           
-          <div className={`relative transition-all duration-1000 delay-300 ${genderAnim.inView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
+          <div className={`lg:col-span-6 transition-all duration-1200 delay-300 ${genderAnim.inView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
             <div className="bg-secondary/10 p-12 lg:p-16 relative">
-              <div className="absolute top-6 left-6 w-12 h-12 border-l-2 border-t-2 border-secondary/30" />
-              <blockquote className="font-serif text-2xl md:text-3xl text-foreground italic leading-relaxed">
-                &ldquo;Inclusion is not a box to check. It is how you build an
-                institution that reflects the world it serves.&rdquo;
+              <span className="text-8xl font-serif text-secondary/10 absolute top-4 right-4 leading-none">&ldquo;</span>
+              <blockquote className="font-serif text-2xl md:text-3xl text-foreground italic leading-relaxed relative">
+                Inclusion is not a box to check. It is how you build an
+                institution that reflects the world it serves.
               </blockquote>
             </div>
           </div>
         </div>
 
-        {/* Why This Matters to Member States */}
+        {/* Why This Matters - Cinematic CTA */}
         <div 
           ref={ctaAnim.ref}
-          className={`relative transition-all duration-1000 ${ctaAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
+          className={`relative transition-all duration-1200 ${ctaAnim.inView ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
         >
-          <div className="bg-primary text-primary-foreground p-16 lg:p-24 relative overflow-hidden">
-            {/* Pattern */}
-            <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)', backgroundSize: '32px 32px' }} />
+          <div className="bg-primary text-primary-foreground p-16 lg:p-28 relative overflow-hidden film-grain">
+            <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)', backgroundSize: '40px 40px' }} />
             
             <div className="relative max-w-4xl">
-              <span className="text-secondary text-[11px] uppercase tracking-[0.3em] font-medium mb-6 block">
-                Member States
+              <span className="inline-flex items-center gap-4 text-secondary text-[10px] uppercase tracking-[0.4em] font-medium mb-10">
+                <span className="w-8 h-px bg-secondary" />
+                The Connection
               </span>
-              <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl mb-10 leading-tight">
-                Why This Matters to Member States
+              
+              <h3 className="font-serif text-4xl md:text-5xl lg:text-6xl mb-12 leading-[1.1]">
+                Why This Matters
+                <span className="block text-secondary">to Member States</span>
               </h3>
-              <p className="text-xl leading-relaxed opacity-90 mb-8 max-w-3xl">
+              
+              <p className="text-xl md:text-2xl leading-relaxed opacity-80 mb-10 max-w-3xl font-light">
                 Better outcomes for people also mean stronger, more useful
                 multilateralism for states. When the UN delivers tangible
-                results &mdash; in health, in food security, in climate
-                response &mdash; it earns the credibility to convene on harder
+                results—in health, in food security, in climate
+                response—it earns the credibility to convene on harder
                 questions.
               </p>
-              <p className="text-lg leading-relaxed opacity-70">
+              
+              <p className="text-lg leading-relaxed opacity-60 max-w-3xl">
                 Grossi is not a narrow technical candidate. His record proves that
                 diplomatic skill and humanitarian impact are not
-                opposites &mdash; they are mutually reinforcing.
+                opposites—they are mutually reinforcing.
               </p>
-              
-              <a 
-                href="#transparency" 
-                className="inline-flex items-center gap-3 mt-10 text-secondary font-medium text-sm uppercase tracking-wider group"
-              >
-                <span>See Governance Standards</span>
-                <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-              </a>
             </div>
           </div>
         </div>
