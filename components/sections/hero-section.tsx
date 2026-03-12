@@ -22,7 +22,7 @@ export function HeroSection() {
             alt="Rafael Grossi"
             fill
             priority
-            className="object-cover object-center sepia-[0.1] saturate-[1.1] brightness-[0.95]"
+            className="object-cover object-top sepia-[0.1] saturate-[1.1] brightness-[0.95]"
             sizes="100vw"
           />
         </div>
