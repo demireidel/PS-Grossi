@@ -12,25 +12,32 @@ export function HeroSection() {
   }, [])
 
   return (
-    <section className="relative min-h-screen h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen h-screen flex items-center justify-center overflow-hidden bg-black">
       {/* Background Image with cinematic treatment */}
-      <div className="absolute inset-0">
-        <Image
-          src="/images/grossi-hero.jpg"
-          alt="Rafael Grossi"
-          fill
-          priority
-          className="object-cover object-center"
-          sizes="100vw"
-        />
-        {/* Sophisticated gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/75" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/30" />
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Animated zoom effect */}
+        <div className="absolute inset-0 ken-burns">
+          <Image
+            src="/images/grossi-hero.jpg"
+            alt="Rafael Grossi"
+            fill
+            priority
+            className="object-cover object-center sepia-[0.1] saturate-[1.1] brightness-[0.95]"
+            sizes="100vw"
+          />
+        </div>
+        {/* Cinematic gradient overlays */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/80" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-black/50" />
+        {/* Vignette effect */}
+        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at center, transparent 20%, rgba(0,0,0,0.6) 100%)' }} />
+        {/* Film grain overlay */}
+        <div className="absolute inset-0 opacity-[0.03] mix-blend-overlay" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")` }} />
       </div>
 
-      {/* Letterbox bars for cinematic feel */}
-      <div className="absolute top-0 left-0 right-0 h-[3%] bg-black/70 z-20" />
-      <div className="absolute bottom-0 left-0 right-0 h-[3%] bg-black/70 z-20" />
+      {/* Letterbox bars for cinematic 2.39:1 feel */}
+      <div className="absolute top-0 left-0 right-0 h-[5%] bg-black z-20" />
+      <div className="absolute bottom-0 left-0 right-0 h-[5%] bg-black z-20" />
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 lg:px-20 text-center">
