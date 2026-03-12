@@ -52,7 +52,7 @@ export function HeroSection() {
 
         <div className="overflow-hidden">
           <h1
-            className={`font-serif text-5xl md:text-7xl lg:text-[8rem] xl:text-[9rem] text-white font-normal leading-[0.9] mb-6 tracking-tight transition-all duration-1000 delay-500 ${
+            className={`font-serif text-4xl md:text-6xl lg:text-7xl xl:text-8xl text-white font-normal leading-[0.9] mb-4 tracking-tight transition-all duration-1000 delay-500 ${
               loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-full"
             }`}
           >
@@ -62,7 +62,7 @@ export function HeroSection() {
         </div>
 
         <p
-          className={`font-serif text-2xl md:text-3xl lg:text-4xl text-white/90 mb-10 tracking-wide transition-all duration-1000 delay-600 ${
+          className={`font-serif text-3xl md:text-5xl lg:text-6xl xl:text-7xl text-white/90 mb-10 tracking-tight transition-all duration-1000 delay-600 ${
             loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
