@@ -109,9 +109,10 @@ export function WithEverybodySection() {
               <div className="relative aspect-[3/4] overflow-hidden film-grain">
                 <div className="absolute inset-0 slow-pan">
                   <Image
-                    src="/images/global-engagement.jpg"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/DG%27s_Reception_2019_%2801313393%29_%2839963811963%29.jpg/1280px-DG%27s_Reception_2019_%2801313393%29_%2839963811963%29.jpg"
                     alt="Global diplomatic engagement"
                     fill
+                    unoptimized
                     className="object-cover color-grade-warm"
                     sizes="(max-width: 1024px) 100vw, 40vw"
                   />

@@ -18,10 +18,11 @@ export function HeroSection() {
         {/* Animated zoom effect */}
         <div className="absolute inset-0 ken-burns">
           <Image
-            src="/images/grossi-hero.jpg"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Rafael_Mariano_Grossi_%2800110002%29_%2851192184415%29.jpg/1280px-Rafael_Mariano_Grossi_%2800110002%29_%2851192184415%29.jpg"
             alt="Rafael Grossi"
             fill
             priority
+            unoptimized
             className="object-cover object-center sepia-[0.1] saturate-[1.1] brightness-[0.95]"
             sizes="100vw"
           />

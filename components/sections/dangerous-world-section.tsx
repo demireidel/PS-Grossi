@@ -57,9 +57,10 @@ export function DangerousWorldSection() {
         <div className="relative aspect-cinema mb-24 overflow-hidden film-grain vignette">
           <div className="absolute inset-0 ken-burns">
             <Image
-              src="/images/crisis-diplomacy.jpg"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/DG_Interview_%2801119848%29_%2850370421978%29.jpg/1280px-DG_Interview_%2801119848%29_%2850370421978%29.jpg"
               alt="Crisis diplomacy in action"
               fill
+              unoptimized
               className="object-cover color-grade-warm"
               sizes="100vw"
             />
