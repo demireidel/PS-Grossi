@@ -22,7 +22,7 @@ export function HeroSection() {
             alt="Rafael Grossi"
             fill
             priority
-            className="object-cover object-center"
+            className="object-cover object-left"
             sizes="100vw"
           />
         </div>
