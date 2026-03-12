@@ -104,16 +104,16 @@ export function VisionSection() {
             {principles.map((principle, index) => (
               <div
                 key={principle.title}
-                className="group p-10 lg:p-12 bg-card border border-border hover:bg-foreground transition-all duration-500"
+                className="group p-10 lg:p-12 bg-card border border-border hover:bg-primary transition-all duration-500"
               >
                 <div className="flex items-start justify-between mb-8">
-                  <principle.icon className="w-8 h-8 text-secondary group-hover:text-secondary transition-colors duration-500" />
-                  <span className="text-4xl font-serif text-foreground/5 group-hover:text-background/10 transition-colors duration-500">0{index + 1}</span>
+                  <principle.icon className="w-8 h-8 text-secondary" />
+                  <span className="text-4xl font-serif text-foreground/10 group-hover:text-primary-foreground/20 transition-colors duration-500">0{index + 1}</span>
                 </div>
-                <h4 className="font-serif text-xl text-foreground group-hover:text-background mb-4 transition-colors duration-500">
+                <h4 className="font-serif text-xl text-foreground group-hover:text-primary-foreground mb-4 transition-colors duration-500">
                   {principle.title}
                 </h4>
-                <p className="text-muted-foreground group-hover:text-background/70 leading-relaxed text-sm transition-colors duration-500">
+                <p className="text-muted-foreground group-hover:text-primary-foreground/80 leading-relaxed text-sm transition-colors duration-500">
                   {principle.description}
                 </p>
               </div>
