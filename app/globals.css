@@ -5,39 +5,39 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: oklch(0.98 0.002 60);
-  --foreground: oklch(0.18 0.02 30);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.18 0.02 30);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.18 0.02 30);
-  --primary: oklch(0.35 0.08 250);
-  --primary-foreground: oklch(0.98 0 0);
-  --secondary: oklch(0.65 0.12 45);
-  --secondary-foreground: oklch(0.98 0 0);
-  --muted: oklch(0.94 0.01 60);
-  --muted-foreground: oklch(0.45 0.02 30);
-  --accent: oklch(0.55 0.15 45);
-  --accent-foreground: oklch(0.98 0 0);
+  --background: oklch(0.985 0.003 80);
+  --foreground: oklch(0.15 0.02 250);
+  --card: oklch(0.995 0.002 80);
+  --card-foreground: oklch(0.15 0.02 250);
+  --popover: oklch(0.995 0.002 80);
+  --popover-foreground: oklch(0.15 0.02 250);
+  --primary: oklch(0.25 0.05 250);
+  --primary-foreground: oklch(0.98 0.002 80);
+  --secondary: oklch(0.62 0.14 65);
+  --secondary-foreground: oklch(0.12 0.02 250);
+  --muted: oklch(0.95 0.005 80);
+  --muted-foreground: oklch(0.40 0.02 250);
+  --accent: oklch(0.55 0.12 65);
+  --accent-foreground: oklch(0.12 0.02 250);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: oklch(0.88 0.02 60);
-  --input: oklch(0.92 0.01 60);
-  --ring: oklch(0.35 0.08 250);
-  --chart-1: oklch(0.35 0.08 250);
-  --chart-2: oklch(0.65 0.12 45);
-  --chart-3: oklch(0.55 0.15 45);
+  --border: oklch(0.90 0.01 80);
+  --input: oklch(0.93 0.005 80);
+  --ring: oklch(0.62 0.14 65);
+  --chart-1: oklch(0.25 0.05 250);
+  --chart-2: oklch(0.62 0.14 65);
+  --chart-3: oklch(0.55 0.12 65);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
   --radius: 0rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.18 0.02 30);
-  --sidebar-primary: oklch(0.35 0.08 250);
+  --sidebar: oklch(0.99 0.002 80);
+  --sidebar-foreground: oklch(0.15 0.02 250);
+  --sidebar-primary: oklch(0.25 0.05 250);
   --sidebar-primary-foreground: oklch(0.98 0 0);
-  --sidebar-accent: oklch(0.94 0.01 60);
-  --sidebar-accent-foreground: oklch(0.18 0.02 30);
-  --sidebar-border: oklch(0.88 0.02 60);
-  --sidebar-ring: oklch(0.35 0.08 250);
+  --sidebar-accent: oklch(0.95 0.005 80);
+  --sidebar-accent-foreground: oklch(0.15 0.02 250);
+  --sidebar-border: oklch(0.90 0.01 80);
+  --sidebar-ring: oklch(0.62 0.14 65);
 }
 
 .dark {
@@ -77,7 +77,7 @@
 
 @theme inline {
   --font-sans: var(--font-sans, 'Inter'), 'Inter', system-ui, sans-serif;
-  --font-serif: var(--font-serif, 'Playfair Display'), 'Playfair Display', Georgia, serif;
+  --font-serif: var(--font-serif, 'Cormorant Garamond'), 'Cormorant Garamond', Georgia, serif;
   --font-mono: 'Geist Mono', 'Geist Mono Fallback';
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -226,4 +226,55 @@
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+}
+
+/* Premium text shadow for hero */
+.text-shadow-premium {
+  text-shadow: 0 2px 20px rgba(0,0,0,0.3), 0 4px 40px rgba(0,0,0,0.2);
+}
+
+/* Elegant hover lift */
+.hover-lift {
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+              box-shadow 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.15);
+}
+
+/* Premium line animation */
+.line-reveal::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--secondary);
+  transition: width 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.line-reveal:hover::after {
+  width: 100%;
+}
+
+/* Elegant focus states */
+:focus-visible {
+  outline: 2px solid oklch(0.62 0.14 65);
+  outline-offset: 4px;
+}
+
+/* Premium letter spacing */
+.tracking-premium {
+  letter-spacing: 0.15em;
+}
+
+/* Gradient text */
+.text-gradient-gold {
+  background: linear-gradient(135deg, oklch(0.72 0.14 65) 0%, oklch(0.55 0.12 65) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }

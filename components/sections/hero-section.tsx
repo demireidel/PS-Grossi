@@ -41,10 +41,11 @@ export function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 lg:px-20 text-center">
-        {/* Decorative line */}
-        <div className={`flex items-center justify-center gap-8 mb-10 transition-all duration-1000 delay-200 ${loaded ? "opacity-100" : "opacity-0"}`}>
-          <span className={`h-px bg-secondary/60 transition-all duration-1000 delay-500 ${loaded ? "w-16" : "w-0"}`} />
-          <span className={`h-px bg-secondary/60 transition-all duration-1000 delay-500 ${loaded ? "w-16" : "w-0"}`} />
+        {/* Decorative element */}
+        <div className={`flex items-center justify-center gap-6 mb-12 transition-all duration-1000 delay-200 ${loaded ? "opacity-100" : "opacity-0"}`}>
+          <span className={`h-px bg-gradient-to-r from-transparent to-secondary/60 transition-all duration-1000 delay-500 ${loaded ? "w-24" : "w-0"}`} />
+          <div className="w-2 h-2 rotate-45 border border-secondary/60" />
+          <span className={`h-px bg-gradient-to-l from-transparent to-secondary/60 transition-all duration-1000 delay-500 ${loaded ? "w-24" : "w-0"}`} />
         </div>
 
         <div
@@ -52,32 +53,34 @@ export function HeroSection() {
             loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <p className="text-white/50 uppercase tracking-[0.4em] text-[11px] mb-6 font-light">
+          <p className="text-white/40 uppercase tracking-[0.5em] text-[10px] mb-8 font-light">
             For United Nations Secretary-General
           </p>
         </div>
 
-        <div className="overflow-hidden">
+        <div className="overflow-hidden mb-6">
           <h1
-            className={`font-serif text-4xl md:text-6xl lg:text-7xl xl:text-8xl text-white font-normal leading-[0.9] mb-4 tracking-tight transition-all duration-1000 delay-500 ${
+            className={`font-serif text-5xl md:text-7xl lg:text-8xl xl:text-9xl text-white font-normal leading-[0.85] tracking-tight text-shadow-premium transition-all duration-1000 delay-500 ${
               loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-full"
             }`}
           >
-            <span className="block">Rafael</span>
-            <span className="block text-secondary italic">Grossi</span>
+            <span className="block font-light">Rafael</span>
+            <span className="block text-gradient-gold italic font-medium">Grossi</span>
           </h1>
         </div>
 
-        <p
-          className={`font-serif text-3xl md:text-5xl lg:text-6xl xl:text-7xl text-white/90 mb-10 tracking-tight transition-all duration-1000 delay-600 ${
-            loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
-        >
-          A UN That Works
-        </p>
+        <div className="overflow-hidden">
+          <p
+            className={`font-serif text-2xl md:text-4xl lg:text-5xl xl:text-6xl text-white/80 mb-12 tracking-wide transition-all duration-1000 delay-600 ${
+              loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
+          >
+            A UN That <span className="italic text-white">Works</span>
+          </p>
+        </div>
 
         <p
-          className={`text-lg md:text-xl lg:text-2xl text-white/70 max-w-2xl mx-auto mb-14 font-light leading-relaxed tracking-wide text-pretty transition-all duration-1000 delay-700 ${
+          className={`text-base md:text-lg lg:text-xl text-white/50 max-w-xl mx-auto font-light leading-relaxed tracking-wide text-pretty transition-all duration-1000 delay-700 ${
             loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
