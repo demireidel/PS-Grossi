@@ -28,59 +28,38 @@ export function DangerousWorldSection() {
   return (
     <section
       id="dangerous-world"
-      className="py-32 lg:py-48 bg-muted relative overflow-hidden"
+      className="py-24 lg:py-32 bg-muted"
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-transparent to-background/50" />
-      
-      <div className="container mx-auto px-6 lg:px-20 relative">
+      <div className="container mx-auto px-6 lg:px-12">
         {/* Section Header */}
-        <div className="max-w-5xl mb-24">
-          <div className="flex items-center gap-6 mb-8">
-            <span className="h-px w-16 bg-secondary" />
-            <p className="text-secondary uppercase tracking-[0.3em] text-[10px] font-medium">
-              The Moment
-            </p>
-          </div>
-          <h2 className="font-serif text-5xl md:text-6xl lg:text-7xl text-foreground mb-10 leading-[0.95] tracking-tight">
-            In a Dangerous <span className="text-secondary italic">World</span>
+        <div className="max-w-4xl mb-20">
+          <p className="text-secondary uppercase tracking-[0.2em] text-sm font-medium mb-4">
+            The Moment
+          </p>
+          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-8 leading-tight">
+            In a Dangerous World
           </h2>
-          <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed font-light max-w-3xl">
+          <p className="text-xl text-muted-foreground leading-relaxed">
             Why this moment requires crisis-tested leadership
           </p>
         </div>
 
-        {/* Hero Image - Cinematic */}
-        <div className="relative aspect-cinema mb-24 overflow-hidden film-grain vignette">
-          <div className="absolute inset-0 ken-burns">
-            <Image
-              src="/images/crisis-diplomacy.jpg"
-              alt="Crisis diplomacy in action"
-              fill
-              className="object-cover color-grade-warm"
-              sizes="100vw"
-            />
-          </div>
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/40" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-black/30" />
-          
-          {/* Letterbox */}
-          <div className="absolute top-0 left-0 right-0 h-[6%] bg-black" />
-          <div className="absolute bottom-0 left-0 right-0 h-[6%] bg-black" />
-          
-          <div className="absolute bottom-[10%] left-0 right-0 px-8 lg:px-16">
-            <div className="flex items-center gap-4 mb-4">
-              <span className="w-12 h-px bg-secondary" />
-              <span className="text-white/50 text-[10px] uppercase tracking-[0.3em]">On the Ground</span>
-            </div>
-            <p className="text-white/90 text-xl md:text-2xl max-w-2xl font-light leading-relaxed">
+        {/* Hero Image */}
+        <div className="relative aspect-[21/9] mb-20 overflow-hidden">
+          <Image
+            src="/images/crisis-diplomacy.jpg"
+            alt="Crisis diplomacy in action"
+            fill
+            className="object-cover"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 p-8 lg:p-12">
+            <p className="text-white/80 text-lg max-w-2xl">
               When crisis meets diplomacy, experience is not optional&mdash;it
               is essential.
             </p>
           </div>
-          
-          {/* Frame accents */}
-          <div className="absolute top-[10%] left-8 w-16 h-16 border-l-2 border-t-2 border-white/20" />
-          <div className="absolute top-[10%] right-8 w-16 h-16 border-r-2 border-t-2 border-white/20" />
         </div>
 
         {/* The Stakes */}
@@ -124,32 +103,32 @@ export function DangerousWorldSection() {
         </div>
 
         {/* Judgment Under Pressure */}
-        <div className="grid md:grid-cols-3 gap-1 mb-24">
-          <div className="group p-12 lg:p-14 bg-card border border-border hover:bg-foreground transition-all duration-500">
-            <p className="text-5xl md:text-6xl font-serif text-secondary mb-6">15+</p>
-            <p className="text-foreground group-hover:text-background font-medium mb-3 transition-colors duration-500">
+        <div className="grid md:grid-cols-3 gap-8 mb-20">
+          <div className="p-8 bg-card border border-border">
+            <p className="text-4xl font-serif text-secondary mb-4">15+</p>
+            <p className="text-foreground font-medium mb-2">
               Years of Crisis Diplomacy
             </p>
-            <p className="text-muted-foreground group-hover:text-background/60 text-sm transition-colors duration-500">
+            <p className="text-muted-foreground text-sm">
               From Argentina to Austria, from bilateral negotiations to
               multilateral leadership
             </p>
           </div>
-          <div className="group p-12 lg:p-14 bg-card border border-border hover:bg-foreground transition-all duration-500">
-            <p className="text-5xl md:text-6xl font-serif text-secondary mb-6">170+</p>
-            <p className="text-foreground group-hover:text-background font-medium mb-3 transition-colors duration-500">
+          <div className="p-8 bg-card border border-border">
+            <p className="text-4xl font-serif text-secondary mb-4">170+</p>
+            <p className="text-foreground font-medium mb-2">
               Member States Engaged
             </p>
-            <p className="text-muted-foreground group-hover:text-background/60 text-sm transition-colors duration-500">
+            <p className="text-muted-foreground text-sm">
               Deep relationships across every region of the world
             </p>
           </div>
-          <div className="group p-12 lg:p-14 bg-card border border-border hover:bg-foreground transition-all duration-500">
-            <p className="text-5xl md:text-6xl font-serif text-secondary mb-6">24/7</p>
-            <p className="text-foreground group-hover:text-background font-medium mb-3 transition-colors duration-500">
+          <div className="p-8 bg-card border border-border">
+            <p className="text-4xl font-serif text-secondary mb-4">24/7</p>
+            <p className="text-foreground font-medium mb-2">
               Real-Time Decision Making
             </p>
-            <p className="text-muted-foreground group-hover:text-background/60 text-sm transition-colors duration-500">
+            <p className="text-muted-foreground text-sm">
               Proven judgment when lives and global stability hang in the
               balance
             </p>
@@ -157,30 +136,19 @@ export function DangerousWorldSection() {
         </div>
 
         {/* Why This Fits */}
-        <div className="bg-foreground text-background p-16 lg:p-24 relative overflow-hidden film-grain">
-          <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)', backgroundSize: '32px 32px' }} />
-          
-          <div className="relative max-w-4xl">
-            <span className="inline-flex items-center gap-4 text-secondary text-[10px] uppercase tracking-[0.4em] font-medium mb-10">
-              <span className="w-8 h-px bg-secondary" />
-              The Fit
-            </span>
-            
-            <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl mb-10 leading-[1.1]">
-              Why This Experience <span className="text-secondary italic">Fits</span>
+        <div className="bg-foreground text-background p-12 lg:p-16">
+          <div className="max-w-4xl">
+            <h3 className="font-serif text-2xl md:text-3xl mb-6">
+              Why This Experience Fits the Office
             </h3>
-            
-            <p className="text-xl md:text-2xl leading-relaxed opacity-80 mb-12 font-light">
+            <p className="text-xl leading-relaxed opacity-90 mb-8">
               The Secretary-General is not a commentator. The role demands
               someone who can walk into a war zone, sit across from adversaries,
               maintain composure when stakes are existential, and return with
               something that moves the needle.
             </p>
-            
-            <blockquote className="relative pl-8 border-l-2 border-secondary">
-              <p className="text-2xl md:text-3xl font-serif italic leading-[1.3]">
-                &ldquo;I go where I am needed. I stay until it matters.&rdquo;
-              </p>
+            <blockquote className="border-l-4 border-secondary pl-6 text-2xl font-serif italic">
+              &ldquo;I go where I am needed. I stay until it matters.&rdquo;
             </blockquote>
           </div>
         </div>

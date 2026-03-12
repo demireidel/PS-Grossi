@@ -27,10 +27,10 @@ export function Navigation() {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-700",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
         scrolled
-          ? "bg-background/98 backdrop-blur-xl border-b border-border/50 shadow-sm"
-          : "bg-gradient-to-b from-black/30 to-transparent"
+          ? "bg-background/95 backdrop-blur-md border-b border-border shadow-sm"
+          : "bg-transparent"
       )}
     >
       <nav className="container mx-auto px-6 lg:px-12">
@@ -56,17 +56,16 @@ export function Navigation() {
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-10">
+          <div className="hidden lg:flex items-center gap-8">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "relative text-[11px] uppercase tracking-[0.15em] font-medium transition-all duration-300 py-2",
+                  "text-sm font-medium transition-colors duration-300 hover:opacity-100",
                   scrolled
-                    ? "text-foreground/60 hover:text-foreground"
-                    : "text-white/60 hover:text-white",
-                  "after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-secondary after:transition-all after:duration-300 hover:after:w-full"
+                    ? "text-foreground/70 hover:text-foreground"
+                    : "text-white/80 hover:text-white"
                 )}
               >
                 {item.label}
