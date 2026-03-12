@@ -14,9 +14,9 @@ export function HeroSection() {
   return (
     <section className="relative min-h-screen h-screen flex items-center justify-center overflow-hidden bg-black">
       {/* Background Image with cinematic treatment */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 w-full h-full overflow-hidden">
         {/* Animated zoom effect */}
-        <div className="absolute inset-0 ken-burns">
+        <div className="relative w-full h-full ken-burns">
           <Image
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Rafael_Mariano_Grossi_%2800110002%29_%2851192184415%29.jpg/1280px-Rafael_Mariano_Grossi_%2800110002%29_%2851192184415%29.jpg"
             alt="Rafael Grossi"

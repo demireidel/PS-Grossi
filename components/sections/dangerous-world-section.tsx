@@ -54,17 +54,15 @@ export function DangerousWorldSection() {
         </div>
 
         {/* Hero Image - Cinematic */}
-        <div className="relative aspect-cinema mb-24 overflow-hidden film-grain vignette">
-          <div className="absolute inset-0 ken-burns">
-            <Image
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/DG_Interview_%2801119848%29_%2850370421978%29.jpg/1280px-DG_Interview_%2801119848%29_%2850370421978%29.jpg"
-              alt="Crisis diplomacy in action"
-              fill
-              unoptimized
-              className="object-cover color-grade-warm"
-              sizes="100vw"
-            />
-          </div>
+        <div className="relative aspect-cinema mb-24 overflow-hidden">
+          <Image
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/DG_Interview_%2801119848%29_%2850370421978%29.jpg/1280px-DG_Interview_%2801119848%29_%2850370421978%29.jpg"
+            alt="Crisis diplomacy in action"
+            fill
+            unoptimized
+            className="object-cover"
+            sizes="100vw"
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/40" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-black/30" />
           
