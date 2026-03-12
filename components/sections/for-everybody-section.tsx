@@ -105,10 +105,9 @@ export function ForEverybodySection() {
           <div className="relative aspect-wide overflow-hidden film-grain vignette">
             <div className="absolute inset-0 ken-burns">
               <Image
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/DG%27s_Reception_2020_%2801313756%29_%2849467835397%29.jpg/1280px-DG%27s_Reception_2020_%2801313756%29_%2849467835397%29.jpg"
+                src="/images/humanitarian-delivery.jpg"
                 alt="Humanitarian engagement"
                 fill
-                unoptimized
                 className="object-cover color-grade-warm"
                 sizes="100vw"
               />

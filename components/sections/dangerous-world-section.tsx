@@ -56,10 +56,9 @@ export function DangerousWorldSection() {
         {/* Hero Image - Cinematic */}
         <div className="relative aspect-cinema mb-24 overflow-hidden">
           <Image
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/DG_Interview_%2801119848%29_%2850370421978%29.jpg/1280px-DG_Interview_%2801119848%29_%2850370421978%29.jpg"
+            src="/images/crisis-diplomacy.jpg"
             alt="Crisis diplomacy in action"
             fill
-            unoptimized
             className="object-cover"
             sizes="100vw"
           />

@@ -105,10 +105,9 @@ export function TransparencySection() {
           <div className="relative aspect-cinema overflow-hidden film-grain vignette">
             <div className="absolute inset-0 ken-burns">
               <Image
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/DG%27s_Press_conference_on_Iran_%2803411554%29_%2851198930802%29.jpg/1280px-DG%27s_Press_conference_on_Iran_%2803411554%29_%2851198930802%29.jpg"
+                src="/images/transparency-governance.jpg"
                 alt="Press conference and transparent governance"
                 fill
-                unoptimized
                 className="object-cover color-grade-cool"
                 sizes="100vw"
               />
