@@ -56,7 +56,7 @@ export function HeroSection() {
               loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-full"
             }`}
           >
-            <span className="block">Rafael Mariano</span>
+            <span className="block">Rafael</span>
             <span className="block text-secondary italic">Grossi</span>
           </h1>
         </div>
