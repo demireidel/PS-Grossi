@@ -77,25 +77,6 @@ export function HeroSection() {
           Crisis-tested leadership for a world that cannot afford to wait.
         </p>
 
-        <div
-          className={`flex flex-col sm:flex-row gap-5 justify-center transition-all duration-1000 delay-900 ${
-            loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
-        >
-          <a
-            href="#vision"
-            className="group relative inline-flex items-center justify-center px-10 py-5 bg-secondary text-secondary-foreground font-medium text-[11px] uppercase tracking-[0.2em] overflow-hidden transition-all duration-500 hover:shadow-lg hover:shadow-secondary/20"
-          >
-            <span className="relative z-10">Explore the Vision</span>
-            <div className="absolute inset-0 bg-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-          </a>
-          <a
-            href="#dangerous-world"
-            className="inline-flex items-center justify-center px-10 py-5 border border-white/20 text-white font-medium text-[11px] uppercase tracking-[0.2em] hover:bg-white/5 hover:border-white/40 transition-all duration-300"
-          >
-            Why Now
-          </a>
-        </div>
       </div>
 
       {/* Scroll Indicator - refined */}
