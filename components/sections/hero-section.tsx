@@ -14,22 +14,18 @@ export function HeroSection() {
   return (
     <section className="relative min-h-screen h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with cinematic treatment */}
-      <div className="absolute inset-0 film-grain">
-        <div className="relative w-full h-full ken-burns">
-          <Image
-            src="/images/grossi-hero.jpg"
-            alt="Rafael Grossi"
-            fill
-            priority
-            className="object-cover object-center color-grade-warm"
-            sizes="100vw"
-          />
-        </div>
+      <div className="absolute inset-0">
+        <Image
+          src="/images/grossi-hero.jpg"
+          alt="Rafael Grossi"
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="100vw"
+        />
         {/* Sophisticated gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/75" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/30" />
-        {/* Vignette effect */}
-        <div className="absolute inset-0 vignette" />
       </div>
 
       {/* Letterbox bars for cinematic feel */}
