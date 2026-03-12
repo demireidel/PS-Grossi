@@ -45,6 +45,9 @@ export function HeroSection() {
             loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
+          <p className="text-secondary uppercase tracking-[0.3em] text-sm md:text-base mb-3 font-medium">
+            Rafael Mariano Grossi
+          </p>
           <p className="text-white/50 uppercase tracking-[0.4em] text-[11px] mb-8 font-light">
             For United Nations Secretary-General
           </p>
