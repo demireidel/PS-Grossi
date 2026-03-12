@@ -12,10 +12,10 @@ export function HeroSection() {
   }, [])
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with cinematic treatment */}
-      <div className="absolute inset-0 film-grain">
-        <div className="absolute inset-0 ken-burns">
+      <div className="absolute inset-0 w-full h-full film-grain">
+        <div className="absolute inset-0 w-full h-full ken-burns">
           <Image
             src="/images/grossi-hero.jpg"
             alt="Rafael Grossi"
