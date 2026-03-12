@@ -45,24 +45,29 @@ export function HeroSection() {
             loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <p className="text-secondary uppercase tracking-[0.15em] text-3xl md:text-4xl lg:text-5xl mb-4 font-semibold">
-            Rafael Mariano Grossi
-          </p>
-          <p className="text-white/50 uppercase tracking-[0.4em] text-[11px] mb-8 font-light">
+          <p className="text-white/50 uppercase tracking-[0.4em] text-[11px] mb-6 font-light">
             For United Nations Secretary-General
           </p>
         </div>
 
         <div className="overflow-hidden">
           <h1
-            className={`font-serif text-5xl md:text-7xl lg:text-[7rem] text-white font-normal leading-[0.95] mb-10 tracking-tight transition-all duration-1000 delay-500 ${
+            className={`font-serif text-5xl md:text-7xl lg:text-[8rem] xl:text-[9rem] text-white font-normal leading-[0.9] mb-6 tracking-tight transition-all duration-1000 delay-500 ${
               loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-full"
             }`}
           >
-            <span className="block">A UN That</span>
-            <span className="block text-secondary italic">Works</span>
+            <span className="block">Rafael Mariano</span>
+            <span className="block text-secondary italic">Grossi</span>
           </h1>
         </div>
+
+        <p
+          className={`font-serif text-2xl md:text-3xl lg:text-4xl text-white/90 mb-10 tracking-wide transition-all duration-1000 delay-600 ${
+            loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
+          A UN That Works
+        </p>
 
         <p
           className={`text-lg md:text-xl lg:text-2xl text-white/70 max-w-2xl mx-auto mb-14 font-light leading-relaxed tracking-wide text-pretty transition-all duration-1000 delay-700 ${
