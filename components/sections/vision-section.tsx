@@ -32,17 +32,27 @@ const principles = [
 
 export function VisionSection() {
   return (
-    <section id="vision" className="py-24 lg:py-32 bg-background">
-      <div className="container mx-auto px-6 lg:px-12">
+    <section id="vision" className="py-32 lg:py-48 bg-background relative overflow-hidden">
+      {/* Subtle background pattern */}
+      <div className="absolute inset-0 opacity-[0.015]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)', backgroundSize: '48px 48px' }} />
+      
+      <div className="container mx-auto px-6 lg:px-20 relative">
         {/* Section Header */}
-        <div className="max-w-4xl mb-20">
-          <p className="text-secondary uppercase tracking-[0.2em] text-sm font-medium mb-4">
-            The Vision
-          </p>
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-8 leading-tight">
-            A UN That Works
+        <div className="max-w-5xl mb-24">
+          <div className="flex items-center gap-6 mb-8">
+            <span className="h-px w-16 bg-secondary" />
+            <p className="text-secondary uppercase tracking-[0.3em] text-[10px] font-medium">
+              Section 01
+            </p>
+            <span className="text-secondary/30">/</span>
+            <p className="text-muted-foreground uppercase tracking-[0.2em] text-[10px]">
+              The Vision
+            </p>
+          </div>
+          <h2 className="font-serif text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-foreground mb-10 leading-[0.95] tracking-tight">
+            A UN That <span className="text-secondary italic">Works</span>
           </h2>
-          <p className="text-xl text-muted-foreground leading-relaxed">
+          <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed font-light max-w-3xl">
             Rafael Grossi&apos;s vision for a more operational, credible, and
             effective United Nations
           </p>
@@ -90,17 +100,20 @@ export function VisionSection() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {principles.map((principle) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-1">
+            {principles.map((principle, index) => (
               <div
                 key={principle.title}
-                className="group p-8 bg-card border border-border hover:border-secondary/50 transition-colors"
+                className="group p-10 lg:p-12 bg-card border border-border hover:bg-foreground transition-all duration-500"
               >
-                <principle.icon className="w-10 h-10 text-secondary mb-6" />
-                <h4 className="font-serif text-xl text-foreground mb-3">
+                <div className="flex items-start justify-between mb-8">
+                  <principle.icon className="w-8 h-8 text-secondary group-hover:text-secondary transition-colors duration-500" />
+                  <span className="text-4xl font-serif text-foreground/5 group-hover:text-background/10 transition-colors duration-500">0{index + 1}</span>
+                </div>
+                <h4 className="font-serif text-xl text-foreground group-hover:text-background mb-4 transition-colors duration-500">
                   {principle.title}
                 </h4>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground group-hover:text-background/70 leading-relaxed text-sm transition-colors duration-500">
                   {principle.description}
                 </p>
               </div>
@@ -109,20 +122,31 @@ export function VisionSection() {
         </div>
 
         {/* Why This Election Matters */}
-        <div className="bg-primary text-primary-foreground p-12 lg:p-16">
-          <div className="max-w-4xl">
-            <h3 className="font-serif text-2xl md:text-3xl mb-6">
-              Why This Election Matters
+        <div className="bg-primary text-primary-foreground p-16 lg:p-24 relative overflow-hidden film-grain">
+          <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)', backgroundSize: '32px 32px' }} />
+          
+          <div className="relative max-w-4xl">
+            <span className="inline-flex items-center gap-4 text-secondary text-[10px] uppercase tracking-[0.4em] font-medium mb-10">
+              <span className="w-8 h-px bg-secondary" />
+              The Stakes
+            </span>
+            
+            <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl mb-10 leading-[1.1]">
+              Why This Election <span className="text-secondary italic">Matters</span>
             </h3>
-            <p className="text-xl leading-relaxed opacity-90 mb-8">
+            
+            <p className="text-xl md:text-2xl leading-relaxed opacity-80 mb-12 font-light">
               The issue is not symbolism. The issue is whether the next
               Secretary-General can make the institution more useful&mdash;to
               member states navigating impossible pressures, and to people whose
               lives depend on what the UN does next.
             </p>
-            <blockquote className="border-l-4 border-secondary pl-6 text-2xl font-serif italic">
-              &ldquo;The world does not need a caretaker. It needs a leader who
-              has walked through fire.&rdquo;
+            
+            <blockquote className="relative pl-8 border-l-2 border-secondary">
+              <p className="text-2xl md:text-3xl font-serif italic leading-[1.3]">
+                &ldquo;The world does not need a caretaker. It needs a leader who
+                has walked through fire.&rdquo;
+              </p>
             </blockquote>
           </div>
         </div>
