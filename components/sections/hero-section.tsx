@@ -19,9 +19,10 @@ export function HeroSection() {
         <div className="relative w-full h-full ken-burns">
           <Image
             src="/images/grossi-hero.jpg"
-            alt="Rafael Grossi"
+            alt="Rafael Grossi, IAEA Director General and candidate for UN Secretary-General"
             fill
             priority
+            quality={90}
             className="object-cover object-left"
             sizes="100vw"
           />

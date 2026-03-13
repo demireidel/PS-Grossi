@@ -57,8 +57,9 @@ export function DangerousWorldSection() {
         <div className="relative aspect-cinema mb-24 overflow-hidden">
           <Image
             src="/images/grossi-zaporizhzhia.jpg"
-            alt="Rafael Grossi inspecting Zaporizhzhia nuclear plant"
+            alt="Rafael Grossi leading the IAEA inspection mission at Zaporizhzhia nuclear power plant during active conflict"
             fill
+            quality={85}
             className="object-cover"
             sizes="100vw"
           />
@@ -83,6 +84,40 @@ export function DangerousWorldSection() {
           {/* Frame accents */}
           <div className="absolute top-[10%] left-8 w-16 h-16 border-l-2 border-t-2 border-white/20" />
           <div className="absolute top-[10%] right-8 w-16 h-16 border-r-2 border-t-2 border-white/20" />
+        </div>
+
+        {/* Secondary Image - Crisis Diplomacy */}
+        <div className="grid lg:grid-cols-2 gap-2 mb-24">
+          <div className="relative aspect-[4/3] overflow-hidden group">
+            <Image
+              src="/images/crisis-diplomacy.jpg"
+              alt="Rafael Grossi engaged in crisis diplomacy, navigating high-stakes nuclear negotiations in conflict zones"
+              fill
+              quality={85}
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+            <div className="absolute bottom-6 left-6 right-6">
+              <p className="text-[10px] uppercase tracking-[0.3em] text-white/50 mb-1">Crisis Response</p>
+              <p className="text-sm text-white/90 font-medium">Frontline Diplomacy in Action</p>
+            </div>
+          </div>
+          <div className="relative aspect-[4/3] overflow-hidden group">
+            <Image
+              src="/images/grossi-tehran.jpg"
+              alt="Rafael Grossi conducting nuclear verification negotiations in Tehran, maintaining dialogue amid geopolitical tensions"
+              fill
+              quality={85}
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+            <div className="absolute bottom-6 left-6 right-6">
+              <p className="text-[10px] uppercase tracking-[0.3em] text-white/50 mb-1">Iran</p>
+              <p className="text-sm text-white/90 font-medium">Nuclear Negotiations, Tehran</p>
+            </div>
+          </div>
         </div>
 
         {/* The Stakes */}

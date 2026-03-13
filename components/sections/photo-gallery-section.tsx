@@ -6,49 +6,73 @@ import Image from "next/image"
 const photos = [
   {
     src: "/images/grossi-hero.jpg",
-    alt: "Rafael Grossi at IAEA headquarters",
+    alt: "Rafael Grossi at IAEA headquarters in Vienna, leading global nuclear diplomacy",
     caption: "At IAEA Headquarters, Vienna",
     size: "large" as const,
   },
   {
+    src: "/images/crisis-diplomacy.jpg",
+    alt: "Rafael Grossi engaged in crisis diplomacy during high-stakes nuclear negotiations",
+    caption: "Crisis Diplomacy in Action",
+    size: "medium" as const,
+  },
+  {
     src: "/images/grossi-zaporizhzhia.jpg",
-    alt: "Inspecting Zaporizhzhia Nuclear Power Plant",
+    alt: "Rafael Grossi leading the IAEA inspection at Zaporizhzhia nuclear plant under active conflict",
     caption: "Zaporizhzhia NPP Inspection, 2022",
     size: "medium" as const,
   },
   {
     src: "/images/grossi-un-address.jpg",
-    alt: "Addressing the United Nations",
+    alt: "Rafael Grossi addressing the United Nations General Assembly on nuclear security",
     caption: "UN General Assembly Address",
     size: "medium" as const,
   },
   {
     src: "/images/grossi-tehran.jpg",
-    alt: "Diplomatic meeting in Tehran",
+    alt: "Rafael Grossi conducting nuclear verification negotiations in Tehran",
     caption: "Nuclear Negotiations, Tehran",
     size: "small" as const,
   },
   {
     src: "/images/grossi-rays-of-hope.jpg",
-    alt: "Visiting cancer treatment facility",
+    alt: "Rafael Grossi visiting a Rays of Hope cancer treatment facility in Africa",
     caption: "Rays of Hope Initiative, Africa",
     size: "small" as const,
   },
   {
     src: "/images/grossi-iaea-board.jpg",
-    alt: "Presiding over IAEA Board of Governors",
+    alt: "Rafael Grossi presiding over the IAEA Board of Governors session",
     caption: "IAEA Board of Governors",
     size: "small" as const,
   },
   {
+    src: "/images/humanitarian-delivery.jpg",
+    alt: "Rafael Grossi overseeing humanitarian delivery programs bringing nuclear technology to communities in need",
+    caption: "Humanitarian Delivery Programs",
+    size: "large" as const,
+  },
+  {
     src: "/images/grossi-security-council.jpg",
-    alt: "Briefing the UN Security Council",
+    alt: "Rafael Grossi briefing the UN Security Council on international nuclear security",
     caption: "UN Security Council Briefing",
     size: "medium" as const,
   },
   {
+    src: "/images/transparency-governance.jpg",
+    alt: "Rafael Grossi leading governance and transparency initiatives at the IAEA",
+    caption: "Institutional Governance",
+    size: "medium" as const,
+  },
+  {
+    src: "/images/with-putin.jpg",
+    alt: "Rafael Grossi in diplomatic meeting with Russian President Putin on nuclear security",
+    caption: "Diplomacy Across Divides",
+    size: "medium" as const,
+  },
+  {
     src: "/images/grossi-portrait-formal.jpg",
-    alt: "Rafael Grossi formal portrait",
+    alt: "Official portrait of Rafael Grossi, IAEA Director General",
     caption: "Official Portrait, 2025",
     size: "medium" as const,
   },
@@ -108,8 +132,9 @@ export function PhotoGallerySection() {
                   src={photo.src}
                   alt={photo.alt}
                   fill
+                  quality={80}
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  sizes="(max-width: 768px) 50vw, (max-width: 1024px) 25vw, 16vw"
+                  sizes={photo.size === 'large' ? '(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 50vw' : photo.size === 'medium' ? '(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw' : '(max-width: 768px) 50vw, (max-width: 1024px) 25vw, 16vw'}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500">

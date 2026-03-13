@@ -121,6 +121,34 @@ export function GlobalSouthSection() {
           ))}
         </div>
 
+        {/* UN Headquarters Image */}
+        <div className={`relative aspect-cinema overflow-hidden mb-20 group transition-all duration-1000 ${contentInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+          <Image
+            src="/images/un-headquarters.jpg"
+            alt="United Nations headquarters building, representing the institution Rafael Grossi seeks to lead and reform"
+            fill
+            quality={85}
+            className="object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-black/30" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/40" />
+
+          {/* Letterbox */}
+          <div className="absolute top-0 left-0 right-0 h-[6%] bg-black" />
+          <div className="absolute bottom-0 left-0 right-0 h-[6%] bg-black" />
+
+          <div className="absolute bottom-[10%] left-0 right-0 px-8 lg:px-16">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="w-12 h-px bg-secondary" />
+              <span className="text-white/50 text-[10px] uppercase tracking-[0.3em]">The Institution</span>
+            </div>
+            <p className="text-white/90 text-xl md:text-2xl max-w-2xl font-light leading-relaxed">
+              A voice from the Global South for the world&apos;s most important institution.
+            </p>
+          </div>
+        </div>
+
         {/* Argentina Context */}
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className={`transition-all duration-1000 ${contentInView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}>
@@ -140,10 +168,11 @@ export function GlobalSouthSection() {
           <div className={`relative aspect-[4/3] overflow-hidden transition-all duration-1000 delay-300 ${contentInView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
             <Image
               src="/images/grossi-portrait-formal.jpg"
-              alt="Rafael Grossi formal portrait"
+              alt="Official portrait of Rafael Grossi, IAEA Director General and first Latin American to lead the agency"
               fill
+              quality={85}
               className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 100vw, 50vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
           </div>
