@@ -110,10 +110,11 @@ export function WithEverybodySection() {
               <div className="relative aspect-[4/3] overflow-hidden group">
                 <Image
                   src="/images/global-engagement.jpg"
-                  alt="Rafael Grossi meeting with President Zelensky"
+                  alt="Rafael Grossi in diplomatic meeting with Ukrainian President Volodymyr Zelensky discussing nuclear safety"
                   fill
+                  quality={85}
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 100vw, 40vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6">
@@ -126,10 +127,11 @@ export function WithEverybodySection() {
               <div className="relative aspect-[4/3] overflow-hidden group">
                 <Image
                   src="/images/with-putin.jpg"
-                  alt="Rafael Grossi meeting with President Putin"
+                  alt="Rafael Grossi in diplomatic meeting with Russian President Vladimir Putin discussing nuclear security"
                   fill
+                  quality={85}
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 100vw, 40vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6">

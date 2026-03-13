@@ -106,8 +106,9 @@ export function TransparencySection() {
             <div className="absolute inset-0 ken-burns">
               <Image
                 src="/images/grossi-iaea-board.jpg"
-                alt="Rafael Grossi presiding over IAEA Board of Governors"
+                alt="Rafael Grossi presiding over the IAEA Board of Governors, demonstrating institutional leadership and governance"
                 fill
+                quality={85}
                 className="object-cover color-grade-cool"
                 sizes="100vw"
               />
@@ -155,6 +156,40 @@ export function TransparencySection() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* Governance in Practice Image */}
+        <div className="grid lg:grid-cols-2 gap-2 mb-40">
+          <div className="relative aspect-[4/3] overflow-hidden group">
+            <Image
+              src="/images/transparency-governance.jpg"
+              alt="Rafael Grossi leading governance discussions at IAEA, demonstrating institutional transparency and accountability in practice"
+              fill
+              quality={85}
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+            <div className="absolute bottom-6 left-6 right-6">
+              <p className="text-[10px] uppercase tracking-[0.3em] text-white/50 mb-1">Governance</p>
+              <p className="text-sm text-white/90 font-medium">Leading by Example at the IAEA</p>
+            </div>
+          </div>
+          <div className="relative aspect-[4/3] overflow-hidden group">
+            <Image
+              src="/images/grossi-security-council.jpg"
+              alt="Rafael Grossi briefing the United Nations Security Council on nuclear safety and international security matters"
+              fill
+              quality={85}
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+            <div className="absolute bottom-6 left-6 right-6">
+              <p className="text-[10px] uppercase tracking-[0.3em] text-white/50 mb-1">Security Council</p>
+              <p className="text-sm text-white/90 font-medium">Briefing the World&apos;s Decision-Makers</p>
+            </div>
           </div>
         </div>
 

@@ -95,10 +95,11 @@ export function VisionSection() {
           <div className="relative aspect-[4/3] overflow-hidden">
             <Image
               src="/images/grossi-un-address.jpg"
-              alt="Rafael Grossi addressing the United Nations"
+              alt="Rafael Grossi delivering an address to the United Nations General Assembly on nuclear security and multilateral cooperation"
               fill
+              quality={85}
               className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 100vw, 50vw"
             />
           </div>
         </div>
