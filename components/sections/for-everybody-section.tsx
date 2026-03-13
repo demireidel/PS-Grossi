@@ -7,35 +7,35 @@ import { Heart, Users2, Leaf, Stethoscope } from "lucide-react"
 const deliveryAreas = [
   {
     icon: Stethoscope,
-    title: "Cancer Care Initiative",
+    title: "Rays of Hope: Cancer Care",
     description:
-      "Rays of Hope: bringing cancer diagnosis and treatment to over 40 countries with no access to radiation therapy.",
+      "A flagship initiative bringing cancer diagnosis and treatment to over 40 countries with little or no access to radiation therapy. Not a program on paper—actual equipment deployed, actual oncologists trained, actual patients treated. This is what delivery looks like.",
     stat: "40+",
     statLabel: "Countries Reached",
   },
   {
     icon: Heart,
-    title: "Food Security",
+    title: "Food Security & Agriculture",
     description:
-      "Technical cooperation on nuclear applications for agriculture, helping nations feed their populations sustainably.",
-    stat: "160",
-    statLabel: "Projects Active",
+      "Technical cooperation on nuclear applications for agriculture, helping nations feed their populations sustainably. From soil fertility to pest control to food preservation—practical technologies that improve lives at scale across developing nations.",
+    stat: "160+",
+    statLabel: "Active Projects",
   },
   {
     icon: Leaf,
-    title: "Climate & Environment",
+    title: "Clean Energy Transition",
     description:
-      "Clean energy support and environmental monitoring, helping countries navigate the energy transition.",
-    stat: "30%",
-    statLabel: "Emissions Focus",
+      "Supporting countries navigating the energy transition with nuclear power expertise, environmental monitoring, and climate science. Helping nations reduce emissions while meeting growing energy demand—the defining challenge of our era.",
+    stat: "70+",
+    statLabel: "Nations Supported",
   },
   {
     icon: Users2,
-    title: "Gender Equality",
+    title: "Gender Parity Achievement",
     description:
-      "Achieved gender parity in senior positions. Launched the Marie Sklodowska-Curie Fellowship Programme.",
+      "Achieved what most international organizations only promise: true gender parity at senior levels. Launched the Marie Sklodowska-Curie Fellowship Programme bringing women scientists from developing countries into nuclear fields worldwide.",
     stat: "50%",
-    statLabel: "Senior Leadership",
+    statLabel: "Women in Leadership",
   },
 ]
 
@@ -191,12 +191,22 @@ export function ForEverybodySection() {
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
               Talk is easy. Results are hard. Under Grossi&apos;s leadership,
               the IAEA achieved something most international organizations only
-              promise: true gender parity at senior levels.
+              promise: true gender parity at senior levels. Not through quotas
+              alone, but through systematic attention to recruitment, promotion,
+              and institutional culture.
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-10">
+            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
               The Marie Sklodowska-Curie Fellowship Programme now brings women
               scientists from developing countries into nuclear fields
-              worldwide, building capacity that will last generations.
+              worldwide, building capacity that will last generations. These are
+              not symbolic gestures—they are structural changes that reshape
+              who has access to scientific careers.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-10">
+              Gender equality is a test of whether a leader can actually change
+              an institution, not just lead it. Grossi passed that test. The
+              same commitment to inclusion, merit, and structural reform would
+              define his approach to the UN Secretariat.
             </p>
             
             <ul className="space-y-5">
@@ -247,7 +257,7 @@ export function ForEverybodySection() {
                 <span className="block text-secondary">to Member States</span>
               </h3>
               
-              <p className="text-xl md:text-2xl leading-relaxed opacity-80 mb-10 max-w-3xl font-light">
+              <p className="text-xl md:text-2xl leading-relaxed opacity-80 mb-8 max-w-3xl font-light">
                 Better outcomes for people also mean stronger, more useful
                 multilateralism for states. When the UN delivers tangible
                 results—in health, in food security, in climate
@@ -255,10 +265,20 @@ export function ForEverybodySection() {
                 questions.
               </p>
               
+              <p className="text-lg leading-relaxed opacity-70 mb-8 max-w-3xl">
+                Member states invest in the UN because they expect a return:
+                problems solved, crises managed, collective goods provided. A
+                Secretary-General who understands operational delivery—not
+                just diplomatic representation—can make that investment pay.
+              </p>
+              
               <p className="text-lg leading-relaxed opacity-60 max-w-3xl">
-                Grossi is not a narrow technical candidate. His record proves that
-                diplomatic skill and humanitarian impact are not
-                opposites—they are mutually reinforcing.
+                Grossi is not a narrow technical candidate. His record proves
+                that diplomatic skill and humanitarian impact are not
+                opposites—they are mutually reinforcing. The same leader who
+                negotiates with heads of state also makes sure cancer patients
+                in Africa get treated. That combination is rare. It is what the
+                role requires.
               </p>
             </div>
           </div>
