@@ -6,21 +6,21 @@ import { Shield, AlertTriangle, Compass } from "lucide-react"
 const experiences = [
   {
     icon: Shield,
-    title: "Nuclear Safeguards in Active Conflict",
+    title: "Zaporizhzhia: Into the Fire",
     description:
-      "Led IAEA missions to Zaporizhzhia—Europe's largest nuclear power plant—under active military conflict. Established permanent on-site monitoring while shells fell nearby. Negotiated access with both Russian and Ukrainian authorities simultaneously, maintaining presence through the most dangerous period of the war.",
+      "In 2022, Grossi personally led the first IAEA mission to Zaporizhzhia—Europe's largest nuclear plant—crossing the front line under active fire. His convoy was attacked in the gray zone. He established permanent monitoring while shells fell nearby, negotiating access with both Moscow and Kyiv. 'I have to maintain this operation,' he says. 'It is very important for peace and security in the world.'",
   },
   {
     icon: AlertTriangle,
-    title: "Iran Nuclear Negotiations",
+    title: "Iran: Doors Others Closed",
     description:
-      "Maintained continuous dialogue with Tehran during years of maximum tension, when other channels had collapsed. Upholding verification standards while keeping Iran engaged—proving that impartiality and rigor can coexist. Achieved access to sensitive sites that had been blocked for years.",
+      "When the JCPOA collapsed and tensions peaked, Grossi kept verification channels open. He traveled to Tehran repeatedly, meeting Iran's highest leadership while upholding inspection standards. After the 2025 Israeli strikes, he negotiated renewed access to facilities. Iran still holds 400kg of 60%-enriched uranium—almost military grade. 'Inspectors must restart work,' Grossi insists.",
   },
   {
     icon: Compass,
-    title: "Global Crisis Response Architecture",
+    title: "Chernobyl: The Sarcophagus Crisis",
     description:
-      "Built and coordinated international technical response mechanisms spanning five continents. From North Korea's nuclear program to Middle East proliferation concerns to Latin American nuclear security—demonstrated capacity to manage multiple complex dossiers simultaneously without losing focus or credibility.",
+      "In early 2025, a drone attack compromised Chernobyl's protective sarcophagus, threatening to release radioactive contamination. Grossi's team assessed the damage over months. 'The sarcophagus's insulation capacity is compromised,' he reported. 'The repair must be extended to ensure protection.' Even 40 years later, nuclear dangers require constant vigilance.",
   },
 ]
 
@@ -56,8 +56,8 @@ export function DangerousWorldSection() {
         {/* Hero Image - Cinematic */}
         <div className="relative aspect-cinema mb-24 overflow-hidden">
           <Image
-            src="/images/crisis-diplomacy.jpg"
-            alt="Crisis diplomacy in action"
+            src="/images/grossi-zaporizhzhia.jpg"
+            alt="Rafael Grossi inspecting Zaporizhzhia nuclear plant"
             fill
             className="object-cover"
             sizes="100vw"
@@ -89,34 +89,35 @@ export function DangerousWorldSection() {
         <div className="grid lg:grid-cols-2 gap-16 items-start mb-24">
           <div>
             <h3 className="font-serif text-2xl md:text-3xl text-foreground mb-6">
-              The Stakes Have Never Been Higher
+              &ldquo;A Fragmented and Volatile World&rdquo;
             </h3>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              This is a moment of active conflict, nuclear escalation risk, and
-              unprecedented institutional strain. Wars rage on multiple
-              continents. The international order faces challenges it was not
-              designed to handle. Nuclear rhetoric has returned to the discourse
-              of major powers for the first time in decades.
+              Grossi&apos;s assessment is unflinching: &ldquo;There is a revival
+              of nuclear deterrence. Nuclear-weapon states are maintaining and
+              even modernizing their arsenals. Strong proliferation pressures
+              are emerging in countries considering acquiring nuclear
+              capabilities as a deterrent.&rdquo;
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              The conflict in Ukraine has placed nuclear facilities at the center
-              of military operations—an unprecedented situation that required
-              immediate, skilled diplomatic intervention. The Middle East remains
-              volatile, with proliferation concerns that demand continuous
-              engagement. Regional conflicts in Africa and Asia test the UN's
-              capacity to respond at scale.
+              On Putin&apos;s nuclear threats: &ldquo;I haven&apos;t registered
+              any threats of a nuclear attack. What has happened is statements
+              warning that, in the event of an existential threat, nuclear
+              weapons are available. This is actually the doctrine of nuclear
+              weapons use for almost all countries.&rdquo;
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Climate emergencies are accelerating, creating new patterns of
-              displacement, conflict, and humanitarian need. Pandemic preparedness
-              remains inadequate. Food systems are under stress. The demand for
-              effective multilateral action has never been greater.
+              On Zaporizhzhia: &ldquo;It remains extremely fragile, very
+              dangerous. We must not forget that it is a nuclear plant located
+              in a combat zone. On the front line. In territory that Russia has
+              fully occupied.&rdquo; The plant was Europe&apos;s largest—now
+              relying on portable diesel generators.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              The next Secretary-General cannot learn on the job. They must
-              arrive ready to engage in danger, not merely comment on it from a
-              distance. Experience in crisis management is not a luxury—it is a
-              prerequisite for the demands of the role.
+              Grossi has received death threats for his work. &ldquo;The death
+              threats have been traumatic,&rdquo; he admits. &ldquo;I continue
+              with personal security because experts consider the threats
+              credible. But in moments of tension like this, one must not give
+              in—much less to threats.&rdquo;
             </p>
           </div>
 
@@ -141,39 +142,39 @@ export function DangerousWorldSection() {
           </div>
         </div>
 
-        {/* Judgment Under Pressure */}
+        {/* Grossi's Career */}
         <div className="grid md:grid-cols-3 gap-1 mb-24">
           <div className="group p-12 lg:p-14 bg-card border border-border hover:bg-foreground transition-all duration-500">
-            <p className="text-5xl md:text-6xl font-serif text-secondary mb-6">35+</p>
+            <p className="text-5xl md:text-6xl font-serif text-secondary mb-6">40</p>
             <p className="text-foreground group-hover:text-background font-medium mb-3 transition-colors duration-500">
-              Years of Diplomatic Service
+              Years in Diplomacy
             </p>
             <p className="text-muted-foreground group-hover:text-background/60 text-sm transition-colors duration-500">
-              From Argentina to Austria, from bilateral negotiations to leading
-              the IAEA through its most challenging period. A career built on
-              navigating complexity and delivering results.
+              Joined Argentina&apos;s Foreign Ministry in 1985. Ambassador to
+              Austria. Chief of Cabinet at OPCW. First Latin American to lead
+              the IAEA. PhD in International Relations from Geneva.
             </p>
           </div>
           <div className="group p-12 lg:p-14 bg-card border border-border hover:bg-foreground transition-all duration-500">
-            <p className="text-5xl md:text-6xl font-serif text-secondary mb-6">178</p>
+            <p className="text-5xl md:text-6xl font-serif text-secondary mb-6">2019</p>
             <p className="text-foreground group-hover:text-background font-medium mb-3 transition-colors duration-500">
-              Member States Engaged
+              IAEA Director General
             </p>
             <p className="text-muted-foreground group-hover:text-background/60 text-sm transition-colors duration-500">
-              Deep relationships across every region of the world. Trusted
-              interlocutor from Washington to Moscow, Beijing to Brussels,
-              Tehran to Riyadh. No region left behind.
+              Elected December 2019. Led the agency through COVID, the Ukraine
+              war, Iran tensions, and the return of nuclear deterrence rhetoric.
+              Re-elected for a second term.
             </p>
           </div>
           <div className="group p-12 lg:p-14 bg-card border border-border hover:bg-foreground transition-all duration-500">
-            <p className="text-5xl md:text-6xl font-serif text-secondary mb-6">50+</p>
+            <p className="text-5xl md:text-6xl font-serif text-secondary mb-6">1st</p>
             <p className="text-foreground group-hover:text-background font-medium mb-3 transition-colors duration-500">
-              High-Stakes Missions
+              Latin American IAEA Chief
             </p>
             <p className="text-muted-foreground group-hover:text-background/60 text-sm transition-colors duration-500">
-              Personal leadership in crisis zones. From Zaporizhzhia under fire
-              to Tehran under sanctions. Judgment tested when lives and global
-              stability hang in the balance.
+              First from the region since the agency&apos;s founding in 1957.
+              Also first to serve two consecutive terms as president of the
+              Nuclear Suppliers Group.
             </p>
           </div>
         </div>
@@ -189,35 +190,37 @@ export function DangerousWorldSection() {
             </span>
             
             <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl mb-10 leading-[1.1]">
-              Why This Experience <span className="text-secondary italic">Fits</span>
+              The Grossi <span className="text-secondary italic">Doctrine</span>
             </h3>
             
             <p className="text-xl md:text-2xl leading-relaxed opacity-80 mb-8 font-light">
-              The Secretary-General is not a commentator. The role demands
-              someone who can walk into a war zone, sit across from adversaries,
-              maintain composure when stakes are existential, and return with
-              something that moves the needle.
+              &ldquo;Whoever holds the position must speak with those who
+              initiated the attacks. That&apos;s the first thing I did: speak
+              with Putin, and many people criticized me for it. But who else am
+              I going to talk to?&rdquo;
             </p>
             
             <p className="text-lg leading-relaxed opacity-70 mb-8">
-              Grossi has done exactly this—repeatedly. When Zaporizhzhia was
-              under bombardment, he went personally. When Iran closed doors to
-              inspectors, he found a way back in. When the international
-              community needed credible reporting on nuclear programs, he
-              delivered it without compromising access.
+              This is the Grossi doctrine: go where the crisis is, talk to
+              whoever is relevant, maintain impartiality without indifference,
+              and return with something concrete. When Zaporizhzhia was under
+              bombardment, he went personally. When Iran closed doors, he found
+              a way back in.
             </p>
             
             <p className="text-lg leading-relaxed opacity-70 mb-12">
-              This is not theoretical preparation for crisis. This is a track
-              record of performance under conditions that test every aspect of
-              diplomatic leadership: courage, judgment, discretion, and the
-              ability to find common ground where others see only confrontation.
+              On accusations of bias: &ldquo;Some say I&apos;m a Zionist puppet,
+              others say the opposite. One day the pro-Ukrainians claim I&apos;m
+              in Putin&apos;s pocket, and when I meet with President Zelensky,
+              the pro-Russians say I&apos;m on the other side. If the price is
+              criticism, so be it.&rdquo;
             </p>
             
             <blockquote className="relative pl-8 border-l-2 border-secondary">
               <p className="text-2xl md:text-3xl font-serif italic leading-[1.3]">
-                &ldquo;I go where I am needed. I stay until it matters. And I
-                return with results, not excuses.&rdquo;
+                &ldquo;My job requires dialogue with everyone. Active diplomacy
+                must be deployed, and solutions proposed as an impartial, but
+                not indifferent, interlocutor.&rdquo;
               </p>
             </blockquote>
           </div>

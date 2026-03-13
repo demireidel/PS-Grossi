@@ -5,11 +5,12 @@ import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 const navItems = [
-  { href: "#vision", label: "A UN That Works" },
-  { href: "#dangerous-world", label: "In a Dangerous World" },
-  { href: "#with-everybody", label: "With Everybody" },
-  { href: "#for-everybody", label: "For Everybody" },
-  { href: "#transparency", label: "Open to Everybody" },
+  { href: "#vision", label: "Vision" },
+  { href: "#dangerous-world", label: "Experience" },
+  { href: "#with-everybody", label: "Diplomacy" },
+  { href: "#for-everybody", label: "Delivery" },
+  { href: "#platform", label: "Platform" },
+  { href: "#global-south", label: "Global South" },
 ]
 
 export function Navigation() {

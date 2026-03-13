@@ -26,20 +26,20 @@ const engagementPrinciples = [
 
 const trackRecords = [
   {
-    title: "Maintained Dialogue with Tehran",
-    description: "When the JCPOA collapsed and tensions peaked, Grossi kept verification channels open. He traveled to Tehran repeatedly, meeting with the highest levels of Iranian leadership. While others chose confrontation, he delivered tangible outcomes—renewed inspections, access to sites, continued reporting. This is what impartial engagement looks like in practice.",
+    title: "Moscow and Kyiv",
+    description: "In the first weeks of Russia's invasion, Grossi went to Moscow. Then to Kyiv. Then to Zaporizhzhia itself, crossing the front line. When asked why he talks to Putin: \"Who else am I going to talk to? The conflict is there.\" Both capitals accepted his presence.",
   },
   {
-    title: "Engaged Moscow on Nuclear Safety",
-    description: "In the midst of war, with relations between Russia and the West at their lowest point in decades, Grossi negotiated access to Zaporizhzhia with Russian authorities while maintaining full cooperation with Kyiv. Both sides accepted his presence—a diplomatic achievement that few believed possible. This is what it means to talk to everybody.",
+    title: "Tehran Under Maximum Pressure",
+    description: "After the 2025 Israeli strikes on Iranian facilities, inspectors were blocked. Grossi negotiated renewed access—meeting Supreme Leader Khamenei directly. Iran holds 400kg of near-weapons-grade uranium. The verification dialogue continues only because he kept the channel open.",
   },
   {
-    title: "Built Consensus Across the Board",
-    description: "From Beijing to Washington, from Riyadh to Brussels, from New Delhi to Brasília, Grossi has earned the respect of capitals that agree on very little else. His reputation for fairness, discretion, and follow-through has made him a trusted interlocutor across every major geopolitical divide.",
+    title: "Critics Prove the Method",
+    description: "Pro-Ukrainians call him pro-Russian. Pro-Russians call him pro-Ukrainian. Pro-Israel and pro-Iran lobbies each claim bias. For Grossi, this symmetry proves the approach works. An impartial broker will be attacked by all sides. That's the job.",
   },
   {
-    title: "Spoke Truth to All Parties",
-    description: "Never sacrificed verification for access. Never diluted findings for political convenience. When IAEA reports have been uncomfortable—for any party—they have been delivered anyway. This is how credibility is built: not through being liked, but through being reliable. Member states know they can trust his word.",
+    title: "Personal Cost",
+    description: "Death threats. Round-the-clock security. His convoy attacked in the gray zone near Zaporizhzhia. Grossi continues working because the alternative—abandoning crisis zones to avoid risk—is worse. \"One must not give in to threats.\"",
   },
 ]
 
@@ -267,9 +267,13 @@ export function WithEverybodySection() {
               
               <blockquote className="relative pl-10 border-l-2 border-secondary-foreground/30">
                 <p className="text-3xl md:text-4xl font-serif italic leading-[1.3]">
-                  &ldquo;Diplomacy means talking to everyone. Otherwise, it is just
-                  a conversation among friends.&rdquo;
+                  &ldquo;My job requires dialogue with everyone. Active diplomacy
+                  must be deployed as an impartial, but not indifferent,
+                  interlocutor.&rdquo;
                 </p>
+                <cite className="block mt-6 text-sm opacity-60 not-italic">
+                  — Rafael Grossi, El Pa&iacute;s, December 2025
+                </cite>
               </blockquote>
             </div>
           </div>

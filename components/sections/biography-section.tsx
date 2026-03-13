@@ -7,43 +7,43 @@ const timeline = [
   {
     year: "1961",
     title: "Born in Buenos Aires",
-    description: "Rafael Mariano Grossi born in Buenos Aires, Argentina.",
+    description: "Rafael Mariano Grossi born in Buenos Aires, Argentina. His grandparents emigrated from Piedmont's Carbonara Scrivia, Italy—which made him honorary citizen in 2025.",
     icon: MapPin,
   },
   {
-    year: "1980s",
-    title: "Education",
-    description: "Law degree from Universidad de Buenos Aires. Advanced studies in international relations and nuclear non-proliferation.",
+    year: "1985",
+    title: "Joins Argentine Foreign Service",
+    description: "Began 40-year diplomatic career. Would later earn a PhD in International Relations from the University of Geneva, where he was named Alumnus of the Year in 2022.",
     icon: GraduationCap,
   },
   {
-    year: "1985",
-    title: "Diplomatic Career Begins",
-    description: "Joined Argentina's Foreign Service. Began work on disarmament and non-proliferation issues.",
+    year: "1998-2002",
+    title: "NATO & European Posts",
+    description: "Argentine Representative to NATO. Head of Embassy in Belgium and Luxembourg. Building relationships across Cold War divides.",
     icon: Briefcase,
   },
   {
-    year: "1994-2007",
-    title: "International Postings",
-    description: "Served at Argentine embassies in Vienna, Geneva, and Washington. Chief of Cabinet at the IAEA under Directors General Blix and ElBaradei.",
+    year: "2002-2007",
+    title: "OPCW Chief of Cabinet",
+    description: "Chief of Cabinet at the Organization for the Prohibition of Chemical Weapons in The Hague. First experience leading an international organization.",
     icon: Globe,
   },
   {
     year: "2010-2013",
-    title: "Argentina's Ambassador to Austria",
-    description: "Served as Argentina's Permanent Representative to the UN and international organizations in Vienna.",
+    title: "IAEA Assistant Director General",
+    description: "Assistant Director General for Policy and Chief of Cabinet at the IAEA. Direct experience with nuclear safeguards before taking the top job.",
     icon: Globe,
   },
   {
-    year: "2013-2019",
-    title: "CTBTO Leadership",
-    description: "Assistant Director General of the IAEA for Policy. Later became Argentina's Ambassador to the IAEA.",
+    year: "2014-2016",
+    title: "Nuclear Suppliers Group President",
+    description: "First person to serve two consecutive terms as NSG president. In 2015, secured the Vienna Declaration on Nuclear Safety after Fukushima.",
     icon: Award,
   },
   {
-    year: "2019-Present",
+    year: "2019",
     title: "IAEA Director General",
-    description: "Elected as Director General of the International Atomic Energy Agency. First Latin American to hold this position.",
+    description: "Elected December 3, 2019. First Latin American to lead the agency since its 1957 founding. Re-elected for a second term.",
     icon: Award,
   },
 ]
@@ -55,19 +55,19 @@ const keyFacts = [
     detail: "Spanish, English, French, Italian, German",
   },
   {
-    label: "Countries Visited",
-    value: "100+",
-    detail: "Diplomatic missions worldwide",
+    label: "Honorary Degrees",
+    value: "6+",
+    detail: "UBA, Milan Polytechnic, Busan, EPFL, Asuncion, and more",
   },
   {
     label: "Years in Diplomacy",
-    value: "40+",
-    detail: "Continuous international service",
+    value: "40",
+    detail: "Since joining Argentina's Foreign Service in 1985",
   },
   {
-    label: "IAEA Member States",
-    value: "178",
-    detail: "Currently representing",
+    label: "International Awards",
+    value: "15+",
+    detail: "Including 2024 Henry DeWolf Smyth Nuclear Statesman Award",
   },
 ]
 
@@ -210,12 +210,13 @@ export function BiographySection() {
             
             <div className="relative max-w-4xl mx-auto text-center">
               <blockquote className="font-serif text-3xl md:text-4xl lg:text-5xl text-foreground italic leading-[1.3] mb-10">
-                I have spent my life building bridges where others saw only walls. 
-                That is what the United Nations must do—every day, everywhere.
+                Whoever holds the position must speak with those who initiated the attacks. 
+                That&apos;s the first thing I did: speak with Putin. Many criticized me for it. 
+                But who else am I going to talk to?
               </blockquote>
               <div className="flex items-center justify-center gap-4">
                 <span className="w-12 h-px bg-secondary" />
-                <p className="text-muted-foreground uppercase tracking-[0.2em] text-sm">Rafael Grossi</p>
+                <p className="text-muted-foreground uppercase tracking-[0.2em] text-sm">Rafael Grossi, El Pa&iacute;s, December 2025</p>
                 <span className="w-12 h-px bg-secondary" />
               </div>
             </div>
