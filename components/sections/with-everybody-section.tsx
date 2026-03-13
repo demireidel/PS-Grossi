@@ -1,7 +1,7 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
+import { useInView } from "@/hooks/use-in-view"
 
 const engagementPrinciples = [
   {
@@ -42,24 +42,6 @@ const trackRecords = [
     description: "Death threats. Round-the-clock security. His convoy attacked in the gray zone near Zaporizhzhia. Grossi continues working because the alternative—abandoning crisis zones to avoid risk—is worse. \"One must not give in to threats.\"",
   },
 ]
-
-function useInView(threshold = 0.15) {
-  const ref = useRef<HTMLDivElement>(null)
-  const [inView, setInView] = useState(false)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) setInView(true)
-      },
-      { threshold }
-    )
-    if (ref.current) observer.observe(ref.current)
-    return () => observer.disconnect()
-  }, [threshold])
-
-  return { ref, inView }
-}
 
 export function WithEverybodySection() {
   const headerAnim = useInView()
@@ -247,7 +229,7 @@ export function WithEverybodySection() {
           ref={ctaAnim.ref}
           className={`relative transition-all duration-1200 ${ctaAnim.inView ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
         >
-          <div className="bg-secondary text-secondary-foreground p-16 lg:p-28 relative overflow-hidden film-grain">
+          <div className="bg-secondary text-secondary-foreground p-16 lg:p-28 relative overflow-hidden">
             <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)', backgroundSize: '40px 40px' }} />
             
             <div className="relative max-w-4xl">

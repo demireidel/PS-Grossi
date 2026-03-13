@@ -1,8 +1,8 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
-import { FileText, BarChart3, Award, Eye, Download, ArrowRight } from "lucide-react"
+import { FileText, BarChart3, Award, Eye, Download } from "lucide-react"
+import { useInView } from "@/hooks/use-in-view"
 
 const commitments = [
   {
@@ -39,24 +39,6 @@ const metrics = [
   { label: "Reach", description: "Access to all parties in all conflicts" },
   { label: "Results", description: "Tangible outcomes for people and states" },
 ]
-
-function useInView(threshold = 0.15) {
-  const ref = useRef<HTMLDivElement>(null)
-  const [inView, setInView] = useState(false)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) setInView(true)
-      },
-      { threshold }
-    )
-    if (ref.current) observer.observe(ref.current)
-    return () => observer.disconnect()
-  }, [threshold])
-
-  return { ref, inView }
-}
 
 export function TransparencySection() {
   const headerAnim = useInView()
@@ -117,11 +99,8 @@ export function TransparencySection() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/40" />
             <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/40" />
             
-            {/* Letterbox */}
-            <div className="absolute top-0 left-0 right-0 h-[8%] bg-black" />
-            <div className="absolute bottom-0 left-0 right-0 h-[8%] bg-black" />
           </div>
-          
+
           {/* Quote overlay */}
           <div className="absolute bottom-[14%] left-0 right-0 px-8 lg:px-20">
             <div className="flex items-center gap-4 mb-4">
@@ -263,10 +242,9 @@ export function TransparencySection() {
                 ))}
               </div>
               
-              <a href="#" className="group inline-flex items-center gap-3 mt-8 text-secondary font-medium text-sm uppercase tracking-wider">
-                <span>View All Documents</span>
-                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-              </a>
+              <p className="mt-8 text-muted-foreground text-sm uppercase tracking-wider">
+                Full document library available upon request
+              </p>
             </div>
           </div>
         </div>

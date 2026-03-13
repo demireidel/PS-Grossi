@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react"
 import Image from "next/image"
-import { ChevronDown } from "lucide-react"
 
 export function HeroSection() {
   const [loaded, setLoaded] = useState(false)
@@ -54,7 +53,7 @@ export function HeroSection() {
             loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <p className="text-white/40 uppercase tracking-[0.5em] text-[10px] mb-8 font-light">
+          <p className="text-white/60 uppercase tracking-[0.5em] text-[10px] mb-8 font-light">
             For United Nations Secretary-General
           </p>
         </div>
@@ -81,7 +80,7 @@ export function HeroSection() {
         </div>
 
         <p
-          className={`text-base md:text-lg lg:text-xl text-white/50 max-w-2xl mx-auto font-light leading-relaxed tracking-wide text-pretty transition-all duration-1000 delay-700 ${
+          className={`text-base md:text-lg lg:text-xl text-white/70 max-w-2xl mx-auto font-light leading-relaxed tracking-wide text-pretty transition-all duration-1000 delay-700 ${
             loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >

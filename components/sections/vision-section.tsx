@@ -1,5 +1,3 @@
-"use client"
-
 import Image from "next/image"
 import { Target, Users, Gauge, RefreshCw } from "lucide-react"
 
@@ -169,12 +167,11 @@ export function VisionSection() {
             </p>
             
             <p className="text-lg leading-relaxed opacity-70 mb-12">
-              &ldquo;If the price is criticism, so be it,&rdquo; Grossi says of
-              the accusations he receives from all sides. &ldquo;My job requires
-              dialogue with everyone. Some say I&apos;m a Zionist puppet, others
-              the opposite. One day the pro-Ukrainians claim I&apos;m in
-              Putin&apos;s pocket; when I meet with Zelensky, the pro-Russians
-              say the reverse. That is precisely what diplomacy requires.&rdquo;
+              The next Secretary-General cannot afford to learn on the job.
+              The crises are too urgent, the divisions too deep, the stakes
+              too high. What is needed is someone who has already done the
+              hardest version of this work&mdash;and delivered results under
+              conditions that most diplomats would consider impossible.
             </p>
             
             <blockquote className="relative pl-8 border-l-2 border-secondary">

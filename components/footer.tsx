@@ -1,32 +1,14 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
 import { Mail, Twitter, Linkedin, ArrowUp, ChevronRight } from "lucide-react"
-
-function useInView(threshold = 0.15) {
-  const ref = useRef<HTMLDivElement>(null)
-  const [inView, setInView] = useState(false)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) setInView(true)
-      },
-      { threshold }
-    )
-    if (ref.current) observer.observe(ref.current)
-    return () => observer.disconnect()
-  }, [threshold])
-
-  return { ref, inView }
-}
+import { useInView } from "@/hooks/use-in-view"
 
 export function Footer() {
   const ctaAnim = useInView()
   const linksAnim = useInView()
 
   return (
-    <footer className="bg-foreground text-background relative overflow-hidden film-grain">
+    <footer className="bg-foreground text-background relative overflow-hidden">
       {/* Subtle pattern */}
       <div className="absolute inset-0 opacity-[0.015]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)', backgroundSize: '32px 32px' }} />
 
@@ -91,11 +73,11 @@ export function Footer() {
                 <span className="font-serif text-2xl">RG</span>
               </div>
               <span className="font-serif text-3xl block mb-2">Rafael Grossi</span>
-              <p className="text-background/40 text-sm uppercase tracking-[0.2em]">
+              <p className="text-background/60 text-sm uppercase tracking-[0.2em]">
                 For Secretary-General of the United Nations
               </p>
             </div>
-            <p className="text-background/50 leading-relaxed max-w-md text-sm">
+            <p className="text-background/60 leading-relaxed max-w-md text-sm">
               Crisis-tested leadership for a world that demands more from its
               institutions. A vision for a UN that delivers results, not just
               resolutions.
@@ -104,7 +86,7 @@ export function Footer() {
 
           {/* Navigation */}
           <div className="md:col-span-3">
-            <h4 className="font-medium text-[10px] uppercase tracking-[0.3em] mb-8 text-background/30">
+            <h4 className="font-medium text-[10px] uppercase tracking-[0.3em] mb-8 text-background/60">
               Sections
             </h4>
             <ul className="space-y-4">
@@ -114,6 +96,7 @@ export function Footer() {
                 { href: "#with-everybody", label: "With Everybody" },
                 { href: "#for-everybody", label: "For Everybody" },
                 { href: "#transparency", label: "Open to Everybody" },
+                { href: "#global-south", label: "Global South" },
               ].map((item) => (
                 <li key={item.href}>
                   <a
@@ -130,7 +113,7 @@ export function Footer() {
 
           {/* Contact */}
           <div className="md:col-span-4">
-            <h4 className="font-medium text-[10px] uppercase tracking-[0.3em] mb-8 text-background/30">
+            <h4 className="font-medium text-[10px] uppercase tracking-[0.3em] mb-8 text-background/60">
               Connect
             </h4>
             <ul className="space-y-4">
@@ -179,19 +162,19 @@ export function Footer() {
       {/* Copyright */}
       <div className="relative container mx-auto px-6 lg:px-20 py-10 border-t border-background/10">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-background/30 text-xs uppercase tracking-wider">
+          <p className="text-background/60 text-xs uppercase tracking-wider">
             &copy; {new Date().getFullYear()} Grossi for UN Campaign. All rights reserved.
           </p>
           <div className="flex items-center gap-8">
             <a
               href="#"
-              className="text-background/30 hover:text-background/60 transition-colors text-xs uppercase tracking-wider"
+              className="text-background/60 hover:text-background/60 transition-colors text-xs uppercase tracking-wider"
             >
               Privacy Policy
             </a>
             <a
               href="#"
-              className="text-background/30 hover:text-background/60 transition-colors text-xs uppercase tracking-wider"
+              className="text-background/60 hover:text-background/60 transition-colors text-xs uppercase tracking-wider"
             >
               Terms of Use
             </a>

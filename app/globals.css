@@ -2,8 +2,6 @@
 @import 'tw-animate-css';
 @import 'shadcn/tailwind.css';
 
-@custom-variant dark (&:is(.dark *));
-
 :root {
   --background: oklch(0.985 0.003 80);
   --foreground: oklch(0.15 0.02 250);
@@ -38,41 +36,6 @@
   --sidebar-accent-foreground: oklch(0.15 0.02 250);
   --sidebar-border: oklch(0.90 0.01 80);
   --sidebar-ring: oklch(0.62 0.14 65);
-}
-
-.dark {
-  --background: oklch(0.15 0.02 30);
-  --foreground: oklch(0.96 0.01 60);
-  --card: oklch(0.18 0.02 30);
-  --card-foreground: oklch(0.96 0.01 60);
-  --popover: oklch(0.18 0.02 30);
-  --popover-foreground: oklch(0.96 0.01 60);
-  --primary: oklch(0.55 0.12 250);
-  --primary-foreground: oklch(0.98 0 0);
-  --secondary: oklch(0.55 0.12 45);
-  --secondary-foreground: oklch(0.98 0 0);
-  --muted: oklch(0.25 0.02 30);
-  --muted-foreground: oklch(0.65 0.02 60);
-  --accent: oklch(0.65 0.15 45);
-  --accent-foreground: oklch(0.98 0 0);
-  --destructive: oklch(0.396 0.141 25.723);
-  --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: oklch(0.28 0.02 30);
-  --input: oklch(0.25 0.02 30);
-  --ring: oklch(0.55 0.12 250);
-  --chart-1: oklch(0.55 0.12 250);
-  --chart-2: oklch(0.65 0.15 45);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.18 0.02 30);
-  --sidebar-foreground: oklch(0.96 0.01 60);
-  --sidebar-primary: oklch(0.55 0.12 250);
-  --sidebar-primary-foreground: oklch(0.98 0 0);
-  --sidebar-accent: oklch(0.25 0.02 30);
-  --sidebar-accent-foreground: oklch(0.96 0.01 60);
-  --sidebar-border: oklch(0.28 0.02 30);
-  --sidebar-ring: oklch(0.55 0.12 250);
 }
 
 @theme inline {
@@ -277,6 +240,25 @@ html {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/* Skip to content link */
+.skip-to-content {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  padding: 1rem 2rem;
+  background: var(--secondary);
+  color: var(--secondary-foreground);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.skip-to-content:focus {
+  left: 0;
 }
 
 /* Accessibility: reduce motion for users who prefer it */
