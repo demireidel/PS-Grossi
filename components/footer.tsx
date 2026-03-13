@@ -96,6 +96,7 @@ export function Footer() {
                 { href: "#with-everybody", label: "With Everybody" },
                 { href: "#for-everybody", label: "For Everybody" },
                 { href: "#transparency", label: "Open to Everybody" },
+                { href: "#global-south", label: "Global South" },
               ].map((item) => (
                 <li key={item.href}>
                   <a
