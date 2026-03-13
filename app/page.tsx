@@ -5,6 +5,9 @@ import { DangerousWorldSection } from "@/components/sections/dangerous-world-sec
 import { WithEverybodySection } from "@/components/sections/with-everybody-section"
 import { ForEverybodySection } from "@/components/sections/for-everybody-section"
 import { TransparencySection } from "@/components/sections/transparency-section"
+import { PolicyPlatformSection } from "@/components/sections/policy-platform-section"
+import { GlobalSouthSection } from "@/components/sections/global-south-section"
+import { CtaSection } from "@/components/sections/cta-section"
 import { Footer } from "@/components/footer"
 
 export default function Home() {
@@ -17,6 +20,9 @@ export default function Home() {
       <WithEverybodySection />
       <ForEverybodySection />
       <TransparencySection />
+      <PolicyPlatformSection />
+      <GlobalSouthSection />
+      <CtaSection />
       <Footer />
     </main>
   )

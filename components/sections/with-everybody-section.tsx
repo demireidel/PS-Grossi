@@ -26,20 +26,20 @@ const engagementPrinciples = [
 
 const trackRecords = [
   {
-    title: "First Thing: Speak with Putin",
-    description: "\"Whoever holds the position must speak with those who initiated the attacks. That's the first thing I did: speak with Putin, and many people criticized me for it. But who else am I going to talk to?\" Grossi went to Moscow when others refused. He went to Kyiv when it mattered. Both accepted him.",
+    title: "Moscow and Kyiv",
+    description: "In the first weeks of Russia's invasion, Grossi went to Moscow. Then to Kyiv. Then to Zaporizhzhia itself, crossing the front line. When asked why he talks to Putin: \"Who else am I going to talk to? The conflict is there.\" Both capitals accepted his presence.",
   },
   {
-    title: "Iran: 400kg at 60%",
-    description: "\"Iran must show us where its 60%-enriched uranium is and guarantee its program is peaceful.\" After the 2025 Israeli strikes, while inspectors were blocked, Grossi negotiated renewed access. He traveled to Tehran repeatedly, meeting Supreme Leader Khamenei. Iran still holds almost military-grade material. The dialogue continues.",
+    title: "Tehran Under Maximum Pressure",
+    description: "After the 2025 Israeli strikes on Iranian facilities, inspectors were blocked. Grossi negotiated renewed access—meeting Supreme Leader Khamenei directly. Iran holds 400kg of near-weapons-grade uranium. The verification dialogue continues only because he kept the channel open.",
   },
   {
-    title: "Critics from All Sides",
-    description: "\"Some say I'm a Zionist puppet, others say the opposite. One day the pro-Ukrainians claim I'm in Putin's pocket, and when I meet with Zelensky, the pro-Russians say I'm on the other side.\" For Grossi, this is proof the method works. \"If the price is criticism, so be it.\"",
+    title: "Critics Prove the Method",
+    description: "Pro-Ukrainians call him pro-Russian. Pro-Russians call him pro-Ukrainian. Pro-Israel and pro-Iran lobbies each claim bias. For Grossi, this symmetry proves the approach works. An impartial broker will be attacked by all sides. That's the job.",
   },
   {
-    title: "Death Threats and Security",
-    description: "\"The death threats have been traumatic. I continue with personal security because experts consider the threats credible.\" Grossi paid a personal price for his engagement. \"But in moments of tension like this, one must not give in—much less to threats.\" He kept working.",
+    title: "Personal Cost",
+    description: "Death threats. Round-the-clock security. His convoy attacked in the gray zone near Zaporizhzhia. Grossi continues working because the alternative—abandoning crisis zones to avoid risk—is worse. \"One must not give in to threats.\"",
   },
 ]
 
