@@ -1,7 +1,8 @@
 import Image from "next/image"
 import { Target, Users, Gauge, RefreshCw } from "lucide-react"
+import type { Principle } from "@/lib/types"
 
-const principles = [
+const principles: Principle[] = [
   {
     icon: Target,
     title: "Act Earlier",

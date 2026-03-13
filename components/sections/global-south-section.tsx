@@ -1,9 +1,10 @@
 "use client"
 
-import { useInView } from "react-intersection-observer"
 import Image from "next/image"
+import { useInView } from "@/hooks/use-in-view"
+import type { RegionalPerspective } from "@/lib/types"
 
-const perspectives = [
+const perspectives: RegionalPerspective[] = [
   {
     region: "Latin America",
     title: "First from the Region",
@@ -38,8 +39,8 @@ const stats = [
 ]
 
 export function GlobalSouthSection() {
-  const { ref: headerRef, inView: headerInView } = useInView({ triggerOnce: true, threshold: 0.2 })
-  const { ref: contentRef, inView: contentInView } = useInView({ triggerOnce: true, threshold: 0.1 })
+  const { ref: headerRef, inView: headerInView } = useInView(0.2)
+  const { ref: contentRef, inView: contentInView } = useInView(0.1)
 
   return (
     <section id="global-south" className="py-32 lg:py-48 bg-background relative overflow-hidden">

@@ -1,9 +1,10 @@
 "use client"
 
-import { useInView } from "react-intersection-observer"
 import { Shield, Users, Zap, Building2, Globe, Scale } from "lucide-react"
+import { useInView } from "@/hooks/use-in-view"
+import type { PolicyArea } from "@/lib/types"
 
-const policyAreas = [
+const policyAreas: PolicyArea[] = [
   {
     icon: Shield,
     title: "Peace and Security",
@@ -79,7 +80,7 @@ const policyAreas = [
 ]
 
 export function PolicyPlatformSection() {
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 })
+  const { ref, inView } = useInView(0.1)
 
   return (
     <section id="platform" className="py-32 lg:py-48 bg-muted/30 relative overflow-hidden">

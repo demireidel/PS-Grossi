@@ -3,8 +3,9 @@
 import Image from "next/image"
 import { FileText, BarChart3, Award, Eye, Download } from "lucide-react"
 import { useInView } from "@/hooks/use-in-view"
+import type { Commitment } from "@/lib/types"
 
-const commitments = [
+const commitments: Commitment[] = [
   {
     icon: Eye,
     title: "Full Financial Disclosure",

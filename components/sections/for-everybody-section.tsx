@@ -3,8 +3,9 @@
 import Image from "next/image"
 import { Heart, Users2, Leaf, Stethoscope } from "lucide-react"
 import { useInView } from "@/hooks/use-in-view"
+import type { DeliveryArea } from "@/lib/types"
 
-const deliveryAreas = [
+const deliveryAreas: DeliveryArea[] = [
   {
     icon: Stethoscope,
     title: "Rays of Hope: Cancer Care",
