@@ -105,8 +105,8 @@ export function ForEverybodySection() {
           <div className="relative aspect-wide overflow-hidden film-grain vignette">
             <div className="absolute inset-0 ken-burns">
               <Image
-                src="/images/humanitarian-delivery.jpg"
-                alt="Humanitarian engagement"
+                src="/images/grossi-rays-of-hope.jpg"
+                alt="Rafael Grossi visiting cancer treatment facility in Africa"
                 fill
                 className="object-cover color-grade-warm"
                 sizes="100vw"

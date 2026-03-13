@@ -139,8 +139,8 @@ export function GlobalSouthSection() {
           </div>
           <div className={`relative aspect-[4/3] overflow-hidden transition-all duration-1000 delay-300 ${contentInView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
             <Image
-              src="/images/grossi-hero.jpg"
-              alt="Rafael Grossi"
+              src="/images/grossi-portrait-formal.jpg"
+              alt="Rafael Grossi formal portrait"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"

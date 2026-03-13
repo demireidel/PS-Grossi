@@ -56,8 +56,8 @@ export function DangerousWorldSection() {
         {/* Hero Image - Cinematic */}
         <div className="relative aspect-cinema mb-24 overflow-hidden">
           <Image
-            src="/images/crisis-diplomacy.jpg"
-            alt="Crisis diplomacy in action"
+            src="/images/grossi-zaporizhzhia.jpg"
+            alt="Rafael Grossi inspecting Zaporizhzhia nuclear plant"
             fill
             className="object-cover"
             sizes="100vw"

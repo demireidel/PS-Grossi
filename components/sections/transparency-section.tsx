@@ -105,8 +105,8 @@ export function TransparencySection() {
           <div className="relative aspect-cinema overflow-hidden film-grain vignette">
             <div className="absolute inset-0 ken-burns">
               <Image
-                src="/images/transparency-governance.jpg"
-                alt="Press conference and transparent governance"
+                src="/images/grossi-iaea-board.jpg"
+                alt="Rafael Grossi presiding over IAEA Board of Governors"
                 fill
                 className="object-cover color-grade-cool"
                 sizes="100vw"
