@@ -106,7 +106,7 @@ export function ForEverybodySection() {
             <div className="absolute inset-0 ken-burns">
               <Image
                 src="/images/grossi-rays-of-hope.jpg"
-                alt="Rafael Grossi visiting a Rays of Hope cancer treatment facility, bringing radiation therapy to underserved communities in Africa"
+                alt="Rafael Grossi with his IAEA delegation at the African Union headquarters in Addis Ababa after launching the Rays of Hope cancer care initiative, February 2022"
                 fill
                 quality={85}
                 className="object-cover color-grade-warm"
@@ -174,38 +174,6 @@ export function ForEverybodySection() {
               </div>
             ))}
           </div>
-        </div>
-
-        {/* Humanitarian Impact Image */}
-        <div className="relative aspect-cinema overflow-hidden mb-40 group">
-          <Image
-            src="/images/humanitarian-delivery.jpg"
-            alt="Rafael Grossi overseeing IAEA humanitarian delivery programs, bringing nuclear technology applications to communities in need"
-            fill
-            quality={85}
-            className="object-cover transition-transform duration-700 group-hover:scale-[1.02]"
-            sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-transparent" />
-
-          {/* Letterbox */}
-          <div className="absolute top-0 left-0 right-0 h-[6%] bg-black" />
-          <div className="absolute bottom-0 left-0 right-0 h-[6%] bg-black" />
-
-          <div className="absolute bottom-[10%] left-0 right-0 px-8 lg:px-20">
-            <div className="flex items-center gap-4 mb-4">
-              <div className="w-12 h-px bg-secondary" />
-              <span className="text-white/50 text-[10px] uppercase tracking-[0.3em]">On the Ground</span>
-            </div>
-            <p className="text-white/90 text-xl md:text-2xl max-w-2xl font-light leading-relaxed">
-              Delivering real impact where it matters most&mdash;not from conference rooms, but in the field.
-            </p>
-          </div>
-
-          {/* Frame accents */}
-          <div className="absolute top-[10%] left-8 w-16 h-16 border-l-2 border-t-2 border-white/20" />
-          <div className="absolute bottom-[10%] right-8 w-16 h-16 border-r-2 border-b-2 border-white/20" />
         </div>
 
         {/* Gender as Proof */}

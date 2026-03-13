@@ -95,7 +95,7 @@ export function VisionSection() {
           <div className="relative aspect-[4/3] overflow-hidden">
             <Image
               src="/images/grossi-un-address.jpg"
-              alt="Rafael Grossi delivering an address to the United Nations General Assembly on nuclear security and multilateral cooperation"
+              alt="Rafael Grossi delivering a keynote address at the IAEA Nuclear Energy Summit podium with international flags, 2024"
               fill
               quality={85}
               className="object-cover"
