@@ -58,36 +58,38 @@ export function VisionSection() {
           </p>
         </div>
 
-        {/* The Problem */}
+        {/* Grossi's Diagnosis */}
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">
           <div>
             <h3 className="font-serif text-2xl md:text-3xl text-foreground mb-6">
-              The Challenge We Face
+              &ldquo;The UN Has Forgotten Its Purpose&rdquo;
             </h3>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              The United Nations is too often reactive, fragmented, and distant
-              from practical results. In a world of accelerating crises—from
-              armed conflicts and nuclear proliferation to climate emergencies
-              and pandemic risks—the gap between what the UN promises and what
-              it delivers has become impossible to ignore.
+              In Grossi&apos;s own words: &ldquo;If you read the Charter, you
+              understand that the UN was created to prevent wars, to bring about
+              peace... and this is not discussed. If you analyze the hotspots of
+              war on a world map—Sudan, Gaza, the Sahel, Ukraine—the common
+              denominator is the absence of the UN. It is not there. It does not
+              act. And this can be remedied.&rdquo;
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Member states invest political capital and financial resources
-              expecting a return in collective security and coordinated action.
-              Too often, they receive process instead of progress, statements
-              instead of solutions, meetings instead of momentum.
+              After 40 years navigating international crises—from the Falklands
+              to Fukushima, from Tehran to Zaporizhzhia—Grossi sees a UN in
+              profound crisis of credibility. The organization remains
+              indispensable, but it has become reactive and distant from the
+              conflicts that define our era.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              This is not a failure of purpose. The UN&apos;s founding vision
-              remains as relevant as ever. It is a failure of
-              performance&mdash;one that can be corrected with leadership that
-              understands both the diplomatic and operational dimensions of the
-              role.
+              &ldquo;The UN is in a profound crisis of credibility,&rdquo; he
+              states. The world is experiencing &ldquo;tremendous
+              fragmentation&rdquo;: overlapping conflicts, weakened alliances,
+              trade wars, and a growing number of countries desiring nuclear
+              capabilities.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              The world cannot afford another decade of incremental adjustment.
-              It needs a Secretary-General who arrives with a clear diagnosis
-              and the experience to act on it.
+              &ldquo;The UN needs a secretary with boots in the mud—not one who
+              comments from a distance. My conviction was forged through
+              experience managing high-tension international crises.&rdquo;
             </p>
           </div>
           <div className="relative aspect-[4/3] overflow-hidden">
@@ -146,34 +148,38 @@ export function VisionSection() {
             </span>
             
             <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl mb-10 leading-[1.1]">
-              Why This Election <span className="text-secondary italic">Matters</span>
+              Why Grossi, <span className="text-secondary italic">Why Now</span>
             </h3>
             
             <p className="text-xl md:text-2xl leading-relaxed opacity-80 mb-8 font-light">
-              The issue is not symbolism. The issue is whether the next
-              Secretary-General can make the institution more useful&mdash;to
-              member states navigating impossible pressures, and to people whose
-              lives depend on what the UN does next.
+              &ldquo;We are actors in a geopolitical reality we must shape to
+              avoid conflict. That is the challenge of diplomacy—today and
+              always.&rdquo; Grossi brings not theory, but four decades of
+              crisis-tested leadership.
             </p>
             
             <p className="text-lg leading-relaxed opacity-70 mb-8">
-              The 2026 selection comes at a moment of profound geopolitical
-              fragmentation. Great power competition has returned. Regional
-              conflicts are multiplying. Trust in multilateral institutions is
-              eroding precisely when it is most needed.
+              The first Latin American to lead the IAEA. A diplomat who has sat
+              across from Putin and Zelensky, Iranian ayatollahs and American
+              presidents. Someone who has walked into active war zones—not to
+              observe, but to act. Grossi received death threats for his work
+              and continues under security protection because experts consider
+              them credible.
             </p>
             
             <p className="text-lg leading-relaxed opacity-70 mb-12">
-              In this environment, the UN cannot simply continue as before. It
-              needs leadership that understands how to operate in contested
-              spaces, maintain credibility with all parties, and deliver
-              outcomes that rebuild confidence in collective action.
+              &ldquo;If the price is criticism, so be it,&rdquo; Grossi says of
+              the accusations he receives from all sides. &ldquo;My job requires
+              dialogue with everyone. Some say I&apos;m a Zionist puppet, others
+              the opposite. One day the pro-Ukrainians claim I&apos;m in
+              Putin&apos;s pocket; when I meet with Zelensky, the pro-Russians
+              say the reverse. That is precisely what diplomacy requires.&rdquo;
             </p>
             
             <blockquote className="relative pl-8 border-l-2 border-secondary">
               <p className="text-2xl md:text-3xl font-serif italic leading-[1.3]">
-                &ldquo;The world does not need a caretaker. It needs a leader who
-                has walked through fire&mdash;and emerged with results.&rdquo;
+                &ldquo;Active diplomacy must be deployed, and solutions proposed
+                as an impartial, but not indifferent, interlocutor.&rdquo;
               </p>
             </blockquote>
           </div>

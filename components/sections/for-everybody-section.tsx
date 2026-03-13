@@ -31,10 +31,10 @@ const deliveryAreas = [
   },
   {
     icon: Users2,
-    title: "Gender Parity Achievement",
+    title: "Gender Parity: From 28% to 52%",
     description:
-      "Achieved what most international organizations only promise: true gender parity at senior levels. Launched the Marie Sklodowska-Curie Fellowship Programme bringing women scientists from developing countries into nuclear fields worldwide.",
-    stat: "50%",
+      "Women in Nuclear awarded Grossi the 2025 Changemaker of Distinction Award. He increased women in leadership from 28% to 52%—true parity. The Marie Sklodowska-Curie and Lise Meitner Programmes now bring women scientists from developing nations into nuclear fields worldwide.",
+    stat: "52%",
     statLabel: "Women in Leadership",
   },
 ]
@@ -189,31 +189,30 @@ export function ForEverybodySection() {
               </h3>
             </div>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Talk is easy. Results are hard. Under Grossi&apos;s leadership,
-              the IAEA achieved something most international organizations only
-              promise: true gender parity at senior levels. Not through quotas
-              alone, but through systematic attention to recruitment, promotion,
-              and institutional culture.
+              In Grossi&apos;s words: &ldquo;What we need is a Secretary-General
+              chosen for their merits. Someone should be chosen for their
+              vision, not because after 80 years of men in the position
+              it&apos;s time for a woman, or someone with blue eyes.&rdquo;
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              The Marie Sklodowska-Curie Fellowship Programme now brings women
-              scientists from developing countries into nuclear fields
-              worldwide, building capacity that will last generations. These are
-              not symbolic gestures—they are structural changes that reshape
-              who has access to scientific careers.
+              Actions over words: Grossi increased women in IAEA leadership from
+              28% to 52%. Women in Nuclear awarded him the 2025 Changemaker of
+              Distinction Award. He launched the Marie Sklodowska-Curie
+              Fellowship and Lise Meitner Programmes, bringing women scientists
+              from developing nations into nuclear fields.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed mb-10">
-              Gender equality is a test of whether a leader can actually change
-              an institution, not just lead it. Grossi passed that test. The
-              same commitment to inclusion, merit, and structural reform would
-              define his approach to the UN Secretariat.
+              As an International Gender Champion, Grossi proved that gender
+              equality is not about rhetoric—it&apos;s about structural change.
+              The same commitment to merit, inclusion, and institutional reform
+              would define his approach to the UN Secretariat.
             </p>
             
             <ul className="space-y-5">
               {[
-                "50% women in senior management",
-                "100+ fellows annually from underrepresented nations",
-                "First IAEA Director General to prioritize gender as strategic"
+                "28% to 52% women in senior management",
+                "2025 Changemaker of Distinction Award",
+                "International Gender Champion"
               ].map((item, i) => (
                 <li 
                   key={i} 
@@ -231,9 +230,12 @@ export function ForEverybodySection() {
             <div className="bg-secondary/10 p-12 lg:p-16 relative">
               <span className="text-8xl font-serif text-secondary/10 absolute top-4 right-4 leading-none">&ldquo;</span>
               <blockquote className="font-serif text-2xl md:text-3xl text-foreground italic leading-relaxed relative">
-                Inclusion is not a box to check. It is how you build an
-                institution that reflects the world it serves.
+                I increased the number of women in leadership positions at the
+                IAEA from 28% to 52%. These are facts, not words.
               </blockquote>
+              <cite className="block mt-6 text-sm text-muted-foreground not-italic">
+                — Rafael Grossi, El Pa&iacute;s interview, December 2025
+              </cite>
             </div>
           </div>
         </div>

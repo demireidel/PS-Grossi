@@ -26,20 +26,20 @@ const engagementPrinciples = [
 
 const trackRecords = [
   {
-    title: "Maintained Dialogue with Tehran",
-    description: "When the JCPOA collapsed and tensions peaked, Grossi kept verification channels open. He traveled to Tehran repeatedly, meeting with the highest levels of Iranian leadership. While others chose confrontation, he delivered tangible outcomes—renewed inspections, access to sites, continued reporting. This is what impartial engagement looks like in practice.",
+    title: "First Thing: Speak with Putin",
+    description: "\"Whoever holds the position must speak with those who initiated the attacks. That's the first thing I did: speak with Putin, and many people criticized me for it. But who else am I going to talk to?\" Grossi went to Moscow when others refused. He went to Kyiv when it mattered. Both accepted him.",
   },
   {
-    title: "Engaged Moscow on Nuclear Safety",
-    description: "In the midst of war, with relations between Russia and the West at their lowest point in decades, Grossi negotiated access to Zaporizhzhia with Russian authorities while maintaining full cooperation with Kyiv. Both sides accepted his presence—a diplomatic achievement that few believed possible. This is what it means to talk to everybody.",
+    title: "Iran: 400kg at 60%",
+    description: "\"Iran must show us where its 60%-enriched uranium is and guarantee its program is peaceful.\" After the 2025 Israeli strikes, while inspectors were blocked, Grossi negotiated renewed access. He traveled to Tehran repeatedly, meeting Supreme Leader Khamenei. Iran still holds almost military-grade material. The dialogue continues.",
   },
   {
-    title: "Built Consensus Across the Board",
-    description: "From Beijing to Washington, from Riyadh to Brussels, from New Delhi to Brasília, Grossi has earned the respect of capitals that agree on very little else. His reputation for fairness, discretion, and follow-through has made him a trusted interlocutor across every major geopolitical divide.",
+    title: "Critics from All Sides",
+    description: "\"Some say I'm a Zionist puppet, others say the opposite. One day the pro-Ukrainians claim I'm in Putin's pocket, and when I meet with Zelensky, the pro-Russians say I'm on the other side.\" For Grossi, this is proof the method works. \"If the price is criticism, so be it.\"",
   },
   {
-    title: "Spoke Truth to All Parties",
-    description: "Never sacrificed verification for access. Never diluted findings for political convenience. When IAEA reports have been uncomfortable—for any party—they have been delivered anyway. This is how credibility is built: not through being liked, but through being reliable. Member states know they can trust his word.",
+    title: "Death Threats and Security",
+    description: "\"The death threats have been traumatic. I continue with personal security because experts consider the threats credible.\" Grossi paid a personal price for his engagement. \"But in moments of tension like this, one must not give in—much less to threats.\" He kept working.",
   },
 ]
 
@@ -267,9 +267,13 @@ export function WithEverybodySection() {
               
               <blockquote className="relative pl-10 border-l-2 border-secondary-foreground/30">
                 <p className="text-3xl md:text-4xl font-serif italic leading-[1.3]">
-                  &ldquo;Diplomacy means talking to everyone. Otherwise, it is just
-                  a conversation among friends.&rdquo;
+                  &ldquo;My job requires dialogue with everyone. Active diplomacy
+                  must be deployed as an impartial, but not indifferent,
+                  interlocutor.&rdquo;
                 </p>
+                <cite className="block mt-6 text-sm opacity-60 not-italic">
+                  — Rafael Grossi, El Pa&iacute;s, December 2025
+                </cite>
               </blockquote>
             </div>
           </div>

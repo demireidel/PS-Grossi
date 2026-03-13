@@ -273,33 +273,35 @@ export function TransparencySection() {
               </h3>
               
               <p className="text-xl md:text-2xl leading-relaxed opacity-80 mb-8 max-w-3xl font-light">
-                A Secretary-General sets the tone for the entire UN system.
-                Grossi&apos;s commitment: integrity over politics, seriousness
-                over performance, inclusion over tokenism, and standards that
-                apply equally to everyone.
+                &ldquo;What we need is a Secretary-General chosen for their
+                merits. Someone should be chosen for their vision, not because
+                after 80 years of men in the position it&apos;s time for a
+                woman, or someone with blue eyes, or a secularist.&rdquo;
               </p>
               
               <p className="text-lg leading-relaxed opacity-70 mb-8 max-w-3xl">
-                The UN Secretariat employs over 40,000 staff worldwide. Their
-                morale, their sense of mission, their willingness to go the
-                extra mile in crisis—all of this depends on leadership that
-                respects them. A Secretary-General who tolerates harassment,
-                rewards political connections over competence, or fails to
-                protect whistleblowers undermines the entire institution.
+                Grossi&apos;s record speaks: at the IAEA, he increased women in
+                leadership from 28% to 52%. Women in Nuclear awarded him the
+                2025 Changemaker of Distinction Award. He launched the Marie
+                Sklodowska-Curie and Lise Meitner Programmes for women
+                scientists from developing nations.
               </p>
               
               <p className="text-lg leading-relaxed opacity-70 mb-16 max-w-3xl">
-                Grossi has built a culture at the IAEA that staff respect. He
-                has shown that technical excellence and human dignity are not
-                in tension—they reinforce each other. The same approach would
-                define his leadership of the broader UN system.
+                The principle is clear: results over rhetoric, merit over
+                patronage, structural change over symbolic gestures. Grossi
+                has proven this can be done. The UN Secretariat—40,000 staff
+                worldwide—deserves the same commitment.
               </p>
               
               <blockquote className="relative pl-10 border-l-2 border-secondary">
                 <p className="text-3xl md:text-4xl font-serif italic leading-[1.3]">
-                  &ldquo;The UN belongs to its member states. But it must be run as
-                  if every staff member&apos;s dignity depends on it—because it does.&rdquo;
+                  &ldquo;I increased women in leadership from 28% to 52%. These
+                  are facts, not words.&rdquo;
                 </p>
+                <cite className="block mt-6 text-sm opacity-60 not-italic">
+                  — Rafael Grossi, El Pa&iacute;s, December 2025
+                </cite>
               </blockquote>
             </div>
           </div>
