@@ -1,5 +1,3 @@
-"use client"
-
 import Image from "next/image"
 import { Shield, AlertTriangle, Compass } from "lucide-react"
 

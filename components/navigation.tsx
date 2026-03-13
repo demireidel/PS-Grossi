@@ -82,7 +82,9 @@ export function Navigation() {
               "lg:hidden p-2 transition-colors",
               scrolled ? "text-foreground" : "text-white"
             )}
-            aria-label="Toggle menu"
+            aria-label={isOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isOpen}
+            aria-controls="mobile-nav"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -90,6 +92,10 @@ export function Navigation() {
 
         {/* Mobile Navigation */}
         <div
+          id="mobile-nav"
+          role="region"
+          aria-label="Mobile navigation"
+          aria-hidden={!isOpen}
           className={cn(
             "lg:hidden overflow-hidden transition-all duration-300",
             isOpen ? "max-h-96 pb-6" : "max-h-0"

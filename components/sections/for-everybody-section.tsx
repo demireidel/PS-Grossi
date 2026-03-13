@@ -1,8 +1,8 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
 import { Heart, Users2, Leaf, Stethoscope } from "lucide-react"
+import { useInView } from "@/hooks/use-in-view"
 
 const deliveryAreas = [
   {
@@ -38,24 +38,6 @@ const deliveryAreas = [
     statLabel: "Women in Leadership",
   },
 ]
-
-function useInView(threshold = 0.15) {
-  const ref = useRef<HTMLDivElement>(null)
-  const [inView, setInView] = useState(false)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) setInView(true)
-      },
-      { threshold }
-    )
-    if (ref.current) observer.observe(ref.current)
-    return () => observer.disconnect()
-  }, [threshold])
-
-  return { ref, inView }
-}
 
 export function ForEverybodySection() {
   const headerAnim = useInView()
@@ -117,11 +99,8 @@ export function ForEverybodySection() {
             <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30" />
             
-            {/* Letterbox */}
-            <div className="absolute top-0 left-0 right-0 h-[6%] bg-black" />
-            <div className="absolute bottom-0 left-0 right-0 h-[6%] bg-black" />
           </div>
-          
+
           {/* Content overlay */}
           <div className="absolute inset-0 flex items-center px-8 lg:px-20">
             <div className="max-w-2xl">
@@ -190,10 +169,10 @@ export function ForEverybodySection() {
               </h3>
             </div>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              In Grossi&apos;s words: &ldquo;What we need is a Secretary-General
-              chosen for their merits. Someone should be chosen for their
-              vision, not because after 80 years of men in the position
-              it&apos;s time for a woman, or someone with blue eyes.&rdquo;
+              Grossi&apos;s approach to gender equality is the same as his
+              approach to everything else: measure it, resource it, deliver
+              it. At the IAEA, he didn&apos;t announce targets&mdash;he changed
+              the institution from within.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
               Actions over words: Grossi increased women in IAEA leadership from
@@ -231,11 +210,11 @@ export function ForEverybodySection() {
             <div className="bg-secondary/10 p-12 lg:p-16 relative">
               <span className="text-8xl font-serif text-secondary/10 absolute top-4 right-4 leading-none">&ldquo;</span>
               <blockquote className="font-serif text-2xl md:text-3xl text-foreground italic leading-relaxed relative">
-                I increased the number of women in leadership positions at the
-                IAEA from 28% to 52%. These are facts, not words.
+                The Marie Sklodowska-Curie Programme is not charity. It is
+                an investment in the talent the world cannot afford to waste.
               </blockquote>
               <cite className="block mt-6 text-sm text-muted-foreground not-italic">
-                — Rafael Grossi, El Pa&iacute;s interview, December 2025
+                — Rafael Grossi, on expanding opportunities for women scientists
               </cite>
             </div>
           </div>
@@ -246,7 +225,7 @@ export function ForEverybodySection() {
           ref={ctaAnim.ref}
           className={`relative transition-all duration-1200 ${ctaAnim.inView ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
         >
-          <div className="bg-primary text-primary-foreground p-16 lg:p-28 relative overflow-hidden film-grain">
+          <div className="bg-primary text-primary-foreground p-16 lg:p-28 relative overflow-hidden">
             <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)', backgroundSize: '40px 40px' }} />
             
             <div className="relative max-w-4xl">

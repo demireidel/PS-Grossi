@@ -39,6 +39,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${cormorant.variable} ${inter.variable}`}>
       <body className="font-sans antialiased">
+        <a href="#main-content" className="skip-to-content">
+          Skip to content
+        </a>
         {children}
         <Analytics />
       </body>

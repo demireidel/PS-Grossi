@@ -134,10 +134,6 @@ export function GlobalSouthSection() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-black/30" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/40" />
 
-          {/* Letterbox */}
-          <div className="absolute top-0 left-0 right-0 h-[6%] bg-black" />
-          <div className="absolute bottom-0 left-0 right-0 h-[6%] bg-black" />
-
           <div className="absolute bottom-[10%] left-0 right-0 px-8 lg:px-16">
             <div className="flex items-center gap-4 mb-4">
               <div className="w-12 h-px bg-secondary" />
