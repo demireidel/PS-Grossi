@@ -8,38 +8,38 @@ const engagementPrinciples = [
     number: "01",
     title: "Neutrality Is Not Passivity",
     description:
-      "Impartiality is what creates reach and usefulness. It is the operating system of effective multilateralism.",
+      "Impartiality is what creates reach and usefulness. It is the operating system of effective multilateralism. A Secretary-General who is seen as aligned with one camp loses the ability to mediate, facilitate, or convene. Neutrality is not weakness—it is the source of the office's unique power.",
   },
   {
     number: "02",
     title: "Access Without Alignment",
     description:
-      "Engaging everyone is not endorsing everyone. The UN must be able to talk to all parties while standing for its principles.",
+      "Engaging everyone is not endorsing everyone. The UN must be able to talk to all parties while standing for its principles. This requires the discipline to separate dialogue from approval, and the skill to maintain relationships that others have abandoned. Grossi has proven this can be done.",
   },
   {
     number: "03",
     title: "Facts Before Positions",
     description:
-      "Serious diplomacy is grounded in verification, restraint, and credibility—not declarations made for domestic audiences.",
+      "Serious diplomacy is grounded in verification, restraint, and credibility—not declarations made for domestic audiences. The IAEA's authority comes from its technical rigor. The Secretary-General's authority must come from the same commitment to truth over convenience.",
   },
 ]
 
 const trackRecords = [
   {
     title: "Maintained Dialogue with Tehran",
-    description: "Even at moments of maximum tension, kept verification channels open and delivered tangible outcomes while others chose confrontation.",
+    description: "When the JCPOA collapsed and tensions peaked, Grossi kept verification channels open. He traveled to Tehran repeatedly, meeting with the highest levels of Iranian leadership. While others chose confrontation, he delivered tangible outcomes—renewed inspections, access to sites, continued reporting. This is what impartial engagement looks like in practice.",
   },
   {
     title: "Engaged Moscow on Nuclear Safety",
-    description: "Negotiated access to Zaporizhzhia with Russian authorities while maintaining full cooperation with Kyiv. Both sides accepted his presence.",
+    description: "In the midst of war, with relations between Russia and the West at their lowest point in decades, Grossi negotiated access to Zaporizhzhia with Russian authorities while maintaining full cooperation with Kyiv. Both sides accepted his presence—a diplomatic achievement that few believed possible. This is what it means to talk to everybody.",
   },
   {
     title: "Built Consensus Across the Board",
-    description: "From Beijing to Washington, from Riyadh to Brussels, earned the respect of capitals that agree on very little else.",
+    description: "From Beijing to Washington, from Riyadh to Brussels, from New Delhi to Brasília, Grossi has earned the respect of capitals that agree on very little else. His reputation for fairness, discretion, and follow-through has made him a trusted interlocutor across every major geopolitical divide.",
   },
   {
     title: "Spoke Truth to All Parties",
-    description: "Never sacrificed verification for access, never diluted findings for political convenience. Credibility maintained through rigor.",
+    description: "Never sacrificed verification for access. Never diluted findings for political convenience. When IAEA reports have been uncomfortable—for any party—they have been delivered anyway. This is how credibility is built: not through being liked, but through being reliable. Member states know they can trust his word.",
   },
 ]
 
@@ -161,10 +161,25 @@ export function WithEverybodySection() {
                 capacity to engage across every fault line—East and West,
                 North and South, across ideological and geopolitical boundaries.
               </p>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                This is not about being neutral on values. The UN Charter is
+                clear about human rights, sovereignty, and the peaceful
+                settlement of disputes. It is about being available to all
+                parties so that when crises emerge, there is someone in the room
+                who everyone can accept as a fair broker.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                Grossi understands this from experience. At the IAEA, he has
+                maintained working relationships with governments that are
+                otherwise not speaking to each other. He has reported
+                uncomfortable truths to capitals across the spectrum—and
+                retained their respect precisely because they know he will do
+                the same to their adversaries.
+              </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                This is not about being neutral on values. It is about being
-                available to all parties so that when crises emerge, there is
-                someone in the room who everyone can accept.
+                This is the only way a Secretary-General can be effective in
+                today&apos;s polarized world. Not by choosing sides, but by
+                being the person all sides are willing to hear.
               </p>
             </div>
 

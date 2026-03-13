@@ -6,21 +6,21 @@ import { Shield, AlertTriangle, Compass } from "lucide-react"
 const experiences = [
   {
     icon: Shield,
-    title: "Nuclear Safeguards in Conflict Zones",
+    title: "Nuclear Safeguards in Active Conflict",
     description:
-      "Led IAEA missions to Zaporizhzhia nuclear plant under active military conflict, establishing on-site monitoring while shells fell.",
+      "Led IAEA missions to Zaporizhzhia—Europe's largest nuclear power plant—under active military conflict. Established permanent on-site monitoring while shells fell nearby. Negotiated access with both Russian and Ukrainian authorities simultaneously, maintaining presence through the most dangerous period of the war.",
   },
   {
     icon: AlertTriangle,
     title: "Iran Nuclear Negotiations",
     description:
-      "Maintained continuous dialogue with Tehran while upholding verification standards, proving that impartiality and rigor can coexist.",
+      "Maintained continuous dialogue with Tehran during years of maximum tension, when other channels had collapsed. Upholding verification standards while keeping Iran engaged—proving that impartiality and rigor can coexist. Achieved access to sensitive sites that had been blocked for years.",
   },
   {
     icon: Compass,
-    title: "Global Crisis Response",
+    title: "Global Crisis Response Architecture",
     description:
-      "Coordinated international technical response across multiple continents, from North Korea to the Middle East to Latin America.",
+      "Built and coordinated international technical response mechanisms spanning five continents. From North Korea's nuclear program to Middle East proliferation concerns to Latin American nuclear security—demonstrated capacity to manage multiple complex dossiers simultaneously without losing focus or credibility.",
   },
 ]
 
@@ -95,12 +95,28 @@ export function DangerousWorldSection() {
               This is a moment of active conflict, nuclear escalation risk, and
               unprecedented institutional strain. Wars rage on multiple
               continents. The international order faces challenges it was not
-              designed to handle.
+              designed to handle. Nuclear rhetoric has returned to the discourse
+              of major powers for the first time in decades.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+              The conflict in Ukraine has placed nuclear facilities at the center
+              of military operations—an unprecedented situation that required
+              immediate, skilled diplomatic intervention. The Middle East remains
+              volatile, with proliferation concerns that demand continuous
+              engagement. Regional conflicts in Africa and Asia test the UN's
+              capacity to respond at scale.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+              Climate emergencies are accelerating, creating new patterns of
+              displacement, conflict, and humanitarian need. Pandemic preparedness
+              remains inadequate. Food systems are under stress. The demand for
+              effective multilateral action has never been greater.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
               The next Secretary-General cannot learn on the job. They must
               arrive ready to engage in danger, not merely comment on it from a
-              distance.
+              distance. Experience in crisis management is not a luxury—it is a
+              prerequisite for the demands of the role.
             </p>
           </div>
 
@@ -128,32 +144,36 @@ export function DangerousWorldSection() {
         {/* Judgment Under Pressure */}
         <div className="grid md:grid-cols-3 gap-1 mb-24">
           <div className="group p-12 lg:p-14 bg-card border border-border hover:bg-foreground transition-all duration-500">
-            <p className="text-5xl md:text-6xl font-serif text-secondary mb-6">15+</p>
+            <p className="text-5xl md:text-6xl font-serif text-secondary mb-6">35+</p>
             <p className="text-foreground group-hover:text-background font-medium mb-3 transition-colors duration-500">
-              Years of Crisis Diplomacy
+              Years of Diplomatic Service
             </p>
             <p className="text-muted-foreground group-hover:text-background/60 text-sm transition-colors duration-500">
-              From Argentina to Austria, from bilateral negotiations to
-              multilateral leadership
+              From Argentina to Austria, from bilateral negotiations to leading
+              the IAEA through its most challenging period. A career built on
+              navigating complexity and delivering results.
             </p>
           </div>
           <div className="group p-12 lg:p-14 bg-card border border-border hover:bg-foreground transition-all duration-500">
-            <p className="text-5xl md:text-6xl font-serif text-secondary mb-6">170+</p>
+            <p className="text-5xl md:text-6xl font-serif text-secondary mb-6">178</p>
             <p className="text-foreground group-hover:text-background font-medium mb-3 transition-colors duration-500">
               Member States Engaged
             </p>
             <p className="text-muted-foreground group-hover:text-background/60 text-sm transition-colors duration-500">
-              Deep relationships across every region of the world
+              Deep relationships across every region of the world. Trusted
+              interlocutor from Washington to Moscow, Beijing to Brussels,
+              Tehran to Riyadh. No region left behind.
             </p>
           </div>
           <div className="group p-12 lg:p-14 bg-card border border-border hover:bg-foreground transition-all duration-500">
-            <p className="text-5xl md:text-6xl font-serif text-secondary mb-6">24/7</p>
+            <p className="text-5xl md:text-6xl font-serif text-secondary mb-6">50+</p>
             <p className="text-foreground group-hover:text-background font-medium mb-3 transition-colors duration-500">
-              Real-Time Decision Making
+              High-Stakes Missions
             </p>
             <p className="text-muted-foreground group-hover:text-background/60 text-sm transition-colors duration-500">
-              Proven judgment when lives and global stability hang in the
-              balance
+              Personal leadership in crisis zones. From Zaporizhzhia under fire
+              to Tehran under sanctions. Judgment tested when lives and global
+              stability hang in the balance.
             </p>
           </div>
         </div>
@@ -172,16 +192,32 @@ export function DangerousWorldSection() {
               Why This Experience <span className="text-secondary italic">Fits</span>
             </h3>
             
-            <p className="text-xl md:text-2xl leading-relaxed opacity-80 mb-12 font-light">
+            <p className="text-xl md:text-2xl leading-relaxed opacity-80 mb-8 font-light">
               The Secretary-General is not a commentator. The role demands
               someone who can walk into a war zone, sit across from adversaries,
               maintain composure when stakes are existential, and return with
               something that moves the needle.
             </p>
             
+            <p className="text-lg leading-relaxed opacity-70 mb-8">
+              Grossi has done exactly this—repeatedly. When Zaporizhzhia was
+              under bombardment, he went personally. When Iran closed doors to
+              inspectors, he found a way back in. When the international
+              community needed credible reporting on nuclear programs, he
+              delivered it without compromising access.
+            </p>
+            
+            <p className="text-lg leading-relaxed opacity-70 mb-12">
+              This is not theoretical preparation for crisis. This is a track
+              record of performance under conditions that test every aspect of
+              diplomatic leadership: courage, judgment, discretion, and the
+              ability to find common ground where others see only confrontation.
+            </p>
+            
             <blockquote className="relative pl-8 border-l-2 border-secondary">
               <p className="text-2xl md:text-3xl font-serif italic leading-[1.3]">
-                &ldquo;I go where I am needed. I stay until it matters.&rdquo;
+                &ldquo;I go where I am needed. I stay until it matters. And I
+                return with results, not excuses.&rdquo;
               </p>
             </blockquote>
           </div>

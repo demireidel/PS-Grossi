@@ -8,22 +8,22 @@ const commitments = [
   {
     icon: Eye,
     title: "Full Financial Disclosure",
-    description: "Complete transparency on personal finances, potential conflicts, and outside interests.",
+    description: "Complete transparency on personal finances, potential conflicts, and outside interests. If member states are asked to trust the Secretary-General, they deserve to know there are no hidden entanglements.",
   },
   {
     icon: FileText,
-    title: "Public Documents",
-    description: "All major speeches, statements, and policy positions freely accessible and searchable.",
+    title: "Public Documents & Positions",
+    description: "All major speeches, statements, and policy positions freely accessible and searchable. Decisions should be explainable. Positions should be documented. Transparency is not optional.",
   },
   {
     icon: BarChart3,
     title: "Performance Metrics",
-    description: "Clear benchmarks for measuring institutional effectiveness, reported annually.",
+    description: "Clear benchmarks for measuring institutional effectiveness, reported annually and honestly. The UN cannot demand accountability from member states while exempting itself from scrutiny.",
   },
   {
     icon: Award,
     title: "Merit-Based Appointments",
-    description: "Commitment to qualification over politics in all senior appointments.",
+    description: "Commitment to qualification over politics in all senior appointments. The Secretariat must be staffed by the best people available, regardless of nationality or political patronage.",
   },
 ]
 
@@ -172,13 +172,24 @@ export function TransparencySection() {
               </h3>
             </div>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              The UN system is vast, complex, and often duplicative. The next
-              Secretary-General must be willing to set clear priorities, reduce
-              overlap, improve coordination, and accelerate response times.
+              The UN system is vast, complex, and often duplicative. Thirty-plus
+              agencies, funds, and programs—each with its own governance, budget,
+              and institutional culture. Coordination is difficult by design.
+              But difficulty is not an excuse for dysfunction.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+              The next Secretary-General must be willing to set clear priorities,
+              reduce overlap, improve coordination, and accelerate response
+              times. This requires both diplomatic skill (the agencies are
+              semi-autonomous) and operational expertise (the Secretariat must
+              lead by example).
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed mb-10">
-              This is not about bureaucratic tinkering. It is about making the
-              system capable of matching the speed and scale of modern crises.
+              Grossi has managed a large international organization through
+              crisis. He understands the difference between reform on paper
+              and reform in practice. He knows that institutional change
+              requires persistence, coalition-building, and results that
+              demonstrate the value of doing things differently.
             </p>
             
             <div className="space-y-4">
@@ -261,11 +272,27 @@ export function TransparencySection() {
                 <span className="block text-secondary">and Merit</span>
               </h3>
               
-              <p className="text-xl md:text-2xl leading-relaxed opacity-80 mb-16 max-w-3xl font-light">
+              <p className="text-xl md:text-2xl leading-relaxed opacity-80 mb-8 max-w-3xl font-light">
                 A Secretary-General sets the tone for the entire UN system.
                 Grossi&apos;s commitment: integrity over politics, seriousness
                 over performance, inclusion over tokenism, and standards that
                 apply equally to everyone.
+              </p>
+              
+              <p className="text-lg leading-relaxed opacity-70 mb-8 max-w-3xl">
+                The UN Secretariat employs over 40,000 staff worldwide. Their
+                morale, their sense of mission, their willingness to go the
+                extra mile in crisis—all of this depends on leadership that
+                respects them. A Secretary-General who tolerates harassment,
+                rewards political connections over competence, or fails to
+                protect whistleblowers undermines the entire institution.
+              </p>
+              
+              <p className="text-lg leading-relaxed opacity-70 mb-16 max-w-3xl">
+                Grossi has built a culture at the IAEA that staff respect. He
+                has shown that technical excellence and human dignity are not
+                in tension—they reinforce each other. The same approach would
+                define his leadership of the broader UN system.
               </p>
               
               <blockquote className="relative pl-10 border-l-2 border-secondary">
@@ -287,10 +314,15 @@ export function TransparencySection() {
           <h3 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-8 leading-[1.1]">
             How a Better-Run UN<br />Should Be Judged
           </h3>
-          <p className="text-lg text-muted-foreground leading-relaxed mb-16 max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground leading-relaxed mb-6 max-w-2xl mx-auto">
             Not by the number of meetings held, but by crises averted. Not by
             statements issued, but by agreements reached. Not by budgets spent,
             but by outcomes delivered.
+          </p>
+          <p className="text-lg text-muted-foreground leading-relaxed mb-16 max-w-2xl mx-auto">
+            Grossi would bring a results-oriented culture to the UN—one that
+            asks not &ldquo;Did we follow the process?&rdquo; but &ldquo;Did we
+            make a difference?&rdquo; This is the only standard that matters.
           </p>
           
           <div className="grid sm:grid-cols-3 gap-1">

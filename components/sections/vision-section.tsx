@@ -8,25 +8,25 @@ const principles = [
     icon: Target,
     title: "Act Earlier",
     description:
-      "Prevention before crisis. Early warning becomes early action.",
+      "Prevention before crisis. The UN must shift from reactive responses to anticipatory action. Early warning systems exist—what is missing is the political will and operational capacity to act on them before situations deteriorate beyond recovery.",
   },
   {
     icon: Users,
     title: "Engage Across Divides",
     description:
-      "Impartial diplomacy that speaks with all parties, not just some.",
+      "Impartial diplomacy that speaks with all parties, not just some. In a world of deepening polarization, the UN's unique value lies in its ability to maintain channels of communication that no single state can replicate.",
   },
   {
     icon: Gauge,
     title: "Deliver for People",
     description:
-      "Practical results that matter to states and citizens alike.",
+      "Practical results that matter to states and citizens alike. The measure of UN success is not the number of resolutions passed, but the tangible improvements in human security, health, food, and dignity.",
   },
   {
     icon: RefreshCw,
     title: "Institutional Renewal",
     description:
-      "A UN that runs itself with discipline, transparency, and merit.",
+      "A UN that runs itself with discipline, transparency, and merit. Internal reform is not optional—it is the foundation of external credibility. Staff deserve a workplace of integrity; member states deserve an institution that performs.",
   },
 ]
 
@@ -66,14 +66,28 @@ export function VisionSection() {
             </h3>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
               The United Nations is too often reactive, fragmented, and distant
-              from practical results. In a world of accelerating crises, the gap
-              between what the UN promises and what it delivers has become
-              impossible to ignore.
+              from practical results. In a world of accelerating crises—from
+              armed conflicts and nuclear proliferation to climate emergencies
+              and pandemic risks—the gap between what the UN promises and what
+              it delivers has become impossible to ignore.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+              Member states invest political capital and financial resources
+              expecting a return in collective security and coordinated action.
+              Too often, they receive process instead of progress, statements
+              instead of solutions, meetings instead of momentum.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+              This is not a failure of purpose. The UN&apos;s founding vision
+              remains as relevant as ever. It is a failure of
+              performance&mdash;one that can be corrected with leadership that
+              understands both the diplomatic and operational dimensions of the
+              role.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              This is not a failure of purpose. It is a failure of
-              performance&mdash;one that can be corrected with the right
-              leadership.
+              The world cannot afford another decade of incremental adjustment.
+              It needs a Secretary-General who arrives with a clear diagnosis
+              and the experience to act on it.
             </p>
           </div>
           <div className="relative aspect-[4/3] overflow-hidden">
@@ -135,17 +149,31 @@ export function VisionSection() {
               Why This Election <span className="text-secondary italic">Matters</span>
             </h3>
             
-            <p className="text-xl md:text-2xl leading-relaxed opacity-80 mb-12 font-light">
+            <p className="text-xl md:text-2xl leading-relaxed opacity-80 mb-8 font-light">
               The issue is not symbolism. The issue is whether the next
               Secretary-General can make the institution more useful&mdash;to
               member states navigating impossible pressures, and to people whose
               lives depend on what the UN does next.
             </p>
             
+            <p className="text-lg leading-relaxed opacity-70 mb-8">
+              The 2026 selection comes at a moment of profound geopolitical
+              fragmentation. Great power competition has returned. Regional
+              conflicts are multiplying. Trust in multilateral institutions is
+              eroding precisely when it is most needed.
+            </p>
+            
+            <p className="text-lg leading-relaxed opacity-70 mb-12">
+              In this environment, the UN cannot simply continue as before. It
+              needs leadership that understands how to operate in contested
+              spaces, maintain credibility with all parties, and deliver
+              outcomes that rebuild confidence in collective action.
+            </p>
+            
             <blockquote className="relative pl-8 border-l-2 border-secondary">
               <p className="text-2xl md:text-3xl font-serif italic leading-[1.3]">
                 &ldquo;The world does not need a caretaker. It needs a leader who
-                has walked through fire.&rdquo;
+                has walked through fire&mdash;and emerged with results.&rdquo;
               </p>
             </blockquote>
           </div>
