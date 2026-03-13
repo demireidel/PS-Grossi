@@ -1,11 +1,11 @@
 "use client"
 
-import { useInView } from "react-intersection-observer"
 import { ArrowUpRight } from "lucide-react"
 import Link from "next/link"
+import { useInView } from "@/hooks/use-in-view"
 
 export function CtaSection() {
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 })
+  const { ref, inView } = useInView(0.2)
 
   return (
     <section 

@@ -3,8 +3,9 @@
 import { useState, useEffect } from "react"
 import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
+import type { NavItem } from "@/lib/types"
 
-const navItems = [
+const navItems: NavItem[] = [
   { href: "#vision", label: "A UN That Works" },
   { href: "#dangerous-world", label: "In a Dangerous World" },
   { href: "#with-everybody", label: "With Everybody" },
@@ -21,9 +22,26 @@ export function Navigation() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50)
     }
-    window.addEventListener("scroll", handleScroll)
+    window.addEventListener("scroll", handleScroll, { passive: true })
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
+
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === "Escape" && isOpen) setIsOpen(false)
+    }
+    document.addEventListener("keydown", handleEscape)
+    return () => document.removeEventListener("keydown", handleEscape)
+  }, [isOpen])
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden"
+    } else {
+      document.body.style.overflow = ""
+    }
+    return () => { document.body.style.overflow = "" }
+  }, [isOpen])
 
   return (
     <header

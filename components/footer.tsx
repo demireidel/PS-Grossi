@@ -1,11 +1,21 @@
 "use client"
 
+import { useState, useEffect } from "react"
 import { Mail, Twitter, Linkedin, ArrowUp, ChevronRight } from "lucide-react"
 import { useInView } from "@/hooks/use-in-view"
 
 export function Footer() {
   const ctaAnim = useInView()
   const linksAnim = useInView()
+  const [showBackToTop, setShowBackToTop] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowBackToTop(window.scrollY > 500)
+    }
+    window.addEventListener("scroll", handleScroll, { passive: true })
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   return (
     <footer className="bg-foreground text-background relative overflow-hidden">
@@ -168,13 +178,13 @@ export function Footer() {
           <div className="flex items-center gap-8">
             <a
               href="#"
-              className="text-background/60 hover:text-background/60 transition-colors text-xs uppercase tracking-wider"
+              className="text-background/60 hover:text-background transition-colors text-xs uppercase tracking-wider"
             >
               Privacy Policy
             </a>
             <a
               href="#"
-              className="text-background/60 hover:text-background/60 transition-colors text-xs uppercase tracking-wider"
+              className="text-background/60 hover:text-background transition-colors text-xs uppercase tracking-wider"
             >
               Terms of Use
             </a>
@@ -185,7 +195,9 @@ export function Footer() {
       {/* Back to Top */}
       <a
         href="#"
-        className="fixed bottom-8 right-8 z-50 w-14 h-14 bg-secondary text-secondary-foreground flex items-center justify-center hover:bg-accent transition-colors duration-300 group"
+        className={`fixed bottom-8 right-8 z-50 w-14 h-14 bg-secondary text-secondary-foreground flex items-center justify-center hover:bg-accent transition-all duration-300 group ${
+          showBackToTop ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
+        }`}
         aria-label="Back to top"
       >
         <ArrowUp className="w-5 h-5 transition-transform group-hover:-translate-y-1" />

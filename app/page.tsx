@@ -1,15 +1,16 @@
+import dynamic from "next/dynamic"
 import { Navigation } from "@/components/navigation"
 import { HeroSection } from "@/components/sections/hero-section"
 import { VisionSection } from "@/components/sections/vision-section"
-import { DangerousWorldSection } from "@/components/sections/dangerous-world-section"
-import { WithEverybodySection } from "@/components/sections/with-everybody-section"
-import { ForEverybodySection } from "@/components/sections/for-everybody-section"
-import { TransparencySection } from "@/components/sections/transparency-section"
-import { PolicyPlatformSection } from "@/components/sections/policy-platform-section"
-import { GlobalSouthSection } from "@/components/sections/global-south-section"
-
-import { CtaSection } from "@/components/sections/cta-section"
 import { Footer } from "@/components/footer"
+
+const DangerousWorldSection = dynamic(() => import("@/components/sections/dangerous-world-section").then(m => ({ default: m.DangerousWorldSection })))
+const WithEverybodySection = dynamic(() => import("@/components/sections/with-everybody-section").then(m => ({ default: m.WithEverybodySection })))
+const ForEverybodySection = dynamic(() => import("@/components/sections/for-everybody-section").then(m => ({ default: m.ForEverybodySection })))
+const TransparencySection = dynamic(() => import("@/components/sections/transparency-section").then(m => ({ default: m.TransparencySection })))
+const PolicyPlatformSection = dynamic(() => import("@/components/sections/policy-platform-section").then(m => ({ default: m.PolicyPlatformSection })))
+const GlobalSouthSection = dynamic(() => import("@/components/sections/global-south-section").then(m => ({ default: m.GlobalSouthSection })))
+const CtaSection = dynamic(() => import("@/components/sections/cta-section").then(m => ({ default: m.CtaSection })))
 
 export default function Home() {
   return (
@@ -23,7 +24,6 @@ export default function Home() {
       <TransparencySection />
       <PolicyPlatformSection />
       <GlobalSouthSection />
-
       <CtaSection />
       <Footer />
     </main>

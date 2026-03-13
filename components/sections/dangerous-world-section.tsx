@@ -1,7 +1,8 @@
 import Image from "next/image"
 import { Shield, AlertTriangle, Compass } from "lucide-react"
+import type { Experience } from "@/lib/types"
 
-const experiences = [
+const experiences: Experience[] = [
   {
     icon: Shield,
     title: "Zaporizhzhia: Into the Fire",
