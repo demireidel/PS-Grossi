@@ -57,7 +57,7 @@ export function DangerousWorldSection() {
         <div className="relative aspect-cinema mb-24 overflow-hidden">
           <Image
             src="/images/grossi-zaporizhzhia.jpg"
-            alt="Rafael Grossi leading the IAEA inspection mission at Zaporizhzhia nuclear power plant during active conflict"
+            alt="IAEA Director General Rafael Grossi wearing combat helmet at the frontline crossing near Zaporizhzhia Nuclear Power Plant, September 2024"
             fill
             quality={85}
             className="object-cover"
@@ -91,7 +91,7 @@ export function DangerousWorldSection() {
           <div className="relative aspect-[4/3] overflow-hidden group">
             <Image
               src="/images/crisis-diplomacy.jpg"
-              alt="Rafael Grossi engaged in crisis diplomacy, navigating high-stakes nuclear negotiations in conflict zones"
+              alt="Rafael Grossi in IAEA field vest during the first Support and Assistance Mission to Zaporizhzhia (ISAMZ), August 2022"
               fill
               quality={85}
               className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -106,7 +106,7 @@ export function DangerousWorldSection() {
           <div className="relative aspect-[4/3] overflow-hidden group">
             <Image
               src="/images/grossi-tehran.jpg"
-              alt="Rafael Grossi conducting nuclear verification negotiations in Tehran, maintaining dialogue amid geopolitical tensions"
+              alt="Rafael Grossi briefing the press on IAEA verification activities in Iran, Vienna, May 2024"
               fill
               quality={85}
               className="object-cover transition-transform duration-700 group-hover:scale-105"

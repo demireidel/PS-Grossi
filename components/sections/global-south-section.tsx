@@ -125,7 +125,7 @@ export function GlobalSouthSection() {
         <div className={`relative aspect-cinema overflow-hidden mb-20 group transition-all duration-1000 ${contentInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
           <Image
             src="/images/un-headquarters.jpg"
-            alt="United Nations headquarters building, representing the institution Rafael Grossi seeks to lead and reform"
+            alt="Rafael Grossi chairing a high-level meeting at IAEA headquarters with international delegates"
             fill
             quality={85}
             className="object-cover transition-transform duration-700 group-hover:scale-[1.02]"
@@ -168,7 +168,7 @@ export function GlobalSouthSection() {
           <div className={`relative aspect-[4/3] overflow-hidden transition-all duration-1000 delay-300 ${contentInView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
             <Image
               src="/images/grossi-portrait-formal.jpg"
-              alt="Official portrait of Rafael Grossi, IAEA Director General and first Latin American to lead the agency"
+              alt="Rafael Grossi speaking at a podium with senior IAEA officials, first Latin American to lead the agency"
               fill
               quality={85}
               className="object-cover"
