@@ -6,7 +6,7 @@ import { OrnamentalDivider } from "@/components/ornamental-divider"
 
 export function CtaSection() {
   return (
-    <section className="py-36 lg:py-52 bg-foreground text-background relative overflow-hidden">
+    <section className="py-40 lg:py-56 bg-foreground text-background relative overflow-hidden">
       <div
         className="absolute inset-0 opacity-[0.015]"
         style={{
@@ -17,7 +17,7 @@ export function CtaSection() {
       {/* Ambient gradient depth */}
       <div className="absolute inset-0 bg-gradient-to-br from-white/[0.015] via-transparent to-black/[0.06]" />
 
-      <div className="container mx-auto px-6 md:px-12 lg:px-20 relative">
+      <div className="container mx-auto px-6 md:px-12 lg:px-24 relative">
         <Reveal direction="up">
           <div className="max-w-5xl mx-auto text-center">
             <OrnamentalDivider label="The Decision" className="mb-12" />

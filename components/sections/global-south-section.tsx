@@ -22,7 +22,7 @@ export function GlobalSouthSection() {
 
       {/* Quote Block */}
       <Reveal direction="up">
-        <div className="mb-36 max-w-4xl mx-auto py-16">
+        <div className="mb-44 max-w-4xl mx-auto py-16">
           <Blockquote variant="centered" size="large" cite="— Rafael Grossi, El País interview, December 2025">
             &ldquo;What we need is a Secretary-General chosen for their merits. Someone should be chosen for their vision, not because after 80 years of men in the position it&apos;s time for a woman, or someone with blue eyes. You should be chosen for what you are, what you have done, what you can do.&rdquo;
           </Blockquote>
@@ -30,7 +30,7 @@ export function GlobalSouthSection() {
       </Reveal>
 
       {/* Stats Row */}
-      <div className="mb-36">
+      <div className="mb-44">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-[2px] bg-border">
           {GLOBAL_SOUTH_STATS.map((stat, index) => (
             <Reveal key={stat.label} direction="up" delay={index * 120}>
@@ -44,7 +44,7 @@ export function GlobalSouthSection() {
       </div>
 
       {/* Regional Perspectives */}
-      <div className="mb-36">
+      <div className="mb-44">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[2px] bg-border">
           {PERSPECTIVES.map((perspective, index) => (
             <Reveal key={perspective.region} direction="up" delay={index * 120}>
@@ -64,7 +64,7 @@ export function GlobalSouthSection() {
 
       {/* UN Headquarters Image */}
       <Reveal direction="fade" threshold={0.05}>
-        <div className="mb-36">
+        <div className="mb-44">
           <CinematicImage
             src="/images/un-headquarters.jpg"
             alt="Rafael Grossi chairing a high-level meeting at IAEA headquarters with international delegates"
@@ -85,7 +85,7 @@ export function GlobalSouthSection() {
       </Reveal>
 
       {/* Argentina Context */}
-      <div className="grid lg:grid-cols-2 gap-20 items-center">
+      <div className="grid lg:grid-cols-2 gap-24 items-center">
         <Reveal direction="left">
           <h3 className="font-serif text-2xl md:text-3xl text-foreground mb-8">
             From Buenos Aires to Vienna

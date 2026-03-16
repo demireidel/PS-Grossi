@@ -18,7 +18,7 @@ export function Footer() {
       <div className="absolute inset-0 bg-gradient-to-b from-white/[0.01] via-transparent to-black/[0.06]" />
 
       {/* CTA Section */}
-      <div className="relative container mx-auto px-6 md:px-12 lg:px-20 py-36 lg:py-48 border-b border-background/[0.06]">
+      <div className="relative container mx-auto px-6 md:px-12 lg:px-24 py-40 lg:py-56 border-b border-background/[0.06]">
         <Reveal direction="fade">
           <div className="max-w-5xl mx-auto text-center">
             <OrnamentalDivider label="The Call" className="mb-12" />
@@ -58,7 +58,7 @@ export function Footer() {
       </div>
 
       {/* Footer Links */}
-      <div className="relative container mx-auto px-6 md:px-12 lg:px-20 py-24">
+      <div className="relative container mx-auto px-6 md:px-12 lg:px-24 py-24">
         <Reveal direction="up">
           <div className="grid md:grid-cols-12 gap-16">
             {/* Brand */}
@@ -150,7 +150,7 @@ export function Footer() {
       </div>
 
       {/* Copyright */}
-      <div className="relative container mx-auto px-6 md:px-12 lg:px-20 py-10 border-t border-background/[0.06]">
+      <div className="relative container mx-auto px-6 md:px-12 lg:px-24 py-10 border-t border-background/[0.06]">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-background/40 text-xs uppercase tracking-wider">
             &copy; {CURRENT_YEAR} Grossi for UN Campaign. All rights reserved.

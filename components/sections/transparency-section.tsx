@@ -25,7 +25,7 @@ export function TransparencySection() {
 
       {/* Cinematic Hero Image */}
       <Reveal direction="fade" threshold={0.05}>
-        <div className="relative mb-36">
+        <div className="relative mb-44">
           <CinematicImage
             src="/images/grossi-iaea-board.jpg"
             alt="Rafael Grossi smiling during a Board of Governors session at IAEA headquarters in Vienna, demonstrating institutional leadership"
@@ -51,7 +51,7 @@ export function TransparencySection() {
       </Reveal>
 
       {/* Transparency Commitments */}
-      <div className="mb-36">
+      <div className="mb-44">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[2px] bg-border">
           {COMMITMENTS.map((item, index) => (
             <Reveal key={item.title} direction="scale" delay={index * 120}>
@@ -68,7 +68,7 @@ export function TransparencySection() {
       </div>
 
       {/* Governance in Practice Image */}
-      <div className="relative aspect-[16/9] overflow-hidden mb-36 group bg-black">
+      <div className="relative aspect-[16/9] overflow-hidden mb-44 group bg-black">
         <Image
           src="/images/transparency-governance.jpg"
           alt="Rafael Grossi in IAEA field vest preparing for a mission near Zaporizhzhia, demonstrating hands-on leadership in crisis zones"
@@ -87,7 +87,7 @@ export function TransparencySection() {
       </div>
 
       {/* Management Discipline + Document Hub */}
-      <div className="grid lg:grid-cols-12 gap-20 items-start mb-36">
+      <div className="grid lg:grid-cols-12 gap-24 items-start mb-44">
         <Reveal direction="up" className="lg:col-span-6">
           <div className="relative mb-10">
             <span className="text-[clamp(8rem,12vw,10rem)] font-serif text-foreground/[0.03] absolute -top-16 -left-4 leading-none select-none pointer-events-none" aria-hidden="true">05</span>
@@ -159,7 +159,7 @@ export function TransparencySection() {
 
       {/* Institutional Culture */}
       <Reveal direction="up">
-        <div className="mb-36">
+        <div className="mb-44">
           <DarkPanel label="The Culture">
             <h3 className="font-serif text-4xl md:text-5xl lg:text-6xl mb-14 leading-[1.1]">
               Institutional Culture

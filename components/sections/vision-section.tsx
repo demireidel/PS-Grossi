@@ -23,9 +23,9 @@ export function VisionSection() {
 
       {/* Grossi's Diagnosis */}
       <Reveal direction="up">
-        <div className="grid lg:grid-cols-2 gap-20 items-center mb-36">
+        <div className="grid lg:grid-cols-2 gap-24 items-center mb-40">
           <div>
-            <h3 className="font-serif text-2xl md:text-3xl text-foreground mb-8">
+            <h3 className="font-serif text-2xl md:text-3xl text-foreground mb-8 font-light">
               &ldquo;The UN Has Forgotten Its Purpose&rdquo;
             </h3>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6">
@@ -67,8 +67,8 @@ export function VisionSection() {
 
       {/* The Doctrine */}
       <Reveal direction="up">
-        <div className="mb-36">
-          <div className="text-center max-w-3xl mx-auto mb-20">
+        <div className="mb-40">
+          <div className="text-center max-w-3xl mx-auto mb-24">
             <h3 className="font-serif text-2xl md:text-3xl text-foreground mb-6">
               The Governing Doctrine
             </h3>

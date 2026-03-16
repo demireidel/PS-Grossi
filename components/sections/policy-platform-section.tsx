@@ -17,7 +17,7 @@ export function PolicyPlatformSection() {
       </Reveal>
 
       {/* Policy Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[2px] bg-border mb-36">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[2px] bg-border mb-44">
         {POLICY_AREAS.map((area, index) => (
           <Reveal key={area.title} direction="scale" delay={index * 120}>
             <ContentCard index={index}>

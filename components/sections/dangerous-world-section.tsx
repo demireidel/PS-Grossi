@@ -23,7 +23,7 @@ export function DangerousWorldSection() {
 
       {/* Hero Image — Cinematic */}
       <Reveal direction="fade" threshold={0.05}>
-        <div className="relative aspect-[16/9] lg:aspect-cinema mb-36 overflow-hidden bg-black">
+        <div className="relative aspect-[16/9] lg:aspect-cinema mb-44 overflow-hidden bg-black">
           <div className="absolute inset-0 clip-reveal revealed">
             <Image
               src="/images/grossi-zaporizhzhia.jpg"
@@ -62,7 +62,7 @@ export function DangerousWorldSection() {
 
       {/* Secondary Images */}
       <Reveal direction="up">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 mb-36">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 mb-44">
           <ImageCaption
             src="/images/crisis-diplomacy.jpg"
             alt="Rafael Grossi in IAEA field vest during the first Support and Assistance Mission to Zaporizhzhia (ISAMZ), August 2022"
@@ -80,7 +80,7 @@ export function DangerousWorldSection() {
 
       {/* The Stakes */}
       <Reveal direction="up">
-        <div className="grid lg:grid-cols-2 gap-20 items-start mb-36">
+        <div className="grid lg:grid-cols-2 gap-24 items-start mb-44">
           <div>
             <h3 className="font-serif text-2xl md:text-3xl text-foreground mb-8">
               &ldquo;A Fragmented and Volatile World&rdquo;
@@ -134,7 +134,7 @@ export function DangerousWorldSection() {
 
       {/* Career Stats */}
       <Reveal direction="up">
-        <div className="mb-36">
+        <div className="mb-44">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-[2px] bg-border">
             {CAREER_STATS.map((card, index) => (
               <Reveal key={card.title} direction="up" delay={index * 120}>

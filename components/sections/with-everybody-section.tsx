@@ -21,7 +21,7 @@ export function WithEverybodySection() {
       </Reveal>
 
       {/* Main Content Grid */}
-      <div className="grid lg:grid-cols-12 gap-20 mb-36">
+      <div className="grid lg:grid-cols-12 gap-24 mb-44">
         {/* Left Column — Dual Images */}
         <Reveal direction="left" className="lg:col-span-5">
           <div className="lg:sticky lg:top-32 space-y-6">
@@ -107,7 +107,7 @@ export function WithEverybodySection() {
 
       {/* Track Record */}
       <Reveal direction="up">
-        <div className="mb-36">
+        <div className="mb-44">
           <div className="text-center max-w-3xl mx-auto mb-20">
             <span className="text-secondary text-[length:var(--text-label)] uppercase tracking-[var(--tracking-ultra)] font-medium mb-6 block">Proven Track Record</span>
             <h3 className="font-serif text-4xl md:text-5xl text-foreground leading-[1.1]">

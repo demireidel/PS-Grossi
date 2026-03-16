@@ -27,24 +27,27 @@ export function DarkPanel({
     : "bg-primary text-primary-foreground"
 
   return (
-    <div className={cn(bgClass, "p-16 lg:p-28 relative overflow-hidden film-grain", className)}>
-      {/* Layered depth — ambient gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white/[0.02] via-transparent to-black/[0.08]" />
-      {/* Subtle dot pattern */}
+    <div className={cn(bgClass, "p-20 lg:p-32 relative overflow-hidden film-grain", className)}>
+      {/* Multi-layer depth */}
+      <div className="absolute inset-0 bg-gradient-to-br from-white/[0.03] via-transparent to-black/[0.12]" />
+      <div className="absolute inset-0 bg-gradient-to-tl from-secondary/[0.02] via-transparent to-transparent" />
+      {/* Dot pattern */}
       <div
-        className="absolute inset-0 opacity-[0.015]"
+        className="absolute inset-0 opacity-[0.012]"
         style={{
           backgroundImage: "var(--dot-pattern)",
           backgroundSize: "var(--dot-size-sm)",
         }}
       />
-      {/* Edge highlight — top */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-secondary/20 to-transparent" />
+      {/* Edge highlight lines */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-secondary/15 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.04] to-transparent" />
+      <div className="absolute top-0 left-0 bottom-0 w-px bg-gradient-to-b from-secondary/10 via-transparent to-transparent" />
 
       <div className={cn("relative", maxWidthMap[maxWidth])}>
         {label && (
-          <span className="inline-flex items-center gap-4 text-secondary text-[length:var(--text-label)] uppercase tracking-[var(--tracking-ultra)] font-medium mb-12">
-            <span className="w-10 h-px bg-gradient-to-r from-secondary to-secondary/30" />
+          <span className="inline-flex items-center gap-5 text-secondary text-[length:var(--text-label)] uppercase tracking-[var(--tracking-ultra)] font-medium mb-14">
+            <span className="w-12 h-px bg-gradient-to-r from-secondary to-secondary/20" />
             {label}
           </span>
         )}

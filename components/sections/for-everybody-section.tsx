@@ -25,7 +25,7 @@ export function ForEverybodySection() {
 
         {/* Cinematic Hero Image */}
         <Reveal direction="fade" threshold={0.05}>
-          <div className="relative mb-36">
+          <div className="relative mb-44">
             <CinematicImage
               src="/images/grossi-rays-of-hope.jpg"
               alt="Rafael Grossi with his IAEA delegation at the African Union headquarters in Addis Ababa after launching the Rays of Hope cancer care initiative, February 2022"
@@ -59,7 +59,7 @@ export function ForEverybodySection() {
         </Reveal>
 
         {/* Delivery Areas Grid */}
-        <div className="mb-36">
+        <div className="mb-44">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[2px] bg-border">
             {DELIVERY_AREAS.map((area, index) => (
               <Reveal key={area.title} direction="up" delay={index * 120}>
@@ -77,7 +77,7 @@ export function ForEverybodySection() {
         </div>
 
         {/* Gender as Proof */}
-        <div className="grid lg:grid-cols-12 gap-20 items-center mb-36">
+        <div className="grid lg:grid-cols-12 gap-24 items-center mb-44">
           <Reveal direction="up" className="lg:col-span-6">
             <div className="relative mb-10">
               <span className="text-[clamp(8rem,12vw,10rem)] font-serif text-foreground/[0.03] absolute -top-16 -left-4 leading-none select-none pointer-events-none" aria-hidden="true">04</span>

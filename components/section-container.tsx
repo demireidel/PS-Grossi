@@ -28,12 +28,12 @@ export function SectionContainer({
   return (
     <section
       id={id}
-      className={cn("py-36 lg:py-52 relative overflow-hidden", bgMap[bg], className)}
+      className={cn("py-40 lg:py-56 relative overflow-hidden", bgMap[bg], className)}
     >
       {withGradientOverlay && (
-        <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-transparent to-background/50" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-transparent to-background/60" />
       )}
-      <div className="container mx-auto px-6 md:px-12 lg:px-20 relative">
+      <div className="container mx-auto px-6 md:px-12 lg:px-24 relative">
         {children}
       </div>
     </section>
