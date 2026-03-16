@@ -3,6 +3,7 @@
 import { Shield, Users, Zap, Building2, Globe, Scale } from "lucide-react"
 import { useInView } from "@/hooks/use-in-view"
 import type { PolicyArea } from "@/lib/types"
+import { DOT_PATTERN_SM, DOT_PATTERN_SIZE_SM, DOT_PATTERN_SIZE_LG } from "@/lib/constants"
 
 const policyAreas: PolicyArea[] = [
   {
@@ -84,8 +85,8 @@ export function PolicyPlatformSection() {
 
   return (
     <section id="platform" className="py-32 lg:py-48 bg-muted/30 relative overflow-hidden">
-      <div className="absolute inset-0 opacity-[0.015]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)', backgroundSize: '48px 48px' }} />
-      
+      <div className="absolute inset-0 opacity-[0.015]" style={{ backgroundImage: DOT_PATTERN_SM, backgroundSize: DOT_PATTERN_SIZE_LG }} />
+
       <div className="container mx-auto px-6 lg:px-20 relative" ref={ref}>
         {/* Section Header */}
         <div className="max-w-5xl mb-20">
@@ -119,21 +120,21 @@ export function PolicyPlatformSection() {
             >
               <div className="flex items-start justify-between mb-6">
                 <area.icon className="w-7 h-7 text-secondary" />
-                <span className="text-3xl font-serif text-foreground/10 group-hover:text-background/20 transition-colors duration-500">
+                <span className="text-3xl font-serif text-foreground/10 group-hover:text-background/20 transition-colors duration-500" aria-hidden="true">
                   0{index + 1}
                 </span>
               </div>
-              
+
               <h3 className="font-serif text-xl text-foreground group-hover:text-background mb-2 transition-colors duration-500">
                 {area.title}
               </h3>
               <p className="text-secondary text-sm mb-6 group-hover:text-secondary/80 transition-colors duration-500">
                 {area.subtitle}
               </p>
-              
+
               <ul className="space-y-3 mb-8">
                 {area.proposals.map((proposal, i) => (
-                  <li 
+                  <li
                     key={i}
                     className="text-sm text-muted-foreground group-hover:text-background/70 leading-relaxed flex gap-3 transition-colors duration-500"
                   >
@@ -142,7 +143,7 @@ export function PolicyPlatformSection() {
                   </li>
                 ))}
               </ul>
-              
+
               <blockquote className="text-sm italic text-muted-foreground/80 group-hover:text-background/60 border-l-2 border-secondary/30 pl-4 transition-colors duration-500">
                 &ldquo;{area.quote}&rdquo;
               </blockquote>
@@ -152,8 +153,8 @@ export function PolicyPlatformSection() {
 
         {/* Bottom CTA */}
         <div className="bg-foreground text-background p-16 lg:p-20 text-center relative overflow-hidden">
-          <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)', backgroundSize: '32px 32px' }} />
-          
+          <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: DOT_PATTERN_SM, backgroundSize: DOT_PATTERN_SIZE_SM }} />
+
           <div className="relative max-w-3xl mx-auto">
             <h3 className="font-serif text-3xl md:text-4xl mb-8 leading-[1.1]">
               This Is Not a Manifesto. <span className="text-secondary italic">It Is a Track Record.</span>

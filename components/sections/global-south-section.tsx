@@ -3,6 +3,7 @@
 import Image from "next/image"
 import { useInView } from "@/hooks/use-in-view"
 import type { RegionalPerspective } from "@/lib/types"
+import { DOT_PATTERN_SM, DOT_PATTERN_SIZE_LG } from "@/lib/constants"
 
 const perspectives: RegionalPerspective[] = [
   {
@@ -44,11 +45,11 @@ export function GlobalSouthSection() {
 
   return (
     <section id="global-south" className="py-32 lg:py-48 bg-background relative overflow-hidden">
-      <div className="absolute inset-0 opacity-[0.015]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)', backgroundSize: '48px 48px' }} />
-      
+      <div className="absolute inset-0 opacity-[0.015]" style={{ backgroundImage: DOT_PATTERN_SM, backgroundSize: DOT_PATTERN_SIZE_LG }} />
+
       <div className="container mx-auto px-6 lg:px-20 relative">
         {/* Section Header */}
-        <div 
+        <div
           ref={headerRef}
           className={`max-w-5xl mb-20 transition-all duration-1000 ${headerInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
         >
@@ -71,7 +72,7 @@ export function GlobalSouthSection() {
         </div>
 
         {/* Quote Block */}
-        <div 
+        <div
           ref={contentRef}
           className={`bg-primary text-primary-foreground p-12 lg:p-16 mb-20 transition-all duration-1000 delay-200 ${contentInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
         >
@@ -86,7 +87,7 @@ export function GlobalSouthSection() {
         {/* Stats Row */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-1 mb-20">
           {stats.map((stat, index) => (
-            <div 
+            <div
               key={stat.label}
               className={`p-8 lg:p-10 bg-card border border-border text-center transition-all duration-700 ${
                 contentInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
@@ -102,7 +103,7 @@ export function GlobalSouthSection() {
         {/* Regional Perspectives */}
         <div className="grid md:grid-cols-2 gap-1 mb-20">
           {perspectives.map((perspective, index) => (
-            <div 
+            <div
               key={perspective.region}
               className={`group p-10 lg:p-14 bg-card border border-border hover:bg-foreground transition-all duration-700 ${
                 contentInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'

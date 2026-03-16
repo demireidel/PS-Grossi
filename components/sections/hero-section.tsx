@@ -7,14 +7,15 @@ export function HeroSection() {
   const [loaded, setLoaded] = useState(false)
 
   useEffect(() => {
-    setLoaded(true)
+    // Use requestAnimationFrame to trigger animations after paint
+    const id = requestAnimationFrame(() => setLoaded(true))
+    return () => cancelAnimationFrame(id)
   }, [])
 
   return (
     <section className="relative min-h-screen h-screen flex items-center justify-center overflow-hidden bg-black">
       {/* Background Image with cinematic treatment */}
       <div className="absolute inset-0 w-full h-full overflow-hidden">
-        {/* Animated zoom effect */}
         <div className="relative w-full h-full ken-burns">
           <Image
             src="/images/grossi-hero.jpg"
@@ -26,22 +27,18 @@ export function HeroSection() {
             sizes="100vw"
           />
         </div>
-        {/* Cinematic gradient overlays */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/80" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-black/50" />
-        {/* Vignette effect */}
         <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at center, transparent 20%, rgba(0,0,0,0.6) 100%)' }} />
-        {/* Film grain overlay */}
         <div className="absolute inset-0 opacity-[0.03] mix-blend-overlay" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")` }} />
       </div>
 
-      {/* Letterbox bars for cinematic 2.39:1 feel */}
+      {/* Letterbox bars */}
       <div className="absolute top-0 left-0 right-0 h-[5%] bg-black z-20" />
       <div className="absolute bottom-0 left-0 right-0 h-[5%] bg-black z-20" />
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 lg:px-20 text-center">
-        {/* Decorative element */}
         <div className={`flex items-center justify-center gap-6 mb-12 transition-all duration-1000 delay-200 ${loaded ? "opacity-100" : "opacity-0"}`}>
           <span className={`h-px bg-gradient-to-r from-transparent to-secondary/60 transition-all duration-1000 delay-500 ${loaded ? "w-24" : "w-0"}`} />
           <div className="w-2 h-2 rotate-45 border border-secondary/60" />
@@ -87,10 +84,9 @@ export function HeroSection() {
           40 years of diplomacy. First Latin American IAEA Director General.
           A leader with boots in the mud.
         </p>
-
       </div>
 
-      {/* Scroll Indicator - refined */}
+      {/* Scroll Indicator */}
       <div
         className={`absolute bottom-16 left-1/2 -translate-x-1/2 transition-all duration-1000 delay-1200 z-10 ${
           loaded ? "opacity-100" : "opacity-0"
