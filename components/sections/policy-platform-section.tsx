@@ -3,7 +3,8 @@
 import { Shield, Users, Zap, Building2, Globe, Scale } from "lucide-react"
 import { useInView } from "@/hooks/use-in-view"
 import type { PolicyArea } from "@/lib/types"
-import { DOT_PATTERN_SM, DOT_PATTERN_SIZE_SM, DOT_PATTERN_SIZE_LG } from "@/lib/constants"
+import { SectionHeader } from "@/components/section-header"
+
 
 const policyAreas: PolicyArea[] = [
   {
@@ -84,51 +85,39 @@ export function PolicyPlatformSection() {
   const { ref, inView } = useInView(0.1)
 
   return (
-    <section id="platform" className="py-32 lg:py-48 bg-muted/30 relative overflow-hidden">
-      <div className="absolute inset-0 opacity-[0.015]" style={{ backgroundImage: DOT_PATTERN_SM, backgroundSize: DOT_PATTERN_SIZE_LG }} />
-
-      <div className="container mx-auto px-6 lg:px-20 relative" ref={ref}>
-        {/* Section Header */}
-        <div className="max-w-5xl mb-20">
-          <div className="flex items-center gap-6 mb-8">
-            <span className="h-px w-16 bg-secondary" />
-            <p className="text-secondary uppercase tracking-[0.3em] text-[10px] font-medium">
-              Section 06
-            </p>
-            <span className="text-secondary/30">/</span>
-            <p className="text-muted-foreground uppercase tracking-[0.2em] text-[10px]">
-              Policy Platform
-            </p>
-          </div>
-          <h2 className="font-serif text-5xl md:text-6xl lg:text-7xl text-foreground mb-10 leading-[0.95] tracking-tight">
-            What Grossi <span className="text-secondary italic">Would Do</span>
-          </h2>
-          <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed font-light max-w-3xl">
-            Concrete proposals across six priority areas. Not aspirations—actionable reforms based on proven experience.
-          </p>
-        </div>
+    <section id="platform" className="py-32 lg:py-48 bg-muted relative overflow-hidden">
+      <div className="container mx-auto px-6 md:px-12 lg:px-20 relative" ref={ref}>
+        <SectionHeader
+          number="06"
+          label="Policy Platform"
+          title={<>What Grossi <span className="text-secondary italic">Would Do</span></>}
+          subtitle="Concrete proposals across six priority areas. Not aspirations—actionable reforms based on proven experience."
+          animated
+          inView={inView}
+        />
 
         {/* Policy Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-1 mb-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[2px] bg-border mb-32">
           {policyAreas.map((area, index) => (
             <div
               key={area.title}
-              className={`group p-10 lg:p-12 bg-card border border-border hover:bg-foreground transition-all duration-700 ${
-                inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              className={`group p-10 lg:p-12 bg-card hover:bg-foreground transition-[opacity,transform,background-color] duration-600 relative overflow-hidden ${
+                inView ? 'opacity-100 scale-100' : 'opacity-0 scale-[0.97]'
               }`}
-              style={{ transitionDelay: `${index * 100}ms` }}
+              style={{ transitionDelay: `${index * 120}ms` }}
             >
+              <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-secondary/40 via-secondary/10 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-600 origin-left" />
               <div className="flex items-start justify-between mb-6">
-                <area.icon className="w-7 h-7 text-secondary" />
-                <span className="text-3xl font-serif text-foreground/10 group-hover:text-background/20 transition-colors duration-500" aria-hidden="true">
+                <area.icon className="w-8 h-8 text-secondary" />
+                <span className="text-3xl font-serif text-foreground/[0.12] group-hover:text-background/20 transition-colors duration-400" aria-hidden="true">
                   0{index + 1}
                 </span>
               </div>
 
-              <h3 className="font-serif text-xl text-foreground group-hover:text-background mb-2 transition-colors duration-500">
+              <h3 className="font-serif text-xl text-foreground group-hover:text-background mb-2 transition-colors duration-400">
                 {area.title}
               </h3>
-              <p className="text-secondary text-sm mb-6 group-hover:text-secondary/80 transition-colors duration-500">
+              <p className="text-secondary text-sm mb-6 group-hover:text-secondary/80 transition-colors duration-400">
                 {area.subtitle}
               </p>
 
@@ -136,7 +125,7 @@ export function PolicyPlatformSection() {
                 {area.proposals.map((proposal, i) => (
                   <li
                     key={i}
-                    className="text-sm text-muted-foreground group-hover:text-background/70 leading-relaxed flex gap-3 transition-colors duration-500"
+                    className="text-sm text-muted-foreground group-hover:text-background/70 leading-relaxed flex gap-3 transition-colors duration-400"
                   >
                     <span className="text-secondary shrink-0 mt-1">—</span>
                     {proposal}
@@ -144,28 +133,24 @@ export function PolicyPlatformSection() {
                 ))}
               </ul>
 
-              <blockquote className="text-sm italic text-muted-foreground/80 group-hover:text-background/60 border-l-2 border-secondary/30 pl-4 transition-colors duration-500">
+              <blockquote className="text-sm italic text-muted-foreground/80 group-hover:text-background/60 border-l-2 border-secondary/30 pl-4 transition-colors duration-400">
                 &ldquo;{area.quote}&rdquo;
               </blockquote>
             </div>
           ))}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="bg-foreground text-background p-16 lg:p-20 text-center relative overflow-hidden">
-          <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: DOT_PATTERN_SM, backgroundSize: DOT_PATTERN_SIZE_SM }} />
-
-          <div className="relative max-w-3xl mx-auto">
-            <h3 className="font-serif text-3xl md:text-4xl mb-8 leading-[1.1]">
-              This Is Not a Manifesto. <span className="text-secondary italic">It Is a Track Record.</span>
-            </h3>
-            <p className="text-lg opacity-70 mb-6 leading-relaxed">
-              Every proposal above reflects something Grossi has already done at the IAEA: crisis deployment, nuclear safety zones, gender parity, institutional reform, impartial engagement across all divides.
-            </p>
-            <p className="text-lg opacity-70 leading-relaxed">
-              The UN Secretary-General role is larger in scope. But the principles are the same. And unlike campaign promises, these have been tested under fire.
-            </p>
-          </div>
+        {/* Closing Statement */}
+        <div className="text-center max-w-3xl mx-auto mt-20">
+          <p className="font-serif text-2xl md:text-3xl text-foreground leading-[1.2] mb-6">
+            This Is Not a Manifesto. <span className="text-secondary italic">It Is a Track Record.</span>
+          </p>
+          <p className="text-muted-foreground leading-relaxed mb-4">
+            Every proposal above reflects something Grossi has already done at the IAEA: crisis deployment, nuclear safety zones, gender parity, institutional reform, impartial engagement across all divides.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            The UN Secretary-General role is larger in scope. But the principles are the same. And unlike campaign promises, these have been tested under fire.
+          </p>
         </div>
       </div>
     </section>
