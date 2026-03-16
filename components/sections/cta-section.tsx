@@ -15,7 +15,7 @@ export function CtaSection() {
     >
       <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: DOT_PATTERN_SM, backgroundSize: DOT_PATTERN_SIZE_SM }} />
 
-      <div className="container mx-auto px-6 lg:px-20 relative">
+      <div className="container mx-auto px-6 md:px-12 lg:px-20 relative">
         <div className={`max-w-5xl mx-auto text-center transition-[opacity,transform] duration-800 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
 
           <div className="flex items-center justify-center gap-6 mb-10">
@@ -38,9 +38,24 @@ export function CtaSection() {
             Rafael Grossi offers something rare: a candidate whose experience matches the demands of the role. Forty years of crisis diplomacy. Leadership of a major UN agency through its most challenging period. A track record of engaging all parties, delivering results, and reforming institutions from within.
           </p>
 
-          <blockquote className="font-serif text-3xl md:text-4xl lg:text-5xl italic leading-[1.2] mb-16 max-w-4xl mx-auto">
-            <span className="text-gradient-gold">&ldquo;</span>The UN needs a secretary with boots in the mud—not one who comments from a distance.<span className="text-gradient-gold">&rdquo;</span>
+          <blockquote className="font-serif text-3xl md:text-4xl lg:text-5xl italic leading-[1.2] mb-20 max-w-4xl mx-auto text-gradient-gold">
+            &ldquo;The UN needs a secretary with boots in the mud—not one who comments from a distance.&rdquo;
           </blockquote>
+
+          {/* Next Steps */}
+          <div className="flex flex-col sm:flex-row justify-center gap-8 mb-20 text-left max-w-3xl mx-auto">
+            {[
+              { label: "Share with Your Delegation", desc: "Forward the vision to decision-makers in your mission" },
+              { label: "Request a Briefing", desc: "Detailed policy positions available for permanent missions" },
+              { label: "Follow the Campaign", desc: "Stay informed on developments and endorsements" },
+            ].map((item, i) => (
+              <div key={i} className="flex-1 border-t border-background/15 pt-6">
+                <p className="text-secondary text-[10px] uppercase tracking-[0.3em] mb-3">0{i + 1}</p>
+                <p className="text-lg font-medium mb-2">{item.label}</p>
+                <p className="text-sm opacity-60">{item.desc}</p>
+              </div>
+            ))}
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-px max-w-2xl mx-auto mb-16 bg-background/10">
             <div className="group p-10 bg-foreground text-left hover:bg-foreground/90 transition-[background-color] duration-400 relative overflow-hidden">

@@ -10,6 +10,8 @@ export const DOT_PATTERN_SIZE_SM = "32px 32px"
 export const DOT_PATTERN_SIZE_MD = "40px 40px"
 export const DOT_PATTERN_SIZE_LG = "48px 48px"
 
+export const BLUR_DATA_URL = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjEwIiBoZWlnaHQ9IjEwIiBmaWxsPSIjZTVlNWU1Ii8+PC9zdmc+"
+
 export const NAV_ITEMS: NavItem[] = [
   { href: "#vision", label: "A UN That Works" },
   { href: "#dangerous-world", label: "In a Dangerous World" },

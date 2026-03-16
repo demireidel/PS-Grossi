@@ -5,8 +5,8 @@ import { useInView } from "@/hooks/use-in-view"
 import type { RegionalPerspective } from "@/lib/types"
 import { SectionHeader } from "@/components/section-header"
 import { Blockquote } from "@/components/blockquote"
-import { DarkPanel } from "@/components/dark-panel"
-import { DOT_PATTERN_SM, DOT_PATTERN_SIZE_LG } from "@/lib/constants"
+import { BLUR_DATA_URL } from "@/lib/constants"
+
 
 const perspectives: RegionalPerspective[] = [
   {
@@ -47,14 +47,12 @@ export function GlobalSouthSection() {
   const quoteAnim = useInView()
   const statsAnim = useInView()
   const perspectivesAnim = useInView()
-  const imageAnim = useInView()
+  const imageAnim = useInView(0.05)
   const contextAnim = useInView()
 
   return (
     <section id="global-south" className="py-32 lg:py-48 bg-background relative overflow-hidden">
-      <div className="absolute inset-0 opacity-[0.015]" style={{ backgroundImage: DOT_PATTERN_SM, backgroundSize: DOT_PATTERN_SIZE_LG }} />
-
-      <div className="container mx-auto px-6 lg:px-20 relative">
+      <div className="container mx-auto px-6 md:px-12 lg:px-20 relative">
         <SectionHeader
           ref={headerAnim.ref}
           number="07"
@@ -68,16 +66,11 @@ export function GlobalSouthSection() {
         {/* Quote Block */}
         <div
           ref={quoteAnim.ref}
-          className={`mb-32 transition-[opacity,transform] duration-800 ${quoteAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
+          className={`mb-32 max-w-4xl mx-auto py-16 transition-[opacity,transform] duration-800 ${quoteAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
         >
-          <DarkPanel variant="primary" align="center">
-            <Blockquote variant="centered" size="large">
-              &ldquo;What we need is a Secretary-General chosen for their merits. Someone should be chosen for their vision, not because after 80 years of men in the position it&apos;s time for a woman, or someone with blue eyes. You should be chosen for what you are, what you have done, what you can do.&rdquo;
-            </Blockquote>
-            <cite className="block mt-8 text-sm opacity-60 not-italic">
-              — Rafael Grossi, El País interview, December 2025
-            </cite>
-          </DarkPanel>
+          <Blockquote variant="centered" size="large" cite="— Rafael Grossi, El País interview, December 2025">
+            &ldquo;What we need is a Secretary-General chosen for their merits. Someone should be chosen for their vision, not because after 80 years of men in the position it&apos;s time for a woman, or someone with blue eyes. You should be chosen for what you are, what you have done, what you can do.&rdquo;
+          </Blockquote>
         </div>
 
         {/* Stats Row */}
@@ -127,13 +120,15 @@ export function GlobalSouthSection() {
         {/* UN Headquarters Image */}
         <div
           ref={imageAnim.ref}
-          className={`relative aspect-[16/9] lg:aspect-cinema overflow-hidden mb-32 group transition-[opacity,transform] duration-800 ${imageAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
+          className={`relative aspect-[16/9] lg:aspect-cinema overflow-hidden mb-32 group bg-black transition-[opacity] duration-800 ${imageAnim.inView ? 'opacity-100' : 'opacity-0'}`}
         >
           <Image
             src="/images/un-headquarters.jpg"
             alt="Rafael Grossi chairing a high-level meeting at IAEA headquarters with international delegates"
             fill
             quality={85}
+            placeholder="blur"
+            blurDataURL={BLUR_DATA_URL}
             className="object-cover transition-transform duration-600 group-hover:scale-105"
             sizes="100vw"
           />
@@ -170,12 +165,14 @@ export function GlobalSouthSection() {
               &ldquo;Argentina is a country that has been part of all the multilateral non-proliferation regimes,&rdquo; he notes. &ldquo;We chose not to develop nuclear weapons, even though we could have. That gives me credibility when I talk about these issues.&rdquo;
             </p>
           </div>
-          <div className={`relative aspect-[4/3] overflow-hidden transition-[opacity,transform] duration-800 delay-300 ${contextAnim.inView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
+          <div className={`relative aspect-[4/3] overflow-hidden bg-muted transition-[opacity,transform] duration-800 delay-300 ${contextAnim.inView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
             <Image
               src="/images/grossi-portrait-formal.jpg"
               alt="Rafael Grossi speaking at a podium with senior IAEA officials, first Latin American to lead the agency"
               fill
               quality={85}
+            placeholder="blur"
+            blurDataURL={BLUR_DATA_URL}
               className="object-cover"
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 100vw, 50vw"
             />

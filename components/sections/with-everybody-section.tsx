@@ -5,6 +5,7 @@ import { useInView } from "@/hooks/use-in-view"
 import { SectionHeader } from "@/components/section-header"
 import { Blockquote } from "@/components/blockquote"
 import { DarkPanel } from "@/components/dark-panel"
+import { BLUR_DATA_URL } from "@/lib/constants"
 
 const engagementPrinciples = [
   {
@@ -54,7 +55,7 @@ export function WithEverybodySection() {
 
   return (
     <section id="with-everybody" className="relative bg-background overflow-hidden">
-      <div className="container mx-auto px-6 lg:px-20 py-32 lg:py-48">
+      <div className="container mx-auto px-6 md:px-12 lg:px-20 py-32 lg:py-48">
         <SectionHeader
           ref={headerAnim.ref}
           number="03"
@@ -74,12 +75,14 @@ export function WithEverybodySection() {
           {/* Left Column - Dual Images */}
           <div className={`lg:col-span-5 transition-[opacity,transform] duration-800 ${contentAnim.inView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}>
             <div className="lg:sticky lg:top-32 space-y-6">
-              <div className="relative aspect-[4/3] overflow-hidden group">
+              <div className="relative aspect-[4/3] overflow-hidden group bg-black">
                 <Image
                   src="/images/global-engagement.jpg"
                   alt="Rafael Grossi in diplomatic meeting with Ukrainian President Volodymyr Zelensky discussing nuclear safety"
                   fill
                   quality={85}
+                  placeholder="blur"
+                  blurDataURL={BLUR_DATA_URL}
                   className="object-cover transition-transform duration-600 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 100vw, 40vw"
                 />
@@ -90,12 +93,14 @@ export function WithEverybodySection() {
                 </div>
               </div>
 
-              <div className="relative aspect-[4/3] overflow-hidden group">
+              <div className="relative aspect-[4/3] overflow-hidden group bg-black">
                 <Image
                   src="/images/with-putin.jpg"
                   alt="Rafael Grossi in diplomatic meeting with Russian President Vladimir Putin discussing nuclear security"
                   fill
                   quality={85}
+                  placeholder="blur"
+                  blurDataURL={BLUR_DATA_URL}
                   className="object-cover transition-transform duration-600 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 100vw, 40vw"
                 />
@@ -210,7 +215,7 @@ export function WithEverybodySection() {
         {/* Why This Is UN Leadership */}
         <div
           ref={ctaAnim.ref}
-          className={`relative transition-[opacity,transform] duration-800 ${ctaAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
+          className={`relative transition-[opacity] duration-800 ${ctaAnim.inView ? 'opacity-100' : 'opacity-0'}`}
         >
           <DarkPanel label="The Essence" dotPatternSize="md">
               <h3 className="font-serif text-4xl md:text-5xl lg:text-6xl mb-12 leading-[1.1]">

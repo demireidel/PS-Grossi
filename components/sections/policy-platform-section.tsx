@@ -4,8 +4,7 @@ import { Shield, Users, Zap, Building2, Globe, Scale } from "lucide-react"
 import { useInView } from "@/hooks/use-in-view"
 import type { PolicyArea } from "@/lib/types"
 import { SectionHeader } from "@/components/section-header"
-import { DarkPanel } from "@/components/dark-panel"
-import { DOT_PATTERN_SM, DOT_PATTERN_SIZE_LG } from "@/lib/constants"
+
 
 const policyAreas: PolicyArea[] = [
   {
@@ -87,9 +86,7 @@ export function PolicyPlatformSection() {
 
   return (
     <section id="platform" className="py-32 lg:py-48 bg-muted relative overflow-hidden">
-      <div className="absolute inset-0 opacity-[0.015]" style={{ backgroundImage: DOT_PATTERN_SM, backgroundSize: DOT_PATTERN_SIZE_LG }} />
-
-      <div className="container mx-auto px-6 lg:px-20 relative" ref={ref}>
+      <div className="container mx-auto px-6 md:px-12 lg:px-20 relative" ref={ref}>
         <SectionHeader
           number="06"
           label="Policy Platform"
@@ -105,9 +102,9 @@ export function PolicyPlatformSection() {
             <div
               key={area.title}
               className={`group p-10 lg:p-12 bg-card hover:bg-foreground transition-[opacity,transform,background-color] duration-600 relative overflow-hidden ${
-                inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                inView ? 'opacity-100 scale-100' : 'opacity-0 scale-[0.97]'
               }`}
-              style={{ transitionDelay: `${index * 100}ms` }}
+              style={{ transitionDelay: `${index * 120}ms` }}
             >
               <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-secondary/40 via-secondary/10 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-600 origin-left" />
               <div className="flex items-start justify-between mb-6">
@@ -143,18 +140,18 @@ export function PolicyPlatformSection() {
           ))}
         </div>
 
-        {/* Bottom CTA */}
-        <DarkPanel align="center" maxWidth="3xl">
-            <h3 className="font-serif text-3xl md:text-4xl mb-8 leading-[1.1]">
-              This Is Not a Manifesto. <span className="text-secondary italic">It Is a Track Record.</span>
-            </h3>
-            <p className="text-lg opacity-70 mb-6 leading-relaxed">
-              Every proposal above reflects something Grossi has already done at the IAEA: crisis deployment, nuclear safety zones, gender parity, institutional reform, impartial engagement across all divides.
-            </p>
-            <p className="text-lg opacity-70 leading-relaxed">
-              The UN Secretary-General role is larger in scope. But the principles are the same. And unlike campaign promises, these have been tested under fire.
-            </p>
-        </DarkPanel>
+        {/* Closing Statement */}
+        <div className="text-center max-w-3xl mx-auto mt-20">
+          <p className="font-serif text-2xl md:text-3xl text-foreground leading-[1.2] mb-6">
+            This Is Not a Manifesto. <span className="text-secondary italic">It Is a Track Record.</span>
+          </p>
+          <p className="text-muted-foreground leading-relaxed mb-4">
+            Every proposal above reflects something Grossi has already done at the IAEA: crisis deployment, nuclear safety zones, gender parity, institutional reform, impartial engagement across all divides.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            The UN Secretary-General role is larger in scope. But the principles are the same. And unlike campaign promises, these have been tested under fire.
+          </p>
+        </div>
       </div>
     </section>
   )

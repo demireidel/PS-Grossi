@@ -40,7 +40,7 @@ export function HeroSection() {
       <div className="absolute top-1/4 left-1/3 w-[600px] h-[600px] bg-secondary/[0.03] rounded-full blur-[120px] pointer-events-none" />
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 lg:px-20 text-center">
+      <div className="relative z-10 container mx-auto px-6 md:px-12 lg:px-20 text-center">
         {/* Ornamental line */}
         <div className={`flex items-center justify-center gap-6 mb-14 transition-[opacity,transform] duration-800 delay-100 ${loaded ? "opacity-100" : "opacity-0"}`}>
           <span className={`h-px bg-gradient-to-r from-transparent via-secondary/60 to-secondary/60 transition-[width] duration-800 delay-200 ${loaded ? "w-28" : "w-0"}`} />
@@ -60,7 +60,7 @@ export function HeroSection() {
 
         <div className="overflow-hidden mb-8">
           <h1
-            className={`font-serif text-5xl md:text-7xl lg:text-8xl xl:text-9xl text-white font-normal leading-[0.85] tracking-tight text-shadow-premium transition-[opacity,transform] duration-800 delay-200 ${
+            className={`font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-white font-normal leading-[0.85] tracking-tight text-shadow-premium transition-[opacity,transform] duration-800 delay-200 ${
               loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-full"
             }`}
           >
@@ -71,7 +71,7 @@ export function HeroSection() {
 
         <div className="overflow-hidden">
           <p
-            className={`font-serif text-2xl md:text-4xl lg:text-5xl xl:text-6xl text-white/80 mb-14 tracking-wide transition-[opacity,transform] duration-800 delay-400 ${
+            className={`font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-white/80 mb-14 tracking-wide transition-[opacity,transform] duration-800 delay-400 ${
               loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
@@ -106,7 +106,7 @@ export function HeroSection() {
 
       {/* Scroll Indicator */}
       <div
-        className={`absolute bottom-16 left-1/2 -translate-x-1/2 transition-[opacity,transform] duration-800 delay-700 z-10 ${
+        className={`absolute bottom-16 left-1/2 -translate-x-1/2 transition-[opacity,transform] duration-800 delay-700 z-30 ${
           loaded ? "opacity-100" : "opacity-0"
         }`}
       >

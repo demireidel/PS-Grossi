@@ -29,7 +29,7 @@ export function Footer() {
       {/* CTA Section */}
       <div
         ref={ctaAnim.ref}
-        className="relative container mx-auto px-6 lg:px-20 py-32 lg:py-44 border-b border-background/10"
+        className="relative container mx-auto px-6 md:px-12 lg:px-20 py-32 lg:py-44 border-b border-background/10"
       >
         <div className={`max-w-5xl mx-auto text-center transition-[opacity,transform] duration-800 ${ctaAnim.inView ? 'opacity-100' : 'opacity-0'}`}>
           <div className="flex items-center justify-center gap-6 mb-10">
@@ -76,7 +76,7 @@ export function Footer() {
       {/* Footer Links */}
       <div
         ref={linksAnim.ref}
-        className="relative container mx-auto px-6 lg:px-20 py-20"
+        className="relative container mx-auto px-6 md:px-12 lg:px-20 py-20"
       >
         <div className={`grid md:grid-cols-12 gap-16 transition-[opacity,transform] duration-800 ${linksAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           {/* Brand */}
@@ -167,7 +167,7 @@ export function Footer() {
       </div>
 
       {/* Copyright */}
-      <div className="relative container mx-auto px-6 lg:px-20 py-10 border-t border-background/10">
+      <div className="relative container mx-auto px-6 md:px-12 lg:px-20 py-10 border-t border-background/10">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-background/60 text-xs uppercase tracking-wider">
             &copy; {CURRENT_YEAR} Grossi for UN Campaign. All rights reserved.
