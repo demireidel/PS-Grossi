@@ -247,6 +247,14 @@ export function TransparencySection() {
                 woman, or someone with blue eyes, or a secularist.&rdquo;
               </p>
 
+              <p className="text-base md:text-lg leading-relaxed opacity-70 mb-8 max-w-3xl">
+                Grossi&apos;s record speaks: at the IAEA, he increased women in
+                leadership from 28% to 52%. Women in Nuclear awarded him the
+                2025 Changemaker of Distinction Award. He launched the Marie
+                Sklodowska-Curie and Lise Meitner Programmes for women
+                scientists from developing nations.
+              </p>
+
               <p className="text-base md:text-lg leading-relaxed opacity-70 mb-16 max-w-3xl">
                 The principle is clear: results over rhetoric, merit over
                 patronage, structural change over symbolic gestures. Grossi
@@ -277,6 +285,12 @@ export function TransparencySection() {
             Not by the number of meetings held, but by crises averted. Not by
             statements issued, but by agreements reached. Not by budgets spent,
             but by outcomes delivered.
+          </p>
+
+          <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-16 max-w-2xl mx-auto">
+            Grossi would bring a results-oriented culture to the UN—one that
+            asks not &ldquo;Did we follow the process?&rdquo; but &ldquo;Did we
+            make a difference?&rdquo; This is the only standard that matters.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-[2px] bg-border">

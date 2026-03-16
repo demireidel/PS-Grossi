@@ -172,6 +172,13 @@ export function ForEverybodySection() {
               Changemaker of Distinction Award from Women in Nuclear.
             </p>
 
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-10">
+              As an International Gender Champion, Grossi proved that gender
+              equality is not about rhetoric—it&apos;s about structural change.
+              The same commitment to merit, inclusion, and institutional reform
+              would define his approach to the UN Secretariat.
+            </p>
+
             <ul className="space-y-5">
               {genderAchievements.map((item, i) => (
                 <li
@@ -217,6 +224,13 @@ export function ForEverybodySection() {
                 results—in health, in food security, in climate
                 response—it earns the credibility to convene on harder
                 questions.
+              </p>
+
+              <p className="text-base md:text-lg leading-relaxed opacity-70 mb-8 max-w-3xl">
+                Member states invest in the UN because they expect a return:
+                problems solved, crises managed, collective goods provided. A
+                Secretary-General who understands operational delivery—not
+                just diplomatic representation—can make that investment pay.
               </p>
 
               <p className="text-base md:text-lg leading-relaxed opacity-70 max-w-3xl">
