@@ -124,14 +124,15 @@ export function TransparencySection() {
 
         {/* Transparency Commitments */}
         <div ref={commitAnim.ref} className="mb-40">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-1">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-border">
             {commitments.map((item, index) => (
               <div
                 key={item.title}
-                className={`group p-10 lg:p-12 bg-card border border-border hover:bg-secondary hover:border-secondary transition-all duration-700 ${commitAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'}`}
+                className={`group p-10 lg:p-12 bg-card hover:bg-secondary transition-all duration-700 relative overflow-hidden ${commitAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'}`}
                 style={{ transitionDelay: commitAnim.inView ? `${index * 100}ms` : '0ms' }}
               >
-                <item.icon className="w-10 h-10 text-secondary group-hover:text-secondary-foreground mb-8 transition-colors duration-500" />
+                <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-secondary/40 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
+                <item.icon className="w-10 h-10 text-secondary group-hover:text-secondary-foreground mb-8 transition-all duration-500 group-hover:scale-110" />
                 <h4 className="font-serif text-xl text-foreground group-hover:text-secondary-foreground mb-4 transition-colors duration-500">
                   {item.title}
                 </h4>
@@ -324,14 +325,15 @@ export function TransparencySection() {
             make a difference?&rdquo; This is the only standard that matters.
           </p>
 
-          <div className="grid sm:grid-cols-3 gap-1">
+          <div className="grid sm:grid-cols-3 gap-px bg-border">
             {metrics.map((metric, index) => (
               <div
                 key={metric.label}
-                className={`p-12 bg-muted hover:bg-secondary group transition-all duration-500 ${metricsAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                className={`p-12 lg:p-14 bg-muted hover:bg-secondary group transition-all duration-700 relative overflow-hidden ${metricsAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                 style={{ transitionDelay: metricsAnim.inView ? `${index * 100 + 200}ms` : '0ms' }}
               >
-                <p className="text-5xl md:text-6xl font-serif text-secondary group-hover:text-secondary-foreground mb-4 transition-colors duration-500">
+                <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-secondary/30 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
+                <p className="text-5xl md:text-6xl font-serif text-secondary group-hover:text-secondary-foreground mb-4 transition-all duration-500 group-hover:scale-105 origin-left">
                   {metric.label}
                 </p>
                 <p className="text-muted-foreground group-hover:text-secondary-foreground/70 text-sm transition-colors duration-500">

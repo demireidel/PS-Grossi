@@ -55,17 +55,17 @@ export function Footer() {
           <div className={`flex flex-col sm:flex-row gap-6 justify-center transition-all duration-1000 delay-700 ${ctaAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <a
               href="#vision"
-              className="group relative inline-flex items-center justify-center px-12 py-6 bg-secondary text-secondary-foreground font-medium text-[11px] uppercase tracking-[0.25em] overflow-hidden transition-all duration-500"
+              className="group relative inline-flex items-center justify-center px-14 py-6 bg-secondary text-secondary-foreground font-medium text-[11px] uppercase tracking-[0.25em] overflow-hidden transition-all duration-500 glow-gold"
             >
               <span className="relative z-10 flex items-center gap-3">
                 Explore the Vision
-                <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                <ChevronRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1.5" />
               </span>
-              <div className="absolute inset-0 bg-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+              <div className="absolute inset-0 bg-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-600 origin-left" />
             </a>
             <a
               href="mailto:contact@grossiforun.org"
-              className="inline-flex items-center justify-center px-12 py-6 border border-background/20 text-background font-medium text-[11px] uppercase tracking-[0.25em] hover:bg-background/10 transition-all duration-300"
+              className="group inline-flex items-center justify-center px-14 py-6 border border-background/15 text-background font-medium text-[11px] uppercase tracking-[0.25em] hover:border-background/30 hover:bg-background/5 transition-all duration-500"
             >
               Contact the Campaign
             </a>
@@ -82,8 +82,9 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-5">
             <div className="mb-8">
-              <div className="w-16 h-16 border border-background/20 flex items-center justify-center mb-6">
-                <span className="font-serif text-2xl">RG</span>
+              <div className="w-16 h-16 border border-background/15 flex items-center justify-center mb-6 relative group">
+                <span className="font-serif text-2xl text-gradient-gold">RG</span>
+                <div className="absolute inset-0 border border-secondary/0 group-hover:border-secondary/20 transition-all duration-500" />
               </div>
               <span className="font-serif text-3xl block mb-2">Rafael Grossi</span>
               <p className="text-background/60 text-sm uppercase tracking-[0.2em]">
@@ -185,12 +186,12 @@ export function Footer() {
       {/* Back to Top */}
       <button
         onClick={scrollToTop}
-        className={`fixed bottom-8 right-8 z-50 w-14 h-14 bg-secondary text-secondary-foreground flex items-center justify-center hover:bg-accent transition-all duration-300 group ${
+        className={`fixed bottom-8 right-8 z-50 w-12 h-12 bg-secondary text-secondary-foreground flex items-center justify-center hover:bg-accent transition-all duration-500 group glow-gold ${
           showBackToTop ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
         }`}
         aria-label="Back to top"
       >
-        <ArrowUp className="w-5 h-5 transition-transform group-hover:-translate-y-1" />
+        <ArrowUp className="w-4 h-4 transition-transform duration-300 group-hover:-translate-y-1" />
       </button>
     </footer>
   )

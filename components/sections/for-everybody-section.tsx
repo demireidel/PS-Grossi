@@ -131,17 +131,18 @@ export function ForEverybodySection() {
 
         {/* Delivery Areas Grid */}
         <div ref={gridAnim.ref} className="mb-40">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-1">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-border">
             {deliveryAreas.map((area, index) => (
               <div
                 key={area.title}
-                className={`group p-10 lg:p-12 bg-card border border-border hover:bg-foreground transition-all duration-700 ${gridAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'}`}
+                className={`group p-10 lg:p-12 bg-card hover:bg-foreground transition-all duration-700 relative overflow-hidden ${gridAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'}`}
                 style={{ transitionDelay: gridAnim.inView ? `${index * 100}ms` : '0ms' }}
               >
+                <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-secondary/40 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
                 <div className="flex items-start justify-between mb-8">
-                  <area.icon className="w-10 h-10 text-secondary group-hover:text-secondary transition-colors duration-500" />
+                  <area.icon className="w-10 h-10 text-secondary transition-transform duration-500 group-hover:scale-110" />
                   <div className="text-right">
-                    <p className="text-4xl font-serif text-secondary group-hover:text-secondary transition-colors duration-500">
+                    <p className="text-4xl font-serif text-secondary transition-colors duration-500">
                       {area.stat}
                     </p>
                     <p className="text-xs text-muted-foreground group-hover:text-background/60 transition-colors duration-500 uppercase tracking-wider">

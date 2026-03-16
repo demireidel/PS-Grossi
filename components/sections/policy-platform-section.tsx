@@ -109,15 +109,16 @@ export function PolicyPlatformSection() {
         </div>
 
         {/* Policy Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-1 mb-24">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border mb-24">
           {policyAreas.map((area, index) => (
             <div
               key={area.title}
-              className={`group p-10 lg:p-12 bg-card border border-border hover:bg-foreground transition-all duration-700 ${
+              className={`group p-10 lg:p-12 bg-card hover:bg-foreground transition-all duration-700 relative overflow-hidden ${
                 inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
+              <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-secondary/40 via-secondary/10 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
               <div className="flex items-start justify-between mb-6">
                 <area.icon className="w-7 h-7 text-secondary" />
                 <span className="text-3xl font-serif text-foreground/10 group-hover:text-background/20 transition-colors duration-500" aria-hidden="true">

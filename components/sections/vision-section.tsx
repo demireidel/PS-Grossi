@@ -91,15 +91,16 @@ export function VisionSection() {
               experience managing high-tension international crises.&rdquo;
             </p>
           </div>
-          <div className="relative aspect-[4/3] overflow-hidden">
+          <div className="relative aspect-[4/3] overflow-hidden group">
             <Image
               src="/images/grossi-un-address.jpg"
               alt="Rafael Grossi delivering a keynote address at the IAEA Nuclear Energy Summit podium with international flags, 2024"
               fill
               quality={85}
-              className="object-cover"
+              className="object-cover transition-transform duration-1000 group-hover:scale-[1.03]"
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 100vw, 50vw"
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
           </div>
         </div>
 
@@ -116,22 +117,25 @@ export function VisionSection() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-1">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-border">
             {principles.map((principle, index) => (
               <div
                 key={principle.title}
-                className="group p-10 lg:p-12 bg-card border border-border hover:bg-primary transition-all duration-500"
+                className="group p-10 lg:p-12 bg-card hover:bg-primary transition-all duration-700 relative overflow-hidden"
               >
-                <div className="flex items-start justify-between mb-8">
-                  <principle.icon className="w-8 h-8 text-secondary" />
-                  <span className="text-4xl font-serif text-foreground/10 group-hover:text-primary-foreground/20 transition-colors duration-500">0{index + 1}</span>
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-gradient-to-br from-primary via-primary to-primary/90" />
+                <div className="relative">
+                  <div className="flex items-start justify-between mb-8">
+                    <principle.icon className="w-8 h-8 text-secondary transition-transform duration-500 group-hover:scale-110" />
+                    <span className="text-4xl font-serif text-foreground/[0.06] group-hover:text-primary-foreground/15 transition-colors duration-500">0{index + 1}</span>
+                  </div>
+                  <h4 className="font-serif text-xl text-foreground group-hover:text-primary-foreground mb-4 transition-colors duration-500">
+                    {principle.title}
+                  </h4>
+                  <p className="text-muted-foreground group-hover:text-primary-foreground/80 leading-relaxed text-sm transition-colors duration-500">
+                    {principle.description}
+                  </p>
                 </div>
-                <h4 className="font-serif text-xl text-foreground group-hover:text-primary-foreground mb-4 transition-colors duration-500">
-                  {principle.title}
-                </h4>
-                <p className="text-muted-foreground group-hover:text-primary-foreground/80 leading-relaxed text-sm transition-colors duration-500">
-                  {principle.description}
-                </p>
               </div>
             ))}
           </div>

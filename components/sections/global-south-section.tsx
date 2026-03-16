@@ -85,31 +85,32 @@ export function GlobalSouthSection() {
         </div>
 
         {/* Stats Row */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-1 mb-20">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-border mb-20">
           {stats.map((stat, index) => (
             <div
               key={stat.label}
-              className={`p-8 lg:p-10 bg-card border border-border text-center transition-all duration-700 ${
+              className={`group p-8 lg:p-10 bg-card text-center transition-all duration-700 relative overflow-hidden hover:bg-muted ${
                 contentInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
               style={{ transitionDelay: `${300 + index * 100}ms` }}
             >
-              <p className="text-4xl md:text-5xl font-serif text-secondary mb-3">{stat.value}</p>
+              <p className="text-4xl md:text-5xl font-serif text-secondary mb-3 transition-transform duration-500 group-hover:scale-110">{stat.value}</p>
               <p className="text-sm text-muted-foreground leading-relaxed">{stat.label}</p>
             </div>
           ))}
         </div>
 
         {/* Regional Perspectives */}
-        <div className="grid md:grid-cols-2 gap-1 mb-20">
+        <div className="grid md:grid-cols-2 gap-px bg-border mb-20">
           {perspectives.map((perspective, index) => (
             <div
               key={perspective.region}
-              className={`group p-10 lg:p-14 bg-card border border-border hover:bg-foreground transition-all duration-700 ${
+              className={`group p-10 lg:p-14 bg-card hover:bg-foreground transition-all duration-700 relative overflow-hidden ${
                 contentInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
               style={{ transitionDelay: `${500 + index * 100}ms` }}
             >
+              <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-secondary/40 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
               <p className="text-secondary text-[10px] uppercase tracking-[0.3em] mb-4 group-hover:text-secondary/80 transition-colors duration-500">
                 {perspective.region}
               </p>

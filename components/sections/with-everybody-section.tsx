@@ -201,14 +201,15 @@ export function WithEverybodySection() {
             </h3>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-1">
+          <div className="grid md:grid-cols-2 gap-px bg-border/50">
             {trackRecords.map((record, index) => (
               <div
                 key={record.title}
-                className={`group p-12 lg:p-16 bg-muted hover:bg-secondary transition-all duration-700 ${recordAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'}`}
+                className={`group p-12 lg:p-16 bg-muted hover:bg-secondary transition-all duration-700 relative overflow-hidden ${recordAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'}`}
                 style={{ transitionDelay: recordAnim.inView ? `${index * 100}ms` : '0ms' }}
               >
-                <span className="text-6xl font-serif text-foreground/[0.05] group-hover:text-secondary-foreground/10 transition-colors duration-500 block mb-6" aria-hidden="true">
+                <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-secondary/30 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
+                <span className="text-6xl font-serif text-foreground/[0.04] group-hover:text-secondary-foreground/10 transition-colors duration-500 block mb-6" aria-hidden="true">
                   0{index + 1}
                 </span>
                 <h4 className="font-serif text-2xl text-foreground group-hover:text-secondary-foreground mb-4 transition-colors duration-500">
