@@ -1,8 +1,12 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
-@import 'shadcn/tailwind.css';
+
+/* ============================================================
+   DESIGN TOKENS
+   ============================================================ */
 
 :root {
+  /* Color palette — OKLCH color space */
   --background: oklch(0.985 0.003 80);
   --foreground: oklch(0.15 0.02 250);
   --card: oklch(0.995 0.002 80);
@@ -22,25 +26,44 @@
   --border: oklch(0.90 0.01 80);
   --input: oklch(0.93 0.005 80);
   --ring: oklch(0.62 0.14 65);
-  --chart-1: oklch(0.25 0.05 250);
-  --chart-2: oklch(0.62 0.14 65);
-  --chart-3: oklch(0.55 0.12 65);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
   --radius: 0rem;
-  --sidebar: oklch(0.99 0.002 80);
-  --sidebar-foreground: oklch(0.15 0.02 250);
-  --sidebar-primary: oklch(0.25 0.05 250);
-  --sidebar-primary-foreground: oklch(0.98 0 0);
-  --sidebar-accent: oklch(0.95 0.005 80);
-  --sidebar-accent-foreground: oklch(0.15 0.02 250);
-  --sidebar-border: oklch(0.90 0.01 80);
-  --sidebar-ring: oklch(0.62 0.14 65);
+
+  /* Typography tokens */
+  --text-micro: 0.5625rem;   /* 9px */
+  --text-label: 0.625rem;    /* 10px */
+  --text-label-lg: 0.6875rem; /* 11px */
+
+  /* Tracking (letter-spacing) tokens */
+  --tracking-tight: 0.1em;
+  --tracking-normal: 0.15em;
+  --tracking-wide: 0.2em;
+  --tracking-wider: 0.25em;
+  --tracking-ultra: 0.3em;
+  --tracking-extreme: 0.4em;
+  --tracking-hero: 0.6em;
+
+  /* Animation timing tokens */
+  --duration-fast: 300ms;
+  --duration-normal: 400ms;
+  --duration-slow: 600ms;
+  --duration-reveal: 800ms;
+
+  /* Dot pattern */
+  --dot-pattern: radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0);
+  --dot-size-sm: 32px 32px;
+  --dot-size-md: 40px 40px;
+
+  /* Blur placeholder */
+  --blur-data-url: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjEwIiBoZWlnaHQ9IjEwIiBmaWxsPSIjZTVlNWU1Ii8+PC9zdmc+");
 }
 
+/* ============================================================
+   TAILWIND THEME MAPPING
+   ============================================================ */
+
 @theme inline {
-  --font-sans: var(--font-sans, 'Inter'), 'Inter', system-ui, sans-serif;
-  --font-serif: var(--font-serif, 'Cormorant Garamond'), 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   --font-mono: 'Geist Mono', 'Geist Mono Fallback';
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -61,24 +84,15 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
 }
+
+/* ============================================================
+   BASE STYLES
+   ============================================================ */
 
 @layer base {
   * {
@@ -92,11 +106,23 @@
   }
 }
 
-/* Cinematic film grain effect */
-.film-grain {
-  position: relative;
+/* Smooth scrolling & fixed header offset */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
 }
 
+/* Selection styling */
+::selection {
+  background-color: oklch(0.65 0.12 45 / 0.25);
+  color: inherit;
+}
+
+/* ============================================================
+   CINEMATIC EFFECTS
+   ============================================================ */
+
+/* Film grain noise overlay */
 .film-grain::after {
   content: '';
   position: absolute;
@@ -107,11 +133,7 @@
   mix-blend-mode: overlay;
 }
 
-/* Vignette effect */
-.vignette {
-  position: relative;
-}
-
+/* Vignette darkening */
 .vignette::before {
   content: '';
   position: absolute;
@@ -120,89 +142,36 @@
   pointer-events: none;
 }
 
-/* Ken Burns slow zoom effect */
+/* Ken Burns slow zoom */
 .ken-burns {
-  animation: kenBurns 25s ease-in-out infinite alternate;
+  animation: ken-burns 25s ease-in-out infinite alternate;
 }
-
-@keyframes kenBurns {
+@keyframes ken-burns {
   0% { transform: scale(1) translate(0, 0); }
   100% { transform: scale(1.08) translate(-1%, -1%); }
 }
 
 /* Cinematic color grading */
-.color-grade-warm {
-  filter: sepia(0.06) saturate(1.08) brightness(0.97) contrast(1.02);
-}
+.color-grade-warm { filter: sepia(0.06) saturate(1.08) brightness(0.97) contrast(1.02); }
+.color-grade-cool { filter: saturate(0.92) brightness(0.96) contrast(1.04); }
 
-.color-grade-cool {
-  filter: saturate(0.92) brightness(0.96) contrast(1.04);
-}
+/* Aspect ratios */
+.aspect-cinema { aspect-ratio: 2.39 / 1; }
+.aspect-wide { aspect-ratio: 21 / 9; }
 
-/* Cinematic aspect ratios */
-.aspect-cinema {
-  aspect-ratio: 2.39 / 1;
-}
+/* ============================================================
+   TYPOGRAPHY EFFECTS
+   ============================================================ */
 
-.aspect-wide {
-  aspect-ratio: 21 / 9;
-}
-
-/* Selection styling */
-::selection {
-  background-color: oklch(0.65 0.12 45 / 0.25);
-  color: inherit;
-}
-
-/* Premium scrollbar */
-::-webkit-scrollbar {
-  width: 5px;
-}
-
-::-webkit-scrollbar-track {
-  background: oklch(0.12 0.02 250);
-}
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, oklch(0.62 0.14 65 / 0.6), oklch(0.55 0.12 65 / 0.4));
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, oklch(0.72 0.14 65 / 0.8), oklch(0.55 0.12 65 / 0.6));
-}
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 6rem;
-}
-
-/* Premium text shadow for hero */
 .text-shadow-premium {
   text-shadow: 0 2px 20px rgba(0,0,0,0.3), 0 4px 40px rgba(0,0,0,0.2);
 }
 
-/* Elegant hover lift */
-.hover-lift {
-  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-              box-shadow 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+.text-shadow-overlay {
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6), 0 2px 8px rgba(0,0,0,0.3);
 }
 
-.hover-lift:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15),
-              0 12px 24px -8px rgba(0, 0, 0, 0.06);
-}
-
-/* Focus states — visible on all backgrounds */
-:focus-visible {
-  outline: 2px solid oklch(0.62 0.14 65);
-  outline-offset: 4px;
-  box-shadow: 0 0 0 6px oklch(0.15 0.02 250 / 0.15);
-}
-
-/* Gradient text */
+/* Gold gradient text */
 .text-gradient-gold {
   background: linear-gradient(135deg, oklch(0.75 0.15 65) 0%, oklch(0.62 0.14 55) 40%, oklch(0.72 0.16 70) 60%, oklch(0.55 0.12 65) 100%);
   -webkit-background-clip: text;
@@ -212,54 +181,35 @@ html {
 
 /* Animated gold shimmer */
 .text-gradient-gold-shimmer {
-  background: linear-gradient(
-    105deg,
-    oklch(0.55 0.12 65) 0%,
-    oklch(0.72 0.16 70) 25%,
-    oklch(0.82 0.14 75) 37%,
-    oklch(0.72 0.16 70) 50%,
-    oklch(0.55 0.12 65) 100%
-  );
+  background: linear-gradient(105deg, oklch(0.55 0.12 65) 0%, oklch(0.72 0.16 70) 25%, oklch(0.82 0.14 75) 37%, oklch(0.72 0.16 70) 50%, oklch(0.55 0.12 65) 100%);
   background-size: 200% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: goldShimmer 6s ease-in-out 3;
+  animation: gold-shimmer 6s ease-in-out 3;
 }
-
-@keyframes goldShimmer {
+@keyframes gold-shimmer {
   0%, 100% { background-position: 100% 50%; }
   50% { background-position: 0% 50%; }
 }
 
-/* Premium glow on gold elements */
+/* ============================================================
+   INTERACTIVE EFFECTS
+   ============================================================ */
+
+/* Hover lift */
+.hover-lift {
+  transition: transform var(--duration-slow) cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow var(--duration-slow) cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15), 0 12px 24px -8px rgba(0,0,0,0.06);
+}
+
+/* Gold glow */
 .glow-gold {
-  box-shadow: 0 0 30px -5px oklch(0.62 0.14 65 / 0.15),
-              0 0 60px -10px oklch(0.62 0.14 65 / 0.08);
-}
-
-/* Overlay text shadow for readability on images */
-.text-shadow-overlay {
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6), 0 2px 8px rgba(0,0,0,0.3);
-}
-
-/* Skip to content link */
-.skip-to-content {
-  position: absolute;
-  left: -9999px;
-  top: 0;
-  z-index: 100;
-  padding: 1rem 2rem;
-  background: var(--secondary);
-  color: var(--secondary-foreground);
-  font-size: 0.875rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-
-.skip-to-content:focus {
-  left: 0;
+  box-shadow: 0 0 30px -5px oklch(0.62 0.14 65 / 0.15), 0 0 60px -10px oklch(0.62 0.14 65 / 0.08);
 }
 
 /* Clip-path reveal for cinematic images */
@@ -271,23 +221,102 @@ html {
   clip-path: inset(0);
 }
 
-/* Accessibility: reduce motion for users who prefer it */
+/* ============================================================
+   SCROLL REVEAL ANIMATION SYSTEM
+   ============================================================ */
+
+/* Base state: hidden (applied by JS via data-reveal) */
+[data-reveal] {
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-duration: var(--duration-reveal);
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Direction variants */
+[data-reveal="up"] { transform: translateY(3rem); }
+[data-reveal="down"] { transform: translateY(-3rem); }
+[data-reveal="left"] { transform: translateX(3rem); }
+[data-reveal="right"] { transform: translateX(-3rem); }
+[data-reveal="fade"] { transform: none; }
+[data-reveal="scale"] { transform: scale(0.96); }
+
+/* Revealed state */
+[data-reveal].revealed {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+}
+
+/* Stagger delay via CSS custom property */
+[data-reveal] {
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+/* ============================================================
+   FOCUS STATES
+   ============================================================ */
+
+:focus-visible {
+  outline: 2px solid oklch(0.62 0.14 65);
+  outline-offset: 4px;
+  box-shadow: 0 0 0 6px oklch(0.15 0.02 250 / 0.15);
+}
+
+/* ============================================================
+   SKIP TO CONTENT
+   ============================================================ */
+
+.skip-to-content {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  padding: 1rem 2rem;
+  background: var(--secondary);
+  color: var(--secondary-foreground);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-tight);
+}
+.skip-to-content:focus { left: 0; }
+
+/* ============================================================
+   SCROLLBAR
+   ============================================================ */
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: oklch(0.12 0.02 250); }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, oklch(0.62 0.14 65 / 0.6), oklch(0.55 0.12 65 / 0.4));
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, oklch(0.72 0.14 65 / 0.8), oklch(0.55 0.12 65 / 0.6));
+}
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+
 @media (prefers-reduced-motion: reduce) {
   .ken-burns,
   .text-gradient-gold-shimmer {
     animation: none;
   }
-
   .clip-reveal {
     clip-path: inset(0);
     transition: none;
   }
-
   .hover-lift:hover {
     transform: none;
   }
-
   html {
     scroll-behavior: auto;
+  }
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }

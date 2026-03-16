@@ -1,68 +1,30 @@
-"use client"
-
 import Image from "next/image"
-import { Shield, AlertTriangle, Compass } from "lucide-react"
-import { useInView } from "@/hooks/use-in-view"
-import type { Experience } from "@/lib/types"
+import { BLUR_DATA_URL } from "@/lib/constants"
+import { EXPERIENCES, CAREER_STATS } from "@/lib/data"
+import { Reveal } from "@/components/reveal"
+import { SectionContainer } from "@/components/section-container"
 import { SectionHeader } from "@/components/section-header"
 import { Blockquote } from "@/components/blockquote"
 import { DarkPanel } from "@/components/dark-panel"
-import { BLUR_DATA_URL } from "@/lib/constants"
-
-const experiences: Experience[] = [
-  {
-    icon: Shield,
-    title: "Zaporizhzhia: Into the Fire",
-    description:
-      "In 2022, Grossi personally led the first IAEA mission to Zaporizhzhia—Europe's largest nuclear plant—crossing the front line under active fire. His convoy was attacked in the gray zone. He established permanent monitoring while shells fell nearby, negotiating access with both Moscow and Kyiv. 'I have to maintain this operation,' he says. 'It is very important for peace and security in the world.'",
-  },
-  {
-    icon: AlertTriangle,
-    title: "Iran: Doors Others Closed",
-    description:
-      "When the JCPOA collapsed and tensions peaked, Grossi kept verification channels open. He traveled to Tehran repeatedly, meeting Iran's highest leadership while upholding inspection standards. After the 2025 Israeli strikes, he negotiated renewed access to facilities. Iran still holds 400kg of 60%-enriched uranium—almost military grade. 'Inspectors must restart work,' Grossi insists.",
-  },
-  {
-    icon: Compass,
-    title: "Chernobyl: The Sarcophagus Crisis",
-    description:
-      "In early 2025, a drone attack compromised Chernobyl's protective sarcophagus, threatening to release radioactive contamination. Grossi's team assessed the damage over months. 'The sarcophagus's insulation capacity is compromised,' he reported. 'The repair must be extended to ensure protection.' Even 40 years later, nuclear dangers require constant vigilance.",
-  },
-]
+import { ImageCaption } from "@/components/image-caption"
+import { ContentCard, CardStatLarge, CardDescription } from "@/components/content-card"
 
 export function DangerousWorldSection() {
-  const headerAnim = useInView()
-  const heroAnim = useInView(0.05)
-  const imagesAnim = useInView()
-  const stakesAnim = useInView()
-  const careerAnim = useInView()
-  const doctrineAnim = useInView()
-
   return (
-    <section
-      id="dangerous-world"
-      className="py-32 lg:py-48 bg-muted relative overflow-hidden"
-    >
-      <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-transparent to-background/50" />
-
-      <div className="container mx-auto px-6 md:px-12 lg:px-20 relative">
+    <SectionContainer id="dangerous-world" bg="muted" withGradientOverlay>
+      <Reveal direction="up">
         <SectionHeader
-          ref={headerAnim.ref}
           number="02"
           label="The Moment"
           title={<>In a Dangerous <span className="text-secondary italic">World</span></>}
           subtitle="Why this moment requires crisis-tested leadership"
-          animated
-          inView={headerAnim.inView}
         />
+      </Reveal>
 
-        {/* Hero Image - Cinematic */}
-        <div
-          ref={heroAnim.ref}
-          className="relative aspect-[16/9] lg:aspect-cinema mb-32 overflow-hidden bg-black"
-        >
-          {/* Image with clip-reveal */}
-          <div className={`absolute inset-0 clip-reveal ${heroAnim.inView ? 'revealed' : ''}`}>
+      {/* Hero Image — Cinematic */}
+      <Reveal direction="fade" threshold={0.05}>
+        <div className="relative aspect-[16/9] lg:aspect-cinema mb-32 overflow-hidden bg-black">
+          <div className="absolute inset-0 clip-reveal revealed">
             <Image
               src="/images/grossi-zaporizhzhia.jpg"
               alt="IAEA Director General Rafael Grossi wearing combat helmet at the frontline crossing near Zaporizhzhia Nuclear Power Plant, September 2024"
@@ -76,73 +38,43 @@ export function DangerousWorldSection() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/40" />
             <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-black/30" />
           </div>
-
-          {/* Letterbox */}
           <div className="absolute top-0 left-0 right-0 h-[6%] bg-black z-10" />
           <div className="absolute bottom-0 left-0 right-0 h-[6%] bg-black z-10" />
-
-          <div className={`absolute bottom-[10%] left-0 right-0 px-8 lg:px-20 z-10 transition-[opacity,transform] duration-800 delay-500 ${heroAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+          <div className="absolute bottom-[10%] left-0 right-0 px-8 lg:px-20 z-10">
             <div className="flex items-center gap-4 mb-4">
               <span className="w-12 h-px bg-secondary" />
-              <span className="text-white/60 text-[10px] uppercase tracking-[0.3em] text-shadow-overlay">On the Ground</span>
+              <span className="text-white/60 text-[length:var(--text-label)] uppercase tracking-[var(--tracking-ultra)] text-shadow-overlay">On the Ground</span>
             </div>
             <p className="text-white/90 text-xl md:text-2xl max-w-2xl font-light leading-relaxed text-shadow-overlay">
-              When crisis meets diplomacy, experience is not optional&mdash;it
-              is essential.
+              When crisis meets diplomacy, experience is not optional&mdash;it is essential.
             </p>
           </div>
-
-          {/* Frame accents */}
           <div className="absolute top-[10%] left-8 w-16 h-16 border-l-2 border-t-2 border-white/20 z-10" />
           <div className="absolute top-[10%] right-8 w-16 h-16 border-r-2 border-t-2 border-white/20 z-10" />
         </div>
+      </Reveal>
 
-        {/* Secondary Image - Crisis Diplomacy */}
-        <div
-          ref={imagesAnim.ref}
-          className={`grid grid-cols-1 lg:grid-cols-2 gap-2 mb-32 transition-[opacity,transform] duration-800 ${imagesAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
-        >
-          <div className="relative aspect-[4/3] overflow-hidden group">
-            <Image
-              src="/images/crisis-diplomacy.jpg"
-              alt="Rafael Grossi in IAEA field vest during the first Support and Assistance Mission to Zaporizhzhia (ISAMZ), August 2022"
-              fill
-              quality={85}
-              placeholder="blur"
-              blurDataURL={BLUR_DATA_URL}
-              className="object-cover transition-transform duration-600 group-hover:scale-105"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-            <div className="absolute bottom-6 left-6 right-6">
-              <p className="text-[10px] uppercase tracking-[0.3em] text-white/60 text-shadow-overlay mb-1">Crisis Response</p>
-              <p className="text-sm text-white/90 font-medium text-shadow-overlay">Frontline Diplomacy in Action</p>
-            </div>
-          </div>
-          <div className="relative aspect-[4/3] overflow-hidden group">
-            <Image
-              src="/images/grossi-tehran.jpg"
-              alt="Rafael Grossi briefing the press on IAEA verification activities in Iran, Vienna, May 2024"
-              fill
-              quality={85}
-              placeholder="blur"
-              blurDataURL={BLUR_DATA_URL}
-              className="object-cover transition-transform duration-600 group-hover:scale-105"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-            <div className="absolute bottom-6 left-6 right-6">
-              <p className="text-[10px] uppercase tracking-[0.3em] text-white/60 text-shadow-overlay mb-1">Iran</p>
-              <p className="text-sm text-white/90 font-medium text-shadow-overlay">Nuclear Negotiations, Tehran</p>
-            </div>
-          </div>
+      {/* Secondary Images */}
+      <Reveal direction="up">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 mb-32">
+          <ImageCaption
+            src="/images/crisis-diplomacy.jpg"
+            alt="Rafael Grossi in IAEA field vest during the first Support and Assistance Mission to Zaporizhzhia (ISAMZ), August 2022"
+            label="Crisis Response"
+            caption="Frontline Diplomacy in Action"
+          />
+          <ImageCaption
+            src="/images/grossi-tehran.jpg"
+            alt="Rafael Grossi briefing the press on IAEA verification activities in Iran, Vienna, May 2024"
+            label="Iran"
+            caption="Nuclear Negotiations, Tehran"
+          />
         </div>
+      </Reveal>
 
-        {/* The Stakes */}
-        <div
-          ref={stakesAnim.ref}
-          className={`grid lg:grid-cols-2 gap-16 items-start mb-32 transition-[opacity,transform] duration-800 ${stakesAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
-        >
+      {/* The Stakes */}
+      <Reveal direction="up">
+        <div className="grid lg:grid-cols-2 gap-16 items-start mb-32">
           <div>
             <h3 className="font-serif text-2xl md:text-3xl text-foreground mb-6">
               &ldquo;A Fragmented and Volatile World&rdquo;
@@ -176,9 +108,8 @@ export function DangerousWorldSection() {
               in—much less to threats.&rdquo;
             </p>
           </div>
-
           <div className="space-y-8">
-            {experiences.map((exp) => (
+            {EXPERIENCES.map((exp) => (
               <div key={exp.title} className="flex gap-6">
                 <div className="flex-shrink-0">
                   <div className="w-14 h-14 bg-secondary/10 flex items-center justify-center">
@@ -186,85 +117,64 @@ export function DangerousWorldSection() {
                   </div>
                 </div>
                 <div>
-                  <h4 className="font-serif text-lg text-foreground mb-2">
-                    {exp.title}
-                  </h4>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {exp.description}
-                  </p>
+                  <h4 className="font-serif text-lg text-foreground mb-2">{exp.title}</h4>
+                  <p className="text-muted-foreground leading-relaxed">{exp.description}</p>
                 </div>
               </div>
             ))}
           </div>
         </div>
+      </Reveal>
 
-        {/* Grossi's Career */}
-        <div ref={careerAnim.ref} className="mb-32">
+      {/* Career Stats */}
+      <Reveal direction="up">
+        <div className="mb-32">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-[2px] bg-border">
-            {[
-              { stat: "40", title: "Years in Diplomacy", desc: "Joined Argentina\u2019s Foreign Ministry in 1985. Ambassador to Austria. Chief of Cabinet at OPCW. First Latin American to lead the IAEA. PhD in International Relations from Geneva." },
-              { stat: "2019", title: "IAEA Director General", desc: "Elected December 2019. Led the agency through COVID, the Ukraine war, Iran tensions, and the return of nuclear deterrence rhetoric. Re-elected for a second term." },
-              { stat: "1st", title: "Latin American IAEA Chief", desc: "First from the region since the agency\u2019s founding in 1957. Also first to serve two consecutive terms as president of the Nuclear Suppliers Group." },
-            ].map((card, index) => (
-              <div
-                key={card.title}
-                className={`group p-10 lg:p-12 bg-card hover:bg-foreground transition-[opacity,transform,background-color] duration-600 relative overflow-hidden ${careerAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'}`}
-                style={{ transitionDelay: careerAnim.inView ? `${index * 100}ms` : '0ms' }}
-              >
-                <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-secondary/40 via-secondary/10 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-600 origin-left" />
-                <p className="text-5xl md:text-6xl font-serif text-secondary mb-6">{card.stat}</p>
-                <p className="text-foreground group-hover:text-background font-medium mb-3 transition-colors duration-400">
-                  {card.title}
-                </p>
-                <p className="text-muted-foreground group-hover:text-background/70 text-sm leading-relaxed transition-colors duration-400">
-                  {card.desc}
-                </p>
-              </div>
+            {CAREER_STATS.map((card, index) => (
+              <Reveal key={card.title} direction="up" delay={index * 100}>
+                <ContentCard index={index}>
+                  <CardStatLarge value={card.stat} label={card.title} />
+                  <CardDescription>{card.description}</CardDescription>
+                </ContentCard>
+              </Reveal>
             ))}
           </div>
         </div>
+      </Reveal>
 
-        {/* Why This Fits */}
-        <div
-          ref={doctrineAnim.ref}
-          className={`transition-[opacity,transform] duration-800 ${doctrineAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
-        >
-          <DarkPanel label="The Fit">
-              <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl mb-10 leading-[1.1]">
-                The Grossi <span className="text-secondary italic">Doctrine</span>
-              </h3>
-
-              <p className="text-xl md:text-2xl leading-relaxed opacity-80 mb-8 font-light">
-                &ldquo;Whoever holds the position must speak with those who
-                initiated the attacks. That&apos;s the first thing I did: speak
-                with Putin, and many people criticized me for it. But who else am
-                I going to talk to?&rdquo;
-              </p>
-
-              <p className="text-lg leading-relaxed opacity-70 mb-8">
-                This is the Grossi doctrine: go where the crisis is, talk to
-                whoever is relevant, maintain impartiality without indifference,
-                and return with something concrete. When Zaporizhzhia was under
-                bombardment, he went personally. When Iran closed doors, he found
-                a way back in.
-              </p>
-
-              <p className="text-lg leading-relaxed opacity-70 mb-12">
-                On accusations of bias: &ldquo;Some say I&apos;m a Zionist puppet,
-                others say the opposite. One day the pro-Ukrainians claim I&apos;m
-                in Putin&apos;s pocket, and when I meet with President Zelensky,
-                the pro-Russians say I&apos;m on the other side. If the price is
-                criticism, so be it.&rdquo;
-              </p>
-
-              <Blockquote>
-                &ldquo;My job requires dialogue with everyone. Active diplomacy
-                must be deployed, and solutions proposed as an impartial, but
-                not indifferent, interlocutor.&rdquo;
-              </Blockquote>
-          </DarkPanel>
-        </div>
-      </div>
-    </section>
+      {/* The Grossi Doctrine */}
+      <Reveal direction="up">
+        <DarkPanel label="The Fit">
+          <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl mb-10 leading-[1.1]">
+            The Grossi <span className="text-secondary italic">Doctrine</span>
+          </h3>
+          <p className="text-xl md:text-2xl leading-relaxed opacity-80 mb-8 font-light">
+            &ldquo;Whoever holds the position must speak with those who
+            initiated the attacks. That&apos;s the first thing I did: speak
+            with Putin, and many people criticized me for it. But who else am
+            I going to talk to?&rdquo;
+          </p>
+          <p className="text-lg leading-relaxed opacity-70 mb-8">
+            This is the Grossi doctrine: go where the crisis is, talk to
+            whoever is relevant, maintain impartiality without indifference,
+            and return with something concrete. When Zaporizhzhia was under
+            bombardment, he went personally. When Iran closed doors, he found
+            a way back in.
+          </p>
+          <p className="text-lg leading-relaxed opacity-70 mb-12">
+            On accusations of bias: &ldquo;Some say I&apos;m a Zionist puppet,
+            others say the opposite. One day the pro-Ukrainians claim I&apos;m
+            in Putin&apos;s pocket, and when I meet with President Zelensky,
+            the pro-Russians say I&apos;m on the other side. If the price is
+            criticism, so be it.&rdquo;
+          </p>
+          <Blockquote>
+            &ldquo;My job requires dialogue with everyone. Active diplomacy
+            must be deployed, and solutions proposed as an impartial, but
+            not indifferent, interlocutor.&rdquo;
+          </Blockquote>
+        </DarkPanel>
+      </Reveal>
+    </SectionContainer>
   )
 }

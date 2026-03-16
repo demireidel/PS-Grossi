@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback, useMemo } from "react"
 import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
-import { NAV_ITEMS, SCROLL_THRESHOLD_NAV, DOT_PATTERN_SM, DOT_PATTERN_SIZE_SM } from "@/lib/constants"
+import { NAV_ITEMS, SCROLL_THRESHOLD_NAV } from "@/lib/constants"
 import { useActiveSection } from "@/hooks/use-active-section"
 
 export function Navigation() {
@@ -23,17 +23,18 @@ export function Navigation() {
       const docHeight = document.documentElement.scrollHeight - window.innerHeight
       setScrollProgress(docHeight > 0 ? window.scrollY / docHeight : 0)
     }
-    window.addEventListener("scroll", handleScroll, { passive: true })
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
 
-  useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === "Escape" && isOpen) setIsOpen(false)
+      if (e.key === "Escape") setIsOpen(false)
     }
+
+    window.addEventListener("scroll", handleScroll, { passive: true })
     document.addEventListener("keydown", handleEscape)
-    return () => document.removeEventListener("keydown", handleEscape)
-  }, [isOpen])
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+      document.removeEventListener("keydown", handleEscape)
+    }
+  }, [])
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : ""
@@ -41,6 +42,10 @@ export function Navigation() {
   }, [isOpen])
 
   const closeMenu = useCallback(() => setIsOpen(false), [])
+
+  const scrollToTop = useCallback(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }, [])
 
   return (
     <>
@@ -54,10 +59,9 @@ export function Navigation() {
       >
         <nav className="container mx-auto px-6 md:px-12 lg:px-20" aria-label="Main navigation">
           <div className="flex items-center justify-between h-[76px]">
-            <a
-              href="#"
-              onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }) }}
-              className="group flex flex-col"
+            <button
+              onClick={scrollToTop}
+              className="group flex flex-col text-left"
             >
               <span
                 className={cn(
@@ -69,13 +73,13 @@ export function Navigation() {
               </span>
               <span
                 className={cn(
-                  "text-[10px] uppercase tracking-[0.25em] transition-colors duration-400",
+                  "text-[length:var(--text-label)] uppercase tracking-[var(--tracking-wider)] transition-colors duration-400",
                   scrolled ? "text-muted-foreground" : "text-white/60"
                 )}
               >
                 For Secretary-General
               </span>
-            </a>
+            </button>
 
             <div className="hidden lg:flex items-center gap-12">
               {NAV_ITEMS.map((item) => {
@@ -85,19 +89,11 @@ export function Navigation() {
                     key={item.href}
                     href={item.href}
                     className={cn(
-                      "relative text-[11px] uppercase tracking-[0.15em] font-medium transition-colors duration-400 py-2",
+                      "relative text-[length:var(--text-label-lg)] uppercase tracking-[var(--tracking-normal)] font-medium transition-colors duration-400 py-2",
                       "after:absolute after:bottom-0 after:left-0 after:h-px after:bg-gradient-to-r after:from-secondary after:to-secondary/50 after:transition-all after:duration-400",
                       isActive
-                        ? cn(
-                            "after:w-full",
-                            scrolled ? "text-foreground" : "text-white"
-                          )
-                        : cn(
-                            "after:w-0 hover:after:w-full",
-                            scrolled
-                              ? "text-foreground/50 hover:text-foreground"
-                              : "text-white/50 hover:text-white"
-                          )
+                        ? cn("after:w-full", scrolled ? "text-foreground" : "text-white")
+                        : cn("after:w-0 hover:after:w-full", scrolled ? "text-foreground/50 hover:text-foreground" : "text-white/50 hover:text-white")
                     )}
                   >
                     {item.label}
@@ -131,7 +127,7 @@ export function Navigation() {
         />
       </header>
 
-      {/* Mobile navigation — full-screen overlay */}
+      {/* Mobile navigation — backdrop */}
       <div
         className={cn(
           "fixed inset-0 bg-black/60 backdrop-blur-sm z-40 lg:hidden transition-opacity duration-300",
@@ -141,6 +137,7 @@ export function Navigation() {
         aria-hidden="true"
       />
 
+      {/* Mobile navigation — panel */}
       <div
         id="mobile-nav"
         role="dialog"
@@ -155,10 +152,12 @@ export function Navigation() {
       >
         <div
           className="absolute inset-0 opacity-[0.02]"
-          style={{ backgroundImage: DOT_PATTERN_SM, backgroundSize: DOT_PATTERN_SIZE_SM }}
+          style={{
+            backgroundImage: "var(--dot-pattern)",
+            backgroundSize: "var(--dot-size-sm)",
+          }}
         />
 
-        {/* Close button */}
         <button
           onClick={closeMenu}
           className="absolute top-0 right-0 p-6 text-background/60 hover:text-background transition-colors z-10"
@@ -192,7 +191,7 @@ export function Navigation() {
           style={{ transitionDelay: isOpen ? "600ms" : "0ms" }}
         >
           <span className="h-px w-12 bg-secondary/40 block mx-auto mb-4" />
-          <p className="text-background/40 text-[10px] uppercase tracking-[0.3em]">
+          <p className="text-background/40 text-[length:var(--text-label)] uppercase tracking-[var(--tracking-ultra)]">
             For Secretary-General
           </p>
         </div>
