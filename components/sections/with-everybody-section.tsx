@@ -75,7 +75,7 @@ export function WithEverybodySection() {
           {/* Left Column - Dual Images */}
           <div className={`lg:col-span-5 transition-[opacity,transform] duration-800 ${contentAnim.inView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}>
             <div className="lg:sticky lg:top-32 space-y-6">
-              <div className="relative aspect-[4/3] overflow-hidden group">
+              <div className="relative aspect-[4/3] overflow-hidden group bg-black">
                 <Image
                   src="/images/global-engagement.jpg"
                   alt="Rafael Grossi in diplomatic meeting with Ukrainian President Volodymyr Zelensky discussing nuclear safety"
@@ -93,7 +93,7 @@ export function WithEverybodySection() {
                 </div>
               </div>
 
-              <div className="relative aspect-[4/3] overflow-hidden group">
+              <div className="relative aspect-[4/3] overflow-hidden group bg-black">
                 <Image
                   src="/images/with-putin.jpg"
                   alt="Rafael Grossi in diplomatic meeting with Russian President Vladimir Putin discussing nuclear security"

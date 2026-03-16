@@ -53,7 +53,7 @@ const managementPriorities = [
 
 export function TransparencySection() {
   const headerAnim = useInView()
-  const imageAnim = useInView(0.2)
+  const imageAnim = useInView(0.05)
   const commitAnim = useInView()
   const disciplineAnim = useInView()
   const cultureAnim = useInView()
@@ -78,7 +78,7 @@ export function TransparencySection() {
           ref={imageAnim.ref}
           className={`relative mb-32 transition-[opacity] duration-800 ${imageAnim.inView ? 'opacity-100' : 'opacity-0'}`}
         >
-          <div className="relative aspect-[16/9] lg:aspect-cinema overflow-hidden film-grain vignette">
+          <div className="relative aspect-[16/9] lg:aspect-cinema overflow-hidden film-grain vignette bg-black">
             <div className="absolute inset-0 ken-burns">
               <Image
                 src="/images/grossi-iaea-board.jpg"
@@ -133,7 +133,7 @@ export function TransparencySection() {
         </div>
 
         {/* Governance in Practice Image */}
-        <div className="relative aspect-[16/9] overflow-hidden mb-32 group">
+        <div className="relative aspect-[16/9] overflow-hidden mb-32 group bg-black">
           <Image
             src="/images/transparency-governance.jpg"
             alt="Rafael Grossi in IAEA field vest preparing for a mission near Zaporizhzhia, demonstrating hands-on leadership in crisis zones"

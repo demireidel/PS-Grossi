@@ -87,7 +87,7 @@ export function VisionSection() {
               experience managing high-tension international crises.&rdquo;
             </Blockquote>
           </div>
-          <div className="relative aspect-[4/3] overflow-hidden group">
+          <div className="relative aspect-[4/3] overflow-hidden group bg-muted">
             <Image
               src="/images/grossi-un-address.jpg"
               alt="Rafael Grossi delivering a keynote address at the IAEA Nuclear Energy Summit podium with international flags, 2024"

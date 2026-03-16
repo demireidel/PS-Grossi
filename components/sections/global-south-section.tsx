@@ -47,7 +47,7 @@ export function GlobalSouthSection() {
   const quoteAnim = useInView()
   const statsAnim = useInView()
   const perspectivesAnim = useInView()
-  const imageAnim = useInView()
+  const imageAnim = useInView(0.05)
   const contextAnim = useInView()
 
   return (
@@ -120,7 +120,7 @@ export function GlobalSouthSection() {
         {/* UN Headquarters Image */}
         <div
           ref={imageAnim.ref}
-          className={`relative aspect-[16/9] lg:aspect-cinema overflow-hidden mb-32 group transition-[opacity,transform] duration-800 ${imageAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
+          className={`relative aspect-[16/9] lg:aspect-cinema overflow-hidden mb-32 group bg-black transition-[opacity] duration-800 ${imageAnim.inView ? 'opacity-100' : 'opacity-0'}`}
         >
           <Image
             src="/images/un-headquarters.jpg"
@@ -165,7 +165,7 @@ export function GlobalSouthSection() {
               &ldquo;Argentina is a country that has been part of all the multilateral non-proliferation regimes,&rdquo; he notes. &ldquo;We chose not to develop nuclear weapons, even though we could have. That gives me credibility when I talk about these issues.&rdquo;
             </p>
           </div>
-          <div className={`relative aspect-[4/3] overflow-hidden transition-[opacity,transform] duration-800 delay-300 ${contextAnim.inView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
+          <div className={`relative aspect-[4/3] overflow-hidden bg-muted transition-[opacity,transform] duration-800 delay-300 ${contextAnim.inView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
             <Image
               src="/images/grossi-portrait-formal.jpg"
               alt="Rafael Grossi speaking at a podium with senior IAEA officials, first Latin American to lead the agency"

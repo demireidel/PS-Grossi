@@ -52,7 +52,7 @@ const genderAchievements = [
 
 export function ForEverybodySection() {
   const headerAnim = useInView()
-  const imageAnim = useInView(0.2)
+  const imageAnim = useInView(0.05)
   const gridAnim = useInView()
   const genderAnim = useInView()
   const ctaAnim = useInView()
@@ -78,7 +78,7 @@ export function ForEverybodySection() {
           ref={imageAnim.ref}
           className={`relative mb-32 transition-[opacity] duration-800 ${imageAnim.inView ? 'opacity-100' : 'opacity-0'}`}
         >
-          <div className="relative aspect-[16/9] lg:aspect-wide overflow-hidden film-grain vignette">
+          <div className="relative aspect-[16/9] lg:aspect-wide overflow-hidden film-grain vignette bg-black">
             <div className="absolute inset-0 ken-burns">
               <Image
                 src="/images/grossi-rays-of-hope.jpg"
