@@ -85,7 +85,7 @@ export function PolicyPlatformSection() {
   const { ref, inView } = useInView(0.1)
 
   return (
-    <section id="platform" className="py-32 lg:py-48 bg-muted/30 relative overflow-hidden">
+    <section id="platform" className="py-32 lg:py-48 bg-muted relative overflow-hidden">
       <div className="absolute inset-0 opacity-[0.015]" style={{ backgroundImage: DOT_PATTERN_SM, backgroundSize: DOT_PATTERN_SIZE_LG }} />
 
       <div className="container mx-auto px-6 lg:px-20 relative" ref={ref}>
@@ -94,10 +94,12 @@ export function PolicyPlatformSection() {
           label="Policy Platform"
           title={<>What Grossi <span className="text-secondary italic">Would Do</span></>}
           subtitle="Concrete proposals across six priority areas. Not aspirations—actionable reforms based on proven experience."
+          animated
+          inView={inView}
         />
 
         {/* Policy Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[2px] bg-border mb-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[2px] bg-border mb-32">
           {policyAreas.map((area, index) => (
             <div
               key={area.title}
@@ -141,7 +143,7 @@ export function PolicyPlatformSection() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="bg-foreground text-background p-16 lg:p-20 text-center relative overflow-hidden">
+        <div className="bg-foreground text-background p-16 lg:p-24 text-center relative overflow-hidden film-grain">
           <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: DOT_PATTERN_SM, backgroundSize: DOT_PATTERN_SIZE_SM }} />
 
           <div className="relative max-w-3xl mx-auto">

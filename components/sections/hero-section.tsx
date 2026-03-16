@@ -43,9 +43,9 @@ export function HeroSection() {
       <div className="relative z-10 container mx-auto px-6 lg:px-20 text-center">
         {/* Ornamental line */}
         <div className={`flex items-center justify-center gap-6 mb-14 transition-[opacity,transform] duration-800 delay-100 ${loaded ? "opacity-100" : "opacity-0"}`}>
-          <span className={`h-px bg-gradient-to-r from-transparent via-secondary/60 to-secondary/60 transition-[opacity,transform] duration-800 delay-200 ${loaded ? "w-28" : "w-0"}`} />
+          <span className={`h-px bg-gradient-to-r from-transparent via-secondary/60 to-secondary/60 transition-[width] duration-800 delay-200 ${loaded ? "w-28" : "w-0"}`} />
           <div className="w-1.5 h-1.5 rotate-45 border border-secondary/50 transition-[opacity,transform] duration-800 delay-300" />
-          <span className={`h-px bg-gradient-to-l from-transparent via-secondary/60 to-secondary/60 transition-[opacity,transform] duration-800 delay-200 ${loaded ? "w-28" : "w-0"}`} />
+          <span className={`h-px bg-gradient-to-l from-transparent via-secondary/60 to-secondary/60 transition-[width] duration-800 delay-200 ${loaded ? "w-28" : "w-0"}`} />
         </div>
 
         <div

@@ -292,7 +292,7 @@ export function TransparencySection() {
             {metrics.map((metric, index) => (
               <div
                 key={metric.label}
-                className={`p-12 lg:p-14 bg-muted hover:bg-foreground group transition-[opacity,transform,background-color] duration-600 relative overflow-hidden ${metricsAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                className={`p-10 lg:p-12 bg-muted hover:bg-foreground group transition-[opacity,transform,background-color] duration-600 relative overflow-hidden ${metricsAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                 style={{ transitionDelay: metricsAnim.inView ? `${index * 100 + 200}ms` : '0ms' }}
               >
                 <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-secondary/40 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-600 origin-left" />

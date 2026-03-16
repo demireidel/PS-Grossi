@@ -1,5 +1,8 @@
+"use client"
+
 import Image from "next/image"
 import { Shield, AlertTriangle, Compass } from "lucide-react"
+import { useInView } from "@/hooks/use-in-view"
 import type { Experience } from "@/lib/types"
 import { SectionHeader } from "@/components/section-header"
 import { Blockquote } from "@/components/blockquote"
@@ -27,6 +30,13 @@ const experiences: Experience[] = [
 ]
 
 export function DangerousWorldSection() {
+  const headerAnim = useInView()
+  const heroAnim = useInView()
+  const imagesAnim = useInView()
+  const stakesAnim = useInView()
+  const careerAnim = useInView()
+  const doctrineAnim = useInView()
+
   return (
     <section
       id="dangerous-world"
@@ -36,14 +46,20 @@ export function DangerousWorldSection() {
 
       <div className="container mx-auto px-6 lg:px-20 relative">
         <SectionHeader
+          ref={headerAnim.ref}
           number="02"
           label="The Moment"
           title={<>In a Dangerous <span className="text-secondary italic">World</span></>}
           subtitle="Why this moment requires crisis-tested leadership"
+          animated
+          inView={headerAnim.inView}
         />
 
         {/* Hero Image - Cinematic */}
-        <div className="relative aspect-[16/9] lg:aspect-cinema mb-24 overflow-hidden">
+        <div
+          ref={heroAnim.ref}
+          className={`relative aspect-[16/9] lg:aspect-cinema mb-32 overflow-hidden transition-[opacity] duration-800 ${heroAnim.inView ? 'opacity-100' : 'opacity-0'}`}
+        >
           <Image
             src="/images/grossi-zaporizhzhia.jpg"
             alt="IAEA Director General Rafael Grossi wearing combat helmet at the frontline crossing near Zaporizhzhia Nuclear Power Plant, September 2024"
@@ -76,7 +92,10 @@ export function DangerousWorldSection() {
         </div>
 
         {/* Secondary Image - Crisis Diplomacy */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 mb-24">
+        <div
+          ref={imagesAnim.ref}
+          className={`grid grid-cols-1 lg:grid-cols-2 gap-2 mb-32 transition-[opacity,transform] duration-800 ${imagesAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
+        >
           <div className="relative aspect-[4/3] overflow-hidden group">
             <Image
               src="/images/crisis-diplomacy.jpg"
@@ -110,7 +129,10 @@ export function DangerousWorldSection() {
         </div>
 
         {/* The Stakes */}
-        <div className="grid lg:grid-cols-2 gap-16 items-start mb-24">
+        <div
+          ref={stakesAnim.ref}
+          className={`grid lg:grid-cols-2 gap-16 items-start mb-32 transition-[opacity,transform] duration-800 ${stakesAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
+        >
           <div>
             <h3 className="font-serif text-2xl md:text-3xl text-foreground mb-6">
               &ldquo;A Fragmented and Volatile World&rdquo;
@@ -167,87 +189,78 @@ export function DangerousWorldSection() {
         </div>
 
         {/* Grossi's Career */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-[2px] bg-border mb-24">
-          <div className="group p-10 lg:p-12 bg-card hover:bg-foreground transition-[background-color] duration-600 relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-secondary/40 via-secondary/10 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-600 origin-left" />
-            <p className="text-5xl md:text-6xl font-serif text-secondary mb-6">40</p>
-            <p className="text-foreground group-hover:text-background font-medium mb-3 transition-colors duration-400">
-              Years in Diplomacy
-            </p>
-            <p className="text-muted-foreground group-hover:text-background/60 text-sm leading-relaxed transition-colors duration-400">
-              Joined Argentina&apos;s Foreign Ministry in 1985. Ambassador to
-              Austria. Chief of Cabinet at OPCW. First Latin American to lead
-              the IAEA. PhD in International Relations from Geneva.
-            </p>
-          </div>
-          <div className="group p-10 lg:p-12 bg-card hover:bg-foreground transition-[background-color] duration-600 relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-secondary/40 via-secondary/10 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-600 origin-left" />
-            <p className="text-5xl md:text-6xl font-serif text-secondary mb-6">2019</p>
-            <p className="text-foreground group-hover:text-background font-medium mb-3 transition-colors duration-400">
-              IAEA Director General
-            </p>
-            <p className="text-muted-foreground group-hover:text-background/60 text-sm leading-relaxed transition-colors duration-400">
-              Elected December 2019. Led the agency through COVID, the Ukraine
-              war, Iran tensions, and the return of nuclear deterrence rhetoric.
-              Re-elected for a second term.
-            </p>
-          </div>
-          <div className="group p-10 lg:p-12 bg-card hover:bg-foreground transition-[background-color] duration-600 relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-secondary/40 via-secondary/10 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-600 origin-left" />
-            <p className="text-5xl md:text-6xl font-serif text-secondary mb-6">1st</p>
-            <p className="text-foreground group-hover:text-background font-medium mb-3 transition-colors duration-400">
-              Latin American IAEA Chief
-            </p>
-            <p className="text-muted-foreground group-hover:text-background/60 text-sm leading-relaxed transition-colors duration-400">
-              First from the region since the agency&apos;s founding in 1957.
-              Also first to serve two consecutive terms as president of the
-              Nuclear Suppliers Group.
-            </p>
+        <div ref={careerAnim.ref} className="mb-32">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-[2px] bg-border">
+            {[
+              { stat: "40", title: "Years in Diplomacy", desc: "Joined Argentina\u2019s Foreign Ministry in 1985. Ambassador to Austria. Chief of Cabinet at OPCW. First Latin American to lead the IAEA. PhD in International Relations from Geneva." },
+              { stat: "2019", title: "IAEA Director General", desc: "Elected December 2019. Led the agency through COVID, the Ukraine war, Iran tensions, and the return of nuclear deterrence rhetoric. Re-elected for a second term." },
+              { stat: "1st", title: "Latin American IAEA Chief", desc: "First from the region since the agency\u2019s founding in 1957. Also first to serve two consecutive terms as president of the Nuclear Suppliers Group." },
+            ].map((card, index) => (
+              <div
+                key={card.title}
+                className={`group p-10 lg:p-12 bg-card hover:bg-foreground transition-[opacity,transform,background-color] duration-600 relative overflow-hidden ${careerAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'}`}
+                style={{ transitionDelay: careerAnim.inView ? `${index * 100}ms` : '0ms' }}
+              >
+                <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-secondary/40 via-secondary/10 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-600 origin-left" />
+                <p className="text-5xl md:text-6xl font-serif text-secondary mb-6">{card.stat}</p>
+                <p className="text-foreground group-hover:text-background font-medium mb-3 transition-colors duration-400">
+                  {card.title}
+                </p>
+                <p className="text-muted-foreground group-hover:text-background/70 text-sm leading-relaxed transition-colors duration-400">
+                  {card.desc}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
 
         {/* Why This Fits */}
-        <div className="bg-foreground text-background p-16 lg:p-24 relative overflow-hidden film-grain">
-          <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: DOT_PATTERN_SM, backgroundSize: DOT_PATTERN_SIZE_SM }} />
+        <div
+          ref={doctrineAnim.ref}
+          className={`transition-[opacity,transform] duration-800 ${doctrineAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
+        >
+          <div className="bg-foreground text-background p-16 lg:p-24 relative overflow-hidden film-grain">
+            <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: DOT_PATTERN_SM, backgroundSize: DOT_PATTERN_SIZE_SM }} />
 
-          <div className="relative max-w-4xl">
-            <span className="inline-flex items-center gap-4 text-secondary text-[10px] uppercase tracking-[0.3em] font-medium mb-10">
-              <span className="w-8 h-px bg-secondary" />
-              The Fit
-            </span>
+            <div className="relative max-w-4xl">
+              <span className="inline-flex items-center gap-4 text-secondary text-[10px] uppercase tracking-[0.3em] font-medium mb-10">
+                <span className="w-8 h-px bg-secondary" />
+                The Fit
+              </span>
 
-            <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl mb-10 leading-[1.1]">
-              The Grossi <span className="text-secondary italic">Doctrine</span>
-            </h3>
+              <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl mb-10 leading-[1.1]">
+                The Grossi <span className="text-secondary italic">Doctrine</span>
+              </h3>
 
-            <p className="text-xl md:text-2xl leading-relaxed opacity-80 mb-8 font-light">
-              &ldquo;Whoever holds the position must speak with those who
-              initiated the attacks. That&apos;s the first thing I did: speak
-              with Putin, and many people criticized me for it. But who else am
-              I going to talk to?&rdquo;
-            </p>
+              <p className="text-xl md:text-2xl leading-relaxed opacity-80 mb-8 font-light">
+                &ldquo;Whoever holds the position must speak with those who
+                initiated the attacks. That&apos;s the first thing I did: speak
+                with Putin, and many people criticized me for it. But who else am
+                I going to talk to?&rdquo;
+              </p>
 
-            <p className="text-lg leading-relaxed opacity-70 mb-8">
-              This is the Grossi doctrine: go where the crisis is, talk to
-              whoever is relevant, maintain impartiality without indifference,
-              and return with something concrete. When Zaporizhzhia was under
-              bombardment, he went personally. When Iran closed doors, he found
-              a way back in.
-            </p>
+              <p className="text-lg leading-relaxed opacity-70 mb-8">
+                This is the Grossi doctrine: go where the crisis is, talk to
+                whoever is relevant, maintain impartiality without indifference,
+                and return with something concrete. When Zaporizhzhia was under
+                bombardment, he went personally. When Iran closed doors, he found
+                a way back in.
+              </p>
 
-            <p className="text-lg leading-relaxed opacity-70 mb-12">
-              On accusations of bias: &ldquo;Some say I&apos;m a Zionist puppet,
-              others say the opposite. One day the pro-Ukrainians claim I&apos;m
-              in Putin&apos;s pocket, and when I meet with President Zelensky,
-              the pro-Russians say I&apos;m on the other side. If the price is
-              criticism, so be it.&rdquo;
-            </p>
+              <p className="text-lg leading-relaxed opacity-70 mb-12">
+                On accusations of bias: &ldquo;Some say I&apos;m a Zionist puppet,
+                others say the opposite. One day the pro-Ukrainians claim I&apos;m
+                in Putin&apos;s pocket, and when I meet with President Zelensky,
+                the pro-Russians say I&apos;m on the other side. If the price is
+                criticism, so be it.&rdquo;
+              </p>
 
-            <Blockquote>
-              &ldquo;My job requires dialogue with everyone. Active diplomacy
-              must be deployed, and solutions proposed as an impartial, but
-              not indifferent, interlocutor.&rdquo;
-            </Blockquote>
+              <Blockquote>
+                &ldquo;My job requires dialogue with everyone. Active diplomacy
+                must be deployed, and solutions proposed as an impartial, but
+                not indifferent, interlocutor.&rdquo;
+              </Blockquote>
+            </div>
           </div>
         </div>
       </div>

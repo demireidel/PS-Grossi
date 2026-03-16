@@ -33,15 +33,15 @@ export function Footer() {
       >
         <div className={`max-w-5xl mx-auto text-center transition-[opacity,transform] duration-800 ${ctaAnim.inView ? 'opacity-100' : 'opacity-0'}`}>
           <div className="flex items-center justify-center gap-6 mb-10">
-            <span className={`h-px bg-secondary transition-[opacity,transform] duration-800 delay-300 ${ctaAnim.inView ? 'w-16' : 'w-0'}`} />
-            <p className="text-secondary uppercase tracking-[0.4em] text-[10px] font-medium">
+            <span className={`h-px bg-secondary transition-[width] duration-800 delay-300 ${ctaAnim.inView ? 'w-16' : 'w-0'}`} />
+            <p className="text-secondary uppercase tracking-[0.3em] text-[10px] font-medium">
               The Call
             </p>
-            <span className={`h-px bg-secondary transition-[opacity,transform] duration-800 delay-300 ${ctaAnim.inView ? 'w-16' : 'w-0'}`} />
+            <span className={`h-px bg-secondary transition-[width] duration-800 delay-300 ${ctaAnim.inView ? 'w-16' : 'w-0'}`} />
           </div>
 
           <div className="overflow-hidden">
-            <h2 className={`font-serif text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-10 leading-[0.95] transition-[opacity,transform] duration-800 delay-200 ${ctaAnim.inView ? 'translate-y-0' : 'translate-y-full'}`}>
+            <h2 className={`font-serif text-4xl md:text-5xl lg:text-6xl mb-10 leading-[0.95] transition-[opacity,transform] duration-800 delay-200 ${ctaAnim.inView ? 'translate-y-0' : 'translate-y-full'}`}>
               The world cannot
               <span className="block text-secondary italic">afford to wait.</span>
             </h2>

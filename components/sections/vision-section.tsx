@@ -1,5 +1,8 @@
+"use client"
+
 import Image from "next/image"
 import { Target, Users, Gauge, RefreshCw } from "lucide-react"
+import { useInView } from "@/hooks/use-in-view"
 import type { Principle } from "@/lib/types"
 import { SectionHeader } from "@/components/section-header"
 import { Blockquote } from "@/components/blockquote"
@@ -33,20 +36,32 @@ const principles: Principle[] = [
 ]
 
 export function VisionSection() {
+  const headerAnim = useInView()
+  const contentAnim = useInView()
+  const doctrineAnim = useInView()
+  const ctaAnim = useInView()
+
   return (
     <section id="vision" className="py-32 lg:py-48 bg-background relative overflow-hidden">
       <div className="absolute inset-0 opacity-[0.015]" style={{ backgroundImage: DOT_PATTERN_SM, backgroundSize: DOT_PATTERN_SIZE_LG }} />
 
       <div className="container mx-auto px-6 lg:px-20 relative">
         <SectionHeader
+          ref={headerAnim.ref}
           number="01"
           label="The Vision"
           title={<>A UN That <span className="text-secondary italic">Works</span></>}
           subtitle="Rafael Grossi's vision for a more operational, credible, and effective United Nations"
+          size="large"
+          animated
+          inView={headerAnim.inView}
         />
 
         {/* Grossi's Diagnosis */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">
+        <div
+          ref={contentAnim.ref}
+          className={`grid lg:grid-cols-2 gap-16 items-center mb-32 transition-[opacity,transform] duration-800 ${contentAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
+        >
           <div>
             <h3 className="font-serif text-2xl md:text-3xl text-foreground mb-6">
               &ldquo;The UN Has Forgotten Its Purpose&rdquo;
@@ -66,18 +81,12 @@ export function VisionSection() {
               indispensable, but it has become reactive and distant from the
               conflicts that define our era.
             </p>
-            <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6">
-              &ldquo;The UN is in a profound crisis of credibility,&rdquo; he
-              states. The world is experiencing &ldquo;tremendous
-              fragmentation&rdquo;: overlapping conflicts, weakened alliances,
-              trade wars, and a growing number of countries desiring nuclear
-              capabilities.
-            </p>
-            <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+
+            <Blockquote size="default">
               &ldquo;The UN needs a secretary with boots in the mud—not one who
               comments from a distance. My conviction was forged through
               experience managing high-tension international crises.&rdquo;
-            </p>
+            </Blockquote>
           </div>
           <div className="relative aspect-[4/3] overflow-hidden group">
             <Image
@@ -88,13 +97,13 @@ export function VisionSection() {
               className="object-cover transition-transform duration-600 group-hover:scale-105"
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 100vw, 50vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-600" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
           </div>
         </div>
 
         {/* The Doctrine */}
-        <div className="mb-24">
-          <div className="text-center max-w-3xl mx-auto mb-16">
+        <div ref={doctrineAnim.ref} className="mb-32">
+          <div className={`text-center max-w-3xl mx-auto mb-16 transition-[opacity,transform] duration-800 ${doctrineAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
             <h3 className="font-serif text-2xl md:text-3xl text-foreground mb-6">
               The Governing Doctrine
             </h3>
@@ -109,7 +118,8 @@ export function VisionSection() {
             {principles.map((principle, index) => (
               <div
                 key={principle.title}
-                className="group p-10 lg:p-12 bg-card hover:bg-foreground transition-[background-color] duration-600 relative overflow-hidden"
+                className={`group p-10 lg:p-12 bg-card hover:bg-foreground transition-[opacity,transform,background-color] duration-600 relative overflow-hidden ${doctrineAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'}`}
+                style={{ transitionDelay: doctrineAnim.inView ? `${index * 100}ms` : '0ms' }}
               >
                 <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-secondary/40 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-600 origin-left" />
                 <div className="flex items-start justify-between mb-8">
@@ -128,47 +138,50 @@ export function VisionSection() {
         </div>
 
         {/* Why This Election Matters */}
-        <div className="bg-primary text-primary-foreground p-16 lg:p-24 relative overflow-hidden film-grain">
-          <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: DOT_PATTERN_SM, backgroundSize: DOT_PATTERN_SIZE_SM }} />
+        <div
+          ref={ctaAnim.ref}
+          className={`transition-[opacity,transform] duration-800 ${ctaAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
+        >
+          <div className="bg-primary text-primary-foreground p-16 lg:p-24 relative overflow-hidden film-grain">
+            <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: DOT_PATTERN_SM, backgroundSize: DOT_PATTERN_SIZE_SM }} />
 
-          <div className="relative max-w-4xl">
-            <span className="inline-flex items-center gap-4 text-secondary text-[10px] uppercase tracking-[0.3em] font-medium mb-10">
-              <span className="w-8 h-px bg-secondary" />
-              The Stakes
-            </span>
+            <div className="relative max-w-4xl">
+              <span className="inline-flex items-center gap-4 text-secondary text-[10px] uppercase tracking-[0.3em] font-medium mb-10">
+                <span className="w-8 h-px bg-secondary" />
+                The Stakes
+              </span>
 
-            <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl mb-10 leading-[1.1]">
-              Why Grossi, <span className="text-secondary italic">Why Now</span>
-            </h3>
+              <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl mb-10 leading-[1.1]">
+                Why Grossi, <span className="text-secondary italic">Why Now</span>
+              </h3>
 
-            <p className="text-xl md:text-2xl leading-relaxed opacity-80 mb-8 font-light">
-              &ldquo;We are actors in a geopolitical reality we must shape to
-              avoid conflict. That is the challenge of diplomacy—today and
-              always.&rdquo; Grossi brings not theory, but four decades of
-              crisis-tested leadership.
-            </p>
+              <p className="text-xl md:text-2xl leading-relaxed opacity-80 mb-8 font-light">
+                &ldquo;We are actors in a geopolitical reality we must shape to
+                avoid conflict. That is the challenge of diplomacy—today and
+                always.&rdquo; Grossi brings not theory, but four decades of
+                crisis-tested leadership.
+              </p>
 
-            <p className="text-lg leading-relaxed opacity-70 mb-8">
-              The first Latin American to lead the IAEA. A diplomat who has sat
-              across from Putin and Zelensky, Iranian ayatollahs and American
-              presidents. Someone who has walked into active war zones—not to
-              observe, but to act. Grossi received death threats for his work
-              and continues under security protection because experts consider
-              them credible.
-            </p>
+              <p className="text-base md:text-lg leading-relaxed opacity-70 mb-8">
+                The first Latin American to lead the IAEA. A diplomat who has sat
+                across from Putin and Zelensky, Iranian ayatollahs and American
+                presidents. Someone who has walked into active war zones—not to
+                observe, but to act.
+              </p>
 
-            <p className="text-lg leading-relaxed opacity-70 mb-12">
-              The next Secretary-General cannot afford to learn on the job.
-              The crises are too urgent, the divisions too deep, the stakes
-              too high. What is needed is someone who has already done the
-              hardest version of this work&mdash;and delivered results under
-              conditions that most diplomats would consider impossible.
-            </p>
+              <p className="text-base md:text-lg leading-relaxed opacity-70 mb-12">
+                The next Secretary-General cannot afford to learn on the job.
+                The crises are too urgent, the divisions too deep, the stakes
+                too high. What is needed is someone who has already done the
+                hardest version of this work&mdash;and delivered results under
+                conditions that most diplomats would consider impossible.
+              </p>
 
-            <Blockquote>
-              &ldquo;Active diplomacy must be deployed, and solutions proposed
-              as an impartial, but not indifferent, interlocutor.&rdquo;
-            </Blockquote>
+              <Blockquote>
+                &ldquo;Active diplomacy must be deployed, and solutions proposed
+                as an impartial, but not indifferent, interlocutor.&rdquo;
+              </Blockquote>
+            </div>
           </div>
         </div>
       </div>

@@ -24,7 +24,7 @@ export const SectionHeader = forwardRef<HTMLDivElement, SectionHeaderProps>(
         }`}
       >
         <div className="flex items-center gap-6 mb-8">
-          <span className={`h-px bg-secondary ${animated ? `transition-all duration-800 delay-200 ${inView ? "w-16" : "w-0"}` : "w-16"}`} />
+          <span className={`h-px bg-secondary ${animated ? `transition-[width] duration-800 delay-200 ${inView ? "w-16" : "w-0"}` : "w-16"}`} />
           <p className="text-secondary uppercase tracking-[0.3em] text-[10px] md:text-[11px] font-medium">
             Section {number}
           </p>
