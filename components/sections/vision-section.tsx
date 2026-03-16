@@ -72,7 +72,7 @@ export function VisionSection() {
               act. And this can be remedied.&rdquo;
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              After 40 years navigating international crises—from the Falklands
+              After 40 years navigating international crises—from non-proliferation talks
               to Fukushima, from Tehran to Zaporizhzhia—Grossi sees a UN in
               profound crisis of credibility. The organization remains
               indispensable, but it has become reactive and distant from the
