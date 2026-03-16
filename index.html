@@ -1,0 +1,2486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rafael Grossi — For United Nations Secretary-General</title>
+<meta name="description" content="Rafael Grossi's vision for a more operational, credible, and effective United Nations. 40 years of diplomacy. First Latin American IAEA Director General.">
+<meta property="og:title" content="Rafael Grossi — For UN Secretary-General">
+<meta property="og:description" content="A UN That Works. Crisis-tested leadership for a dangerous world.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   DESIGN TOKENS
+   ============================================================ */
+:root {
+  --background: oklch(0.975 0.005 70);
+  --foreground: oklch(0.11 0.03 255);
+  --card: oklch(0.985 0.004 70);
+  --card-foreground: oklch(0.11 0.03 255);
+  --primary: oklch(0.18 0.06 255);
+  --primary-foreground: oklch(0.975 0.005 70);
+  --secondary: oklch(0.72 0.15 55);
+  --secondary-foreground: oklch(0.08 0.03 255);
+  --muted: oklch(0.96 0.007 70);
+  --muted-foreground: oklch(0.48 0.015 255);
+  --accent: oklch(0.60 0.14 55);
+  --border: oklch(0.92 0.006 70);
+  --ring: oklch(0.72 0.15 55);
+  --text-micro: 0.5625rem;
+  --text-label: 0.625rem;
+  --text-label-lg: 0.6875rem;
+  --tracking-tight: 0.1em;
+  --tracking-normal: 0.15em;
+  --tracking-wide: 0.2em;
+  --tracking-wider: 0.25em;
+  --tracking-ultra: 0.3em;
+  --tracking-extreme: 0.4em;
+  --tracking-hero: 0.6em;
+  --duration-fast: 350ms;
+  --duration-normal: 550ms;
+  --duration-slow: 800ms;
+  --duration-reveal: 1000ms;
+  --duration-hero: 1600ms;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-premium: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dot-pattern: radial-gradient(circle at 1px 1px, currentColor 0.5px, transparent 0);
+  --dot-size-sm: 32px 32px;
+  --shadow-soft: 0 2px 20px -4px rgba(0,0,0,0.06), 0 12px 28px -4px rgba(0,0,0,0.04);
+  --shadow-elevated: 0 4px 30px -6px rgba(0,0,0,0.1), 0 24px 48px -8px rgba(0,0,0,0.06);
+  --shadow-dramatic: 0 12px 50px -12px rgba(0,0,0,0.15), 0 30px 70px -15px rgba(0,0,0,0.1);
+  --shadow-floating: 0 20px 60px -15px rgba(0,0,0,0.2), 0 40px 80px -20px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.03);
+  --shadow-glow-gold: 0 0 50px -10px oklch(0.72 0.15 55 / 0.25), 0 0 100px -20px oklch(0.72 0.15 55 / 0.12);
+}
+
+/* ============================================================
+   BASE
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; border: 0 solid var(--border); }
+html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1;
+  line-height: 1.6;
+}
+::selection { background-color: oklch(0.72 0.15 55 / 0.2); color: inherit; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+button { background: none; border: none; cursor: pointer; font: inherit; color: inherit; }
+.serif { font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif; }
+
+/* ============================================================
+   SCROLLBAR
+   ============================================================ */
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: oklch(0.08 0.03 255); }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, oklch(0.72 0.15 55 / 0.4), oklch(0.60 0.14 55 / 0.2)); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: linear-gradient(180deg, oklch(0.80 0.13 55 / 0.6), oklch(0.72 0.15 55 / 0.4)); }
+
+/* ============================================================
+   LAYOUT
+   ============================================================ */
+.container { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
+@media (min-width: 768px) { .container { padding: 0 3rem; } }
+@media (min-width: 1024px) { .container { padding: 0 6rem; } }
+
+.section { padding: 10rem 0; position: relative; overflow: hidden; }
+@media (max-width: 1023px) { .section { padding: 6rem 0; } }
+
+/* Grid utilities */
+.grid { display: grid; }
+.grid-2 { grid-template-columns: 1fr; gap: 2px; }
+.grid-3 { grid-template-columns: 1fr; gap: 2px; }
+.grid-4 { grid-template-columns: 1fr; gap: 2px; }
+.grid-gap-24 { gap: 6rem; }
+@media (min-width: 768px) {
+  .grid-2 { grid-template-columns: repeat(2, 1fr); }
+  .grid-3 { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 1024px) {
+  .grid-4 { grid-template-columns: repeat(4, 1fr); }
+  .grid-12 { grid-template-columns: repeat(12, 1fr); }
+}
+.col-span-5 { grid-column: span 5; }
+.col-span-6 { grid-column: span 6; }
+.col-span-7 { grid-column: span 7; }
+
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.items-center { align-items: center; }
+.items-start { align-items: start; }
+.items-end { align-items: end; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.gap-2 { gap: 0.5rem; }
+.gap-3 { gap: 0.75rem; }
+.gap-4 { gap: 1rem; }
+.gap-5 { gap: 1.25rem; }
+.gap-6 { gap: 1.5rem; }
+.gap-8 { gap: 2rem; }
+.gap-10 { gap: 2.5rem; }
+.gap-12 { gap: 3rem; }
+.gap-14 { gap: 3.5rem; }
+.gap-16 { gap: 4rem; }
+.gap-24 { gap: 6rem; }
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.relative { position: relative; }
+.absolute { position: absolute; }
+.overflow-hidden { overflow: hidden; }
+.w-full { width: 100%; }
+.max-w-md { max-width: 28rem; }
+.max-w-xl { max-width: 36rem; }
+.max-w-2xl { max-width: 42rem; }
+.max-w-3xl { max-width: 48rem; }
+.max-w-4xl { max-width: 56rem; }
+.max-w-5xl { max-width: 64rem; }
+.max-w-6xl { max-width: 72rem; }
+
+/* ============================================================
+   TYPOGRAPHY
+   ============================================================ */
+.text-xs { font-size: 0.75rem; }
+.text-sm { font-size: 0.875rem; }
+.text-base { font-size: 1rem; }
+.text-lg { font-size: 1.125rem; }
+.text-xl { font-size: 1.25rem; }
+.text-2xl { font-size: 1.5rem; }
+.text-3xl { font-size: 1.875rem; }
+.text-4xl { font-size: 2.25rem; }
+.text-5xl { font-size: 3rem; }
+.text-6xl { font-size: 3.75rem; }
+.text-7xl { font-size: 4.5rem; }
+.text-8xl { font-size: 6rem; }
+@media (min-width: 768px) {
+  .md\:text-lg { font-size: 1.125rem; }
+  .md\:text-xl { font-size: 1.25rem; }
+  .md\:text-2xl { font-size: 1.5rem; }
+  .md\:text-3xl { font-size: 1.875rem; }
+  .md\:text-4xl { font-size: 2.25rem; }
+  .md\:text-5xl { font-size: 3rem; }
+  .md\:text-6xl { font-size: 3.75rem; }
+}
+@media (min-width: 1024px) {
+  .lg\:text-5xl { font-size: 3rem; }
+  .lg\:text-6xl { font-size: 3.75rem; }
+  .lg\:text-7xl { font-size: 4.5rem; }
+  .lg\:text-9xl { font-size: 8rem; }
+}
+@media (min-width: 1280px) {
+  .xl\:text-8xl { font-size: 6rem; }
+  .xl\:text-hero { font-size: 10rem; }
+}
+
+.font-light { font-weight: 300; }
+.font-extralight { font-weight: 200; }
+.font-normal { font-weight: 400; }
+.font-medium { font-weight: 500; }
+.font-semibold { font-weight: 600; }
+.italic { font-style: italic; }
+.uppercase { text-transform: uppercase; }
+.leading-none { line-height: 1; }
+.leading-tight { line-height: 1.1; }
+.leading-relaxed { line-height: 1.625; }
+.tracking-tight { letter-spacing: -0.025em; }
+.tracking-wide { letter-spacing: 0.025em; }
+
+/* Colors */
+.text-foreground { color: var(--foreground); }
+.text-muted-foreground { color: var(--muted-foreground); }
+.text-secondary { color: var(--secondary); }
+.text-white { color: white; }
+.bg-background { background: var(--background); }
+.bg-muted { background: var(--muted); }
+.bg-foreground { background: var(--foreground); }
+.bg-card { background: var(--card); }
+.bg-primary { background: var(--primary); }
+.bg-black { background: black; }
+.bg-border { background: var(--border); }
+
+/* ============================================================
+   CINEMATIC EFFECTS
+   ============================================================ */
+.film-grain::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='5' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.018;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+  z-index: 1;
+}
+.vignette::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 20%, rgba(0,0,0,0.6) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+.ken-burns { animation: ken-burns 35s ease-in-out infinite alternate; }
+@keyframes ken-burns {
+  0% { transform: scale(1) translate(0, 0); }
+  100% { transform: scale(1.05) translate(-0.6%, -0.4%); }
+}
+.color-grade-warm { filter: sepia(0.04) saturate(1.12) brightness(0.97) contrast(1.03); }
+.color-grade-cool { filter: saturate(0.88) brightness(0.94) contrast(1.06) hue-rotate(-3deg); }
+.aspect-cinema { aspect-ratio: 2.39 / 1; }
+.aspect-wide { aspect-ratio: 21 / 9; }
+.aspect-16-9 { aspect-ratio: 16 / 9; }
+.aspect-4-3 { aspect-ratio: 4 / 3; }
+
+/* ============================================================
+   TYPOGRAPHY EFFECTS
+   ============================================================ */
+.text-shadow-premium {
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5), 0 4px 20px rgba(0,0,0,0.35), 0 12px 50px rgba(0,0,0,0.2);
+}
+.text-shadow-overlay {
+  text-shadow: 0 1px 3px rgba(0,0,0,0.75), 0 3px 12px rgba(0,0,0,0.45), 0 8px 30px rgba(0,0,0,0.2);
+}
+.text-gradient-gold {
+  background: linear-gradient(135deg, oklch(0.80 0.13 72) 0%, oklch(0.75 0.16 60) 20%, oklch(0.68 0.155 55) 45%, oklch(0.75 0.16 60) 70%, oklch(0.80 0.13 72) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.text-gradient-gold-shimmer {
+  background: linear-gradient(105deg, oklch(0.62 0.14 52) 0%, oklch(0.75 0.16 60) 15%, oklch(0.85 0.11 75) 30%, oklch(0.80 0.14 65) 45%, oklch(0.72 0.16 58) 60%, oklch(0.85 0.11 75) 75%, oklch(0.75 0.16 60) 88%, oklch(0.62 0.14 52) 100%);
+  background-size: 400% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gold-shimmer 10s ease-in-out infinite;
+}
+@keyframes gold-shimmer {
+  0%, 100% { background-position: 100% 50%; }
+  50% { background-position: 0% 50%; }
+}
+
+/* ============================================================
+   GLASS & INTERACTIVE
+   ============================================================ */
+.glass {
+  backdrop-filter: blur(32px) saturate(200%);
+  -webkit-backdrop-filter: blur(32px) saturate(200%);
+}
+.glow-gold { box-shadow: var(--shadow-glow-gold); }
+
+/* Scroll indicator */
+@keyframes scroll-line {
+  0% { transform: translateY(-100%); opacity: 0; }
+  30% { opacity: 1; }
+  100% { transform: translateY(300%); opacity: 0; }
+}
+.scroll-indicator-line { animation: scroll-line 2s var(--ease-out-quart) infinite; }
+
+/* ============================================================
+   SCROLL REVEAL
+   ============================================================ */
+[data-reveal] {
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-duration: var(--duration-reveal);
+  transition-timing-function: var(--ease-out-expo);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+[data-reveal="up"] { transform: translateY(3rem); }
+[data-reveal="down"] { transform: translateY(-3rem); }
+[data-reveal="left"] { transform: translateX(3rem); }
+[data-reveal="right"] { transform: translateX(-3rem); }
+[data-reveal="fade"] { transform: none; }
+[data-reveal="scale"] { transform: scale(0.95); }
+[data-reveal].revealed {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+}
+
+/* ============================================================
+   FOCUS & SKIP
+   ============================================================ */
+:focus-visible {
+  outline: 2px solid oklch(0.72 0.15 55);
+  outline-offset: 4px;
+  box-shadow: 0 0 0 6px oklch(0.11 0.03 255 / 0.1);
+}
+.skip-to-content {
+  position: absolute; left: -9999px; top: 0; z-index: 100;
+  padding: 1rem 2rem; background: var(--secondary); color: var(--secondary-foreground);
+  font-size: 0.875rem; font-weight: 500; text-transform: uppercase; letter-spacing: var(--tracking-tight);
+}
+.skip-to-content:focus { left: 0; }
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+.nav-header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+  transition: all 800ms ease;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.3), transparent);
+}
+.nav-header.scrolled {
+  background: oklch(0.975 0.005 70 / 0.6);
+  backdrop-filter: blur(32px) saturate(200%);
+  -webkit-backdrop-filter: blur(32px) saturate(200%);
+  border-bottom: 1px solid oklch(0.92 0.006 70 / 0.15);
+  box-shadow: 0 1px 50px -15px rgba(0,0,0,0.05);
+}
+.nav-inner { display: flex; align-items: center; justify-content: space-between; height: 80px; }
+.nav-logo { display: flex; flex-direction: column; text-align: left; background: none; border: none; cursor: pointer; }
+.nav-logo-name {
+  font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 600;
+  letter-spacing: -0.025em; transition: color 600ms; color: white;
+}
+.scrolled .nav-logo-name { color: var(--foreground); }
+.nav-logo-sub {
+  font-size: var(--text-label); text-transform: uppercase;
+  letter-spacing: var(--tracking-wider); transition: color 600ms; color: rgba(255,255,255,0.4);
+}
+.scrolled .nav-logo-sub { color: oklch(0.48 0.015 255 / 0.6); }
+
+.nav-links { display: none; align-items: center; gap: 3.5rem; }
+@media (min-width: 1024px) { .nav-links { display: flex; } }
+.nav-link {
+  position: relative; font-size: var(--text-label-lg); text-transform: uppercase;
+  letter-spacing: var(--tracking-normal); font-weight: 500;
+  transition: color 600ms; padding: 0.5rem 0; color: rgba(255,255,255,0.35);
+}
+.nav-link::after {
+  content: ''; position: absolute; bottom: 0; left: 0; height: 1px;
+  width: 0; background: oklch(0.72 0.15 55 / 0.4); transition: all 600ms;
+}
+.nav-link:hover { color: white; }
+.nav-link:hover::after { width: 100%; }
+.nav-link.active { color: white; }
+.nav-link.active::after { width: 100%; background: oklch(0.72 0.15 55 / 0.6); }
+.scrolled .nav-link { color: oklch(0.11 0.03 255 / 0.35); }
+.scrolled .nav-link:hover, .scrolled .nav-link.active { color: var(--foreground); }
+
+.nav-hamburger { display: block; padding: 0.5rem; transition: color 300ms; color: white; z-index: 60; }
+@media (min-width: 1024px) { .nav-hamburger { display: none; } }
+.scrolled .nav-hamburger { color: var(--foreground); }
+
+.nav-progress {
+  position: absolute; bottom: 0; left: 0; height: 1px;
+  background: linear-gradient(90deg, oklch(0.72 0.15 55 / 0.4), oklch(0.80 0.13 60 / 0.7), oklch(0.72 0.15 55 / 0.2));
+  transition: opacity 600ms; opacity: 0; width: 0;
+}
+.scrolled .nav-progress { opacity: 1; }
+
+/* Mobile menu */
+.mobile-backdrop {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.75);
+  backdrop-filter: blur(12px); z-index: 40; transition: opacity 500ms;
+  opacity: 0; pointer-events: none;
+}
+.mobile-backdrop.open { opacity: 1; pointer-events: auto; }
+.mobile-menu {
+  position: fixed; inset: 0; z-index: 50; background: var(--foreground); color: var(--background);
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+  transition: opacity 700ms, transform 700ms;
+  opacity: 0; transform: translateY(-100%); pointer-events: none;
+}
+.mobile-menu.open { opacity: 1; transform: translateY(0); pointer-events: auto; }
+@media (min-width: 1024px) { .mobile-menu, .mobile-backdrop { display: none !important; } }
+.mobile-close {
+  position: absolute; top: 0; right: 0; padding: 1.75rem;
+  color: oklch(0.975 0.005 70 / 0.3); z-index: 10;
+}
+.mobile-close:hover { color: var(--background); }
+.mobile-nav { display: flex; flex-direction: column; align-items: center; gap: 3rem; position: relative; }
+.mobile-link {
+  font-family: 'Cormorant Garamond', serif; font-size: 1.875rem;
+  color: oklch(0.975 0.005 70 / 0.6); transition: opacity 700ms, transform 700ms, color 400ms;
+  opacity: 0; transform: translateY(1rem);
+}
+.mobile-menu.open .mobile-link { opacity: 1; transform: translateY(0); }
+.mobile-link:hover { color: var(--background); }
+.mobile-bottom {
+  position: absolute; bottom: 4rem; text-align: center;
+  transition: opacity 700ms; opacity: 0;
+}
+.mobile-menu.open .mobile-bottom { opacity: 1; transition-delay: 800ms; }
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero {
+  position: relative; min-height: 100vh; display: flex;
+  align-items: center; justify-content: center; overflow: hidden; background: black;
+}
+.hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; }
+.hero-bg img {
+  width: 100%; height: 100%; object-fit: cover; object-position: left center;
+}
+.hero-gradient-1 { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.85), rgba(0,0,0,0.1), rgba(0,0,0,0.95)); }
+.hero-gradient-2 { position: absolute; inset: 0; background: linear-gradient(to right, rgba(0,0,0,0.75), transparent, rgba(0,0,0,0.6)); }
+.hero-gradient-3 { position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 40%, transparent 5%, rgba(0,0,0,0.8) 100%); }
+.hero-gradient-4 { position: absolute; inset: 0; background: radial-gradient(ellipse at 70% 80%, transparent 30%, rgba(0,0,0,0.4) 100%); }
+.hero-letterbox-top { position: absolute; top: 0; left: 0; right: 0; height: 7%; background: linear-gradient(to bottom, black, rgba(0,0,0,0.8)); z-index: 20; }
+.hero-letterbox-bottom { position: absolute; bottom: 0; left: 0; right: 0; height: 7%; background: linear-gradient(to top, black, rgba(0,0,0,0.8)); z-index: 20; }
+
+.hero-content {
+  position: relative; z-index: 10; text-align: center; width: 100%;
+  padding: 0 1.5rem;
+}
+@media (min-width: 768px) { .hero-content { padding: 0 3rem; } }
+@media (min-width: 1024px) { .hero-content { padding: 0 5rem; } }
+
+/* Hero entrance animations */
+.hero-element {
+  opacity: 0; transform: translateY(1rem);
+  transition: opacity 1600ms var(--ease-out-expo), transform 1600ms var(--ease-out-expo);
+}
+.hero.loaded .hero-element { opacity: 1; transform: translateY(0); }
+.hero-element.delay-1 { transition-delay: 300ms; }
+.hero-element.delay-2 { transition-delay: 400ms; }
+.hero-element.delay-3 { transition-delay: 500ms; }
+.hero-element.delay-4 { transition-delay: 700ms; }
+.hero-element.delay-5 { transition-delay: 900ms; }
+.hero-element.delay-6 { transition-delay: 1100ms; }
+.hero-element.delay-7 { transition-delay: 1300ms; }
+
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.75rem; color: white; font-weight: 400;
+  line-height: 0.78; letter-spacing: -0.025em; margin-bottom: 1.5rem;
+}
+@media (min-width: 640px) { .hero-title { font-size: 4.5rem; } }
+@media (min-width: 768px) { .hero-title { font-size: 6rem; } }
+@media (min-width: 1024px) { .hero-title { font-size: 8rem; } }
+@media (min-width: 1280px) { .hero-title { font-size: 10rem; } }
+
+.hero-tagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem; color: rgba(255,255,255,0.6); margin-bottom: 5rem;
+  letter-spacing: 0.025em; font-weight: 300;
+}
+@media (min-width: 640px) { .hero-tagline { font-size: 1.875rem; } }
+@media (min-width: 768px) { .hero-tagline { font-size: 2.25rem; } }
+@media (min-width: 1024px) { .hero-tagline { font-size: 3rem; } }
+@media (min-width: 1280px) { .hero-tagline { font-size: 3.75rem; } }
+
+.hero-scroll {
+  position: absolute; bottom: 8%; left: 50%; transform: translateX(-50%); z-index: 30;
+  display: flex; flex-direction: column; align-items: center;
+  color: rgba(255,255,255,0.15); transition: color 600ms;
+}
+.hero-scroll:hover { color: rgba(255,255,255,0.4); }
+.hero-scroll-track {
+  width: 1px; height: 5rem; background: rgba(255,255,255,0.06);
+  position: relative; overflow: hidden;
+}
+.hero-scroll-bar {
+  position: absolute; left: 0; width: 100%; height: 1.25rem;
+  background: linear-gradient(to bottom, oklch(0.72 0.15 55 / 0.5), transparent);
+}
+
+/* Corner accents */
+.corner-accent { position: absolute; z-index: 20; }
+.corner-line-h { position: absolute; height: 1px; width: 7rem; }
+.corner-line-v { position: absolute; width: 1px; height: 7rem; }
+
+/* Ambient lights */
+.ambient-light {
+  position: absolute; border-radius: 50%; pointer-events: none;
+}
+
+/* ============================================================
+   SECTION HEADER
+   ============================================================ */
+.section-header { position: relative; margin-bottom: 8rem; }
+.section-header.large { max-width: 72rem; margin-bottom: 9rem; }
+.section-header-watermark {
+  position: absolute; top: -5rem; left: -1.5rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(10rem, 18vw, 16rem);
+  color: oklch(0.11 0.03 255 / 0.02);
+  line-height: 1; user-select: none; pointer-events: none; font-weight: 300;
+}
+.section-header-meta {
+  display: flex; align-items: center; gap: 1.5rem; margin-bottom: 3rem; position: relative;
+}
+.section-header-line {
+  height: 1px; width: 6rem;
+  background: linear-gradient(90deg, var(--secondary), oklch(0.72 0.15 55 / 0.2));
+}
+.section-header-num {
+  color: var(--secondary); text-transform: uppercase;
+  letter-spacing: var(--tracking-ultra); font-size: var(--text-label); font-weight: 500;
+}
+@media (min-width: 768px) { .section-header-num { font-size: var(--text-label-lg); } }
+.section-header-label {
+  color: oklch(0.48 0.015 255 / 0.7); text-transform: uppercase;
+  letter-spacing: var(--tracking-wide); font-size: var(--text-label);
+}
+@media (min-width: 768px) { .section-header-label { font-size: var(--text-label-lg); } }
+.section-header-slash { color: oklch(0.72 0.15 55 / 0.15); }
+
+.section-header-title {
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--foreground); line-height: 0.88; letter-spacing: -0.025em;
+  margin-bottom: 3rem; position: relative;
+  font-size: 2.25rem;
+}
+@media (min-width: 768px) { .section-header-title { font-size: 3rem; } }
+@media (min-width: 1024px) { .section-header-title { font-size: 3.75rem; } }
+@media (min-width: 1280px) { .section-header-title { font-size: 4.5rem; } }
+.section-header.large .section-header-title { font-size: 3rem; }
+@media (min-width: 768px) { .section-header.large .section-header-title { font-size: 3.75rem; } }
+@media (min-width: 1024px) { .section-header.large .section-header-title { font-size: 4.5rem; } }
+@media (min-width: 1280px) { .section-header.large .section-header-title { font-size: 6rem; } }
+
+.section-header-subtitle {
+  font-size: 1.25rem; color: var(--muted-foreground);
+  line-height: 1.6; font-weight: 300; max-width: 48rem;
+}
+@media (min-width: 768px) { .section-header-subtitle { font-size: 1.5rem; } }
+
+/* ============================================================
+   CONTENT CARD
+   ============================================================ */
+.content-card {
+  padding: 2.5rem; background: var(--card); position: relative; overflow: hidden;
+  transition: background-color 800ms var(--ease-out-expo),
+              box-shadow 800ms var(--ease-out-expo),
+              transform 800ms var(--ease-out-expo);
+}
+@media (min-width: 1024px) { .content-card { padding: 3.5rem; } }
+.content-card:hover {
+  background: var(--foreground);
+  box-shadow: 0 20px 60px -15px rgba(0,0,0,0.15), 0 40px 80px -20px rgba(0,0,0,0.1);
+  transform: translateY(-4px);
+}
+.content-card .card-bar {
+  position: absolute; top: 0; left: 0; width: 100%; height: 2px;
+  background: linear-gradient(90deg, var(--secondary), oklch(0.72 0.15 55 / 0.4), transparent);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 800ms var(--ease-out-expo);
+}
+.content-card:hover .card-bar { transform: scaleX(1); }
+.content-card .card-glow {
+  position: absolute; top: 0; left: 0; width: 100%; height: 10rem;
+  background: linear-gradient(to bottom, oklch(0.72 0.15 55 / 0.04), transparent);
+  opacity: 0; transition: opacity 800ms;
+}
+.content-card:hover .card-glow { opacity: 1; }
+.content-card .card-content { position: relative; }
+
+.card-icon {
+  width: 2rem; height: 2rem; color: var(--secondary);
+  transition: transform 600ms, color 600ms;
+}
+.content-card:hover .card-icon { transform: scale(1.1); }
+.card-icon-lg { width: 2.5rem; height: 2.5rem; color: var(--secondary); transition: transform 600ms; }
+.content-card:hover .card-icon-lg { transform: scale(1.1); }
+
+.card-number {
+  font-family: 'Cormorant Garamond', serif; font-size: 3rem;
+  color: oklch(0.11 0.03 255 / 0.05); font-weight: 300;
+  transition: color 600ms;
+}
+.content-card:hover .card-number { color: oklch(0.975 0.005 70 / 0.1); }
+
+.card-title {
+  font-family: 'Cormorant Garamond', serif; font-size: 1.25rem;
+  color: var(--foreground); margin-bottom: 1rem; transition: color 600ms;
+}
+.content-card:hover .card-title { color: var(--background); }
+
+.card-desc {
+  color: var(--muted-foreground); line-height: 1.625; font-size: 0.875rem;
+  transition: color 600ms;
+}
+.content-card:hover .card-desc { color: oklch(0.975 0.005 70 / 0.55); }
+
+.card-stat-value {
+  font-family: 'Cormorant Garamond', serif; font-size: 2.25rem;
+  color: var(--secondary); font-weight: 300; transition: color 600ms;
+}
+.card-stat-label {
+  font-size: 0.75rem; color: var(--muted-foreground); text-transform: uppercase;
+  letter-spacing: 0.05em; transition: color 600ms;
+}
+.content-card:hover .card-stat-label { color: oklch(0.975 0.005 70 / 0.45); }
+
+.card-stat-lg-value {
+  font-family: 'Cormorant Garamond', serif; font-size: 3rem;
+  color: var(--secondary); margin-bottom: 1.5rem; font-weight: 300;
+}
+@media (min-width: 768px) { .card-stat-lg-value { font-size: 3.75rem; } }
+.card-stat-lg-label {
+  color: var(--foreground); font-weight: 500; margin-bottom: 0.75rem;
+  transition: color 600ms;
+}
+.content-card:hover .card-stat-lg-label { color: var(--background); }
+
+/* Invertible card variant */
+.content-card.invertible:hover { background: var(--foreground); }
+.content-card.invertible:hover .inv-title { color: var(--background); }
+.content-card.invertible:hover .inv-num { color: oklch(0.975 0.005 70 / 0.15); }
+.content-card.invertible:hover .inv-desc { color: oklch(0.975 0.005 70 / 0.6); }
+
+/* Stat card in global south */
+.stat-card {
+  padding: 2.5rem; background: var(--card); text-align: center;
+  transition: background-color 700ms; position: relative; overflow: hidden;
+}
+@media (min-width: 1024px) { .stat-card { padding: 3.5rem; } }
+.stat-card:hover { background: var(--foreground); }
+.stat-card-value {
+  font-family: 'Cormorant Garamond', serif; font-size: 2.25rem;
+  color: var(--secondary); margin-bottom: 1rem;
+  transition: transform 500ms;
+}
+@media (min-width: 768px) { .stat-card-value { font-size: 3rem; } }
+.stat-card:hover .stat-card-value { transform: scale(1.1); }
+.stat-card-label {
+  font-size: 0.875rem; color: var(--muted-foreground); line-height: 1.625;
+  transition: color 500ms;
+}
+.stat-card:hover .stat-card-label { color: oklch(0.975 0.005 70 / 0.6); }
+
+/* ============================================================
+   DARK PANEL
+   ============================================================ */
+.dark-panel {
+  padding: 5rem; background: var(--foreground); color: var(--background);
+  position: relative; overflow: hidden;
+}
+@media (min-width: 1024px) { .dark-panel { padding: 8rem; } }
+.dark-panel.primary { background: var(--primary); color: var(--primary-foreground); }
+.dark-panel-gradient-1 {
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom right, rgba(255,255,255,0.03), transparent, rgba(0,0,0,0.12));
+}
+.dark-panel-gradient-2 {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top left, oklch(0.72 0.15 55 / 0.02), transparent, transparent);
+}
+.dark-panel-dots {
+  position: absolute; inset: 0; opacity: 0.012;
+  background-image: var(--dot-pattern); background-size: var(--dot-size-sm);
+}
+.dark-panel-edge-top {
+  position: absolute; top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, oklch(0.72 0.15 55 / 0.15), transparent);
+}
+.dark-panel-edge-bottom {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.04), transparent);
+}
+.dark-panel-edge-left {
+  position: absolute; top: 0; left: 0; bottom: 0; width: 1px;
+  background: linear-gradient(180deg, oklch(0.72 0.15 55 / 0.1), transparent, transparent);
+}
+.dark-panel-content { position: relative; max-width: 56rem; }
+.dark-panel-label {
+  display: inline-flex; align-items: center; gap: 1.25rem;
+  color: var(--secondary); font-size: var(--text-label); text-transform: uppercase;
+  letter-spacing: var(--tracking-ultra); font-weight: 500; margin-bottom: 3.5rem;
+}
+.dark-panel-label-line {
+  width: 3rem; height: 1px;
+  background: linear-gradient(90deg, var(--secondary), oklch(0.72 0.15 55 / 0.2));
+}
+
+/* ============================================================
+   BLOCKQUOTE
+   ============================================================ */
+.bq {
+  position: relative; padding-left: 2rem;
+  border-left: 2px solid oklch(0.72 0.15 55 / 0.6);
+}
+.bq-text {
+  font-family: 'Cormorant Garamond', serif; font-style: italic; line-height: 1.3;
+  font-size: 1.25rem;
+}
+@media (min-width: 768px) { .bq-text { font-size: 1.5rem; } }
+@media (min-width: 1024px) { .bq-text { font-size: 1.875rem; } }
+.bq-text.large { font-size: 1.5rem; }
+@media (min-width: 768px) { .bq-text.large { font-size: 1.875rem; } }
+@media (min-width: 1024px) { .bq-text.large { font-size: 2.25rem; } }
+.bq-cite {
+  display: block; margin-top: 2rem; font-size: 0.875rem;
+  opacity: 0.5; font-style: normal; letter-spacing: 0.025em;
+}
+
+.bq-centered { text-align: center; padding-left: 0; border-left: none; }
+.bq-centered .bq-deco {
+  display: block; font-family: 'Cormorant Garamond', serif;
+  font-size: 6rem; line-height: 1; color: oklch(0.72 0.15 55 / 0.06);
+  position: absolute; top: -2rem; left: 50%; transform: translateX(-50%);
+  user-select: none; pointer-events: none;
+}
+
+/* ============================================================
+   ORNAMENTAL DIVIDER
+   ============================================================ */
+.ornamental { display: flex; align-items: center; justify-content: center; gap: 1rem; }
+.ornamental-line {
+  height: 1px; width: 9rem;
+  background: linear-gradient(90deg, transparent, oklch(0.72 0.15 55 / 0.3), oklch(0.72 0.15 55 / 0.4));
+}
+.ornamental-line.reverse {
+  background: linear-gradient(270deg, transparent, oklch(0.72 0.15 55 / 0.3), oklch(0.72 0.15 55 / 0.4));
+}
+.ornamental-diamond {
+  width: 5px; height: 5px; transform: rotate(45deg);
+  border: 1px solid oklch(0.72 0.15 55 / 0.35);
+}
+.ornamental-label-line {
+  height: 1px; width: 6rem;
+  background: linear-gradient(90deg, transparent, oklch(0.72 0.15 55 / 0.5));
+}
+.ornamental-label-line.reverse {
+  background: linear-gradient(270deg, transparent, oklch(0.72 0.15 55 / 0.5));
+}
+.ornamental-text {
+  color: oklch(0.72 0.15 55 / 0.8); text-transform: uppercase;
+  letter-spacing: var(--tracking-ultra); font-size: var(--text-label); font-weight: 500;
+}
+
+/* ============================================================
+   CINEMATIC IMAGE
+   ============================================================ */
+.cinematic-image {
+  position: relative; overflow: hidden; background: black;
+}
+.cinematic-image img {
+  width: 100%; height: 100%; object-fit: cover;
+  position: absolute; inset: 0;
+}
+.cinematic-overlay-1 {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.65), rgba(0,0,0,0.15), rgba(0,0,0,0.30));
+}
+.cinematic-overlay-2 {
+  position: absolute; inset: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.35), transparent, rgba(0,0,0,0.35));
+}
+.cinematic-corner {
+  position: absolute; width: 4rem; height: 4rem; z-index: 10;
+}
+.cinematic-content {
+  position: absolute; inset: 0; z-index: 10;
+  display: flex; align-items: flex-end;
+}
+
+/* Image with caption */
+.image-caption {
+  position: relative; overflow: hidden; background: black;
+}
+.image-caption img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 700ms;
+}
+.image-caption:hover img { transform: scale(1.05); }
+.image-caption-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.65), rgba(0,0,0,0.1), transparent);
+}
+.image-caption-text { position: absolute; bottom: 1.5rem; left: 1.5rem; right: 1.5rem; }
+
+/* ============================================================
+   ENGAGEMENT PRINCIPLE
+   ============================================================ */
+.engagement-item {
+  display: flex; gap: 2rem; padding: 2rem;
+  border-left: 2px solid oklch(0.72 0.15 55 / 0.2);
+  transition: border-color 500ms, background-color 500ms;
+}
+.engagement-item:hover {
+  border-color: oklch(0.72 0.15 55 / 0.7);
+  background: oklch(0.96 0.007 70 / 0.5);
+}
+.engagement-num {
+  font-family: 'Cormorant Garamond', serif; font-size: 3rem;
+  color: oklch(0.72 0.15 55 / 0.25); flex-shrink: 0;
+}
+.engagement-title {
+  font-family: 'Cormorant Garamond', serif; font-size: 1.5rem;
+  color: var(--foreground); margin-bottom: 1rem;
+}
+
+/* ============================================================
+   POLICY CARD
+   ============================================================ */
+.policy-proposals { list-style: none; margin-bottom: 2rem; }
+.policy-proposals li {
+  font-size: 0.875rem; color: var(--muted-foreground); line-height: 1.625;
+  display: flex; gap: 0.75rem; margin-bottom: 0.75rem;
+  transition: color 500ms;
+}
+.content-card:hover .policy-proposals li { color: oklch(0.975 0.005 70 / 0.6); }
+.policy-dash { color: var(--secondary); flex-shrink: 0; margin-top: 0.25rem; }
+.policy-quote {
+  font-size: 0.875rem; font-style: italic; color: oklch(0.48 0.015 255 / 0.7);
+  border-left: 2px solid oklch(0.72 0.15 55 / 0.2); padding-left: 1rem;
+  transition: color 500ms;
+}
+.content-card:hover .policy-quote { color: oklch(0.975 0.005 70 / 0.5); }
+
+/* ============================================================
+   DOCUMENT HUB
+   ============================================================ */
+.doc-item {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.25rem; background: var(--card); border: 1px solid var(--border);
+  transition: border-color 500ms, background-color 500ms; cursor: pointer;
+}
+.doc-item:hover {
+  border-color: oklch(0.72 0.15 55 / 0.5);
+  background: oklch(0.72 0.15 55 / 0.03);
+}
+.doc-item:hover .doc-icon,
+.doc-item:hover .doc-name,
+.doc-item:hover .doc-dl { color: var(--secondary); }
+.doc-icon, .doc-dl { color: var(--muted-foreground); transition: color 500ms; }
+.doc-name { color: var(--foreground); transition: color 500ms; }
+
+/* ============================================================
+   MANAGEMENT PRIORITY
+   ============================================================ */
+.mgmt-item {
+  display: flex; align-items: center; gap: 1.25rem; padding: 1.25rem;
+  background: var(--muted);
+}
+.mgmt-num {
+  width: 3rem; height: 3rem; background: oklch(0.72 0.15 55 / 0.08);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--secondary); font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem; flex-shrink: 0;
+}
+
+/* ============================================================
+   EXPERIENCE CARD
+   ============================================================ */
+.exp-card { display: flex; gap: 1.5rem; }
+.exp-icon-box {
+  width: 3.5rem; height: 3.5rem; background: oklch(0.72 0.15 55 / 0.08);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.exp-icon { width: 2rem; height: 2rem; color: var(--secondary); }
+.exp-title {
+  font-family: 'Cormorant Garamond', serif; font-size: 1.125rem;
+  color: var(--foreground); margin-bottom: 0.5rem;
+}
+
+/* ============================================================
+   GENDER ACHIEVEMENTS
+   ============================================================ */
+.gender-item {
+  display: flex; align-items: center; gap: 1rem; color: var(--foreground);
+}
+.gender-dot {
+  width: 0.75rem; height: 0.75rem; background: oklch(0.72 0.15 55 / 0.8); flex-shrink: 0;
+}
+
+/* ============================================================
+   CTA SECTION
+   ============================================================ */
+.cta-section {
+  padding: 10rem 0; background: var(--foreground); color: var(--background);
+  position: relative; overflow: hidden;
+}
+@media (max-width: 1023px) { .cta-section { padding: 6rem 0; } }
+.cta-dots {
+  position: absolute; inset: 0; opacity: 0.015;
+  background-image: var(--dot-pattern); background-size: var(--dot-size-sm);
+}
+.cta-gradient {
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom right, rgba(255,255,255,0.015), transparent, rgba(0,0,0,0.06));
+}
+.cta-step { flex: 1; border-top: 1px solid oklch(0.975 0.005 70 / 0.1); padding-top: 2rem; }
+.cta-step-num {
+  color: var(--secondary); font-size: var(--text-label); text-transform: uppercase;
+  letter-spacing: var(--tracking-ultra); margin-bottom: 0.75rem;
+}
+
+.contact-box {
+  padding: 2.5rem; background: var(--foreground); text-align: left;
+  transition: background-color 500ms; position: relative; overflow: hidden;
+}
+.contact-box:hover { background: oklch(0.11 0.03 255 / 0.9); }
+.contact-box-bar {
+  position: absolute; top: 0; left: 0; width: 100%; height: 2px;
+  background: linear-gradient(90deg, oklch(0.72 0.15 55 / 0.4), transparent);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 700ms;
+}
+.contact-box:hover .contact-box-bar { transform: scaleX(1); }
+.contact-label {
+  color: var(--secondary); font-size: var(--text-label); text-transform: uppercase;
+  letter-spacing: var(--tracking-ultra); margin-bottom: 1rem;
+}
+.contact-link {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  color: var(--secondary); transition: color 400ms;
+}
+.contact-link:hover { color: oklch(0.72 0.15 55 / 0.8); }
+.contact-link svg { transition: transform 400ms; }
+.contact-link:hover svg { transform: translate(2px, -2px); }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer {
+  background: var(--foreground); color: var(--background);
+  position: relative; overflow: hidden;
+}
+.footer-cta {
+  padding: 10rem 0; border-bottom: 1px solid oklch(0.975 0.005 70 / 0.06);
+  position: relative;
+}
+@media (max-width: 1023px) { .footer-cta { padding: 6rem 0; } }
+.footer-btn-primary {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 1.5rem 3.5rem; background: var(--secondary); color: var(--secondary-foreground);
+  font-weight: 500; font-size: var(--text-label-lg); text-transform: uppercase;
+  letter-spacing: var(--tracking-wider); position: relative; overflow: hidden;
+  box-shadow: var(--shadow-glow-gold); transition: background-color 500ms;
+}
+.footer-btn-primary:hover { background: var(--accent); }
+.footer-btn-outline {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 1.5rem 3.5rem; border: 1px solid oklch(0.975 0.005 70 / 0.1);
+  color: var(--background); font-weight: 500; font-size: var(--text-label-lg);
+  text-transform: uppercase; letter-spacing: var(--tracking-wider);
+  transition: border-color 500ms, background-color 500ms;
+}
+.footer-btn-outline:hover {
+  border-color: oklch(0.975 0.005 70 / 0.25);
+  background: oklch(0.975 0.005 70 / 0.03);
+}
+
+.footer-links { padding: 6rem 0; position: relative; }
+.footer-brand-icon {
+  width: 4rem; height: 4rem; border: 1px solid oklch(0.975 0.005 70 / 0.1);
+  display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;
+}
+.footer-section-title {
+  font-weight: 500; font-size: var(--text-label); text-transform: uppercase;
+  letter-spacing: var(--tracking-ultra); margin-bottom: 2rem;
+  color: oklch(0.975 0.005 70 / 0.4);
+}
+.footer-nav-link {
+  display: flex; align-items: center; gap: 0.5rem;
+  color: oklch(0.975 0.005 70 / 0.5); transition: color 400ms;
+}
+.footer-nav-link:hover { color: var(--background); }
+.footer-nav-link .link-bar {
+  width: 0; height: 1px; background: var(--secondary);
+  transition: width 400ms;
+}
+.footer-nav-link:hover .link-bar { width: 1rem; }
+
+.footer-social-link {
+  display: flex; align-items: center; gap: 1rem;
+  color: oklch(0.975 0.005 70 / 0.5); transition: color 400ms;
+}
+.footer-social-link:hover { color: var(--background); }
+.footer-social-icon {
+  width: 2.5rem; height: 2.5rem; border: 1px solid oklch(0.975 0.005 70 / 0.1);
+  display: flex; align-items: center; justify-content: center;
+  transition: border-color 400ms, background-color 400ms;
+}
+.footer-social-link:hover .footer-social-icon {
+  border-color: oklch(0.72 0.15 55 / 0.4);
+  background: oklch(0.72 0.15 55 / 0.06);
+}
+
+.footer-copyright {
+  padding: 2.5rem 0; border-top: 1px solid oklch(0.975 0.005 70 / 0.06);
+  position: relative;
+}
+
+/* ============================================================
+   BACK TO TOP
+   ============================================================ */
+.back-to-top {
+  position: fixed; bottom: 2rem; right: 2rem; z-index: 50;
+  width: 3rem; height: 3rem; background: var(--secondary); color: var(--secondary-foreground);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: var(--shadow-glow-gold);
+  transition: opacity 500ms, transform 500ms, background-color 400ms;
+  opacity: 0; transform: translateY(1rem); pointer-events: none;
+}
+.back-to-top.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+.back-to-top:hover { background: var(--accent); }
+.back-to-top svg { transition: transform 400ms; }
+.back-to-top:hover svg { transform: translateY(-4px); }
+
+/* ============================================================
+   STICKY SIDEBAR
+   ============================================================ */
+@media (min-width: 1024px) {
+  .lg-sticky { position: sticky; top: 8rem; }
+}
+
+/* ============================================================
+   WATERMARK NUMBER
+   ============================================================ */
+.watermark-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(8rem, 12vw, 10rem);
+  color: oklch(0.11 0.03 255 / 0.03);
+  position: absolute; top: -4rem; left: -1rem;
+  line-height: 1; user-select: none; pointer-events: none;
+}
+
+/* ============================================================
+   QUOTE PANEL (for-everybody gender section)
+   ============================================================ */
+.quote-panel {
+  background: oklch(0.72 0.15 55 / 0.06); padding: 3rem;
+  position: relative;
+}
+@media (min-width: 1024px) { .quote-panel { padding: 4rem; } }
+.quote-panel-deco {
+  font-family: 'Cormorant Garamond', serif; font-size: 8rem;
+  color: oklch(0.72 0.15 55 / 0.06); position: absolute; top: 1rem; right: 1.5rem;
+  line-height: 1; user-select: none; pointer-events: none;
+}
+
+/* ============================================================
+   MISC
+   ============================================================ */
+.dot-bg {
+  position: absolute; inset: 0; opacity: 0.012;
+  background-image: var(--dot-pattern); background-size: var(--dot-size-sm);
+}
+.gradient-overlay-subtle {
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, oklch(0.975 0.005 70 / 0.6), transparent, oklch(0.975 0.005 70 / 0.6));
+}
+.gradient-depth {
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.01), transparent, rgba(0,0,0,0.06));
+}
+.section-gradient-muted {
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, var(--background), transparent, var(--background));
+  opacity: 0.3;
+}
+
+/* SVG icon base */
+.icon { display: inline-block; vertical-align: middle; }
+.icon svg { width: 100%; height: 100%; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.icon-sm { width: 1rem; height: 1rem; }
+.icon-md { width: 1.25rem; height: 1.25rem; }
+.icon-lg { width: 1.5rem; height: 1.5rem; }
+.icon-xl { width: 2rem; height: 2rem; }
+.icon-2xl { width: 2.5rem; height: 2.5rem; }
+.icon-thin svg { stroke-width: 1.5; }
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  .ken-burns, .text-gradient-gold-shimmer, .scroll-indicator-line { animation: none; }
+  html { scroll-behavior: auto; }
+  [data-reveal] { opacity: 1; transform: none; transition: none; }
+  .hero-element { opacity: 1; transform: none; transition: none; }
+  .content-card:hover { transform: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- Skip to content -->
+<a href="#main-content" class="skip-to-content">Skip to content</a>
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<header class="nav-header" id="nav-header">
+  <nav class="container" aria-label="Main navigation">
+    <div class="nav-inner">
+      <button class="nav-logo" id="nav-logo-btn">
+        <span class="nav-logo-name">Rafael Grossi</span>
+        <span class="nav-logo-sub">For Secretary-General</span>
+      </button>
+      <div class="nav-links">
+        <a href="#vision" class="nav-link" data-section="vision">A UN That Works</a>
+        <a href="#dangerous-world" class="nav-link" data-section="dangerous-world">In a Dangerous World</a>
+        <a href="#with-everybody" class="nav-link" data-section="with-everybody">With Everybody</a>
+        <a href="#for-everybody" class="nav-link" data-section="for-everybody">For Everybody</a>
+        <a href="#transparency" class="nav-link" data-section="transparency">Open to Everybody</a>
+        <a href="#global-south" class="nav-link" data-section="global-south">Global South</a>
+      </div>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span class="icon icon-lg" id="hamburger-icon">
+          <svg viewBox="0 0 24 24"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+        </span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav-progress" id="nav-progress"></div>
+</header>
+
+<!-- Mobile backdrop -->
+<div class="mobile-backdrop" id="mobile-backdrop"></div>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobile-nav" role="dialog" aria-label="Mobile navigation">
+  <div class="dot-bg"></div>
+  <button class="mobile-close" id="mobile-close" aria-label="Close menu">
+    <span class="icon icon-lg"><svg viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></span>
+  </button>
+  <nav class="mobile-nav">
+    <a href="#vision" class="mobile-link" style="transition-delay: 300ms">A UN That Works</a>
+    <a href="#dangerous-world" class="mobile-link" style="transition-delay: 380ms">In a Dangerous World</a>
+    <a href="#with-everybody" class="mobile-link" style="transition-delay: 460ms">With Everybody</a>
+    <a href="#for-everybody" class="mobile-link" style="transition-delay: 540ms">For Everybody</a>
+    <a href="#transparency" class="mobile-link" style="transition-delay: 620ms">Open to Everybody</a>
+    <a href="#global-south" class="mobile-link" style="transition-delay: 700ms">Global South</a>
+  </nav>
+  <div class="mobile-bottom">
+    <span style="display:block;height:1px;width:3.5rem;background:oklch(0.72 0.15 55/0.25);margin:0 auto 1.25rem"></span>
+    <p style="color:oklch(0.975 0.005 70/0.25);font-size:var(--text-label);text-transform:uppercase;letter-spacing:var(--tracking-ultra)">For Secretary-General</p>
+  </div>
+</div>
+
+<!-- ============================================================
+     HERO SECTION
+     ============================================================ -->
+<section class="hero" id="hero-section">
+  <div class="hero-bg">
+    <div style="position:relative;width:100%;height:100%" class="ken-burns">
+      <img src="images/grossi-hero.jpg" alt="Rafael Grossi, IAEA Director General and candidate for UN Secretary-General" style="width:100%;height:100%;object-fit:cover;object-position:left center">
+    </div>
+    <div class="hero-gradient-1"></div>
+    <div class="hero-gradient-2"></div>
+    <div class="hero-gradient-3"></div>
+    <div class="hero-gradient-4"></div>
+    <div class="film-grain" style="position:absolute;inset:0"></div>
+  </div>
+
+  <!-- Letterbox bars -->
+  <div class="hero-letterbox-top"></div>
+  <div class="hero-letterbox-bottom"></div>
+
+  <!-- Ambient lights -->
+  <div class="ambient-light" style="top:20%;left:20%;width:900px;height:900px;background:oklch(0.72 0.15 55/0.02);filter:blur(200px)"></div>
+  <div class="ambient-light" style="bottom:25%;right:20%;width:600px;height:600px;background:oklch(0.72 0.15 55/0.012);filter:blur(150px)"></div>
+  <div class="ambient-light" style="top:50%;left:50%;transform:translate(-50%,-50%);width:400px;height:400px;background:rgba(255,255,255,0.008);filter:blur(100px)"></div>
+
+  <!-- Content -->
+  <div class="hero-content">
+    <!-- Ornamental divider -->
+    <div class="hero-element delay-1" style="margin-bottom:5rem">
+      <div class="ornamental">
+        <span class="ornamental-line reverse"></span>
+        <div class="ornamental-diamond"></div>
+        <span class="ornamental-line"></span>
+      </div>
+    </div>
+
+    <!-- Subtitle -->
+    <div class="hero-element delay-2">
+      <p style="color:rgba(255,255,255,0.3);text-transform:uppercase;letter-spacing:var(--tracking-hero);font-size:var(--text-label);margin-bottom:3.5rem;font-weight:300">
+        For United Nations Secretary-General
+      </p>
+    </div>
+
+    <!-- Name -->
+    <div class="hero-element delay-3" style="overflow:hidden;margin-bottom:1.5rem">
+      <h1 class="hero-title text-shadow-premium">
+        <span style="display:block;font-weight:200">Rafael</span>
+        <span class="text-gradient-gold-shimmer" style="display:block;font-style:italic;font-weight:500;margin-top:1rem">Grossi</span>
+      </h1>
+    </div>
+
+    <!-- Tagline -->
+    <div class="hero-element delay-4" style="overflow:hidden">
+      <p class="hero-tagline">
+        A UN That <span style="font-style:italic;color:rgba(255,255,255,0.85);font-weight:400">Works</span>
+      </p>
+    </div>
+
+    <!-- Body -->
+    <p class="hero-element delay-5" style="font-size:1rem;color:rgba(255,255,255,0.4);max-width:36rem;margin:0 auto;font-weight:300;line-height:1.8;letter-spacing:0.025em">
+      40 years of diplomacy. First Latin American IAEA Director General.
+      A leader with boots in the mud.
+    </p>
+
+    <!-- CTA -->
+    <div class="hero-element delay-6" style="margin-top:6rem">
+      <a href="#vision" style="display:inline-flex;align-items:center;gap:1.25rem;color:oklch(0.72 0.15 55/0.5);transition:color 600ms">
+        <span style="font-size:var(--text-label);text-transform:uppercase;letter-spacing:var(--tracking-ultra);font-weight:300">Explore the Vision</span>
+        <span style="width:3rem;height:1px;background:oklch(0.72 0.15 55/0.2);transition:all 600ms;display:block"></span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="hero-scroll hero-element delay-7">
+    <a href="#vision" style="display:flex;flex-direction:column;align-items:center;color:inherit">
+      <span style="font-size:var(--text-micro);text-transform:uppercase;letter-spacing:var(--tracking-extreme);margin-bottom:1.25rem;font-weight:300">Scroll</span>
+      <div class="hero-scroll-track">
+        <div class="hero-scroll-bar scroll-indicator-line"></div>
+      </div>
+    </a>
+  </div>
+
+  <!-- Corner accents -->
+  <div class="corner-accent hero-element delay-7" style="top:8%;left:2rem">
+    <div class="corner-line-h" style="top:0;left:0;background:linear-gradient(to right,rgba(255,255,255,0.07),transparent)"></div>
+    <div class="corner-line-v" style="top:0;left:0;background:linear-gradient(to bottom,rgba(255,255,255,0.07),transparent)"></div>
+  </div>
+  <div class="corner-accent hero-element delay-7" style="top:8%;right:2rem">
+    <div class="corner-line-h" style="top:0;right:0;background:linear-gradient(to left,rgba(255,255,255,0.07),transparent)"></div>
+    <div class="corner-line-v" style="top:0;right:0;background:linear-gradient(to bottom,rgba(255,255,255,0.07),transparent)"></div>
+  </div>
+  <div class="corner-accent hero-element delay-7" style="bottom:8%;left:2rem">
+    <div class="corner-line-h" style="bottom:0;left:0;background:linear-gradient(to right,rgba(255,255,255,0.07),transparent)"></div>
+    <div class="corner-line-v" style="bottom:0;left:0;background:linear-gradient(to top,rgba(255,255,255,0.07),transparent)"></div>
+  </div>
+  <div class="corner-accent hero-element delay-7" style="bottom:8%;right:2rem">
+    <div class="corner-line-h" style="bottom:0;right:0;background:linear-gradient(to left,rgba(255,255,255,0.07),transparent)"></div>
+    <div class="corner-line-v" style="bottom:0;right:0;background:linear-gradient(to top,rgba(255,255,255,0.07),transparent)"></div>
+  </div>
+</section>
+
+<main id="main-content">
+
+<!-- ============================================================
+     SECTION 01 — VISION
+     ============================================================ -->
+<section class="section bg-background" id="vision">
+  <div class="container">
+    <div data-reveal="up">
+      <div class="section-header large">
+        <span class="section-header-watermark" aria-hidden="true">01</span>
+        <div class="section-header-meta">
+          <span class="section-header-line"></span>
+          <p class="section-header-num">Section 01</p>
+          <span class="section-header-slash">/</span>
+          <p class="section-header-label">The Vision</p>
+        </div>
+        <h2 class="section-header-title">A UN That <span class="text-secondary italic">Works</span></h2>
+        <p class="section-header-subtitle">Rafael Grossi&rsquo;s vision for a more operational, credible, and effective United Nations</p>
+      </div>
+    </div>
+
+    <!-- Diagnosis -->
+    <div data-reveal="up">
+      <div class="grid grid-gap-24" style="margin-bottom:10rem">
+        <div style="display:grid;grid-template-columns:1fr;gap:6rem" class="grid-gap-24">
+          <div style="display:grid;gap:6rem" class="vision-grid-2col">
+            <div>
+              <h3 class="serif" style="font-size:1.5rem;color:var(--foreground);margin-bottom:2rem;font-weight:300">&ldquo;The UN Has Forgotten Its Purpose&rdquo;</h3>
+              <p style="font-size:1rem;color:var(--muted-foreground);line-height:1.625;margin-bottom:1.5rem">
+                In Grossi&rsquo;s own words: &ldquo;If you read the Charter, you understand that the UN was created to prevent wars, to bring about peace... and this is not discussed. If you analyze the hotspots of war on a world map&mdash;Sudan, Gaza, the Sahel, Ukraine&mdash;the common denominator is the absence of the UN. It is not there. It does not act. And this can be remedied.&rdquo;
+              </p>
+              <p style="font-size:1rem;color:var(--muted-foreground);line-height:1.625;margin-bottom:2rem">
+                After 40 years navigating international crises&mdash;from non-proliferation talks to Fukushima, from Tehran to Zaporizhzhia&mdash;Grossi sees a UN in profound crisis of credibility. The organization remains indispensable, but it has become reactive and distant from the conflicts that define our era.
+              </p>
+              <div class="bq">
+                <p class="bq-text">&ldquo;The UN needs a secretary with boots in the mud&mdash;not one who comments from a distance. My conviction was forged through experience managing high-tension international crises.&rdquo;</p>
+              </div>
+            </div>
+            <div style="position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--muted)">
+              <img src="images/grossi-un-address.jpg" alt="Rafael Grossi delivering a keynote address at the IAEA Nuclear Energy Summit podium with international flags, 2024" style="width:100%;height:100%;object-fit:cover;transition:transform 700ms">
+              <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.5),transparent,transparent)"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Doctrine -->
+    <div data-reveal="up">
+      <div style="margin-bottom:10rem">
+        <div style="text-align:center;max-width:48rem;margin:0 auto 6rem">
+          <h3 class="serif" style="font-size:1.5rem;color:var(--foreground);margin-bottom:1.5rem">The Governing Doctrine</h3>
+          <p style="font-size:1rem;color:var(--muted-foreground);line-height:1.625">Early action. Impartial engagement. Practical delivery. Institutional renewal. Four principles that define what a working UN must embody.</p>
+        </div>
+
+        <div class="grid grid-4 bg-border">
+          <div data-reveal="up" style="--reveal-delay:0ms">
+            <div class="content-card">
+              <div class="card-bar"></div>
+              <div class="card-glow"></div>
+              <div class="card-content">
+                <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:2rem">
+                  <span class="icon icon-xl icon-thin card-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>
+                  <span class="card-number" aria-hidden="true">01</span>
+                </div>
+                <h4 class="card-title">Act Earlier</h4>
+                <p class="card-desc">Prevention before crisis. The UN must shift from reactive responses to anticipatory action. Early warning systems exist&mdash;what is missing is the political will and operational capacity to act on them before situations deteriorate beyond recovery.</p>
+              </div>
+            </div>
+          </div>
+          <div data-reveal="up" style="--reveal-delay:120ms">
+            <div class="content-card">
+              <div class="card-bar"></div>
+              <div class="card-glow"></div>
+              <div class="card-content">
+                <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:2rem">
+                  <span class="icon icon-xl icon-thin card-icon"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+                  <span class="card-number" aria-hidden="true">02</span>
+                </div>
+                <h4 class="card-title">Engage Across Divides</h4>
+                <p class="card-desc">Impartial diplomacy that speaks with all parties, not just some. In a world of deepening polarization, the UN&rsquo;s unique value lies in its ability to maintain channels of communication that no single state can replicate.</p>
+              </div>
+            </div>
+          </div>
+          <div data-reveal="up" style="--reveal-delay:240ms">
+            <div class="content-card">
+              <div class="card-bar"></div>
+              <div class="card-glow"></div>
+              <div class="card-content">
+                <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:2rem">
+                  <span class="icon icon-xl icon-thin card-icon"><svg viewBox="0 0 24 24"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg></span>
+                  <span class="card-number" aria-hidden="true">03</span>
+                </div>
+                <h4 class="card-title">Deliver for People</h4>
+                <p class="card-desc">Practical results that matter to states and citizens alike. The measure of UN success is not the number of resolutions passed, but the tangible improvements in human security, health, food, and dignity.</p>
+              </div>
+            </div>
+          </div>
+          <div data-reveal="up" style="--reveal-delay:360ms">
+            <div class="content-card">
+              <div class="card-bar"></div>
+              <div class="card-glow"></div>
+              <div class="card-content">
+                <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:2rem">
+                  <span class="icon icon-xl icon-thin card-icon"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/></svg></span>
+                  <span class="card-number" aria-hidden="true">04</span>
+                </div>
+                <h4 class="card-title">Institutional Renewal</h4>
+                <p class="card-desc">A UN that runs itself with discipline, transparency, and merit. Internal reform is not optional&mdash;it is the foundation of external credibility. Staff deserve a workplace of integrity; member states deserve an institution that performs.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Why Grossi, Why Now -->
+    <div data-reveal="fade">
+      <div class="dark-panel primary film-grain">
+        <div class="dark-panel-gradient-1"></div>
+        <div class="dark-panel-gradient-2"></div>
+        <div class="dark-panel-dots"></div>
+        <div class="dark-panel-edge-top"></div>
+        <div class="dark-panel-edge-bottom"></div>
+        <div class="dark-panel-edge-left"></div>
+        <div class="dark-panel-content">
+          <span class="dark-panel-label"><span class="dark-panel-label-line"></span>The Stakes</span>
+          <h3 class="serif" style="font-size:1.875rem;margin-bottom:3rem;line-height:1.1">Why Grossi, <span class="text-secondary italic">Why Now</span></h3>
+          <p style="font-size:1.25rem;line-height:1.625;opacity:0.8;margin-bottom:2rem;font-weight:300">&ldquo;We are actors in a geopolitical reality we must shape to avoid conflict. That is the challenge of diplomacy&mdash;today and always.&rdquo; Grossi brings not theory, but four decades of crisis-tested leadership.</p>
+          <p style="font-size:1rem;line-height:1.625;opacity:0.7;margin-bottom:2rem">The first Latin American to lead the IAEA. A diplomat who has sat across from Putin and Zelensky, Iranian ayatollahs and American presidents. Someone who has walked into active war zones&mdash;not to observe, but to act.</p>
+          <p style="font-size:1rem;line-height:1.625;opacity:0.7;margin-bottom:3.5rem">The next Secretary-General cannot afford to learn on the job. The crises are too urgent, the divisions too deep, the stakes too high. What is needed is someone who has already done the hardest version of this work&mdash;and delivered results under conditions that most diplomats would consider impossible.</p>
+          <div class="bq" style="border-color:oklch(0.72 0.15 55/0.6)">
+            <p class="bq-text">&ldquo;Active diplomacy must be deployed, and solutions proposed as an impartial, but not indifferent, interlocutor.&rdquo;</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 02 — DANGEROUS WORLD
+     ============================================================ -->
+<section class="section bg-muted" id="dangerous-world" style="position:relative;overflow:hidden">
+  <div class="gradient-overlay-subtle"></div>
+  <div class="container" style="position:relative">
+    <div data-reveal="up">
+      <div class="section-header">
+        <span class="section-header-watermark" aria-hidden="true">02</span>
+        <div class="section-header-meta">
+          <span class="section-header-line"></span>
+          <p class="section-header-num">Section 02</p>
+          <span class="section-header-slash">/</span>
+          <p class="section-header-label">The Moment</p>
+        </div>
+        <h2 class="section-header-title">In a Dangerous <span class="text-secondary italic">World</span></h2>
+        <p class="section-header-subtitle">Why this moment requires crisis-tested leadership</p>
+      </div>
+    </div>
+
+    <!-- Cinematic hero image -->
+    <div data-reveal="fade" style="margin-bottom:11rem">
+      <div class="cinematic-image aspect-16-9" style="position:relative;background:black">
+        <img src="images/grossi-zaporizhzhia.jpg" alt="IAEA Director General Rafael Grossi wearing combat helmet at the frontline crossing near Zaporizhzhia Nuclear Power Plant, September 2024" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.75),rgba(0,0,0,0.15),rgba(0,0,0,0.35))"></div>
+        <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(0,0,0,0.5),transparent,rgba(0,0,0,0.3))"></div>
+        <div style="position:absolute;top:0;left:0;right:0;height:6%;background:black;z-index:10"></div>
+        <div style="position:absolute;bottom:0;left:0;right:0;height:6%;background:black;z-index:10"></div>
+        <div style="position:absolute;bottom:10%;left:0;right:0;padding:0 2rem;z-index:10">
+          <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem;padding:0 0 0 0">
+            <span style="width:3.5rem;height:1px;background:linear-gradient(90deg,var(--secondary),oklch(0.72 0.15 55/0.3))"></span>
+            <span class="text-shadow-overlay" style="color:rgba(255,255,255,0.5);font-size:var(--text-label);text-transform:uppercase;letter-spacing:var(--tracking-ultra)">On the Ground</span>
+          </div>
+          <p class="text-shadow-overlay" style="color:rgba(255,255,255,0.85);font-size:1.25rem;max-width:42rem;font-weight:300;line-height:1.625">When crisis meets diplomacy, experience is not optional&mdash;it is essential.</p>
+        </div>
+        <!-- Corner accents -->
+        <div style="position:absolute;top:10%;left:2rem;width:4rem;height:4rem;z-index:10">
+          <div style="position:absolute;top:0;left:0;width:100%;height:1px;background:linear-gradient(to right,rgba(255,255,255,0.15),transparent)"></div>
+          <div style="position:absolute;top:0;left:0;width:1px;height:100%;background:linear-gradient(to bottom,rgba(255,255,255,0.15),transparent)"></div>
+        </div>
+        <div style="position:absolute;top:10%;right:2rem;width:4rem;height:4rem;z-index:10">
+          <div style="position:absolute;top:0;right:0;width:100%;height:1px;background:linear-gradient(to left,rgba(255,255,255,0.15),transparent)"></div>
+          <div style="position:absolute;top:0;right:0;width:1px;height:100%;background:linear-gradient(to bottom,rgba(255,255,255,0.15),transparent)"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Secondary images -->
+    <div data-reveal="up" style="margin-bottom:11rem">
+      <div class="grid grid-2">
+        <div class="image-caption aspect-4-3">
+          <img src="images/crisis-diplomacy.jpg" alt="Rafael Grossi in IAEA field vest during the first Support and Assistance Mission to Zaporizhzhia (ISAMZ), August 2022">
+          <div class="image-caption-overlay"></div>
+          <div class="image-caption-text">
+            <p style="font-size:var(--text-label);text-transform:uppercase;letter-spacing:var(--tracking-ultra);color:rgba(255,255,255,0.5);margin-bottom:0.375rem" class="text-shadow-overlay">Crisis Response</p>
+            <p style="font-size:0.875rem;color:rgba(255,255,255,0.85);font-weight:500" class="text-shadow-overlay">Frontline Diplomacy in Action</p>
+          </div>
+        </div>
+        <div class="image-caption aspect-4-3">
+          <img src="images/grossi-tehran.jpg" alt="Rafael Grossi briefing the press on IAEA verification activities in Iran, Vienna, May 2024">
+          <div class="image-caption-overlay"></div>
+          <div class="image-caption-text">
+            <p style="font-size:var(--text-label);text-transform:uppercase;letter-spacing:var(--tracking-ultra);color:rgba(255,255,255,0.5);margin-bottom:0.375rem" class="text-shadow-overlay">Iran</p>
+            <p style="font-size:0.875rem;color:rgba(255,255,255,0.85);font-weight:500" class="text-shadow-overlay">Nuclear Negotiations, Tehran</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stakes + Experiences -->
+    <div data-reveal="up" style="margin-bottom:11rem">
+      <div class="vision-grid-2col" style="display:grid;gap:6rem;align-items:start">
+        <div>
+          <h3 class="serif" style="font-size:1.5rem;color:var(--foreground);margin-bottom:2rem">&ldquo;A Fragmented and Volatile World&rdquo;</h3>
+          <p style="color:var(--muted-foreground);line-height:1.625;margin-bottom:1.5rem">Grossi&rsquo;s assessment is unflinching: &ldquo;There is a revival of nuclear deterrence. Nuclear-weapon states are maintaining and even modernizing their arsenals. Strong proliferation pressures are emerging in countries considering acquiring nuclear capabilities as a deterrent.&rdquo;</p>
+          <p style="color:var(--muted-foreground);line-height:1.625;margin-bottom:1.5rem">On Putin&rsquo;s nuclear threats: &ldquo;I haven&rsquo;t registered any threats of a nuclear attack. What has happened is statements warning that, in the event of an existential threat, nuclear weapons are available. This is actually the doctrine of nuclear weapons use for almost all countries.&rdquo;</p>
+          <p style="color:var(--muted-foreground);line-height:1.625;margin-bottom:1.5rem">On Zaporizhzhia: &ldquo;It remains extremely fragile, very dangerous. We must not forget that it is a nuclear plant located in a combat zone. On the front line. In territory that Russia has fully occupied.&rdquo; The plant was Europe&rsquo;s largest&mdash;now relying on portable diesel generators.</p>
+          <p style="color:var(--muted-foreground);line-height:1.625">Grossi has received death threats for his work. &ldquo;The death threats have been traumatic,&rdquo; he admits. &ldquo;I continue with personal security because experts consider the threats credible. But in moments of tension like this, one must not give in&mdash;much less to threats.&rdquo;</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:2.5rem">
+          <div class="exp-card">
+            <div class="exp-icon-box"><span class="icon icon-xl exp-icon"><svg viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg></span></div>
+            <div><h4 class="exp-title">Zaporizhzhia: Into the Fire</h4><p style="color:var(--muted-foreground);line-height:1.625">In 2022, Grossi personally led the first IAEA mission to Zaporizhzhia&mdash;Europe&rsquo;s largest nuclear plant&mdash;crossing the front line under active fire. His convoy was attacked in the gray zone. He established permanent monitoring while shells fell nearby, negotiating access with both Moscow and Kyiv. &ldquo;I have to maintain this operation,&rdquo; he says. &ldquo;It is very important for peace and security in the world.&rdquo;</p></div>
+          </div>
+          <div class="exp-card">
+            <div class="exp-icon-box"><span class="icon icon-xl exp-icon"><svg viewBox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span></div>
+            <div><h4 class="exp-title">Iran: Doors Others Closed</h4><p style="color:var(--muted-foreground);line-height:1.625">When the JCPOA collapsed and tensions peaked, Grossi kept verification channels open. He traveled to Tehran repeatedly, meeting Iran&rsquo;s highest leadership while upholding inspection standards. After the 2025 Israeli strikes, he negotiated renewed access to facilities. Iran still holds 400kg of 60%-enriched uranium&mdash;almost military grade. &ldquo;Inspectors must restart work,&rdquo; Grossi insists.</p></div>
+          </div>
+          <div class="exp-card">
+            <div class="exp-icon-box"><span class="icon icon-xl exp-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49 m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"/></svg></span></div>
+            <div><h4 class="exp-title">Chernobyl: The Sarcophagus Crisis</h4><p style="color:var(--muted-foreground);line-height:1.625">In early 2025, a drone attack compromised Chernobyl&rsquo;s protective sarcophagus, threatening to release radioactive contamination. Grossi&rsquo;s team assessed the damage over months. &ldquo;The sarcophagus&rsquo;s insulation capacity is compromised,&rdquo; he reported. &ldquo;The repair must be extended to ensure protection.&rdquo; Even 40 years later, nuclear dangers require constant vigilance.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Career Stats -->
+    <div data-reveal="up" style="margin-bottom:11rem">
+      <div class="grid grid-3 bg-border">
+        <div data-reveal="up" style="--reveal-delay:0ms">
+          <div class="content-card"><div class="card-bar"></div><div class="card-glow"></div><div class="card-content">
+            <p class="card-stat-lg-value">40</p>
+            <p class="card-stat-lg-label">Years in Diplomacy</p>
+            <p class="card-desc">Joined Argentina&rsquo;s Foreign Ministry in 1985. Ambassador to Austria. Chief of Cabinet at OPCW. First Latin American to lead the IAEA. PhD in International Relations from Geneva.</p>
+          </div></div>
+        </div>
+        <div data-reveal="up" style="--reveal-delay:120ms">
+          <div class="content-card"><div class="card-bar"></div><div class="card-glow"></div><div class="card-content">
+            <p class="card-stat-lg-value">2019</p>
+            <p class="card-stat-lg-label">IAEA Director General</p>
+            <p class="card-desc">Elected December 2019. Led the agency through COVID, the Ukraine war, Iran tensions, and the return of nuclear deterrence rhetoric. Re-elected for a second term.</p>
+          </div></div>
+        </div>
+        <div data-reveal="up" style="--reveal-delay:240ms">
+          <div class="content-card"><div class="card-bar"></div><div class="card-glow"></div><div class="card-content">
+            <p class="card-stat-lg-value">1st</p>
+            <p class="card-stat-lg-label">Latin American IAEA Chief</p>
+            <p class="card-desc">First from the region since the agency&rsquo;s founding in 1957. Also first to serve two consecutive terms as president of the Nuclear Suppliers Group.</p>
+          </div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grossi Doctrine panel -->
+    <div data-reveal="up">
+      <div class="dark-panel film-grain">
+        <div class="dark-panel-gradient-1"></div><div class="dark-panel-gradient-2"></div><div class="dark-panel-dots"></div>
+        <div class="dark-panel-edge-top"></div><div class="dark-panel-edge-bottom"></div><div class="dark-panel-edge-left"></div>
+        <div class="dark-panel-content">
+          <span class="dark-panel-label"><span class="dark-panel-label-line"></span>The Fit</span>
+          <h3 class="serif" style="font-size:1.875rem;margin-bottom:3rem;line-height:1.1">The Grossi <span class="text-secondary italic">Doctrine</span></h3>
+          <p style="font-size:1.25rem;line-height:1.625;opacity:0.8;margin-bottom:2rem;font-weight:300">&ldquo;Whoever holds the position must speak with those who initiated the attacks. That&rsquo;s the first thing I did: speak with Putin, and many people criticized me for it. But who else am I going to talk to?&rdquo;</p>
+          <p style="font-size:1.125rem;line-height:1.625;opacity:0.7;margin-bottom:2rem">This is the Grossi doctrine: go where the crisis is, talk to whoever is relevant, maintain impartiality without indifference, and return with something concrete. When Zaporizhzhia was under bombardment, he went personally. When Iran closed doors, he found a way back in.</p>
+          <p style="font-size:1.125rem;line-height:1.625;opacity:0.7;margin-bottom:3.5rem">On accusations of bias: &ldquo;Some say I&rsquo;m a Zionist puppet, others say the opposite. One day the pro-Ukrainians claim I&rsquo;m in Putin&rsquo;s pocket, and when I meet with President Zelensky, the pro-Russians say I&rsquo;m on the other side. If the price is criticism, so be it.&rdquo;</p>
+          <div class="bq" style="border-color:oklch(0.72 0.15 55/0.6)">
+            <p class="bq-text">&ldquo;My job requires dialogue with everyone. Active diplomacy must be deployed, and solutions proposed as an impartial, but not indifferent, interlocutor.&rdquo;</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 03 — WITH EVERYBODY
+     ============================================================ -->
+<section class="section bg-background" id="with-everybody">
+  <div class="container">
+    <div data-reveal="up">
+      <div class="section-header large">
+        <span class="section-header-watermark" aria-hidden="true">03</span>
+        <div class="section-header-meta">
+          <span class="section-header-line"></span>
+          <p class="section-header-num">Section 03</p>
+          <span class="section-header-slash">/</span>
+          <p class="section-header-label">The Method</p>
+        </div>
+        <h2 class="section-header-title">With <span class="text-secondary italic">Everybody</span></h2>
+        <p class="section-header-subtitle">How impartial diplomacy works in a divided world.</p>
+      </div>
+    </div>
+
+    <div class="with-everybody-grid" style="display:grid;gap:6rem;margin-bottom:11rem">
+      <!-- Left: images -->
+      <div data-reveal="left" class="with-images-col">
+        <div class="lg-sticky" style="display:flex;flex-direction:column;gap:1.5rem">
+          <div class="image-caption aspect-4-3">
+            <img src="images/global-engagement.jpg" alt="Rafael Grossi in diplomatic meeting with Ukrainian President Volodymyr Zelensky discussing nuclear safety">
+            <div class="image-caption-overlay"></div>
+            <div class="image-caption-text">
+              <p style="font-size:var(--text-label);text-transform:uppercase;letter-spacing:var(--tracking-ultra);color:rgba(255,255,255,0.5);margin-bottom:0.375rem" class="text-shadow-overlay">Ukraine</p>
+              <p style="font-size:0.875rem;color:rgba(255,255,255,0.85);font-weight:500" class="text-shadow-overlay">With President Zelensky</p>
+            </div>
+          </div>
+          <div class="image-caption aspect-4-3">
+            <img src="images/with-putin.jpg" alt="Rafael Grossi in diplomatic meeting with Russian President Vladimir Putin discussing nuclear security">
+            <div class="image-caption-overlay"></div>
+            <div class="image-caption-text">
+              <p style="font-size:var(--text-label);text-transform:uppercase;letter-spacing:var(--tracking-ultra);color:rgba(255,255,255,0.5);margin-bottom:0.375rem" class="text-shadow-overlay">Russia</p>
+              <p style="font-size:0.875rem;color:rgba(255,255,255,0.85);font-weight:500" class="text-shadow-overlay">With President Putin</p>
+            </div>
+          </div>
+          <p style="text-align:center;color:var(--muted-foreground);font-size:0.875rem;font-style:italic;margin-top:1.5rem">Diplomacy means talking to everyone.</p>
+        </div>
+      </div>
+
+      <!-- Right: content -->
+      <div class="with-content-col" style="display:flex;flex-direction:column;gap:6rem">
+        <div data-reveal="up" style="--reveal-delay:300ms">
+          <div style="position:relative;margin-bottom:2.5rem">
+            <span class="watermark-num" aria-hidden="true">03</span>
+            <h3 class="serif" style="font-size:2.25rem;color:var(--foreground);line-height:1.1;position:relative">
+              Impartiality as
+              <span style="display:block;color:oklch(0.72 0.15 55/0.7)">Effectiveness</span>
+            </h3>
+          </div>
+          <p style="color:var(--muted-foreground);line-height:1.625;margin-bottom:1.5rem">A Secretary-General cannot help bridge divides while speaking only to one camp. The power of the office lies precisely in its capacity to engage across every fault line&mdash;East and West, North and South, across ideological and geopolitical boundaries.</p>
+          <p style="color:var(--muted-foreground);line-height:1.625;margin-bottom:2rem">This is not about being neutral on values. The UN Charter is clear about human rights, sovereignty, and the peaceful settlement of disputes. It is about being available to all parties so that when crises emerge, there is someone in the room who everyone can accept as a fair broker.</p>
+          <div class="bq"><p class="bq-text">&ldquo;If the price is criticism, so be it. My job requires dialogue with everyone.&rdquo;</p></div>
+          <p style="color:var(--muted-foreground);line-height:1.625;margin-top:2rem">Grossi has maintained working relationships with governments that are otherwise not speaking to each other. He has reported uncomfortable truths to capitals across the spectrum&mdash;and retained their respect precisely because they will do the same to their adversaries.</p>
+        </div>
+
+        <!-- Engagement principles -->
+        <div style="display:flex;flex-direction:column;gap:3.5rem">
+          <div data-reveal="right" style="--reveal-delay:400ms">
+            <div class="engagement-item">
+              <div class="engagement-num">01</div>
+              <div>
+                <h4 class="engagement-title">Neutrality Is Not Passivity</h4>
+                <p style="color:var(--muted-foreground);line-height:1.625">Impartiality is what creates reach and usefulness. It is the operating system of effective multilateralism. A Secretary-General who is seen as aligned with one camp loses the ability to mediate, facilitate, or convene. Neutrality is not weakness&mdash;it is the source of the office&rsquo;s unique power.</p>
+              </div>
+            </div>
+          </div>
+          <div data-reveal="right" style="--reveal-delay:550ms">
+            <div class="engagement-item">
+              <div class="engagement-num">02</div>
+              <div>
+                <h4 class="engagement-title">Access Without Alignment</h4>
+                <p style="color:var(--muted-foreground);line-height:1.625">Engaging everyone is not endorsing everyone. The UN must be able to talk to all parties while standing for its principles. This requires the discipline to separate dialogue from approval, and the skill to maintain relationships that others have abandoned. Grossi has proven this can be done.</p>
+              </div>
+            </div>
+          </div>
+          <div data-reveal="right" style="--reveal-delay:700ms">
+            <div class="engagement-item">
+              <div class="engagement-num">03</div>
+              <div>
+                <h4 class="engagement-title">Facts Before Positions</h4>
+                <p style="color:var(--muted-foreground);line-height:1.625">Serious diplomacy is grounded in verification, restraint, and credibility&mdash;not declarations made for domestic audiences. The IAEA&rsquo;s authority comes from its technical rigor. The Secretary-General&rsquo;s authority must come from the same commitment to truth over convenience.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Track Record -->
+    <div data-reveal="up" style="margin-bottom:11rem">
+      <div style="text-align:center;max-width:48rem;margin:0 auto 5rem">
+        <span style="color:var(--secondary);font-size:var(--text-label);text-transform:uppercase;letter-spacing:var(--tracking-ultra);font-weight:500;display:block;margin-bottom:1.5rem">Proven Track Record</span>
+        <h3 class="serif" style="font-size:2.25rem;color:var(--foreground);line-height:1.1">Results Speak Louder</h3>
+      </div>
+      <div class="grid grid-2 bg-border">
+        <div data-reveal="up" style="--reveal-delay:0ms">
+          <div class="content-card invertible" style="background:var(--muted)"><div class="card-bar"></div><div class="card-glow"></div><div class="card-content">
+            <span class="inv-num" style="font-size:3.75rem;font-family:'Cormorant Garamond',serif;color:oklch(0.11 0.03 255/0.06);display:block;margin-bottom:1.5rem;transition:color 500ms" aria-hidden="true">01</span>
+            <h4 class="serif inv-title" style="font-size:1.5rem;color:var(--foreground);margin-bottom:1rem;transition:color 500ms">Moscow and Kyiv</h4>
+            <p class="card-desc inv-desc">In the first weeks of Russia&rsquo;s invasion, Grossi went to Moscow. Then to Kyiv. Then to Zaporizhzhia itself, crossing the front line. When asked why he talks to Putin: &ldquo;Who else am I going to talk to? The conflict is there.&rdquo; Both capitals accepted his presence.</p>
+          </div></div>
+        </div>
+        <div data-reveal="up" style="--reveal-delay:120ms">
+          <div class="content-card invertible" style="background:var(--muted)"><div class="card-bar"></div><div class="card-glow"></div><div class="card-content">
+            <span class="inv-num" style="font-size:3.75rem;font-family:'Cormorant Garamond',serif;color:oklch(0.11 0.03 255/0.06);display:block;margin-bottom:1.5rem;transition:color 500ms" aria-hidden="true">02</span>
+            <h4 class="serif inv-title" style="font-size:1.5rem;color:var(--foreground);margin-bottom:1rem;transition:color 500ms">Tehran Under Maximum Pressure</h4>
+            <p class="card-desc inv-desc">After the 2025 Israeli strikes on Iranian facilities, inspectors were blocked. Grossi negotiated renewed access&mdash;meeting Supreme Leader Khamenei directly. Iran holds 400kg of near-weapons-grade uranium. The verification dialogue continues only because he kept the channel open.</p>
+          </div></div>
+        </div>
+        <div data-reveal="up" style="--reveal-delay:240ms">
+          <div class="content-card invertible" style="background:var(--muted)"><div class="card-bar"></div><div class="card-glow"></div><div class="card-content">
+            <span class="inv-num" style="font-size:3.75rem;font-family:'Cormorant Garamond',serif;color:oklch(0.11 0.03 255/0.06);display:block;margin-bottom:1.5rem;transition:color 500ms" aria-hidden="true">03</span>
+            <h4 class="serif inv-title" style="font-size:1.5rem;color:var(--foreground);margin-bottom:1rem;transition:color 500ms">Critics Prove the Method</h4>
+            <p class="card-desc inv-desc">Pro-Ukrainians call him pro-Russian. Pro-Russians call him pro-Ukrainian. Pro-Israel and pro-Iran lobbies each claim bias. For Grossi, this symmetry proves the approach works. An impartial broker will be attacked by all sides. That&rsquo;s the job.</p>
+          </div></div>
+        </div>
+        <div data-reveal="up" style="--reveal-delay:360ms">
+          <div class="content-card invertible" style="background:var(--muted)"><div class="card-bar"></div><div class="card-glow"></div><div class="card-content">
+            <span class="inv-num" style="font-size:3.75rem;font-family:'Cormorant Garamond',serif;color:oklch(0.11 0.03 255/0.06);display:block;margin-bottom:1.5rem;transition:color 500ms" aria-hidden="true">04</span>
+            <h4 class="serif inv-title" style="font-size:1.5rem;color:var(--foreground);margin-bottom:1rem;transition:color 500ms">Personal Cost</h4>
+            <p class="card-desc inv-desc">Death threats. Round-the-clock security. His convoy attacked in the gray zone near Zaporizhzhia. Grossi continues working because the alternative&mdash;abandoning crisis zones to avoid risk&mdash;is worse. &ldquo;One must not give in to threats.&rdquo;</p>
+          </div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Why This Is UN Leadership -->
+    <div data-reveal="fade">
+      <div class="dark-panel film-grain">
+        <div class="dark-panel-gradient-1"></div><div class="dark-panel-gradient-2"></div><div class="dark-panel-dots"></div>
+        <div class="dark-panel-edge-top"></div><div class="dark-panel-edge-bottom"></div><div class="dark-panel-edge-left"></div>
+        <div class="dark-panel-content">
+          <span class="dark-panel-label"><span class="dark-panel-label-line"></span>The Essence</span>
+          <h3 class="serif" style="font-size:2.25rem;margin-bottom:3.5rem;line-height:1.1">Why This Is<span style="display:block;color:var(--secondary);font-style:italic">UN Leadership</span></h3>
+          <p style="font-size:1.25rem;line-height:1.625;opacity:0.8;margin-bottom:4rem;max-width:48rem;font-weight:300">The United Nations was built on the premise that even adversaries can share a table. The Secretary-General must be the person who sets that table&mdash;and who is welcome at every seat around it.</p>
+          <div class="bq" style="border-color:oklch(0.72 0.15 55/0.6)">
+            <p class="bq-text large">&ldquo;My job requires dialogue with everyone. Active diplomacy must be deployed as an impartial, but not indifferent, interlocutor.&rdquo;</p>
+            <cite class="bq-cite">&mdash; Rafael Grossi, El Pa&iacute;s, December 2025</cite>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 04 — FOR EVERYBODY
+     ============================================================ -->
+<section class="section bg-muted" id="for-everybody" style="position:relative">
+  <div class="section-gradient-muted"></div>
+  <div class="container" style="position:relative">
+    <div data-reveal="up">
+      <div class="section-header large">
+        <span class="section-header-watermark" aria-hidden="true">04</span>
+        <div class="section-header-meta"><span class="section-header-line"></span><p class="section-header-num">Section 04</p><span class="section-header-slash">/</span><p class="section-header-label">The Impact</p></div>
+        <h2 class="section-header-title">For <span class="text-secondary italic">Everybody</span></h2>
+        <p class="section-header-subtitle">How leadership is judged by what it delivers for people.</p>
+      </div>
+    </div>
+
+    <!-- Cinematic image -->
+    <div data-reveal="fade" style="margin-bottom:11rem;position:relative">
+      <div class="cinematic-image aspect-wide film-grain vignette" style="position:relative">
+        <div class="ken-burns" style="position:absolute;inset:0"><img src="images/grossi-rays-of-hope.jpg" alt="Rafael Grossi with his IAEA delegation at the African Union headquarters in Addis Ababa after launching the Rays of Hope cancer care initiative, February 2022" class="color-grade-warm" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></div>
+        <div class="cinematic-overlay-1"></div><div class="cinematic-overlay-2"></div>
+        <div class="cinematic-content" style="padding:0 2rem 10%">
+          <div style="max-width:42rem">
+            <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem">
+              <div style="width:3.5rem;height:1px;background:linear-gradient(90deg,var(--secondary),oklch(0.72 0.15 55/0.3))"></div>
+              <span class="text-shadow-overlay" style="color:rgba(255,255,255,0.5);font-size:var(--text-label);text-transform:uppercase;letter-spacing:var(--tracking-ultra)">Human Dignity</span>
+            </div>
+            <h3 class="serif text-shadow-overlay" style="font-size:2.25rem;color:white;line-height:1.1;margin-bottom:1.5rem">Human Dignity<span style="display:block;color:oklch(0.72 0.15 55/0.8);font-style:italic">as Purpose</span></h3>
+            <p class="text-shadow-overlay" style="color:rgba(255,255,255,0.6);line-height:1.625;max-width:36rem">The UN must be judged by what it protects and improves. Not by resolutions passed, but by lives changed.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Delivery areas grid -->
+    <div style="margin-bottom:11rem">
+      <div class="grid grid-4 bg-border">
+        <div data-reveal="up" style="--reveal-delay:0ms"><div class="content-card"><div class="card-bar"></div><div class="card-glow"></div><div class="card-content">
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:2rem">
+            <span class="icon icon-2xl icon-thin card-icon-lg"><svg viewBox="0 0 24 24"><path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6 6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/><path d="M8 15v1a6 6 0 0 0 6 6 6 6 0 0 0 6-6v-4"/><circle cx="20" cy="10" r="2"/></svg></span>
+            <div style="text-align:right"><p class="card-stat-value">40+</p><p class="card-stat-label">Countries Reached</p></div>
+          </div>
+          <h4 class="card-title">Rays of Hope: Cancer Care</h4>
+          <p class="card-desc">A flagship initiative bringing cancer diagnosis and treatment to over 40 countries with little or no access to radiation therapy. Not a program on paper&mdash;actual equipment deployed, actual oncologists trained, actual patients treated. This is what delivery looks like.</p>
+        </div></div></div>
+        <div data-reveal="up" style="--reveal-delay:120ms"><div class="content-card"><div class="card-bar"></div><div class="card-glow"></div><div class="card-content">
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:2rem">
+            <span class="icon icon-2xl icon-thin card-icon-lg"><svg viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></span>
+            <div style="text-align:right"><p class="card-stat-value">160+</p><p class="card-stat-label">Active Projects</p></div>
+          </div>
+          <h4 class="card-title">Food Security &amp; Agriculture</h4>
+          <p class="card-desc">Technical cooperation on nuclear applications for agriculture, helping nations feed their populations sustainably. From soil fertility to pest control to food preservation&mdash;practical technologies that improve lives at scale across developing nations.</p>
+        </div></div></div>
+        <div data-reveal="up" style="--reveal-delay:240ms"><div class="content-card"><div class="card-bar"></div><div class="card-glow"></div><div class="card-content">
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:2rem">
+            <span class="icon icon-2xl icon-thin card-icon-lg"><svg viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.9C15.5 4.9 17 3.5 17 3.5s1.5 2 2 4.5c.3 1.5.2 3-.5 4.5"/><path d="M16.8 14c.8-.4 1.5-1 2-1.5"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span>
+            <div style="text-align:right"><p class="card-stat-value">70+</p><p class="card-stat-label">Nations Supported</p></div>
+          </div>
+          <h4 class="card-title">Clean Energy Transition</h4>
+          <p class="card-desc">Supporting countries navigating the energy transition with nuclear power expertise, environmental monitoring, and climate science. Helping nations reduce emissions while meeting growing energy demand&mdash;the defining challenge of our era.</p>
+        </div></div></div>
+        <div data-reveal="up" style="--reveal-delay:360ms"><div class="content-card"><div class="card-bar"></div><div class="card-glow"></div><div class="card-content">
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:2rem">
+            <span class="icon icon-2xl icon-thin card-icon-lg"><svg viewBox="0 0 24 24"><path d="M14 19a6 6 0 0 0-12 0"/><circle cx="8" cy="9" r="4"/><path d="M22 19a6 6 0 0 0-6-6 4 4 0 1 0 0-8"/></svg></span>
+            <div style="text-align:right"><p class="card-stat-value">52%</p><p class="card-stat-label">Women in Leadership</p></div>
+          </div>
+          <h4 class="card-title">Gender Parity: From 28% to 52%</h4>
+          <p class="card-desc">Women in Nuclear awarded Grossi the 2025 Changemaker of Distinction Award. He increased women in leadership from 28% to 52%&mdash;true parity. The Marie Sklodowska-Curie and Lise Meitner Programmes now bring women scientists from developing nations into nuclear fields worldwide.</p>
+        </div></div></div>
+      </div>
+    </div>
+
+    <!-- Gender section -->
+    <div style="display:grid;gap:6rem;align-items:center;margin-bottom:11rem" class="gender-grid">
+      <div data-reveal="up">
+        <div style="position:relative;margin-bottom:2.5rem">
+          <span class="watermark-num" aria-hidden="true">04</span>
+          <h3 class="serif" style="font-size:2.25rem;color:var(--foreground);line-height:1.1;position:relative">Gender as Proof<span style="display:block;color:oklch(0.72 0.15 55/0.7)">of Leadership</span></h3>
+        </div>
+        <p style="color:var(--muted-foreground);line-height:1.625;margin-bottom:1.5rem">Grossi&rsquo;s approach to gender equality is the same as his approach to everything else: measure it, resource it, deliver it. At the IAEA, he didn&rsquo;t announce targets&mdash;he changed the institution from within.</p>
+        <p style="color:var(--muted-foreground);line-height:1.625;margin-bottom:2.5rem">Actions over words: he increased women in IAEA leadership from 28% to 52%, launched the Marie Sklodowska-Curie Fellowship and Lise Meitner Programmes, and earned the 2025 Changemaker of Distinction Award from Women in Nuclear.</p>
+        <p style="color:var(--muted-foreground);line-height:1.625;margin-bottom:2.5rem">As an International Gender Champion, Grossi proved that gender equality is not about rhetoric&mdash;it&rsquo;s about structural change. The same commitment to merit, inclusion, and institutional reform would define his approach to the UN Secretariat.</p>
+        <div style="display:flex;flex-direction:column;gap:1.25rem">
+          <div data-reveal="right" style="--reveal-delay:300ms"><div class="gender-item"><span class="gender-dot"></span><span>28% to 52% women in senior management</span></div></div>
+          <div data-reveal="right" style="--reveal-delay:400ms"><div class="gender-item"><span class="gender-dot"></span><span>2025 Changemaker of Distinction Award</span></div></div>
+          <div data-reveal="right" style="--reveal-delay:500ms"><div class="gender-item"><span class="gender-dot"></span><span>International Gender Champion</span></div></div>
+        </div>
+      </div>
+      <div data-reveal="right" style="--reveal-delay:300ms">
+        <div class="quote-panel">
+          <span class="quote-panel-deco" aria-hidden="true">&ldquo;</span>
+          <div class="bq"><p class="bq-text">The Marie Sklodowska-Curie Programme is not charity. It is an investment in the talent the world cannot afford to waste.</p></div>
+          <cite style="display:block;margin-top:2rem;font-size:0.875rem;color:var(--muted-foreground);font-style:normal;letter-spacing:0.025em">&mdash; Rafael Grossi, on expanding opportunities for women scientists</cite>
+        </div>
+      </div>
+    </div>
+
+    <!-- Why This Matters -->
+    <div data-reveal="up">
+      <div class="dark-panel primary film-grain">
+        <div class="dark-panel-gradient-1"></div><div class="dark-panel-gradient-2"></div><div class="dark-panel-dots"></div>
+        <div class="dark-panel-edge-top"></div><div class="dark-panel-edge-bottom"></div><div class="dark-panel-edge-left"></div>
+        <div class="dark-panel-content">
+          <span class="dark-panel-label"><span class="dark-panel-label-line"></span>The Connection</span>
+          <h3 class="serif" style="font-size:2.25rem;margin-bottom:3.5rem;line-height:1.1">Why This Matters<span style="display:block;color:var(--secondary)">to Member States</span></h3>
+          <p style="font-size:1.25rem;line-height:1.625;opacity:0.8;margin-bottom:2rem;max-width:48rem;font-weight:300">Better outcomes for people also mean stronger, more useful multilateralism for states. When the UN delivers tangible results&mdash;in health, in food security, in climate response&mdash;it earns the credibility to convene on harder questions.</p>
+          <p style="font-size:1rem;line-height:1.625;opacity:0.7;margin-bottom:2rem;max-width:48rem">Member states invest in the UN because they expect a return: problems solved, crises managed, collective goods provided. A Secretary-General who understands operational delivery&mdash;not just diplomatic representation&mdash;can make that investment pay.</p>
+          <p style="font-size:1rem;line-height:1.625;opacity:0.7;max-width:48rem">Grossi is not a narrow technical candidate. His record proves that diplomatic skill and humanitarian impact are not opposites&mdash;they are mutually reinforcing. The same leader who negotiates with heads of state also makes sure cancer patients in Africa get treated. That combination is rare. It is what the role requires.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 05 — TRANSPARENCY
+     ============================================================ -->
+<section class="section bg-background" id="transparency">
+  <div class="container">
+    <div data-reveal="up">
+      <div class="section-header large">
+        <span class="section-header-watermark" aria-hidden="true">05</span>
+        <div class="section-header-meta"><span class="section-header-line"></span><p class="section-header-num">Section 05</p><span class="section-header-slash">/</span><p class="section-header-label">The Standard</p></div>
+        <h2 class="section-header-title">Open to <span class="text-secondary italic">Everybody</span></h2>
+        <p class="section-header-subtitle">How he would run the institution with transparency and discipline.</p>
+      </div>
+    </div>
+
+    <!-- Cinematic image -->
+    <div data-reveal="fade" style="margin-bottom:11rem">
+      <div class="cinematic-image aspect-cinema film-grain vignette">
+        <div class="ken-burns" style="position:absolute;inset:0"><img src="images/grossi-iaea-board.jpg" alt="Rafael Grossi smiling during a Board of Governors session at IAEA headquarters in Vienna" class="color-grade-cool" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></div>
+        <div class="cinematic-overlay-1"></div><div class="cinematic-overlay-2"></div>
+        <div class="cinematic-content" style="padding:0 2rem 14%">
+          <div>
+            <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem">
+              <div style="width:3.5rem;height:1px;background:linear-gradient(90deg,var(--secondary),oklch(0.72 0.15 55/0.3))"></div>
+              <span class="text-shadow-overlay" style="color:rgba(255,255,255,0.5);font-size:var(--text-label);text-transform:uppercase;letter-spacing:var(--tracking-ultra)">Accountability</span>
+            </div>
+            <p class="text-shadow-overlay" style="color:white;font-size:1.25rem;font-weight:300;max-width:48rem;line-height:1.625">Accountability is not a constraint on leadership. It is what gives leadership legitimacy.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Commitments grid -->
+    <div style="margin-bottom:11rem">
+      <div class="grid grid-4 bg-border">
+        <div data-reveal="scale" style="--reveal-delay:0ms"><div class="content-card"><div class="card-bar"></div><div class="card-glow"></div><div class="card-content">
+          <span class="icon icon-2xl icon-thin card-icon-lg"><svg viewBox="0 0 24 24"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/></svg></span>
+          <div style="margin-top:2rem"><h4 class="card-title">Full Financial Disclosure</h4><p class="card-desc">Complete transparency on personal finances, potential conflicts, and outside interests. If member states are asked to trust the Secretary-General, they deserve to know there are no hidden entanglements.</p></div>
+        </div></div></div>
+        <div data-reveal="scale" style="--reveal-delay:120ms"><div class="content-card"><div class="card-bar"></div><div class="card-glow"></div><div class="card-content">
+          <span class="icon icon-2xl icon-thin card-icon-lg"><svg viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></span>
+          <div style="margin-top:2rem"><h4 class="card-title">Public Documents &amp; Positions</h4><p class="card-desc">All major speeches, statements, and policy positions freely accessible and searchable. Decisions should be explainable. Positions should be documented. Transparency is not optional.</p></div>
+        </div></div></div>
+        <div data-reveal="scale" style="--reveal-delay:240ms"><div class="content-card"><div class="card-bar"></div><div class="card-glow"></div><div class="card-content">
+          <span class="icon icon-2xl icon-thin card-icon-lg"><svg viewBox="0 0 24 24"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg></span>
+          <div style="margin-top:2rem"><h4 class="card-title">Performance Metrics</h4><p class="card-desc">Clear benchmarks for measuring institutional effectiveness, reported annually and honestly. The UN cannot demand accountability from member states while exempting itself from scrutiny.</p></div>
+        </div></div></div>
+        <div data-reveal="scale" style="--reveal-delay:360ms"><div class="content-card"><div class="card-bar"></div><div class="card-glow"></div><div class="card-content">
+          <span class="icon icon-2xl icon-thin card-icon-lg"><svg viewBox="0 0 24 24"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg></span>
+          <div style="margin-top:2rem"><h4 class="card-title">Merit-Based Appointments</h4><p class="card-desc">Commitment to qualification over politics in all senior appointments. The Secretariat must be staffed by the best people available, regardless of nationality or political patronage.</p></div>
+        </div></div></div>
+      </div>
+    </div>
+
+    <!-- Governance image -->
+    <div style="position:relative;aspect-ratio:16/9;overflow:hidden;margin-bottom:11rem;background:black">
+      <img src="images/transparency-governance.jpg" alt="Rafael Grossi in IAEA field vest preparing for a mission near Zaporizhzhia" style="width:100%;height:100%;object-fit:cover;transition:transform 700ms">
+      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.65),transparent,transparent)"></div>
+      <div style="position:absolute;bottom:2rem;left:2rem;right:2rem">
+        <p style="font-size:var(--text-label);text-transform:uppercase;letter-spacing:var(--tracking-ultra);color:rgba(255,255,255,0.5);margin-bottom:0.5rem" class="text-shadow-overlay">In the Field</p>
+        <p style="font-size:1.125rem;color:rgba(255,255,255,0.85);font-weight:500" class="text-shadow-overlay">Leadership means being present where it matters.</p>
+      </div>
+    </div>
+
+    <!-- Management + Documents -->
+    <div style="display:grid;gap:6rem;align-items:start;margin-bottom:11rem" class="mgmt-grid">
+      <div data-reveal="up">
+        <div style="position:relative;margin-bottom:2.5rem">
+          <span class="watermark-num" aria-hidden="true">05</span>
+          <h3 class="serif" style="font-size:2.25rem;color:var(--foreground);line-height:1.1;position:relative">Management<span style="display:block;color:oklch(0.72 0.15 55/0.7)">Discipline</span></h3>
+        </div>
+        <p style="color:var(--muted-foreground);line-height:1.625;margin-bottom:1.5rem">The UN system is vast, complex, and often duplicative. Thirty-plus agencies, funds, and programs&mdash;each with its own governance, budget, and institutional culture. Coordination is difficult by design. But difficulty is not an excuse for dysfunction.</p>
+        <p style="color:var(--muted-foreground);line-height:1.625;margin-bottom:2.5rem">Grossi has managed a large international organization through crisis. He understands the difference between reform on paper and reform in practice&mdash;and knows that institutional change requires persistence, coalition-building, and results that demonstrate the value of doing things differently.</p>
+        <div style="display:flex;flex-direction:column;gap:1rem">
+          <div data-reveal="right" style="--reveal-delay:300ms"><div class="mgmt-item"><span class="mgmt-num">1</span><span style="color:var(--foreground)">Clear strategic priorities, publicly stated</span></div></div>
+          <div data-reveal="right" style="--reveal-delay:400ms"><div class="mgmt-item"><span class="mgmt-num">2</span><span style="color:var(--foreground)">Reduced duplication across agencies</span></div></div>
+          <div data-reveal="right" style="--reveal-delay:500ms"><div class="mgmt-item"><span class="mgmt-num">3</span><span style="color:var(--foreground)">Faster crisis response mechanisms</span></div></div>
+        </div>
+      </div>
+      <div data-reveal="right" style="--reveal-delay:300ms">
+        <div style="background:var(--muted);padding:2.5rem">
+          <div style="display:flex;align-items:center;gap:1rem;margin-bottom:2rem">
+            <span style="width:2.5rem;height:1px;background:linear-gradient(90deg,var(--secondary),oklch(0.72 0.15 55/0.3))"></span>
+            <h4 class="serif" style="font-size:1.5rem;color:var(--foreground)">Transparency Hub</h4>
+          </div>
+          <p style="color:var(--muted-foreground);margin-bottom:2.5rem">Access key documents, speeches, and disclosures.</p>
+          <div style="display:flex;flex-direction:column;gap:0.75rem">
+            <div class="doc-item"><div style="display:flex;align-items:center;gap:1rem"><span class="icon icon-md doc-icon"><svg viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></span><span class="doc-name">Vision Statement</span></div><div style="display:flex;align-items:center;gap:0.75rem"><span style="font-size:0.75rem;color:var(--muted-foreground);text-transform:uppercase;letter-spacing:0.05em">PDF</span><span class="icon icon-sm doc-dl"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg></span></div></div>
+            <div class="doc-item"><div style="display:flex;align-items:center;gap:1rem"><span class="icon icon-md doc-icon"><svg viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></span><span class="doc-name">Governance Reform Proposal</span></div><div style="display:flex;align-items:center;gap:0.75rem"><span style="font-size:0.75rem;color:var(--muted-foreground);text-transform:uppercase;letter-spacing:0.05em">PDF</span><span class="icon icon-sm doc-dl"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg></span></div></div>
+            <div class="doc-item"><div style="display:flex;align-items:center;gap:1rem"><span class="icon icon-md doc-icon"><svg viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></span><span class="doc-name">Financial Disclosure</span></div><div style="display:flex;align-items:center;gap:0.75rem"><span style="font-size:0.75rem;color:var(--muted-foreground);text-transform:uppercase;letter-spacing:0.05em">PDF</span><span class="icon icon-sm doc-dl"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg></span></div></div>
+            <div class="doc-item"><div style="display:flex;align-items:center;gap:1rem"><span class="icon icon-md doc-icon"><svg viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></span><span class="doc-name">Career Summary</span></div><div style="display:flex;align-items:center;gap:0.75rem"><span style="font-size:0.75rem;color:var(--muted-foreground);text-transform:uppercase;letter-spacing:0.05em">PDF</span><span class="icon icon-sm doc-dl"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg></span></div></div>
+          </div>
+          <p style="margin-top:2rem;color:var(--muted-foreground);font-size:0.875rem;text-transform:uppercase;letter-spacing:0.05em">Full document library available upon request</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Institutional Culture panel -->
+    <div data-reveal="up" style="margin-bottom:11rem">
+      <div class="dark-panel film-grain">
+        <div class="dark-panel-gradient-1"></div><div class="dark-panel-gradient-2"></div><div class="dark-panel-dots"></div>
+        <div class="dark-panel-edge-top"></div><div class="dark-panel-edge-bottom"></div><div class="dark-panel-edge-left"></div>
+        <div class="dark-panel-content">
+          <span class="dark-panel-label"><span class="dark-panel-label-line"></span>The Culture</span>
+          <h3 class="serif" style="font-size:2.25rem;margin-bottom:3.5rem;line-height:1.1">Institutional Culture<span style="display:block;color:var(--secondary)">and Merit</span></h3>
+          <p style="font-size:1.25rem;line-height:1.625;opacity:0.8;margin-bottom:2rem;max-width:48rem;font-weight:300">&ldquo;What we need is a Secretary-General chosen for their merits. Someone should be chosen for their vision, not because after 80 years of men in the position it&rsquo;s time for a woman, or someone with blue eyes, or a secularist.&rdquo;</p>
+          <p style="font-size:1rem;line-height:1.625;opacity:0.7;margin-bottom:2rem;max-width:48rem">Grossi&rsquo;s record speaks: at the IAEA, he increased women in leadership from 28% to 52%. Women in Nuclear awarded him the 2025 Changemaker of Distinction Award. He launched the Marie Sklodowska-Curie and Lise Meitner Programmes for women scientists from developing nations.</p>
+          <p style="font-size:1rem;line-height:1.625;opacity:0.7;margin-bottom:4rem;max-width:48rem">The principle is clear: results over rhetoric, merit over patronage, structural change over symbolic gestures. Grossi has proven this can be done. The UN Secretariat&mdash;40,000 staff worldwide&mdash;deserves the same commitment.</p>
+          <div class="bq" style="border-color:oklch(0.72 0.15 55/0.6)">
+            <p class="bq-text large">&ldquo;I increased women in leadership from 28% to 52%. These are facts, not words.&rdquo;</p>
+            <cite class="bq-cite">&mdash; Rafael Grossi, El Pa&iacute;s, December 2025</cite>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Metrics -->
+    <div data-reveal="up">
+      <div style="text-align:center;max-width:56rem;margin:0 auto">
+        <span style="color:var(--secondary);font-size:var(--text-label);text-transform:uppercase;letter-spacing:var(--tracking-ultra);font-weight:500;display:block;margin-bottom:1.5rem">The Measure</span>
+        <h3 class="serif" style="font-size:2.25rem;color:var(--foreground);margin-bottom:2.5rem;line-height:1.1">How a Better-Run UN<br>Should Be Judged</h3>
+        <p style="color:var(--muted-foreground);line-height:1.625;margin-bottom:1.5rem;max-width:42rem;margin-left:auto;margin-right:auto">Not by the number of meetings held, but by crises averted. Not by statements issued, but by agreements reached. Not by budgets spent, but by outcomes delivered.</p>
+        <p style="color:var(--muted-foreground);line-height:1.625;margin-bottom:4rem;max-width:42rem;margin-left:auto;margin-right:auto">Grossi would bring a results-oriented culture to the UN&mdash;one that asks not &ldquo;Did we follow the process?&rdquo; but &ldquo;Did we make a difference?&rdquo; This is the only standard that matters.</p>
+        <div class="grid grid-3 bg-border">
+          <div data-reveal="up" style="--reveal-delay:200ms"><div class="content-card invertible" style="background:var(--muted)"><div class="card-bar"></div><div class="card-glow"></div><div class="card-content">
+            <p class="serif inv-title" style="font-size:3rem;color:var(--secondary);margin-bottom:1rem;transition:color 500ms">Speed</p>
+            <p class="card-desc inv-desc">Response time to emerging crises</p>
+          </div></div></div>
+          <div data-reveal="up" style="--reveal-delay:320ms"><div class="content-card invertible" style="background:var(--muted)"><div class="card-bar"></div><div class="card-glow"></div><div class="card-content">
+            <p class="serif inv-title" style="font-size:3rem;color:var(--secondary);margin-bottom:1rem;transition:color 500ms">Reach</p>
+            <p class="card-desc inv-desc">Access to all parties in all conflicts</p>
+          </div></div></div>
+          <div data-reveal="up" style="--reveal-delay:440ms"><div class="content-card invertible" style="background:var(--muted)"><div class="card-bar"></div><div class="card-glow"></div><div class="card-content">
+            <p class="serif inv-title" style="font-size:3rem;color:var(--secondary);margin-bottom:1rem;transition:color 500ms">Results</p>
+            <p class="card-desc inv-desc">Tangible outcomes for people and states</p>
+          </div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 06 — POLICY PLATFORM
+     ============================================================ -->
+<section class="section bg-muted" id="platform">
+  <div class="container">
+    <div data-reveal="up">
+      <div class="section-header">
+        <span class="section-header-watermark" aria-hidden="true">06</span>
+        <div class="section-header-meta"><span class="section-header-line"></span><p class="section-header-num">Section 06</p><span class="section-header-slash">/</span><p class="section-header-label">Policy Platform</p></div>
+        <h2 class="section-header-title">What Grossi <span class="text-secondary italic">Would Do</span></h2>
+        <p class="section-header-subtitle">Concrete proposals across six priority areas. Not aspirations&mdash;actionable reforms based on proven experience.</p>
+      </div>
+    </div>
+
+    <div class="grid grid-3 bg-border" style="margin-bottom:11rem">
+      <!-- Policy 1: Peace & Security -->
+      <div data-reveal="scale" style="--reveal-delay:0ms"><div class="content-card"><div class="card-bar"></div><div class="card-glow"></div><div class="card-content">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:1.5rem">
+          <span class="icon icon-xl card-icon"><svg viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg></span>
+          <span class="card-number" aria-hidden="true">01</span>
+        </div>
+        <h3 class="card-title" style="font-size:1.25rem">Peace and Security</h3>
+        <p style="color:var(--secondary);font-size:0.875rem;margin-bottom:1.5rem;transition:color 500ms">From Commentary to Action</p>
+        <ul class="policy-proposals">
+          <li><span class="policy-dash">&mdash;</span>Deploy UN presence to conflict zones before full escalation&mdash;not after</li>
+          <li><span class="policy-dash">&mdash;</span>Strengthen the Secretary-General&rsquo;s good offices with dedicated crisis response capacity</li>
+          <li><span class="policy-dash">&mdash;</span>Reform peacekeeping mandates to match operational realities on the ground</li>
+          <li><span class="policy-dash">&mdash;</span>Establish direct communication channels with all parties in active conflicts</li>
+        </ul>
+        <p class="policy-quote">&ldquo;The UN must be present where conflicts are, not comment from afar.&rdquo;</p>
+      </div></div></div>
+
+      <!-- Policy 2: Nuclear Risk -->
+      <div data-reveal="scale" style="--reveal-delay:120ms"><div class="content-card"><div class="card-bar"></div><div class="card-glow"></div><div class="card-content">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:1.5rem">
+          <span class="icon icon-xl card-icon"><svg viewBox="0 0 24 24"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg></span>
+          <span class="card-number" aria-hidden="true">02</span>
+        </div>
+        <h3 class="card-title" style="font-size:1.25rem">Nuclear Risk Reduction</h3>
+        <p style="color:var(--secondary);font-size:0.875rem;margin-bottom:1.5rem;transition:color 500ms">Grossi&rsquo;s Core Expertise</p>
+        <ul class="policy-proposals">
+          <li><span class="policy-dash">&mdash;</span>Reinforce global non-proliferation architecture with strengthened verification</li>
+          <li><span class="policy-dash">&mdash;</span>Establish safety zones around nuclear facilities in conflict areas</li>
+          <li><span class="policy-dash">&mdash;</span>Lead dialogue on new arms control frameworks for a multipolar era</li>
+          <li><span class="policy-dash">&mdash;</span>Support states in peaceful nuclear energy transition with IAEA model</li>
+        </ul>
+        <p class="policy-quote">&ldquo;Nuclear risks are rising. We cannot afford to wait for the next crisis.&rdquo;</p>
+      </div></div></div>
+
+      <!-- Policy 3: Climate -->
+      <div data-reveal="scale" style="--reveal-delay:240ms"><div class="content-card"><div class="card-bar"></div><div class="card-glow"></div><div class="card-content">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:1.5rem">
+          <span class="icon icon-xl card-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
+          <span class="card-number" aria-hidden="true">03</span>
+        </div>
+        <h3 class="card-title" style="font-size:1.25rem">Climate and Development</h3>
+        <p style="color:var(--secondary);font-size:0.875rem;margin-bottom:1.5rem;transition:color 500ms">Delivery Over Declarations</p>
+        <ul class="policy-proposals">
+          <li><span class="policy-dash">&mdash;</span>Accelerate clean energy support for developing nations&mdash;technical, not just financial</li>
+          <li><span class="policy-dash">&mdash;</span>Integrate climate action across all UN agencies, not siloed programs</li>
+          <li><span class="policy-dash">&mdash;</span>Expand models like Rays of Hope: tangible projects with measurable impact</li>
+          <li><span class="policy-dash">&mdash;</span>Bridge North-South divide with practical cooperation, not lectures</li>
+        </ul>
+        <p class="policy-quote">&ldquo;The Global South needs partners, not patrons.&rdquo;</p>
+      </div></div></div>
+
+      <!-- Policy 4: Institutional Reform -->
+      <div data-reveal="scale" style="--reveal-delay:360ms"><div class="content-card"><div class="card-bar"></div><div class="card-glow"></div><div class="card-content">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:1.5rem">
+          <span class="icon icon-xl card-icon"><svg viewBox="0 0 24 24"><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg></span>
+          <span class="card-number" aria-hidden="true">04</span>
+        </div>
+        <h3 class="card-title" style="font-size:1.25rem">Institutional Reform</h3>
+        <p style="color:var(--secondary);font-size:0.875rem;margin-bottom:1.5rem;transition:color 500ms">Merit and Results</p>
+        <ul class="policy-proposals">
+          <li><span class="policy-dash">&mdash;</span>Appoint senior staff based on qualification, not political patronage</li>
+          <li><span class="policy-dash">&mdash;</span>Set clear performance metrics for all UN agencies and report publicly</li>
+          <li><span class="policy-dash">&mdash;</span>Reduce bureaucratic overlap and accelerate crisis response times</li>
+          <li><span class="policy-dash">&mdash;</span>Build workplace culture of integrity&mdash;zero tolerance for harassment</li>
+        </ul>
+        <p class="policy-quote">&ldquo;The UN must demand of itself what it demands of member states.&rdquo;</p>
+      </div></div></div>
+
+      <!-- Policy 5: Inclusion -->
+      <div data-reveal="scale" style="--reveal-delay:480ms"><div class="content-card"><div class="card-bar"></div><div class="card-glow"></div><div class="card-content">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:1.5rem">
+          <span class="icon icon-xl card-icon"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+          <span class="card-number" aria-hidden="true">05</span>
+        </div>
+        <h3 class="card-title" style="font-size:1.25rem">Inclusion and Representation</h3>
+        <p style="color:var(--secondary);font-size:0.875rem;margin-bottom:1.5rem;transition:color 500ms">Proven Track Record</p>
+        <ul class="policy-proposals">
+          <li><span class="policy-dash">&mdash;</span>Continue gender parity achievements: from 28% to 52% at IAEA, now UN-wide</li>
+          <li><span class="policy-dash">&mdash;</span>Expand programs like Marie Sklodowska-Curie for developing nation scientists</li>
+          <li><span class="policy-dash">&mdash;</span>Ensure Global South voices in senior leadership&mdash;not token appointments</li>
+          <li><span class="policy-dash">&mdash;</span>Merit-based selection: vision and experience over identity quotas</li>
+        </ul>
+        <p class="policy-quote">&ldquo;I increased women in leadership from 28% to 52%. These are facts, not words.&rdquo;</p>
+      </div></div></div>
+
+      <!-- Policy 6: Multilateral System -->
+      <div data-reveal="scale" style="--reveal-delay:600ms"><div class="content-card"><div class="card-bar"></div><div class="card-glow"></div><div class="card-content">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:1.5rem">
+          <span class="icon icon-xl card-icon"><svg viewBox="0 0 24 24"><path d="m3 17 2 2 4-4"/><path d="m3 7 2 2 4-4"/><path d="M13 6h8"/><path d="M13 12h8"/><path d="M13 18h8"/></svg></span>
+          <span class="card-number" aria-hidden="true">06</span>
+        </div>
+        <h3 class="card-title" style="font-size:1.25rem">Multilateral System</h3>
+        <p style="color:var(--secondary);font-size:0.875rem;margin-bottom:1.5rem;transition:color 500ms">Rebuilding Trust</p>
+        <ul class="policy-proposals">
+          <li><span class="policy-dash">&mdash;</span>Demonstrate UN utility through concrete results that matter to states</li>
+          <li><span class="policy-dash">&mdash;</span>Maintain impartiality as the foundation of the office&rsquo;s unique value</li>
+          <li><span class="policy-dash">&mdash;</span>Speak truth to all parties&mdash;even when uncomfortable</li>
+          <li><span class="policy-dash">&mdash;</span>Earn credibility through delivery, not rhetoric</li>
+        </ul>
+        <p class="policy-quote">&ldquo;The UN&rsquo;s authority must be earned through performance.&rdquo;</p>
+      </div></div></div>
+    </div>
+
+    <!-- Closing -->
+    <div data-reveal="up">
+      <div style="text-align:center;max-width:48rem;margin:5rem auto 0">
+        <p class="serif" style="font-size:1.5rem;color:var(--foreground);line-height:1.2;margin-bottom:2rem">This Is Not a Manifesto. <span class="text-secondary italic">It Is a Track Record.</span></p>
+        <p style="color:var(--muted-foreground);line-height:1.625;margin-bottom:1rem">Every proposal above reflects something Grossi has already done at the IAEA: crisis deployment, nuclear safety zones, gender parity, institutional reform, impartial engagement across all divides.</p>
+        <p style="color:var(--muted-foreground);line-height:1.625">The UN Secretary-General role is larger in scope. But the principles are the same. And unlike campaign promises, these have been tested under fire.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 07 — GLOBAL SOUTH
+     ============================================================ -->
+<section class="section bg-background" id="global-south">
+  <div class="container">
+    <div data-reveal="up">
+      <div class="section-header">
+        <span class="section-header-watermark" aria-hidden="true">07</span>
+        <div class="section-header-meta"><span class="section-header-line"></span><p class="section-header-num">Section 07</p><span class="section-header-slash">/</span><p class="section-header-label">A Voice from the South</p></div>
+        <h2 class="section-header-title">The Global South <span class="text-secondary italic">Perspective</span></h2>
+        <p class="section-header-subtitle">Grossi is Argentine. He understands what it means to navigate great power politics from outside the traditional centers of power.</p>
+      </div>
+    </div>
+
+    <!-- Quote -->
+    <div data-reveal="up" style="margin-bottom:11rem">
+      <div style="max-width:56rem;margin:0 auto;padding:4rem 0">
+        <div class="bq-centered" style="position:relative;text-align:center">
+          <span class="bq-deco" aria-hidden="true">&ldquo;</span>
+          <p class="serif italic bq-text large" style="position:relative;line-height:1.2">&ldquo;What we need is a Secretary-General chosen for their merits. Someone should be chosen for their vision, not because after 80 years of men in the position it&rsquo;s time for a woman, or someone with blue eyes. You should be chosen for what you are, what you have done, what you can do.&rdquo;</p>
+          <cite class="bq-cite">&mdash; Rafael Grossi, El Pa&iacute;s interview, December 2025</cite>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div style="margin-bottom:11rem">
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:var(--border)">
+        <div data-reveal="up" style="--reveal-delay:0ms"><div class="stat-card"><p class="stat-card-value">40+</p><p class="stat-card-label">Years as a diplomat from Argentina</p></div></div>
+        <div data-reveal="up" style="--reveal-delay:120ms"><div class="stat-card"><p class="stat-card-value">1st</p><p class="stat-card-label">Latin American IAEA Director General</p></div></div>
+        <div data-reveal="up" style="--reveal-delay:240ms"><div class="stat-card"><p class="stat-card-value">40+</p><p class="stat-card-label">African nations reached by Rays of Hope</p></div></div>
+        <div data-reveal="up" style="--reveal-delay:360ms"><div class="stat-card"><p class="stat-card-value">6+</p><p class="stat-card-label">Honorary degrees from Global South universities</p></div></div>
+      </div>
+    </div>
+
+    <!-- Regional perspectives -->
+    <div style="margin-bottom:11rem">
+      <div class="grid grid-2 bg-border">
+        <div data-reveal="up" style="--reveal-delay:0ms"><div class="content-card"><div class="card-bar"></div><div class="card-glow"></div><div class="card-content">
+          <p style="color:var(--secondary);font-size:var(--text-label);text-transform:uppercase;letter-spacing:var(--tracking-ultra);margin-bottom:1rem;transition:color 500ms">Latin America</p>
+          <h3 class="card-title" style="font-size:1.5rem">First from the Region</h3>
+          <p class="card-desc">In nearly 80 years of the IAEA, no Latin American had led the agency. Grossi changed that in 2019. Now he seeks to bring the same perspective to the UN&mdash;an institution where no Secretary-General has come from Latin America since Javier P&eacute;rez de Cu&eacute;llar (Peru, 1982-1991).</p>
+        </div></div></div>
+        <div data-reveal="up" style="--reveal-delay:120ms"><div class="content-card"><div class="card-bar"></div><div class="card-glow"></div><div class="card-content">
+          <p style="color:var(--secondary);font-size:var(--text-label);text-transform:uppercase;letter-spacing:var(--tracking-ultra);margin-bottom:1rem;transition:color 500ms">Africa</p>
+          <h3 class="card-title" style="font-size:1.5rem">Rays of Hope</h3>
+          <p class="card-desc">Grossi&rsquo;s flagship cancer care initiative has reached 40+ African nations with little access to radiation therapy. Not studies&mdash;actual equipment, trained oncologists, patients treated. &ldquo;The Global South needs partners, not patrons,&rdquo; he says.</p>
+        </div></div></div>
+        <div data-reveal="up" style="--reveal-delay:240ms"><div class="content-card"><div class="card-bar"></div><div class="card-glow"></div><div class="card-content">
+          <p style="color:var(--secondary);font-size:var(--text-label);text-transform:uppercase;letter-spacing:var(--tracking-ultra);margin-bottom:1rem;transition:color 500ms">Asia-Pacific</p>
+          <h3 class="card-title" style="font-size:1.5rem">Nuclear Cooperation</h3>
+          <p class="card-desc">From Busan to Bangkok, Grossi has built IAEA technical cooperation across the region. Honorary doctorates from universities in South Korea, Vietnam, and the Philippines reflect relationships built through delivery, not diplomacy alone.</p>
+        </div></div></div>
+        <div data-reveal="up" style="--reveal-delay:360ms"><div class="content-card"><div class="card-bar"></div><div class="card-glow"></div><div class="card-content">
+          <p style="color:var(--secondary);font-size:var(--text-label);text-transform:uppercase;letter-spacing:var(--tracking-ultra);margin-bottom:1rem;transition:color 500ms">Middle East</p>
+          <h3 class="card-title" style="font-size:1.5rem">Engaged with All</h3>
+          <p class="card-desc">Iran, Israel, Saudi Arabia, UAE&mdash;Grossi maintains working relationships across the region&rsquo;s deepest divides. &ldquo;Some call me a Zionist puppet, others the opposite,&rdquo; he notes. That is precisely the point.</p>
+        </div></div></div>
+      </div>
+    </div>
+
+    <!-- UN HQ image -->
+    <div data-reveal="fade" style="margin-bottom:11rem">
+      <div class="cinematic-image aspect-cinema">
+        <img src="images/un-headquarters.jpg" alt="Rafael Grossi chairing a high-level meeting at IAEA headquarters with international delegates" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+        <div class="cinematic-overlay-1"></div><div class="cinematic-overlay-2"></div>
+        <div class="cinematic-content" style="padding:0 2rem 10%">
+          <div>
+            <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem">
+              <div style="width:3.5rem;height:1px;background:linear-gradient(90deg,var(--secondary),oklch(0.72 0.15 55/0.3))"></div>
+              <span class="text-shadow-overlay" style="color:rgba(255,255,255,0.5);font-size:var(--text-label);text-transform:uppercase;letter-spacing:var(--tracking-ultra)">The Institution</span>
+            </div>
+            <p class="text-shadow-overlay" style="color:rgba(255,255,255,0.85);font-size:1.25rem;max-width:42rem;font-weight:300;line-height:1.625">A voice from the Global South for the world&rsquo;s most important institution.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Argentina bio -->
+    <div style="display:grid;gap:6rem;align-items:center" class="argentina-grid">
+      <div data-reveal="left">
+        <h3 class="serif" style="font-size:1.5rem;color:var(--foreground);margin-bottom:2rem">From Buenos Aires to Vienna</h3>
+        <p style="color:var(--muted-foreground);line-height:1.625;margin-bottom:1.5rem">Born in Buenos Aires in 1961. Grandparents from Piedmont, Italy&mdash;Carbonara Scrivia made him honorary citizen in 2025. Joined Argentina&rsquo;s Foreign Service in 1985. Lived through economic crises, hyperinflation, democratic transitions.</p>
+        <p style="color:var(--muted-foreground);line-height:1.625;margin-bottom:1.5rem">This background matters. Grossi understands what smaller nations face when great powers clash. He knows how developing countries navigate international institutions designed by others. He has spent 40 years building bridges from that position.</p>
+        <p style="color:var(--muted-foreground);line-height:1.625">&ldquo;Argentina is a country that has been part of all the multilateral non-proliferation regimes,&rdquo; he notes. &ldquo;We chose not to develop nuclear weapons, even though we could have. That gives me credibility when I talk about these issues.&rdquo;</p>
+      </div>
+      <div data-reveal="right" style="--reveal-delay:300ms">
+        <div style="position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--muted)">
+          <img src="images/grossi-portrait-formal.jpg" alt="Rafael Grossi speaking at a podium with senior IAEA officials, first Latin American to lead the agency" style="width:100%;height:100%;object-fit:cover">
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.35),transparent,transparent)"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CTA SECTION
+     ============================================================ -->
+<section class="cta-section" id="cta">
+  <div class="cta-dots"></div>
+  <div class="cta-gradient"></div>
+  <div class="container" style="position:relative">
+    <div data-reveal="up">
+      <div style="max-width:64rem;margin:0 auto;text-align:center">
+        <div class="ornamental" style="gap:1.5rem;margin-bottom:3rem">
+          <span class="ornamental-label-line reverse"></span>
+          <span class="ornamental-text">The Decision</span>
+          <span class="ornamental-label-line"></span>
+        </div>
+        <h2 class="serif" style="font-size:3rem;margin-bottom:3rem;line-height:0.92;letter-spacing:-0.025em">A UN That <span class="text-secondary italic">Works</span></h2>
+        <p style="font-size:1.25rem;line-height:1.625;opacity:0.6;margin-bottom:2rem;max-width:48rem;margin-left:auto;margin-right:auto;font-weight:300">The selection of the next Secretary-General is among the most consequential decisions the international community will make this decade.</p>
+        <p style="font-size:1.125rem;line-height:1.625;opacity:0.5;margin-bottom:5rem;max-width:48rem;margin-left:auto;margin-right:auto">Rafael Grossi offers something rare: a candidate whose experience matches the demands of the role. Forty years of crisis diplomacy. Leadership of a major UN agency through its most challenging period. A track record of engaging all parties, delivering results, and reforming institutions from within.</p>
+        <blockquote class="serif italic text-gradient-gold" style="font-size:1.875rem;line-height:1.2;margin-bottom:6rem;max-width:56rem;margin-left:auto;margin-right:auto">&ldquo;The UN needs a secretary with boots in the mud&mdash;not one who comments from a distance.&rdquo;</blockquote>
+
+        <!-- Next steps -->
+        <div style="display:flex;flex-direction:column;gap:2.5rem;margin-bottom:6rem;text-align:left;max-width:48rem;margin-left:auto;margin-right:auto">
+          <div class="cta-step"><p class="cta-step-num">01</p><p style="font-size:1.125rem;font-weight:500;margin-bottom:0.5rem">Share with Your Delegation</p><p style="font-size:0.875rem;opacity:0.5">Forward the vision to decision-makers in your mission</p></div>
+          <div class="cta-step"><p class="cta-step-num">02</p><p style="font-size:1.125rem;font-weight:500;margin-bottom:0.5rem">Request a Briefing</p><p style="font-size:0.875rem;opacity:0.5">Detailed policy positions available for permanent missions</p></div>
+          <div class="cta-step"><p class="cta-step-num">03</p><p style="font-size:1.125rem;font-weight:500;margin-bottom:0.5rem">Follow the Campaign</p><p style="font-size:0.875rem;opacity:0.5">Stay informed on developments and endorsements</p></div>
+        </div>
+
+        <!-- Contact boxes -->
+        <div style="display:grid;grid-template-columns:1fr;gap:1px;max-width:42rem;margin:0 auto 5rem;background:oklch(0.975 0.005 70/0.1)">
+          <div class="contact-box"><div class="contact-box-bar"></div>
+            <p class="contact-label">For Delegations</p>
+            <p style="font-size:1.125rem;opacity:0.7;margin-bottom:1.25rem">Briefing materials and policy positions available upon request.</p>
+            <a href="mailto:campaign@grossi2026.org" class="contact-link">campaign@grossi2026.org <span class="icon icon-sm"><svg viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span></a>
+          </div>
+          <div class="contact-box"><div class="contact-box-bar"></div>
+            <p class="contact-label">For Media</p>
+            <p style="font-size:1.125rem;opacity:0.7;margin-bottom:1.25rem">Press inquiries, interview requests, and background briefings.</p>
+            <a href="mailto:press@grossi2026.org" class="contact-link">press@grossi2026.org <span class="icon icon-sm"><svg viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span></a>
+          </div>
+        </div>
+
+        <div style="padding-top:4rem;border-top:1px solid oklch(0.975 0.005 70/0.06)">
+          <p style="font-size:0.875rem;opacity:0.4;text-transform:uppercase;letter-spacing:var(--tracking-wide);margin-bottom:1rem">Authorized by the Campaign for Rafael Grossi</p>
+          <p style="font-size:0.875rem;opacity:0.4">For United Nations Secretary-General 2026</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="footer">
+  <div class="dot-bg"></div>
+  <div class="gradient-depth"></div>
+
+  <!-- CTA -->
+  <div class="footer-cta">
+    <div class="container" style="position:relative">
+      <div data-reveal="fade">
+        <div style="max-width:64rem;margin:0 auto;text-align:center">
+          <div class="ornamental" style="gap:1.5rem;margin-bottom:3rem">
+            <span class="ornamental-label-line reverse"></span>
+            <span class="ornamental-text">The Call</span>
+            <span class="ornamental-label-line"></span>
+          </div>
+          <h2 class="serif" style="font-size:2.25rem;margin-bottom:3rem;line-height:0.92">The world cannot<span style="display:block;color:var(--secondary);font-style:italic">afford to wait.</span></h2>
+          <p style="font-size:1.25rem;color:oklch(0.975 0.005 70/0.5);margin-bottom:4rem;max-width:48rem;margin-left:auto;margin-right:auto;font-weight:300;line-height:1.625">For a United Nations that works&mdash;in a dangerous world, with everybody, for everybody, and open to everybody.</p>
+          <div style="display:flex;flex-direction:column;gap:1.5rem;justify-content:center;align-items:center">
+            <a href="#vision" class="footer-btn-primary">
+              <span style="position:relative;z-index:10;display:flex;align-items:center;gap:0.75rem">Explore the Vision <span class="icon icon-sm"><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></span></span>
+            </a>
+            <a href="mailto:contact@grossiforun.org" class="footer-btn-outline">Contact the Campaign</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Links -->
+  <div class="footer-links">
+    <div class="container" style="position:relative">
+      <div data-reveal="up">
+        <div style="display:grid;grid-template-columns:1fr;gap:4rem">
+          <!-- Brand -->
+          <div>
+            <div style="margin-bottom:2.5rem">
+              <div class="footer-brand-icon"><span class="serif text-gradient-gold" style="font-size:1.5rem">RG</span></div>
+              <span class="serif" style="font-size:1.875rem;display:block;margin-bottom:0.5rem">Rafael Grossi</span>
+              <p style="color:oklch(0.975 0.005 70/0.5);font-size:0.875rem;text-transform:uppercase;letter-spacing:var(--tracking-wide)">For Secretary-General of the United Nations</p>
+            </div>
+            <p style="color:oklch(0.975 0.005 70/0.4);line-height:1.625;max-width:28rem;font-size:0.875rem">Crisis-tested leadership for a world that demands more from its institutions. A vision for a UN that delivers results, not just resolutions.</p>
+          </div>
+
+          <!-- Nav + Contact row -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem">
+            <div>
+              <h4 class="footer-section-title">Sections</h4>
+              <ul style="display:flex;flex-direction:column;gap:1rem">
+                <li><a href="#vision" class="footer-nav-link"><span class="link-bar"></span>A UN That Works</a></li>
+                <li><a href="#dangerous-world" class="footer-nav-link"><span class="link-bar"></span>In a Dangerous World</a></li>
+                <li><a href="#with-everybody" class="footer-nav-link"><span class="link-bar"></span>With Everybody</a></li>
+                <li><a href="#for-everybody" class="footer-nav-link"><span class="link-bar"></span>For Everybody</a></li>
+                <li><a href="#transparency" class="footer-nav-link"><span class="link-bar"></span>Open to Everybody</a></li>
+                <li><a href="#global-south" class="footer-nav-link"><span class="link-bar"></span>Global South</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="footer-section-title">Connect</h4>
+              <ul style="display:flex;flex-direction:column;gap:1rem">
+                <li><a href="mailto:contact@grossiforun.org" class="footer-social-link">
+                  <div class="footer-social-icon"><span class="icon icon-sm"><svg viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span></div>
+                  <span>contact@grossiforun.org</span>
+                </a></li>
+                <li><a href="https://twitter.com/rafaborun" target="_blank" rel="noopener noreferrer" class="footer-social-link">
+                  <div class="footer-social-icon"><span class="icon icon-sm"><svg viewBox="0 0 24 24"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></span></div>
+                  <span>@rafaborun</span>
+                </a></li>
+                <li><a href="https://linkedin.com/in/rafaelgrossi" target="_blank" rel="noopener noreferrer" class="footer-social-link">
+                  <div class="footer-social-icon"><span class="icon icon-sm"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></span></div>
+                  <span>LinkedIn</span>
+                </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="footer-copyright">
+    <div class="container" style="position:relative">
+      <div style="display:flex;flex-direction:column;justify-content:space-between;align-items:center;gap:1.5rem">
+        <p style="color:oklch(0.975 0.005 70/0.4);font-size:0.75rem;text-transform:uppercase;letter-spacing:0.05em">&copy; 2026 Grossi for UN Campaign. All rights reserved.</p>
+        <div style="display:flex;align-items:center;gap:2rem">
+          <span style="color:oklch(0.975 0.005 70/0.3);font-size:0.75rem;text-transform:uppercase;letter-spacing:0.05em">Privacy Policy</span>
+          <span style="color:oklch(0.975 0.005 70/0.3);font-size:0.75rem;text-transform:uppercase;letter-spacing:0.05em">Terms of Use</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to top -->
+<button class="back-to-top" id="back-to-top" aria-label="Back to top">
+  <span class="icon icon-sm"><svg viewBox="0 0 24 24"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg></span>
+</button>
+
+<!-- ============================================================
+     JAVASCRIPT
+     ============================================================ -->
+<script>
+(function() {
+  'use strict';
+
+  // ── Scroll Reveal ──
+  const revealObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('[data-reveal]').forEach(function(el) {
+    revealObserver.observe(el);
+  });
+
+  // ── Navigation ──
+  const header = document.getElementById('nav-header');
+  const progress = document.getElementById('nav-progress');
+  const navLinks = document.querySelectorAll('.nav-link');
+  const sections = ['vision','dangerous-world','with-everybody','for-everybody','transparency','global-south'];
+
+  function onScroll() {
+    const scrollY = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? scrollY / docHeight : 0;
+
+    // Scrolled state
+    if (scrollY > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+
+    // Progress bar
+    progress.style.width = (pct * 100) + '%';
+
+    // Active section
+    let active = '';
+    for (let i = sections.length - 1; i >= 0; i--) {
+      const el = document.getElementById(sections[i]);
+      if (el && el.getBoundingClientRect().top <= 200) {
+        active = sections[i];
+        break;
+      }
+    }
+    navLinks.forEach(function(link) {
+      if (link.getAttribute('data-section') === active) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+
+    // Back to top
+    const btn = document.getElementById('back-to-top');
+    if (scrollY > 500) {
+      btn.classList.add('visible');
+    } else {
+      btn.classList.remove('visible');
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // ── Logo click → scroll to top ──
+  document.getElementById('nav-logo-btn').addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // ── Back to top ──
+  document.getElementById('back-to-top').addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // ── Mobile menu ──
+  const mobileMenu = document.getElementById('mobile-nav');
+  const mobileBackdrop = document.getElementById('mobile-backdrop');
+  const hamburger = document.getElementById('nav-hamburger');
+
+  function openMenu() {
+    mobileMenu.classList.add('open');
+    mobileBackdrop.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    hamburger.setAttribute('aria-expanded', 'true');
+  }
+  function closeMenu() {
+    mobileMenu.classList.remove('open');
+    mobileBackdrop.classList.remove('open');
+    document.body.style.overflow = '';
+    hamburger.setAttribute('aria-expanded', 'false');
+  }
+
+  hamburger.addEventListener('click', function() {
+    if (mobileMenu.classList.contains('open')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+  document.getElementById('mobile-close').addEventListener('click', closeMenu);
+  mobileBackdrop.addEventListener('click', closeMenu);
+  document.querySelectorAll('.mobile-link').forEach(function(link) {
+    link.addEventListener('click', closeMenu);
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeMenu();
+  });
+
+  // ── Hero load animation ──
+  requestAnimationFrame(function() {
+    document.getElementById('hero-section').classList.add('loaded');
+  });
+
+})();
+</script>
+
+<!-- Responsive grid overrides -->
+<style>
+/* 2-col grids at lg */
+@media (min-width: 1024px) {
+  .vision-grid-2col { grid-template-columns: 1fr 1fr !important; }
+  .with-everybody-grid { grid-template-columns: 5fr 7fr !important; }
+  .gender-grid { grid-template-columns: 1fr 1fr !important; }
+  .mgmt-grid { grid-template-columns: 1fr 1fr !important; }
+  .argentina-grid { grid-template-columns: 1fr 1fr !important; }
+  .stat-grid-4 { grid-template-columns: repeat(4, 1fr) !important; }
+}
+@media (min-width: 640px) {
+  .cta-section .cta-step + .cta-step + .cta-step { /* keep flex */ }
+  .contact-box-grid { grid-template-columns: repeat(2, 1fr) !important; }
+}
+@media (min-width: 640px) {
+  .footer-links .footer-grid { grid-template-columns: 5fr 3fr 4fr !important; }
+}
+@media (min-width: 768px) {
+  .footer-copyright > div > div { flex-direction: row !important; }
+  .footer-cta .footer-btns { flex-direction: row !important; }
+}
+
+/* CTA steps horizontal on sm+ */
+@media (min-width: 640px) {
+  .cta-section [style*="flex-direction:column"][style*="gap:2.5rem"] {
+    flex-direction: row !important;
+  }
+}
+
+/* Footer 3-col on md+ */
+@media (min-width: 768px) {
+  .footer-links .container > div > div > div:first-child + div {
+    /* handled inline */
+  }
+}
+</style>
+
+</body>
+</html>
