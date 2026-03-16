@@ -4,6 +4,7 @@ import Image from "next/image"
 import { FileText, BarChart3, Award, Eye, Download } from "lucide-react"
 import { useInView } from "@/hooks/use-in-view"
 import type { Commitment } from "@/lib/types"
+import { DOT_PATTERN_SM, DOT_PATTERN_SIZE_MD } from "@/lib/constants"
 
 const commitments: Commitment[] = [
   {
@@ -41,6 +42,12 @@ const metrics = [
   { label: "Results", description: "Tangible outcomes for people and states" },
 ]
 
+const managementPriorities = [
+  "Clear strategic priorities, publicly stated",
+  "Reduced duplication across agencies",
+  "Faster crisis response mechanisms",
+]
+
 export function TransparencySection() {
   const headerAnim = useInView()
   const imageAnim = useInView(0.2)
@@ -53,7 +60,7 @@ export function TransparencySection() {
     <section id="transparency" className="relative bg-background overflow-hidden">
       <div className="container mx-auto px-6 lg:px-20 py-40 lg:py-56">
         {/* Section Header */}
-        <div 
+        <div
           ref={headerAnim.ref}
           className={`max-w-6xl mb-24 transition-all duration-1200 ${headerAnim.inView ? 'opacity-100' : 'opacity-0'}`}
         >
@@ -67,21 +74,21 @@ export function TransparencySection() {
               The Standard
             </p>
           </div>
-          
+
           <div className="overflow-hidden">
             <h2 className={`font-serif text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-foreground leading-[0.9] tracking-tight transition-all duration-1000 delay-200 ${headerAnim.inView ? 'translate-y-0' : 'translate-y-full'}`}>
               Open to
               <span className="block text-secondary italic">Everybody</span>
             </h2>
           </div>
-          
+
           <p className={`text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mt-12 font-light transition-all duration-1000 delay-500 ${headerAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             How he would run the institution with transparency and discipline.
           </p>
         </div>
 
         {/* Cinematic Hero Image */}
-        <div 
+        <div
           ref={imageAnim.ref}
           className={`relative mb-40 transition-all duration-1500 ${imageAnim.inView ? 'opacity-100' : 'opacity-0'}`}
         >
@@ -96,13 +103,11 @@ export function TransparencySection() {
                 sizes="100vw"
               />
             </div>
-            
+
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/40" />
             <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/40" />
-            
           </div>
 
-          {/* Quote overlay */}
           <div className="absolute bottom-[14%] left-0 right-0 px-8 lg:px-20">
             <div className="flex items-center gap-4 mb-4">
               <div className="w-12 h-px bg-secondary" />
@@ -113,7 +118,6 @@ export function TransparencySection() {
             </p>
           </div>
 
-          {/* Frame accents */}
           <div className="absolute top-[12%] left-8 w-16 h-16 border-l-2 border-t-2 border-white/20" />
           <div className="absolute top-[12%] right-8 w-16 h-16 border-r-2 border-t-2 border-white/20" />
         </div>
@@ -157,13 +161,13 @@ export function TransparencySection() {
         </div>
 
         {/* Management Discipline + Document Hub */}
-        <div 
+        <div
           ref={disciplineAnim.ref}
           className="grid lg:grid-cols-12 gap-20 items-start mb-40"
         >
           <div className={`lg:col-span-6 transition-all duration-1000 ${disciplineAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
             <div className="relative mb-8">
-              <span className="text-[150px] font-serif text-foreground/[0.03] absolute -top-20 -left-4 leading-none select-none">05</span>
+              <span className="text-[150px] font-serif text-foreground/[0.03] absolute -top-20 -left-4 leading-none select-none" aria-hidden="true">05</span>
               <h3 className="font-serif text-4xl md:text-5xl text-foreground leading-[1.1] relative">
                 Management
                 <span className="block text-secondary/70">Discipline</span>
@@ -189,15 +193,11 @@ export function TransparencySection() {
               requires persistence, coalition-building, and results that
               demonstrate the value of doing things differently.
             </p>
-            
+
             <div className="space-y-4">
-              {[
-                "Clear strategic priorities, publicly stated",
-                "Reduced duplication across agencies",
-                "Faster crisis response mechanisms"
-              ].map((item, i) => (
-                <div 
-                  key={i}
+              {managementPriorities.map((item, i) => (
+                <div
+                  key={item}
                   className={`flex items-center gap-5 p-5 bg-muted transition-all duration-500 ${disciplineAnim.inView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}
                   style={{ transitionDelay: disciplineAnim.inView ? `${i * 100 + 300}ms` : '0ms' }}
                 >
@@ -242,7 +242,7 @@ export function TransparencySection() {
                   </div>
                 ))}
               </div>
-              
+
               <p className="mt-8 text-muted-foreground text-sm uppercase tracking-wider">
                 Full document library available upon request
               </p>
@@ -250,32 +250,32 @@ export function TransparencySection() {
           </div>
         </div>
 
-        {/* Institutional Culture - Cinematic Block */}
-        <div 
+        {/* Institutional Culture */}
+        <div
           ref={cultureAnim.ref}
           className={`relative mb-40 transition-all duration-1200 ${cultureAnim.inView ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
         >
           <div className="bg-foreground text-background p-16 lg:p-28 relative overflow-hidden film-grain">
-            <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)', backgroundSize: '40px 40px' }} />
-            
+            <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: DOT_PATTERN_SM, backgroundSize: DOT_PATTERN_SIZE_MD }} />
+
             <div className="relative max-w-4xl">
               <span className="inline-flex items-center gap-4 text-secondary text-[10px] uppercase tracking-[0.4em] font-medium mb-10">
                 <span className="w-8 h-px bg-secondary" />
                 The Culture
               </span>
-              
+
               <h3 className="font-serif text-4xl md:text-5xl lg:text-6xl mb-12 leading-[1.1]">
                 Institutional Culture
                 <span className="block text-secondary">and Merit</span>
               </h3>
-              
+
               <p className="text-xl md:text-2xl leading-relaxed opacity-80 mb-8 max-w-3xl font-light">
                 &ldquo;What we need is a Secretary-General chosen for their
                 merits. Someone should be chosen for their vision, not because
                 after 80 years of men in the position it&apos;s time for a
                 woman, or someone with blue eyes, or a secularist.&rdquo;
               </p>
-              
+
               <p className="text-lg leading-relaxed opacity-70 mb-8 max-w-3xl">
                 Grossi&apos;s record speaks: at the IAEA, he increased women in
                 leadership from 28% to 52%. Women in Nuclear awarded him the
@@ -283,14 +283,14 @@ export function TransparencySection() {
                 Sklodowska-Curie and Lise Meitner Programmes for women
                 scientists from developing nations.
               </p>
-              
+
               <p className="text-lg leading-relaxed opacity-70 mb-16 max-w-3xl">
                 The principle is clear: results over rhetoric, merit over
                 patronage, structural change over symbolic gestures. Grossi
                 has proven this can be done. The UN Secretariat—40,000 staff
                 worldwide—deserves the same commitment.
               </p>
-              
+
               <blockquote className="relative pl-10 border-l-2 border-secondary">
                 <p className="text-3xl md:text-4xl font-serif italic leading-[1.3]">
                   &ldquo;I increased women in leadership from 28% to 52%. These
@@ -305,7 +305,7 @@ export function TransparencySection() {
         </div>
 
         {/* Measuring Performance */}
-        <div 
+        <div
           ref={metricsAnim.ref}
           className={`text-center max-w-4xl mx-auto transition-all duration-1000 ${metricsAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
         >
@@ -323,10 +323,10 @@ export function TransparencySection() {
             asks not &ldquo;Did we follow the process?&rdquo; but &ldquo;Did we
             make a difference?&rdquo; This is the only standard that matters.
           </p>
-          
+
           <div className="grid sm:grid-cols-3 gap-1">
             {metrics.map((metric, index) => (
-              <div 
+              <div
                 key={metric.label}
                 className={`p-12 bg-muted hover:bg-secondary group transition-all duration-500 ${metricsAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                 style={{ transitionDelay: metricsAnim.inView ? `${index * 100 + 200}ms` : '0ms' }}

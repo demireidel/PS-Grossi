@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { Target, Users, Gauge, RefreshCw } from "lucide-react"
 import type { Principle } from "@/lib/types"
+import { DOT_PATTERN_SM, DOT_PATTERN_SIZE_SM, DOT_PATTERN_SIZE_LG } from "@/lib/constants"
 
 const principles: Principle[] = [
   {
@@ -32,9 +33,8 @@ const principles: Principle[] = [
 export function VisionSection() {
   return (
     <section id="vision" className="py-32 lg:py-48 bg-background relative overflow-hidden">
-      {/* Subtle background pattern */}
-      <div className="absolute inset-0 opacity-[0.015]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)', backgroundSize: '48px 48px' }} />
-      
+      <div className="absolute inset-0 opacity-[0.015]" style={{ backgroundImage: DOT_PATTERN_SM, backgroundSize: DOT_PATTERN_SIZE_LG }} />
+
       <div className="container mx-auto px-6 lg:px-20 relative">
         {/* Section Header */}
         <div className="max-w-5xl mb-24">
@@ -139,25 +139,25 @@ export function VisionSection() {
 
         {/* Why This Election Matters */}
         <div className="bg-primary text-primary-foreground p-16 lg:p-24 relative overflow-hidden film-grain">
-          <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)', backgroundSize: '32px 32px' }} />
-          
+          <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: DOT_PATTERN_SM, backgroundSize: DOT_PATTERN_SIZE_SM }} />
+
           <div className="relative max-w-4xl">
             <span className="inline-flex items-center gap-4 text-secondary text-[10px] uppercase tracking-[0.4em] font-medium mb-10">
               <span className="w-8 h-px bg-secondary" />
               The Stakes
             </span>
-            
+
             <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl mb-10 leading-[1.1]">
               Why Grossi, <span className="text-secondary italic">Why Now</span>
             </h3>
-            
+
             <p className="text-xl md:text-2xl leading-relaxed opacity-80 mb-8 font-light">
               &ldquo;We are actors in a geopolitical reality we must shape to
               avoid conflict. That is the challenge of diplomacy—today and
               always.&rdquo; Grossi brings not theory, but four decades of
               crisis-tested leadership.
             </p>
-            
+
             <p className="text-lg leading-relaxed opacity-70 mb-8">
               The first Latin American to lead the IAEA. A diplomat who has sat
               across from Putin and Zelensky, Iranian ayatollahs and American
@@ -166,7 +166,7 @@ export function VisionSection() {
               and continues under security protection because experts consider
               them credible.
             </p>
-            
+
             <p className="text-lg leading-relaxed opacity-70 mb-12">
               The next Secretary-General cannot afford to learn on the job.
               The crises are too urgent, the divisions too deep, the stakes
@@ -174,7 +174,7 @@ export function VisionSection() {
               hardest version of this work&mdash;and delivered results under
               conditions that most diplomats would consider impossible.
             </p>
-            
+
             <blockquote className="relative pl-8 border-l-2 border-secondary">
               <p className="text-2xl md:text-3xl font-serif italic leading-[1.3]">
                 &ldquo;Active diplomacy must be deployed, and solutions proposed

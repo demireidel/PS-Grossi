@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { Mail, Twitter, Linkedin, ArrowUp, ChevronRight } from "lucide-react"
 import { useInView } from "@/hooks/use-in-view"
+import { NAV_ITEMS, SCROLL_THRESHOLD_BACK_TO_TOP, CURRENT_YEAR, DOT_PATTERN_SM, DOT_PATTERN_SIZE_SM } from "@/lib/constants"
 
 export function Footer() {
   const ctaAnim = useInView()
@@ -11,24 +12,26 @@ export function Footer() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setShowBackToTop(window.scrollY > 500)
+      setShowBackToTop(window.scrollY > SCROLL_THRESHOLD_BACK_TO_TOP)
     }
     window.addEventListener("scroll", handleScroll, { passive: true })
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }
+
   return (
     <footer className="bg-foreground text-background relative overflow-hidden">
-      {/* Subtle pattern */}
-      <div className="absolute inset-0 opacity-[0.015]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)', backgroundSize: '32px 32px' }} />
+      <div className="absolute inset-0 opacity-[0.015]" style={{ backgroundImage: DOT_PATTERN_SM, backgroundSize: DOT_PATTERN_SIZE_SM }} />
 
       {/* CTA Section */}
-      <div 
+      <div
         ref={ctaAnim.ref}
         className="relative container mx-auto px-6 lg:px-20 py-32 lg:py-44 border-b border-background/10"
       >
         <div className={`max-w-5xl mx-auto text-center transition-all duration-1200 ${ctaAnim.inView ? 'opacity-100' : 'opacity-0'}`}>
-          {/* Overline */}
           <div className="flex items-center justify-center gap-6 mb-10">
             <span className={`h-px bg-secondary transition-all duration-1000 delay-300 ${ctaAnim.inView ? 'w-16' : 'w-0'}`} />
             <p className="text-secondary uppercase tracking-[0.4em] text-[10px] font-medium">
@@ -36,19 +39,19 @@ export function Footer() {
             </p>
             <span className={`h-px bg-secondary transition-all duration-1000 delay-300 ${ctaAnim.inView ? 'w-16' : 'w-0'}`} />
           </div>
-          
+
           <div className="overflow-hidden">
             <h2 className={`font-serif text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-10 leading-[0.95] transition-all duration-1000 delay-200 ${ctaAnim.inView ? 'translate-y-0' : 'translate-y-full'}`}>
               The world cannot
               <span className="block text-secondary italic">afford to wait.</span>
             </h2>
           </div>
-          
+
           <p className={`text-xl md:text-2xl text-background/60 mb-14 max-w-3xl mx-auto font-light leading-relaxed transition-all duration-1000 delay-500 ${ctaAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             For a United Nations that works—in a dangerous world, with
             everybody, for everybody, and open to everybody.
           </p>
-          
+
           <div className={`flex flex-col sm:flex-row gap-6 justify-center transition-all duration-1000 delay-700 ${ctaAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <a
               href="#vision"
@@ -71,7 +74,7 @@ export function Footer() {
       </div>
 
       {/* Footer Links */}
-      <div 
+      <div
         ref={linksAnim.ref}
         className="relative container mx-auto px-6 lg:px-20 py-20"
       >
@@ -100,14 +103,7 @@ export function Footer() {
               Sections
             </h4>
             <ul className="space-y-4">
-              {[
-                { href: "#vision", label: "A UN That Works" },
-                { href: "#dangerous-world", label: "In a Dangerous World" },
-                { href: "#with-everybody", label: "With Everybody" },
-                { href: "#for-everybody", label: "For Everybody" },
-                { href: "#transparency", label: "Open to Everybody" },
-                { href: "#global-south", label: "Global South" },
-              ].map((item) => (
+              {NAV_ITEMS.map((item) => (
                 <li key={item.href}>
                   <a
                     href={item.href}
@@ -173,35 +169,29 @@ export function Footer() {
       <div className="relative container mx-auto px-6 lg:px-20 py-10 border-t border-background/10">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-background/60 text-xs uppercase tracking-wider">
-            &copy; {new Date().getFullYear()} Grossi for UN Campaign. All rights reserved.
+            &copy; {CURRENT_YEAR} Grossi for UN Campaign. All rights reserved.
           </p>
           <div className="flex items-center gap-8">
-            <a
-              href="#"
-              className="text-background/60 hover:text-background transition-colors text-xs uppercase tracking-wider"
-            >
+            <span className="text-background/40 text-xs uppercase tracking-wider">
               Privacy Policy
-            </a>
-            <a
-              href="#"
-              className="text-background/60 hover:text-background transition-colors text-xs uppercase tracking-wider"
-            >
+            </span>
+            <span className="text-background/40 text-xs uppercase tracking-wider">
               Terms of Use
-            </a>
+            </span>
           </div>
         </div>
       </div>
 
       {/* Back to Top */}
-      <a
-        href="#"
+      <button
+        onClick={scrollToTop}
         className={`fixed bottom-8 right-8 z-50 w-14 h-14 bg-secondary text-secondary-foreground flex items-center justify-center hover:bg-accent transition-all duration-300 group ${
           showBackToTop ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
         }`}
         aria-label="Back to top"
       >
         <ArrowUp className="w-5 h-5 transition-transform group-hover:-translate-y-1" />
-      </a>
+      </button>
     </footer>
   )
 }

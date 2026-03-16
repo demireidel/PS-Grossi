@@ -3,22 +3,21 @@
 import { ArrowUpRight } from "lucide-react"
 import Link from "next/link"
 import { useInView } from "@/hooks/use-in-view"
+import { DOT_PATTERN_SM, DOT_PATTERN_SIZE_SM } from "@/lib/constants"
 
 export function CtaSection() {
   const { ref, inView } = useInView(0.2)
 
   return (
-    <section 
+    <section
       ref={ref}
       className="py-32 lg:py-48 bg-foreground text-background relative overflow-hidden"
     >
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)', backgroundSize: '32px 32px' }} />
-      
+      <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: DOT_PATTERN_SM, backgroundSize: DOT_PATTERN_SIZE_SM }} />
+
       <div className="container mx-auto px-6 lg:px-20 relative">
         <div className={`max-w-5xl mx-auto text-center transition-all duration-1000 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
-          
-          {/* Header */}
+
           <div className="flex items-center justify-center gap-6 mb-10">
             <span className="h-px w-16 bg-secondary" />
             <p className="text-secondary uppercase tracking-[0.3em] text-[10px] font-medium">
@@ -39,12 +38,10 @@ export function CtaSection() {
             Rafael Grossi offers something rare: a candidate whose experience matches the demands of the role. Forty years of crisis diplomacy. Leadership of a major UN agency through its most challenging period. A track record of engaging all parties, delivering results, and reforming institutions from within.
           </p>
 
-          {/* Quote */}
           <blockquote className="font-serif text-3xl md:text-4xl lg:text-5xl italic leading-[1.2] mb-16 max-w-4xl mx-auto">
             &ldquo;The UN needs a secretary with boots in the mud—not one who comments from a distance.&rdquo;
           </blockquote>
 
-          {/* Contact Information */}
           <div className="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto mb-16">
             <div className="p-8 border border-background/20 text-left">
               <p className="text-secondary text-[10px] uppercase tracking-[0.3em] mb-3">
@@ -53,7 +50,7 @@ export function CtaSection() {
               <p className="text-lg opacity-80 mb-4">
                 Briefing materials and policy positions available upon request.
               </p>
-              <Link 
+              <Link
                 href="mailto:campaign@grossi2026.org"
                 className="inline-flex items-center gap-2 text-secondary hover:opacity-80 transition-opacity"
               >
@@ -68,7 +65,7 @@ export function CtaSection() {
               <p className="text-lg opacity-80 mb-4">
                 Press inquiries, interview requests, and background briefings.
               </p>
-              <Link 
+              <Link
                 href="mailto:press@grossi2026.org"
                 className="inline-flex items-center gap-2 text-secondary hover:opacity-80 transition-opacity"
               >
@@ -78,7 +75,6 @@ export function CtaSection() {
             </div>
           </div>
 
-          {/* Final Message */}
           <div className="pt-16 border-t border-background/10">
             <p className="text-sm opacity-40 uppercase tracking-[0.2em] mb-4">
               Authorized by the Campaign for Rafael Grossi

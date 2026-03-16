@@ -1,18 +1,10 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
+import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
-import type { NavItem } from "@/lib/types"
-
-const navItems: NavItem[] = [
-  { href: "#vision", label: "A UN That Works" },
-  { href: "#dangerous-world", label: "In a Dangerous World" },
-  { href: "#with-everybody", label: "With Everybody" },
-  { href: "#for-everybody", label: "For Everybody" },
-  { href: "#transparency", label: "Open to Everybody" },
-  { href: "#global-south", label: "Global South" },
-]
+import { NAV_ITEMS, SCROLL_THRESHOLD_NAV } from "@/lib/constants"
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -20,7 +12,7 @@ export function Navigation() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50)
+      setScrolled(window.scrollY > SCROLL_THRESHOLD_NAV)
     }
     window.addEventListener("scroll", handleScroll, { passive: true })
     return () => window.removeEventListener("scroll", handleScroll)
@@ -35,13 +27,11 @@ export function Navigation() {
   }, [isOpen])
 
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden"
-    } else {
-      document.body.style.overflow = ""
-    }
+    document.body.style.overflow = isOpen ? "hidden" : ""
     return () => { document.body.style.overflow = "" }
   }, [isOpen])
+
+  const closeMenu = useCallback(() => setIsOpen(false), [])
 
   return (
     <header
@@ -52,10 +42,9 @@ export function Navigation() {
           : "bg-gradient-to-b from-black/40 to-transparent"
       )}
     >
-      <nav className="container mx-auto px-6 lg:px-12">
+      <nav className="container mx-auto px-6 lg:px-12" aria-label="Main navigation">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <a href="#" className="flex flex-col">
+          <Link href="/" className="flex flex-col">
             <span
               className={cn(
                 "font-serif text-xl font-semibold tracking-tight transition-colors duration-300",
@@ -72,11 +61,10 @@ export function Navigation() {
             >
               For Secretary-General
             </span>
-          </a>
+          </Link>
 
-          {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-10">
-            {navItems.map((item) => (
+            {NAV_ITEMS.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
@@ -93,7 +81,6 @@ export function Navigation() {
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className={cn(
@@ -108,7 +95,6 @@ export function Navigation() {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
         <div
           id="mobile-nav"
           role="region"
@@ -120,11 +106,11 @@ export function Navigation() {
           )}
         >
           <div className="flex flex-col gap-4 pt-4">
-            {navItems.map((item) => (
+            {NAV_ITEMS.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                onClick={() => setIsOpen(false)}
+                onClick={closeMenu}
                 className={cn(
                   "text-base font-medium transition-colors py-2",
                   scrolled

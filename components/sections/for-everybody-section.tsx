@@ -4,6 +4,7 @@ import Image from "next/image"
 import { Heart, Users2, Leaf, Stethoscope } from "lucide-react"
 import { useInView } from "@/hooks/use-in-view"
 import type { DeliveryArea } from "@/lib/types"
+import { DOT_PATTERN_SM, DOT_PATTERN_SIZE_MD } from "@/lib/constants"
 
 const deliveryAreas: DeliveryArea[] = [
   {
@@ -40,6 +41,12 @@ const deliveryAreas: DeliveryArea[] = [
   },
 ]
 
+const genderAchievements = [
+  "28% to 52% women in senior management",
+  "2025 Changemaker of Distinction Award",
+  "International Gender Champion",
+]
+
 export function ForEverybodySection() {
   const headerAnim = useInView()
   const imageAnim = useInView(0.2)
@@ -53,7 +60,7 @@ export function ForEverybodySection() {
 
       <div className="relative container mx-auto px-6 lg:px-20 py-40 lg:py-56">
         {/* Section Header */}
-        <div 
+        <div
           ref={headerAnim.ref}
           className={`max-w-6xl mb-24 transition-all duration-1200 ${headerAnim.inView ? 'opacity-100' : 'opacity-0'}`}
         >
@@ -67,21 +74,21 @@ export function ForEverybodySection() {
               The Impact
             </p>
           </div>
-          
+
           <div className="overflow-hidden">
             <h2 className={`font-serif text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-foreground leading-[0.9] tracking-tight transition-all duration-1000 delay-200 ${headerAnim.inView ? 'translate-y-0' : 'translate-y-full'}`}>
               For
               <span className="block text-secondary italic">Everybody</span>
             </h2>
           </div>
-          
+
           <p className={`text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mt-12 font-light transition-all duration-1000 delay-500 ${headerAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             How leadership is judged by what it delivers for people.
           </p>
         </div>
 
         {/* Cinematic Hero Image */}
-        <div 
+        <div
           ref={imageAnim.ref}
           className={`relative mb-40 transition-all duration-1500 ${imageAnim.inView ? 'opacity-100' : 'opacity-0'}`}
         >
@@ -96,13 +103,11 @@ export function ForEverybodySection() {
                 sizes="100vw"
               />
             </div>
-            
+
             <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30" />
-            
           </div>
 
-          {/* Content overlay */}
           <div className="absolute inset-0 flex items-center px-8 lg:px-20">
             <div className="max-w-2xl">
               <div className="flex items-center gap-4 mb-6">
@@ -120,7 +125,6 @@ export function ForEverybodySection() {
             </div>
           </div>
 
-          {/* Frame accents */}
           <div className="absolute top-[10%] left-8 w-16 h-16 border-l-2 border-t-2 border-white/20" />
           <div className="absolute bottom-[10%] right-8 w-16 h-16 border-r-2 border-b-2 border-white/20" />
         </div>
@@ -157,13 +161,13 @@ export function ForEverybodySection() {
         </div>
 
         {/* Gender as Proof */}
-        <div 
+        <div
           ref={genderAnim.ref}
           className="grid lg:grid-cols-12 gap-20 items-center mb-40"
         >
           <div className={`lg:col-span-6 transition-all duration-1000 ${genderAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
             <div className="relative mb-8">
-              <span className="text-[150px] font-serif text-foreground/[0.03] absolute -top-20 -left-4 leading-none select-none">04</span>
+              <span className="text-[150px] font-serif text-foreground/[0.03] absolute -top-20 -left-4 leading-none select-none" aria-hidden="true">04</span>
               <h3 className="font-serif text-4xl md:text-5xl text-foreground leading-[1.1] relative">
                 Gender as Proof
                 <span className="block text-secondary/70">of Leadership</span>
@@ -188,28 +192,24 @@ export function ForEverybodySection() {
               The same commitment to merit, inclusion, and institutional reform
               would define his approach to the UN Secretariat.
             </p>
-            
+
             <ul className="space-y-5">
-              {[
-                "28% to 52% women in senior management",
-                "2025 Changemaker of Distinction Award",
-                "International Gender Champion"
-              ].map((item, i) => (
-                <li 
-                  key={i} 
+              {genderAchievements.map((item, i) => (
+                <li
+                  key={item}
                   className={`flex items-center gap-4 text-foreground transition-all duration-500 ${genderAnim.inView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}
                   style={{ transitionDelay: genderAnim.inView ? `${i * 100 + 300}ms` : '0ms' }}
                 >
-                  <span className="w-3 h-3 bg-secondary" />
+                  <span className="w-3 h-3 bg-secondary flex-shrink-0" />
                   <span>{item}</span>
                 </li>
               ))}
             </ul>
           </div>
-          
+
           <div className={`lg:col-span-6 transition-all duration-1200 delay-300 ${genderAnim.inView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
             <div className="bg-secondary/10 p-12 lg:p-16 relative">
-              <span className="text-8xl font-serif text-secondary/10 absolute top-4 right-4 leading-none">&ldquo;</span>
+              <span className="text-8xl font-serif text-secondary/10 absolute top-4 right-4 leading-none" aria-hidden="true">&ldquo;</span>
               <blockquote className="font-serif text-2xl md:text-3xl text-foreground italic leading-relaxed relative">
                 The Marie Sklodowska-Curie Programme is not charity. It is
                 an investment in the talent the world cannot afford to waste.
@@ -221,25 +221,25 @@ export function ForEverybodySection() {
           </div>
         </div>
 
-        {/* Why This Matters - Cinematic CTA */}
-        <div 
+        {/* Why This Matters */}
+        <div
           ref={ctaAnim.ref}
           className={`relative transition-all duration-1200 ${ctaAnim.inView ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
         >
           <div className="bg-primary text-primary-foreground p-16 lg:p-28 relative overflow-hidden">
-            <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)', backgroundSize: '40px 40px' }} />
-            
+            <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: DOT_PATTERN_SM, backgroundSize: DOT_PATTERN_SIZE_MD }} />
+
             <div className="relative max-w-4xl">
               <span className="inline-flex items-center gap-4 text-secondary text-[10px] uppercase tracking-[0.4em] font-medium mb-10">
                 <span className="w-8 h-px bg-secondary" />
                 The Connection
               </span>
-              
+
               <h3 className="font-serif text-4xl md:text-5xl lg:text-6xl mb-12 leading-[1.1]">
                 Why This Matters
                 <span className="block text-secondary">to Member States</span>
               </h3>
-              
+
               <p className="text-xl md:text-2xl leading-relaxed opacity-80 mb-8 max-w-3xl font-light">
                 Better outcomes for people also mean stronger, more useful
                 multilateralism for states. When the UN delivers tangible
@@ -247,14 +247,14 @@ export function ForEverybodySection() {
                 response—it earns the credibility to convene on harder
                 questions.
               </p>
-              
+
               <p className="text-lg leading-relaxed opacity-70 mb-8 max-w-3xl">
                 Member states invest in the UN because they expect a return:
                 problems solved, crises managed, collective goods provided. A
                 Secretary-General who understands operational delivery—not
                 just diplomatic representation—can make that investment pay.
               </p>
-              
+
               <p className="text-lg leading-relaxed opacity-60 max-w-3xl">
                 Grossi is not a narrow technical candidate. His record proves
                 that diplomatic skill and humanitarian impact are not

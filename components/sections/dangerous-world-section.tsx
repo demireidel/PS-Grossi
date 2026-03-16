@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { Shield, AlertTriangle, Compass } from "lucide-react"
 import type { Experience } from "@/lib/types"
+import { DOT_PATTERN_SM, DOT_PATTERN_SIZE_SM } from "@/lib/constants"
 
 const experiences: Experience[] = [
   {
@@ -30,7 +31,7 @@ export function DangerousWorldSection() {
       className="py-32 lg:py-48 bg-muted relative overflow-hidden"
     >
       <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-transparent to-background/50" />
-      
+
       <div className="container mx-auto px-6 lg:px-20 relative">
         {/* Section Header */}
         <div className="max-w-5xl mb-24">
@@ -64,11 +65,11 @@ export function DangerousWorldSection() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/40" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-black/30" />
-          
+
           {/* Letterbox */}
           <div className="absolute top-0 left-0 right-0 h-[6%] bg-black" />
           <div className="absolute bottom-0 left-0 right-0 h-[6%] bg-black" />
-          
+
           <div className="absolute bottom-[10%] left-0 right-0 px-8 lg:px-16">
             <div className="flex items-center gap-4 mb-4">
               <span className="w-12 h-px bg-secondary" />
@@ -79,7 +80,7 @@ export function DangerousWorldSection() {
               is essential.
             </p>
           </div>
-          
+
           {/* Frame accents */}
           <div className="absolute top-[10%] left-8 w-16 h-16 border-l-2 border-t-2 border-white/20" />
           <div className="absolute top-[10%] right-8 w-16 h-16 border-r-2 border-t-2 border-white/20" />
@@ -215,25 +216,25 @@ export function DangerousWorldSection() {
 
         {/* Why This Fits */}
         <div className="bg-foreground text-background p-16 lg:p-24 relative overflow-hidden film-grain">
-          <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)', backgroundSize: '32px 32px' }} />
-          
+          <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: DOT_PATTERN_SM, backgroundSize: DOT_PATTERN_SIZE_SM }} />
+
           <div className="relative max-w-4xl">
             <span className="inline-flex items-center gap-4 text-secondary text-[10px] uppercase tracking-[0.4em] font-medium mb-10">
               <span className="w-8 h-px bg-secondary" />
               The Fit
             </span>
-            
+
             <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl mb-10 leading-[1.1]">
               The Grossi <span className="text-secondary italic">Doctrine</span>
             </h3>
-            
+
             <p className="text-xl md:text-2xl leading-relaxed opacity-80 mb-8 font-light">
               &ldquo;Whoever holds the position must speak with those who
               initiated the attacks. That&apos;s the first thing I did: speak
               with Putin, and many people criticized me for it. But who else am
               I going to talk to?&rdquo;
             </p>
-            
+
             <p className="text-lg leading-relaxed opacity-70 mb-8">
               This is the Grossi doctrine: go where the crisis is, talk to
               whoever is relevant, maintain impartiality without indifference,
@@ -241,7 +242,7 @@ export function DangerousWorldSection() {
               bombardment, he went personally. When Iran closed doors, he found
               a way back in.
             </p>
-            
+
             <p className="text-lg leading-relaxed opacity-70 mb-12">
               On accusations of bias: &ldquo;Some say I&apos;m a Zionist puppet,
               others say the opposite. One day the pro-Ukrainians claim I&apos;m
@@ -249,7 +250,7 @@ export function DangerousWorldSection() {
               the pro-Russians say I&apos;m on the other side. If the price is
               criticism, so be it.&rdquo;
             </p>
-            
+
             <blockquote className="relative pl-8 border-l-2 border-secondary">
               <p className="text-2xl md:text-3xl font-serif italic leading-[1.3]">
                 &ldquo;My job requires dialogue with everyone. Active diplomacy
