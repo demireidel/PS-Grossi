@@ -4,7 +4,7 @@
 Personal website for Grossi. Static landing page, no backend.
 
 ## Tech Stack
-- Next.js 15 (App Router)
+- Next.js 16 (App Router)
 - TypeScript (strict mode)
 - Tailwind CSS 4
 - shadcn/ui components
