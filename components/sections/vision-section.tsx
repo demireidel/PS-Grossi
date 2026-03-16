@@ -2,6 +2,7 @@ import Image from "next/image"
 import { Target, Users, Gauge, RefreshCw } from "lucide-react"
 import type { Principle } from "@/lib/types"
 import { SectionHeader } from "@/components/section-header"
+import { Blockquote } from "@/components/blockquote"
 import { DOT_PATTERN_SM, DOT_PATTERN_SIZE_SM, DOT_PATTERN_SIZE_LG } from "@/lib/constants"
 
 const principles: Principle[] = [
@@ -50,7 +51,7 @@ export function VisionSection() {
             <h3 className="font-serif text-2xl md:text-3xl text-foreground mb-6">
               &ldquo;The UN Has Forgotten Its Purpose&rdquo;
             </h3>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6">
               In Grossi&apos;s own words: &ldquo;If you read the Charter, you
               understand that the UN was created to prevent wars, to bring about
               peace... and this is not discussed. If you analyze the hotspots of
@@ -58,21 +59,21 @@ export function VisionSection() {
               denominator is the absence of the UN. It is not there. It does not
               act. And this can be remedied.&rdquo;
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6">
               After 40 years navigating international crises—from non-proliferation talks
               to Fukushima, from Tehran to Zaporizhzhia—Grossi sees a UN in
               profound crisis of credibility. The organization remains
               indispensable, but it has become reactive and distant from the
               conflicts that define our era.
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6">
               &ldquo;The UN is in a profound crisis of credibility,&rdquo; he
               states. The world is experiencing &ldquo;tremendous
               fragmentation&rdquo;: overlapping conflicts, weakened alliances,
               trade wars, and a growing number of countries desiring nuclear
               capabilities.
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
               &ldquo;The UN needs a secretary with boots in the mud—not one who
               comments from a distance. My conviction was forged through
               experience managing high-tension international crises.&rdquo;
@@ -97,7 +98,7 @@ export function VisionSection() {
             <h3 className="font-serif text-2xl md:text-3xl text-foreground mb-6">
               The Governing Doctrine
             </h3>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
               Early action. Impartial engagement. Practical delivery.
               Institutional renewal. Four principles that define what a working
               UN must embody.
@@ -108,7 +109,7 @@ export function VisionSection() {
             {principles.map((principle, index) => (
               <div
                 key={principle.title}
-                className="group p-10 lg:p-12 bg-card hover:bg-foreground transition-all duration-600 relative overflow-hidden"
+                className="group p-10 lg:p-12 bg-card hover:bg-foreground transition-[background-color] duration-600 relative overflow-hidden"
               >
                 <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-secondary/40 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-600 origin-left" />
                 <div className="flex items-start justify-between mb-8">
@@ -131,7 +132,7 @@ export function VisionSection() {
           <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: DOT_PATTERN_SM, backgroundSize: DOT_PATTERN_SIZE_SM }} />
 
           <div className="relative max-w-4xl">
-            <span className="inline-flex items-center gap-4 text-secondary text-[10px] uppercase tracking-[0.4em] font-medium mb-10">
+            <span className="inline-flex items-center gap-4 text-secondary text-[10px] uppercase tracking-[0.3em] font-medium mb-10">
               <span className="w-8 h-px bg-secondary" />
               The Stakes
             </span>
@@ -164,12 +165,10 @@ export function VisionSection() {
               conditions that most diplomats would consider impossible.
             </p>
 
-            <blockquote className="relative pl-8 border-l-2 border-secondary">
-              <p className="text-2xl md:text-3xl font-serif italic leading-[1.3]">
-                &ldquo;Active diplomacy must be deployed, and solutions proposed
-                as an impartial, but not indifferent, interlocutor.&rdquo;
-              </p>
-            </blockquote>
+            <Blockquote>
+              &ldquo;Active diplomacy must be deployed, and solutions proposed
+              as an impartial, but not indifferent, interlocutor.&rdquo;
+            </Blockquote>
           </div>
         </div>
       </div>

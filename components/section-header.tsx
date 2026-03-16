@@ -20,7 +20,7 @@ export const SectionHeader = forwardRef<HTMLDivElement, SectionHeaderProps>(
       <div
         ref={ref}
         className={`${isLarge ? "max-w-6xl mb-28" : "max-w-5xl mb-24"} ${
-          animated ? `transition-all duration-800 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}` : ""
+          animated ? `transition-[opacity,transform] duration-800 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}` : ""
         }`}
       >
         <div className="flex items-center gap-6 mb-8">

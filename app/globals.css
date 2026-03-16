@@ -139,9 +139,13 @@
   filter: saturate(0.92) brightness(0.96) contrast(1.04);
 }
 
-/* Cinematic aspect ratio */
+/* Cinematic aspect ratios */
 .aspect-cinema {
   aspect-ratio: 2.39 / 1;
+}
+
+.aspect-wide {
+  aspect-ratio: 21 / 9;
 }
 
 /* Selection styling */
@@ -220,7 +224,7 @@ html {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: goldShimmer 6s ease-in-out infinite;
+  animation: goldShimmer 6s ease-in-out 3;
 }
 
 @keyframes goldShimmer {
@@ -232,6 +236,11 @@ html {
 .glow-gold {
   box-shadow: 0 0 30px -5px oklch(0.62 0.14 65 / 0.15),
               0 0 60px -10px oklch(0.62 0.14 65 / 0.08);
+}
+
+/* Overlay text shadow for readability on images */
+.text-shadow-overlay {
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6), 0 2px 8px rgba(0,0,0,0.3);
 }
 
 /* Skip to content link */

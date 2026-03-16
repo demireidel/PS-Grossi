@@ -42,14 +42,14 @@ export function HeroSection() {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 lg:px-20 text-center">
         {/* Ornamental line */}
-        <div className={`flex items-center justify-center gap-6 mb-14 transition-all duration-800 delay-100 ${loaded ? "opacity-100" : "opacity-0"}`}>
-          <span className={`h-px bg-gradient-to-r from-transparent via-secondary/60 to-secondary/60 transition-all duration-800 delay-200 ${loaded ? "w-28" : "w-0"}`} />
-          <div className="w-1.5 h-1.5 rotate-45 border border-secondary/50 transition-all duration-800 delay-300" />
-          <span className={`h-px bg-gradient-to-l from-transparent via-secondary/60 to-secondary/60 transition-all duration-800 delay-200 ${loaded ? "w-28" : "w-0"}`} />
+        <div className={`flex items-center justify-center gap-6 mb-14 transition-[opacity,transform] duration-800 delay-100 ${loaded ? "opacity-100" : "opacity-0"}`}>
+          <span className={`h-px bg-gradient-to-r from-transparent via-secondary/60 to-secondary/60 transition-[opacity,transform] duration-800 delay-200 ${loaded ? "w-28" : "w-0"}`} />
+          <div className="w-1.5 h-1.5 rotate-45 border border-secondary/50 transition-[opacity,transform] duration-800 delay-300" />
+          <span className={`h-px bg-gradient-to-l from-transparent via-secondary/60 to-secondary/60 transition-[opacity,transform] duration-800 delay-200 ${loaded ? "w-28" : "w-0"}`} />
         </div>
 
         <div
-          className={`transition-all duration-800 delay-100 ${
+          className={`transition-[opacity,transform] duration-800 delay-100 ${
             loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
@@ -60,7 +60,7 @@ export function HeroSection() {
 
         <div className="overflow-hidden mb-8">
           <h1
-            className={`font-serif text-5xl md:text-7xl lg:text-8xl xl:text-9xl text-white font-normal leading-[0.85] tracking-tight text-shadow-premium transition-all duration-800 delay-200 ${
+            className={`font-serif text-5xl md:text-7xl lg:text-8xl xl:text-9xl text-white font-normal leading-[0.85] tracking-tight text-shadow-premium transition-[opacity,transform] duration-800 delay-200 ${
               loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-full"
             }`}
           >
@@ -71,7 +71,7 @@ export function HeroSection() {
 
         <div className="overflow-hidden">
           <p
-            className={`font-serif text-2xl md:text-4xl lg:text-5xl xl:text-6xl text-white/80 mb-14 tracking-wide transition-all duration-800 delay-400 ${
+            className={`font-serif text-2xl md:text-4xl lg:text-5xl xl:text-6xl text-white/80 mb-14 tracking-wide transition-[opacity,transform] duration-800 delay-400 ${
               loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
@@ -80,7 +80,7 @@ export function HeroSection() {
         </div>
 
         <p
-          className={`text-base md:text-lg lg:text-xl text-white/60 max-w-2xl mx-auto font-light leading-relaxed tracking-wide text-pretty transition-all duration-800 delay-500 ${
+          className={`text-base md:text-lg lg:text-xl text-white/60 max-w-2xl mx-auto font-light leading-relaxed tracking-wide text-pretty transition-[opacity,transform] duration-800 delay-500 ${
             loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
@@ -90,7 +90,7 @@ export function HeroSection() {
 
         {/* Subtle CTA hint */}
         <div
-          className={`mt-16 transition-all duration-800 delay-600 ${
+          className={`mt-16 transition-[opacity,transform] duration-800 delay-600 ${
             loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
@@ -106,7 +106,7 @@ export function HeroSection() {
 
       {/* Scroll Indicator */}
       <div
-        className={`absolute bottom-16 left-1/2 -translate-x-1/2 transition-all duration-800 delay-700 z-10 ${
+        className={`absolute bottom-16 left-1/2 -translate-x-1/2 transition-[opacity,transform] duration-800 delay-700 z-10 ${
           loaded ? "opacity-100" : "opacity-0"
         }`}
       >
@@ -123,19 +123,19 @@ export function HeroSection() {
       </div>
 
       {/* Corner accents - thinner, more refined */}
-      <div className={`absolute top-[6%] left-10 w-20 h-20 transition-all duration-800 delay-500 ${loaded ? "opacity-100" : "opacity-0"}`}>
+      <div className={`absolute top-[6%] left-10 w-20 h-20 transition-[opacity,transform] duration-800 delay-500 ${loaded ? "opacity-100" : "opacity-0"}`}>
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-white/15 to-transparent" />
         <div className="absolute top-0 left-0 w-px h-full bg-gradient-to-b from-white/15 to-transparent" />
       </div>
-      <div className={`absolute top-[6%] right-10 w-20 h-20 transition-all duration-800 delay-500 ${loaded ? "opacity-100" : "opacity-0"}`}>
+      <div className={`absolute top-[6%] right-10 w-20 h-20 transition-[opacity,transform] duration-800 delay-500 ${loaded ? "opacity-100" : "opacity-0"}`}>
         <div className="absolute top-0 right-0 w-full h-px bg-gradient-to-l from-white/15 to-transparent" />
         <div className="absolute top-0 right-0 w-px h-full bg-gradient-to-b from-white/15 to-transparent" />
       </div>
-      <div className={`absolute bottom-[6%] left-10 w-20 h-20 transition-all duration-800 delay-500 ${loaded ? "opacity-100" : "opacity-0"}`}>
+      <div className={`absolute bottom-[6%] left-10 w-20 h-20 transition-[opacity,transform] duration-800 delay-500 ${loaded ? "opacity-100" : "opacity-0"}`}>
         <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-white/15 to-transparent" />
         <div className="absolute bottom-0 left-0 w-px h-full bg-gradient-to-t from-white/15 to-transparent" />
       </div>
-      <div className={`absolute bottom-[6%] right-10 w-20 h-20 transition-all duration-800 delay-500 ${loaded ? "opacity-100" : "opacity-0"}`}>
+      <div className={`absolute bottom-[6%] right-10 w-20 h-20 transition-[opacity,transform] duration-800 delay-500 ${loaded ? "opacity-100" : "opacity-0"}`}>
         <div className="absolute bottom-0 right-0 w-full h-px bg-gradient-to-l from-white/15 to-transparent" />
         <div className="absolute bottom-0 right-0 w-px h-full bg-gradient-to-t from-white/15 to-transparent" />
       </div>

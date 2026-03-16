@@ -36,7 +36,7 @@ export function Navigation() {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-600",
+        "fixed top-0 left-0 right-0 z-50 transition-[background-color,border-color,box-shadow] duration-600",
         scrolled
           ? "bg-background/80 backdrop-blur-2xl backdrop-saturate-150 border-b border-border/30 shadow-[0_1px_30px_-10px_rgba(0,0,0,0.08)]"
           : "bg-gradient-to-b from-black/50 via-black/20 to-transparent"
@@ -47,7 +47,7 @@ export function Navigation() {
           <Link href="/" className="group flex flex-col">
             <span
               className={cn(
-                "font-serif text-xl font-semibold tracking-tight transition-all duration-400",
+                "font-serif text-xl font-semibold tracking-tight transition-colors duration-400",
                 scrolled ? "text-foreground" : "text-white"
               )}
             >
@@ -55,7 +55,7 @@ export function Navigation() {
             </span>
             <span
               className={cn(
-                "text-[10px] uppercase tracking-[0.25em] transition-all duration-400",
+                "text-[10px] uppercase tracking-[0.25em] transition-colors duration-400",
                 scrolled ? "text-muted-foreground" : "text-white/60"
               )}
             >
@@ -69,7 +69,7 @@ export function Navigation() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "relative text-[11px] uppercase tracking-[0.15em] font-medium transition-all duration-400 py-2",
+                  "relative text-[11px] uppercase tracking-[0.15em] font-medium transition-colors duration-400 py-2",
                   scrolled
                     ? "text-foreground/50 hover:text-foreground"
                     : "text-white/50 hover:text-white",
@@ -101,7 +101,7 @@ export function Navigation() {
           aria-label="Mobile navigation"
           aria-hidden={!isOpen}
           className={cn(
-            "lg:hidden overflow-hidden transition-all duration-300",
+            "lg:hidden overflow-hidden transition-[max-height,padding] duration-300",
             isOpen ? "max-h-96 pb-6" : "max-h-0"
           )}
         >

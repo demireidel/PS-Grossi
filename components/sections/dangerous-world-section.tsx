@@ -2,6 +2,7 @@ import Image from "next/image"
 import { Shield, AlertTriangle, Compass } from "lucide-react"
 import type { Experience } from "@/lib/types"
 import { SectionHeader } from "@/components/section-header"
+import { Blockquote } from "@/components/blockquote"
 import { DOT_PATTERN_SM, DOT_PATTERN_SIZE_SM } from "@/lib/constants"
 
 const experiences: Experience[] = [
@@ -58,12 +59,12 @@ export function DangerousWorldSection() {
           <div className="absolute top-0 left-0 right-0 h-[6%] bg-black" />
           <div className="absolute bottom-0 left-0 right-0 h-[6%] bg-black" />
 
-          <div className="absolute bottom-[10%] left-0 right-0 px-8 lg:px-16">
+          <div className="absolute bottom-[10%] left-0 right-0 px-8 lg:px-20">
             <div className="flex items-center gap-4 mb-4">
               <span className="w-12 h-px bg-secondary" />
-              <span className="text-white/50 text-[10px] uppercase tracking-[0.3em]">On the Ground</span>
+              <span className="text-white/60 text-[10px] uppercase tracking-[0.3em] text-shadow-overlay">On the Ground</span>
             </div>
-            <p className="text-white/90 text-xl md:text-2xl max-w-2xl font-light leading-relaxed">
+            <p className="text-white/90 text-xl md:text-2xl max-w-2xl font-light leading-relaxed text-shadow-overlay">
               When crisis meets diplomacy, experience is not optional&mdash;it
               is essential.
             </p>
@@ -87,8 +88,8 @@ export function DangerousWorldSection() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
             <div className="absolute bottom-6 left-6 right-6">
-              <p className="text-[10px] uppercase tracking-[0.3em] text-white/50 mb-1">Crisis Response</p>
-              <p className="text-sm text-white/90 font-medium">Frontline Diplomacy in Action</p>
+              <p className="text-[10px] uppercase tracking-[0.3em] text-white/60 text-shadow-overlay mb-1">Crisis Response</p>
+              <p className="text-sm text-white/90 font-medium text-shadow-overlay">Frontline Diplomacy in Action</p>
             </div>
           </div>
           <div className="relative aspect-[4/3] overflow-hidden group">
@@ -102,8 +103,8 @@ export function DangerousWorldSection() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
             <div className="absolute bottom-6 left-6 right-6">
-              <p className="text-[10px] uppercase tracking-[0.3em] text-white/50 mb-1">Iran</p>
-              <p className="text-sm text-white/90 font-medium">Nuclear Negotiations, Tehran</p>
+              <p className="text-[10px] uppercase tracking-[0.3em] text-white/60 text-shadow-overlay mb-1">Iran</p>
+              <p className="text-sm text-white/90 font-medium text-shadow-overlay">Nuclear Negotiations, Tehran</p>
             </div>
           </div>
         </div>
@@ -114,28 +115,28 @@ export function DangerousWorldSection() {
             <h3 className="font-serif text-2xl md:text-3xl text-foreground mb-6">
               &ldquo;A Fragmented and Volatile World&rdquo;
             </h3>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6">
               Grossi&apos;s assessment is unflinching: &ldquo;There is a revival
               of nuclear deterrence. Nuclear-weapon states are maintaining and
               even modernizing their arsenals. Strong proliferation pressures
               are emerging in countries considering acquiring nuclear
               capabilities as a deterrent.&rdquo;
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6">
               On Putin&apos;s nuclear threats: &ldquo;I haven&apos;t registered
               any threats of a nuclear attack. What has happened is statements
               warning that, in the event of an existential threat, nuclear
               weapons are available. This is actually the doctrine of nuclear
               weapons use for almost all countries.&rdquo;
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6">
               On Zaporizhzhia: &ldquo;It remains extremely fragile, very
               dangerous. We must not forget that it is a nuclear plant located
               in a combat zone. On the front line. In territory that Russia has
               fully occupied.&rdquo; The plant was Europe&apos;s largest—now
               relying on portable diesel generators.
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
               Grossi has received death threats for his work. &ldquo;The death
               threats have been traumatic,&rdquo; he admits. &ldquo;I continue
               with personal security because experts consider the threats
@@ -167,7 +168,7 @@ export function DangerousWorldSection() {
 
         {/* Grossi's Career */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-[2px] bg-border mb-24">
-          <div className="group p-12 lg:p-16 bg-card hover:bg-foreground transition-all duration-600 relative overflow-hidden">
+          <div className="group p-10 lg:p-12 bg-card hover:bg-foreground transition-[background-color] duration-600 relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-secondary/40 via-secondary/10 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-600 origin-left" />
             <p className="text-5xl md:text-6xl font-serif text-secondary mb-6">40</p>
             <p className="text-foreground group-hover:text-background font-medium mb-3 transition-colors duration-400">
@@ -179,7 +180,7 @@ export function DangerousWorldSection() {
               the IAEA. PhD in International Relations from Geneva.
             </p>
           </div>
-          <div className="group p-12 lg:p-16 bg-card hover:bg-foreground transition-all duration-600 relative overflow-hidden">
+          <div className="group p-10 lg:p-12 bg-card hover:bg-foreground transition-[background-color] duration-600 relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-secondary/40 via-secondary/10 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-600 origin-left" />
             <p className="text-5xl md:text-6xl font-serif text-secondary mb-6">2019</p>
             <p className="text-foreground group-hover:text-background font-medium mb-3 transition-colors duration-400">
@@ -191,7 +192,7 @@ export function DangerousWorldSection() {
               Re-elected for a second term.
             </p>
           </div>
-          <div className="group p-12 lg:p-16 bg-card hover:bg-foreground transition-all duration-600 relative overflow-hidden">
+          <div className="group p-10 lg:p-12 bg-card hover:bg-foreground transition-[background-color] duration-600 relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-secondary/40 via-secondary/10 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-600 origin-left" />
             <p className="text-5xl md:text-6xl font-serif text-secondary mb-6">1st</p>
             <p className="text-foreground group-hover:text-background font-medium mb-3 transition-colors duration-400">
@@ -210,7 +211,7 @@ export function DangerousWorldSection() {
           <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: DOT_PATTERN_SM, backgroundSize: DOT_PATTERN_SIZE_SM }} />
 
           <div className="relative max-w-4xl">
-            <span className="inline-flex items-center gap-4 text-secondary text-[10px] uppercase tracking-[0.4em] font-medium mb-10">
+            <span className="inline-flex items-center gap-4 text-secondary text-[10px] uppercase tracking-[0.3em] font-medium mb-10">
               <span className="w-8 h-px bg-secondary" />
               The Fit
             </span>
@@ -242,13 +243,11 @@ export function DangerousWorldSection() {
               criticism, so be it.&rdquo;
             </p>
 
-            <blockquote className="relative pl-8 border-l-2 border-secondary">
-              <p className="text-2xl md:text-3xl font-serif italic leading-[1.3]">
-                &ldquo;My job requires dialogue with everyone. Active diplomacy
-                must be deployed, and solutions proposed as an impartial, but
-                not indifferent, interlocutor.&rdquo;
-              </p>
-            </blockquote>
+            <Blockquote>
+              &ldquo;My job requires dialogue with everyone. Active diplomacy
+              must be deployed, and solutions proposed as an impartial, but
+              not indifferent, interlocutor.&rdquo;
+            </Blockquote>
           </div>
         </div>
       </div>

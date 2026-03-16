@@ -101,7 +101,7 @@ export function PolicyPlatformSection() {
           {policyAreas.map((area, index) => (
             <div
               key={area.title}
-              className={`group p-10 lg:p-12 bg-card hover:bg-foreground transition-all duration-600 relative overflow-hidden ${
+              className={`group p-10 lg:p-12 bg-card hover:bg-foreground transition-[opacity,transform,background-color] duration-600 relative overflow-hidden ${
                 inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
