@@ -1,7 +1,6 @@
 "use client"
 
 import { useState, useEffect, useCallback, useMemo } from "react"
-import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { NAV_ITEMS, SCROLL_THRESHOLD_NAV, DOT_PATTERN_SM, DOT_PATTERN_SIZE_SM } from "@/lib/constants"
@@ -55,7 +54,11 @@ export function Navigation() {
       >
         <nav className="container mx-auto px-6 md:px-12 lg:px-20" aria-label="Main navigation">
           <div className="flex items-center justify-between h-[76px]">
-            <Link href="/" className="group flex flex-col">
+            <a
+              href="#"
+              onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }) }}
+              className="group flex flex-col"
+            >
               <span
                 className={cn(
                   "font-serif text-xl font-semibold tracking-tight transition-colors duration-400",
@@ -72,7 +75,7 @@ export function Navigation() {
               >
                 For Secretary-General
               </span>
-            </Link>
+            </a>
 
             <div className="hidden lg:flex items-center gap-12">
               {NAV_ITEMS.map((item) => {
