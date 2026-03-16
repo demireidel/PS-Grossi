@@ -32,7 +32,7 @@ const experiences: Experience[] = [
 
 export function DangerousWorldSection() {
   const headerAnim = useInView()
-  const heroAnim = useInView()
+  const heroAnim = useInView(0.05)
   const imagesAnim = useInView()
   const stakesAnim = useInView()
   const careerAnim = useInView()
@@ -59,26 +59,29 @@ export function DangerousWorldSection() {
         {/* Hero Image - Cinematic */}
         <div
           ref={heroAnim.ref}
-          className={`relative aspect-[16/9] lg:aspect-cinema mb-32 overflow-hidden clip-reveal ${heroAnim.inView ? 'revealed' : ''}`}
+          className="relative aspect-[16/9] lg:aspect-cinema mb-32 overflow-hidden bg-black"
         >
-          <Image
-            src="/images/grossi-zaporizhzhia.jpg"
-            alt="IAEA Director General Rafael Grossi wearing combat helmet at the frontline crossing near Zaporizhzhia Nuclear Power Plant, September 2024"
-            fill
-            quality={85}
-            placeholder="blur"
-            blurDataURL={BLUR_DATA_URL}
-            className="object-cover"
-            sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/40" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-black/30" />
+          {/* Image with clip-reveal */}
+          <div className={`absolute inset-0 clip-reveal ${heroAnim.inView ? 'revealed' : ''}`}>
+            <Image
+              src="/images/grossi-zaporizhzhia.jpg"
+              alt="IAEA Director General Rafael Grossi wearing combat helmet at the frontline crossing near Zaporizhzhia Nuclear Power Plant, September 2024"
+              fill
+              quality={85}
+              placeholder="blur"
+              blurDataURL={BLUR_DATA_URL}
+              className="object-cover"
+              sizes="100vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/40" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-black/30" />
+          </div>
 
           {/* Letterbox */}
-          <div className="absolute top-0 left-0 right-0 h-[6%] bg-black" />
-          <div className="absolute bottom-0 left-0 right-0 h-[6%] bg-black" />
+          <div className="absolute top-0 left-0 right-0 h-[6%] bg-black z-10" />
+          <div className="absolute bottom-0 left-0 right-0 h-[6%] bg-black z-10" />
 
-          <div className="absolute bottom-[10%] left-0 right-0 px-8 lg:px-20">
+          <div className={`absolute bottom-[10%] left-0 right-0 px-8 lg:px-20 z-10 transition-[opacity,transform] duration-800 delay-500 ${heroAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
             <div className="flex items-center gap-4 mb-4">
               <span className="w-12 h-px bg-secondary" />
               <span className="text-white/60 text-[10px] uppercase tracking-[0.3em] text-shadow-overlay">On the Ground</span>
@@ -90,8 +93,8 @@ export function DangerousWorldSection() {
           </div>
 
           {/* Frame accents */}
-          <div className="absolute top-[10%] left-8 w-16 h-16 border-l-2 border-t-2 border-white/20" />
-          <div className="absolute top-[10%] right-8 w-16 h-16 border-r-2 border-t-2 border-white/20" />
+          <div className="absolute top-[10%] left-8 w-16 h-16 border-l-2 border-t-2 border-white/20 z-10" />
+          <div className="absolute top-[10%] right-8 w-16 h-16 border-r-2 border-t-2 border-white/20 z-10" />
         </div>
 
         {/* Secondary Image - Crisis Diplomacy */}
