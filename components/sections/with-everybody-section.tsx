@@ -56,10 +56,10 @@ export function WithEverybodySection() {
         {/* Section Header */}
         <div
           ref={headerAnim.ref}
-          className={`max-w-6xl mb-32 transition-all duration-1200 ${headerAnim.inView ? 'opacity-100' : 'opacity-0'}`}
+          className={`max-w-6xl mb-32 transition-all duration-800 ${headerAnim.inView ? 'opacity-100' : 'opacity-0'}`}
         >
           <div className="flex items-center gap-6 mb-10">
-            <span className={`h-px bg-secondary transition-all duration-1000 delay-300 ${headerAnim.inView ? 'w-20' : 'w-0'}`} />
+            <span className={`h-px bg-secondary transition-all duration-800 delay-300 ${headerAnim.inView ? 'w-20' : 'w-0'}`} />
             <p className="text-secondary uppercase tracking-[0.4em] text-[10px] font-medium">
               Section 03
             </p>
@@ -70,13 +70,13 @@ export function WithEverybodySection() {
           </div>
 
           <div className="overflow-hidden">
-            <h2 className={`font-serif text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-foreground leading-[0.9] tracking-tight transition-all duration-1000 delay-200 ${headerAnim.inView ? 'translate-y-0' : 'translate-y-full'}`}>
+            <h2 className={`font-serif text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-foreground leading-[0.9] tracking-tight transition-all duration-800 delay-200 ${headerAnim.inView ? 'translate-y-0' : 'translate-y-full'}`}>
               With
               <span className="block text-secondary italic">Everybody</span>
             </h2>
           </div>
 
-          <p className={`text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mt-12 font-light transition-all duration-1000 delay-500 ${headerAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <p className={`text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mt-12 font-light transition-all duration-800 delay-500 ${headerAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             How impartial diplomacy works in a divided world.
           </p>
         </div>
@@ -87,7 +87,7 @@ export function WithEverybodySection() {
           className="grid lg:grid-cols-12 gap-20 mb-40"
         >
           {/* Left Column - Dual Images */}
-          <div className={`lg:col-span-5 transition-all duration-1200 ${contentAnim.inView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}>
+          <div className={`lg:col-span-5 transition-all duration-800 ${contentAnim.inView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}>
             <div className="lg:sticky lg:top-32 space-y-6">
               <div className="relative aspect-[4/3] overflow-hidden group">
                 <Image
@@ -129,9 +129,9 @@ export function WithEverybodySection() {
 
           {/* Right Column - Content */}
           <div className="lg:col-span-7 space-y-20">
-            <div className={`transition-all duration-1000 delay-300 ${contentAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+            <div className={`transition-all duration-800 delay-300 ${contentAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
               <div className="relative mb-8">
-                <span className="text-[150px] font-serif text-foreground/[0.03] absolute -top-20 -left-4 leading-none select-none" aria-hidden="true">03</span>
+                <span className="text-[150px] font-serif text-foreground/[0.08] absolute -top-20 -left-4 leading-none select-none" aria-hidden="true">03</span>
                 <h3 className="font-serif text-4xl md:text-5xl text-foreground leading-[1.1] relative">
                   Impartiality as
                   <span className="block text-secondary/70">Effectiveness</span>
@@ -194,28 +194,28 @@ export function WithEverybodySection() {
 
         {/* Track Record */}
         <div ref={recordAnim.ref} className="mb-40">
-          <div className={`text-center max-w-3xl mx-auto mb-20 transition-all duration-1000 ${recordAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+          <div className={`text-center max-w-3xl mx-auto mb-20 transition-all duration-800 ${recordAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
             <span className="text-secondary text-[10px] uppercase tracking-[0.4em] font-medium mb-6 block">Proven Track Record</span>
             <h3 className="font-serif text-4xl md:text-5xl text-foreground leading-[1.1]">
               Results Speak Louder
             </h3>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-px bg-border/50">
+          <div className="grid md:grid-cols-2 gap-[2px] bg-border">
             {trackRecords.map((record, index) => (
               <div
                 key={record.title}
-                className={`group p-12 lg:p-16 bg-muted hover:bg-secondary transition-all duration-700 relative overflow-hidden ${recordAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'}`}
+                className={`group p-12 lg:p-16 bg-muted hover:bg-foreground transition-all duration-600 relative overflow-hidden ${recordAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'}`}
                 style={{ transitionDelay: recordAnim.inView ? `${index * 100}ms` : '0ms' }}
               >
-                <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-secondary/30 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
-                <span className="text-6xl font-serif text-foreground/[0.04] group-hover:text-secondary-foreground/10 transition-colors duration-500 block mb-6" aria-hidden="true">
+                <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-secondary/40 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-600 origin-left" />
+                <span className="text-6xl font-serif text-foreground/[0.12] group-hover:text-background/20 transition-colors duration-400 block mb-6" aria-hidden="true">
                   0{index + 1}
                 </span>
-                <h4 className="font-serif text-2xl text-foreground group-hover:text-secondary-foreground mb-4 transition-colors duration-500">
+                <h4 className="font-serif text-2xl text-foreground group-hover:text-background mb-4 transition-colors duration-400">
                   {record.title}
                 </h4>
-                <p className="text-muted-foreground group-hover:text-secondary-foreground/70 leading-relaxed transition-colors duration-500">
+                <p className="text-muted-foreground group-hover:text-background/70 leading-relaxed transition-colors duration-400">
                   {record.description}
                 </p>
               </div>
@@ -226,7 +226,7 @@ export function WithEverybodySection() {
         {/* Why This Is UN Leadership */}
         <div
           ref={ctaAnim.ref}
-          className={`relative transition-all duration-1200 ${ctaAnim.inView ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
+          className={`relative transition-all duration-800 ${ctaAnim.inView ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
         >
           <div className="bg-secondary text-secondary-foreground p-16 lg:p-28 relative overflow-hidden">
             <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: DOT_PATTERN_SM, backgroundSize: DOT_PATTERN_SIZE_MD }} />

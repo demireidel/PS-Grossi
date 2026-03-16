@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { Shield, AlertTriangle, Compass } from "lucide-react"
 import type { Experience } from "@/lib/types"
+import { SectionHeader } from "@/components/section-header"
 import { DOT_PATTERN_SM, DOT_PATTERN_SIZE_SM } from "@/lib/constants"
 
 const experiences: Experience[] = [
@@ -33,28 +34,15 @@ export function DangerousWorldSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-transparent to-background/50" />
 
       <div className="container mx-auto px-6 lg:px-20 relative">
-        {/* Section Header */}
-        <div className="max-w-5xl mb-24">
-          <div className="flex items-center gap-6 mb-8">
-            <span className="h-px w-16 bg-secondary" />
-            <p className="text-secondary uppercase tracking-[0.3em] text-[10px] font-medium">
-              Section 02
-            </p>
-            <span className="text-secondary/30">/</span>
-            <p className="text-muted-foreground uppercase tracking-[0.2em] text-[10px]">
-              The Moment
-            </p>
-          </div>
-          <h2 className="font-serif text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-foreground mb-10 leading-[0.95] tracking-tight">
-            In a Dangerous <span className="text-secondary italic">World</span>
-          </h2>
-          <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed font-light max-w-3xl">
-            Why this moment requires crisis-tested leadership
-          </p>
-        </div>
+        <SectionHeader
+          number="02"
+          label="The Moment"
+          title={<>In a Dangerous <span className="text-secondary italic">World</span></>}
+          subtitle="Why this moment requires crisis-tested leadership"
+        />
 
         {/* Hero Image - Cinematic */}
-        <div className="relative aspect-cinema mb-24 overflow-hidden">
+        <div className="relative aspect-[16/9] lg:aspect-cinema mb-24 overflow-hidden">
           <Image
             src="/images/grossi-zaporizhzhia.jpg"
             alt="IAEA Director General Rafael Grossi wearing combat helmet at the frontline crossing near Zaporizhzhia Nuclear Power Plant, September 2024"
@@ -178,38 +166,38 @@ export function DangerousWorldSection() {
         </div>
 
         {/* Grossi's Career */}
-        <div className="grid md:grid-cols-3 gap-px bg-border mb-24">
-          <div className="group p-12 lg:p-16 bg-card hover:bg-foreground transition-all duration-700 relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-secondary/40 via-secondary/10 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
+        <div className="grid md:grid-cols-3 gap-[2px] bg-border mb-24">
+          <div className="group p-12 lg:p-16 bg-card hover:bg-foreground transition-all duration-600 relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-secondary/40 via-secondary/10 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-600 origin-left" />
             <p className="text-5xl md:text-6xl font-serif text-secondary mb-6">40</p>
-            <p className="text-foreground group-hover:text-background font-medium mb-3 transition-colors duration-500">
+            <p className="text-foreground group-hover:text-background font-medium mb-3 transition-colors duration-400">
               Years in Diplomacy
             </p>
-            <p className="text-muted-foreground group-hover:text-background/60 text-sm leading-relaxed transition-colors duration-500">
+            <p className="text-muted-foreground group-hover:text-background/60 text-sm leading-relaxed transition-colors duration-400">
               Joined Argentina&apos;s Foreign Ministry in 1985. Ambassador to
               Austria. Chief of Cabinet at OPCW. First Latin American to lead
               the IAEA. PhD in International Relations from Geneva.
             </p>
           </div>
-          <div className="group p-12 lg:p-16 bg-card hover:bg-foreground transition-all duration-700 relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-secondary/40 via-secondary/10 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
+          <div className="group p-12 lg:p-16 bg-card hover:bg-foreground transition-all duration-600 relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-secondary/40 via-secondary/10 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-600 origin-left" />
             <p className="text-5xl md:text-6xl font-serif text-secondary mb-6">2019</p>
-            <p className="text-foreground group-hover:text-background font-medium mb-3 transition-colors duration-500">
+            <p className="text-foreground group-hover:text-background font-medium mb-3 transition-colors duration-400">
               IAEA Director General
             </p>
-            <p className="text-muted-foreground group-hover:text-background/60 text-sm leading-relaxed transition-colors duration-500">
+            <p className="text-muted-foreground group-hover:text-background/60 text-sm leading-relaxed transition-colors duration-400">
               Elected December 2019. Led the agency through COVID, the Ukraine
               war, Iran tensions, and the return of nuclear deterrence rhetoric.
               Re-elected for a second term.
             </p>
           </div>
-          <div className="group p-12 lg:p-16 bg-card hover:bg-foreground transition-all duration-700 relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-secondary/40 via-secondary/10 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
+          <div className="group p-12 lg:p-16 bg-card hover:bg-foreground transition-all duration-600 relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-secondary/40 via-secondary/10 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-600 origin-left" />
             <p className="text-5xl md:text-6xl font-serif text-secondary mb-6">1st</p>
-            <p className="text-foreground group-hover:text-background font-medium mb-3 transition-colors duration-500">
+            <p className="text-foreground group-hover:text-background font-medium mb-3 transition-colors duration-400">
               Latin American IAEA Chief
             </p>
-            <p className="text-muted-foreground group-hover:text-background/60 text-sm leading-relaxed transition-colors duration-500">
+            <p className="text-muted-foreground group-hover:text-background/60 text-sm leading-relaxed transition-colors duration-400">
               First from the region since the agency&apos;s founding in 1957.
               Also first to serve two consecutive terms as president of the
               Nuclear Suppliers Group.

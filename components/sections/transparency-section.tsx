@@ -62,7 +62,7 @@ export function TransparencySection() {
         {/* Section Header */}
         <div
           ref={headerAnim.ref}
-          className={`max-w-6xl mb-24 transition-all duration-1200 ${headerAnim.inView ? 'opacity-100' : 'opacity-0'}`}
+          className={`max-w-6xl mb-24 transition-all duration-800 ${headerAnim.inView ? 'opacity-100' : 'opacity-0'}`}
         >
           <div className="flex items-center gap-6 mb-10">
             <span className={`h-px bg-secondary transition-all duration-1000 delay-300 ${headerAnim.inView ? 'w-20' : 'w-0'}`} />
@@ -90,9 +90,9 @@ export function TransparencySection() {
         {/* Cinematic Hero Image */}
         <div
           ref={imageAnim.ref}
-          className={`relative mb-40 transition-all duration-1500 ${imageAnim.inView ? 'opacity-100' : 'opacity-0'}`}
+          className={`relative mb-40 transition-all duration-800 ${imageAnim.inView ? 'opacity-100' : 'opacity-0'}`}
         >
-          <div className="relative aspect-cinema overflow-hidden film-grain vignette">
+          <div className="relative aspect-[16/9] lg:aspect-cinema overflow-hidden film-grain vignette">
             <div className="absolute inset-0 ken-burns">
               <Image
                 src="/images/grossi-iaea-board.jpg"
@@ -124,19 +124,19 @@ export function TransparencySection() {
 
         {/* Transparency Commitments */}
         <div ref={commitAnim.ref} className="mb-40">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-border">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-[2px] bg-border">
             {commitments.map((item, index) => (
               <div
                 key={item.title}
-                className={`group p-10 lg:p-12 bg-card hover:bg-secondary transition-all duration-700 relative overflow-hidden ${commitAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'}`}
+                className={`group p-10 lg:p-12 bg-card hover:bg-foreground transition-all duration-600 relative overflow-hidden ${commitAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'}`}
                 style={{ transitionDelay: commitAnim.inView ? `${index * 100}ms` : '0ms' }}
               >
-                <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-secondary/40 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
-                <item.icon className="w-10 h-10 text-secondary group-hover:text-secondary-foreground mb-8 transition-all duration-500 group-hover:scale-110" />
-                <h4 className="font-serif text-xl text-foreground group-hover:text-secondary-foreground mb-4 transition-colors duration-500">
+                <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-secondary/40 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-600 origin-left" />
+                <item.icon className="w-10 h-10 text-secondary group-hover:text-secondary mb-8 transition-all duration-400 group-hover:scale-110" />
+                <h4 className="font-serif text-xl text-foreground group-hover:text-background mb-4 transition-colors duration-400">
                   {item.title}
                 </h4>
-                <p className="text-muted-foreground group-hover:text-secondary-foreground/70 text-sm leading-relaxed transition-colors duration-500">
+                <p className="text-muted-foreground group-hover:text-background/70 text-sm leading-relaxed transition-colors duration-400">
                   {item.description}
                 </p>
               </div>
@@ -168,7 +168,7 @@ export function TransparencySection() {
         >
           <div className={`lg:col-span-6 transition-all duration-1000 ${disciplineAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
             <div className="relative mb-8">
-              <span className="text-[150px] font-serif text-foreground/[0.03] absolute -top-20 -left-4 leading-none select-none" aria-hidden="true">05</span>
+              <span className="text-[150px] font-serif text-foreground/[0.08] absolute -top-20 -left-4 leading-none select-none" aria-hidden="true">05</span>
               <h3 className="font-serif text-4xl md:text-5xl text-foreground leading-[1.1] relative">
                 Management
                 <span className="block text-secondary/70">Discipline</span>
@@ -212,7 +212,7 @@ export function TransparencySection() {
           </div>
 
           {/* Document Hub */}
-          <div className={`lg:col-span-6 transition-all duration-1200 delay-300 ${disciplineAnim.inView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
+          <div className={`lg:col-span-6 transition-all duration-800 delay-300 ${disciplineAnim.inView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
             <div className="bg-muted p-10 lg:p-14">
               <div className="flex items-center gap-4 mb-8">
                 <span className="w-8 h-px bg-secondary" />
@@ -254,7 +254,7 @@ export function TransparencySection() {
         {/* Institutional Culture */}
         <div
           ref={cultureAnim.ref}
-          className={`relative mb-40 transition-all duration-1200 ${cultureAnim.inView ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
+          className={`relative mb-40 transition-all duration-800 ${cultureAnim.inView ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
         >
           <div className="bg-foreground text-background p-16 lg:p-28 relative overflow-hidden film-grain">
             <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: DOT_PATTERN_SM, backgroundSize: DOT_PATTERN_SIZE_MD }} />
@@ -325,18 +325,18 @@ export function TransparencySection() {
             make a difference?&rdquo; This is the only standard that matters.
           </p>
 
-          <div className="grid sm:grid-cols-3 gap-px bg-border">
+          <div className="grid sm:grid-cols-3 gap-[2px] bg-border">
             {metrics.map((metric, index) => (
               <div
                 key={metric.label}
-                className={`p-12 lg:p-14 bg-muted hover:bg-secondary group transition-all duration-700 relative overflow-hidden ${metricsAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                className={`p-12 lg:p-14 bg-muted hover:bg-foreground group transition-all duration-600 relative overflow-hidden ${metricsAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                 style={{ transitionDelay: metricsAnim.inView ? `${index * 100 + 200}ms` : '0ms' }}
               >
-                <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-secondary/30 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
-                <p className="text-5xl md:text-6xl font-serif text-secondary group-hover:text-secondary-foreground mb-4 transition-all duration-500 group-hover:scale-105 origin-left">
+                <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-secondary/40 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-600 origin-left" />
+                <p className="text-5xl md:text-6xl font-serif text-secondary group-hover:text-secondary mb-4 transition-colors duration-400">
                   {metric.label}
                 </p>
-                <p className="text-muted-foreground group-hover:text-secondary-foreground/70 text-sm transition-colors duration-500">
+                <p className="text-muted-foreground group-hover:text-background/70 text-sm transition-colors duration-400">
                   {metric.description}
                 </p>
               </div>

@@ -31,28 +31,28 @@ export function Footer() {
         ref={ctaAnim.ref}
         className="relative container mx-auto px-6 lg:px-20 py-32 lg:py-44 border-b border-background/10"
       >
-        <div className={`max-w-5xl mx-auto text-center transition-all duration-1200 ${ctaAnim.inView ? 'opacity-100' : 'opacity-0'}`}>
+        <div className={`max-w-5xl mx-auto text-center transition-all duration-800 ${ctaAnim.inView ? 'opacity-100' : 'opacity-0'}`}>
           <div className="flex items-center justify-center gap-6 mb-10">
-            <span className={`h-px bg-secondary transition-all duration-1000 delay-300 ${ctaAnim.inView ? 'w-16' : 'w-0'}`} />
+            <span className={`h-px bg-secondary transition-all duration-800 delay-300 ${ctaAnim.inView ? 'w-16' : 'w-0'}`} />
             <p className="text-secondary uppercase tracking-[0.4em] text-[10px] font-medium">
               The Call
             </p>
-            <span className={`h-px bg-secondary transition-all duration-1000 delay-300 ${ctaAnim.inView ? 'w-16' : 'w-0'}`} />
+            <span className={`h-px bg-secondary transition-all duration-800 delay-300 ${ctaAnim.inView ? 'w-16' : 'w-0'}`} />
           </div>
 
           <div className="overflow-hidden">
-            <h2 className={`font-serif text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-10 leading-[0.95] transition-all duration-1000 delay-200 ${ctaAnim.inView ? 'translate-y-0' : 'translate-y-full'}`}>
+            <h2 className={`font-serif text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-10 leading-[0.95] transition-all duration-800 delay-200 ${ctaAnim.inView ? 'translate-y-0' : 'translate-y-full'}`}>
               The world cannot
               <span className="block text-secondary italic">afford to wait.</span>
             </h2>
           </div>
 
-          <p className={`text-xl md:text-2xl text-background/60 mb-14 max-w-3xl mx-auto font-light leading-relaxed transition-all duration-1000 delay-500 ${ctaAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <p className={`text-xl md:text-2xl text-background/60 mb-14 max-w-3xl mx-auto font-light leading-relaxed transition-all duration-800 delay-500 ${ctaAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             For a United Nations that works—in a dangerous world, with
             everybody, for everybody, and open to everybody.
           </p>
 
-          <div className={`flex flex-col sm:flex-row gap-6 justify-center transition-all duration-1000 delay-700 ${ctaAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div className={`flex flex-col sm:flex-row gap-6 justify-center transition-all duration-800 delay-700 ${ctaAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <a
               href="#vision"
               className="group relative inline-flex items-center justify-center px-14 py-6 bg-secondary text-secondary-foreground font-medium text-[11px] uppercase tracking-[0.25em] overflow-hidden transition-all duration-500 glow-gold"
@@ -78,7 +78,7 @@ export function Footer() {
         ref={linksAnim.ref}
         className="relative container mx-auto px-6 lg:px-20 py-20"
       >
-        <div className={`grid md:grid-cols-12 gap-16 transition-all duration-1000 ${linksAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div className={`grid md:grid-cols-12 gap-16 transition-all duration-800 ${linksAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           {/* Brand */}
           <div className="md:col-span-5">
             <div className="mb-8">

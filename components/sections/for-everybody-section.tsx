@@ -62,7 +62,7 @@ export function ForEverybodySection() {
         {/* Section Header */}
         <div
           ref={headerAnim.ref}
-          className={`max-w-6xl mb-24 transition-all duration-1200 ${headerAnim.inView ? 'opacity-100' : 'opacity-0'}`}
+          className={`max-w-6xl mb-24 transition-all duration-800 ${headerAnim.inView ? 'opacity-100' : 'opacity-0'}`}
         >
           <div className="flex items-center gap-6 mb-10">
             <span className={`h-px bg-secondary transition-all duration-1000 delay-300 ${headerAnim.inView ? 'w-20' : 'w-0'}`} />
@@ -90,9 +90,9 @@ export function ForEverybodySection() {
         {/* Cinematic Hero Image */}
         <div
           ref={imageAnim.ref}
-          className={`relative mb-40 transition-all duration-1500 ${imageAnim.inView ? 'opacity-100' : 'opacity-0'}`}
+          className={`relative mb-40 transition-all duration-800 ${imageAnim.inView ? 'opacity-100' : 'opacity-0'}`}
         >
-          <div className="relative aspect-wide overflow-hidden film-grain vignette">
+          <div className="relative aspect-[16/9] lg:aspect-wide overflow-hidden film-grain vignette">
             <div className="absolute inset-0 ken-burns">
               <Image
                 src="/images/grossi-rays-of-hope.jpg"
@@ -131,14 +131,14 @@ export function ForEverybodySection() {
 
         {/* Delivery Areas Grid */}
         <div ref={gridAnim.ref} className="mb-40">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-border">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-[2px] bg-border">
             {deliveryAreas.map((area, index) => (
               <div
                 key={area.title}
-                className={`group p-10 lg:p-12 bg-card hover:bg-foreground transition-all duration-700 relative overflow-hidden ${gridAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'}`}
+                className={`group p-10 lg:p-12 bg-card hover:bg-foreground transition-all duration-600 relative overflow-hidden ${gridAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'}`}
                 style={{ transitionDelay: gridAnim.inView ? `${index * 100}ms` : '0ms' }}
               >
-                <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-secondary/40 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
+                <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-secondary/40 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-600 origin-left" />
                 <div className="flex items-start justify-between mb-8">
                   <area.icon className="w-10 h-10 text-secondary transition-transform duration-500 group-hover:scale-110" />
                   <div className="text-right">
@@ -168,7 +168,7 @@ export function ForEverybodySection() {
         >
           <div className={`lg:col-span-6 transition-all duration-1000 ${genderAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
             <div className="relative mb-8">
-              <span className="text-[150px] font-serif text-foreground/[0.03] absolute -top-20 -left-4 leading-none select-none" aria-hidden="true">04</span>
+              <span className="text-[150px] font-serif text-foreground/[0.08] absolute -top-20 -left-4 leading-none select-none" aria-hidden="true">04</span>
               <h3 className="font-serif text-4xl md:text-5xl text-foreground leading-[1.1] relative">
                 Gender as Proof
                 <span className="block text-secondary/70">of Leadership</span>
@@ -208,7 +208,7 @@ export function ForEverybodySection() {
             </ul>
           </div>
 
-          <div className={`lg:col-span-6 transition-all duration-1200 delay-300 ${genderAnim.inView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
+          <div className={`lg:col-span-6 transition-all duration-800 delay-300 ${genderAnim.inView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
             <div className="bg-secondary/10 p-12 lg:p-16 relative">
               <span className="text-8xl font-serif text-secondary/10 absolute top-4 right-4 leading-none" aria-hidden="true">&ldquo;</span>
               <blockquote className="font-serif text-2xl md:text-3xl text-foreground italic leading-relaxed relative">
@@ -225,7 +225,7 @@ export function ForEverybodySection() {
         {/* Why This Matters */}
         <div
           ref={ctaAnim.ref}
-          className={`relative transition-all duration-1200 ${ctaAnim.inView ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
+          className={`relative transition-all duration-800 ${ctaAnim.inView ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
         >
           <div className="bg-primary text-primary-foreground p-16 lg:p-28 relative overflow-hidden">
             <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: DOT_PATTERN_SM, backgroundSize: DOT_PATTERN_SIZE_MD }} />

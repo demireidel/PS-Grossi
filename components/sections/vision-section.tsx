@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { Target, Users, Gauge, RefreshCw } from "lucide-react"
 import type { Principle } from "@/lib/types"
+import { SectionHeader } from "@/components/section-header"
 import { DOT_PATTERN_SM, DOT_PATTERN_SIZE_SM, DOT_PATTERN_SIZE_LG } from "@/lib/constants"
 
 const principles: Principle[] = [
@@ -36,26 +37,12 @@ export function VisionSection() {
       <div className="absolute inset-0 opacity-[0.015]" style={{ backgroundImage: DOT_PATTERN_SM, backgroundSize: DOT_PATTERN_SIZE_LG }} />
 
       <div className="container mx-auto px-6 lg:px-20 relative">
-        {/* Section Header */}
-        <div className="max-w-5xl mb-24">
-          <div className="flex items-center gap-6 mb-8">
-            <span className="h-px w-16 bg-secondary" />
-            <p className="text-secondary uppercase tracking-[0.3em] text-[10px] font-medium">
-              Section 01
-            </p>
-            <span className="text-secondary/30">/</span>
-            <p className="text-muted-foreground uppercase tracking-[0.2em] text-[10px]">
-              The Vision
-            </p>
-          </div>
-          <h2 className="font-serif text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-foreground mb-10 leading-[0.95] tracking-tight">
-            A UN That <span className="text-secondary italic">Works</span>
-          </h2>
-          <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed font-light max-w-3xl">
-            Rafael Grossi&apos;s vision for a more operational, credible, and
-            effective United Nations
-          </p>
-        </div>
+        <SectionHeader
+          number="01"
+          label="The Vision"
+          title={<>A UN That <span className="text-secondary italic">Works</span></>}
+          subtitle="Rafael Grossi's vision for a more operational, credible, and effective United Nations"
+        />
 
         {/* Grossi's Diagnosis */}
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">
@@ -97,10 +84,10 @@ export function VisionSection() {
               alt="Rafael Grossi delivering a keynote address at the IAEA Nuclear Energy Summit podium with international flags, 2024"
               fill
               quality={85}
-              className="object-cover transition-transform duration-1000 group-hover:scale-[1.03]"
+              className="object-cover transition-transform duration-600 group-hover:scale-[1.03]"
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 100vw, 50vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-600" />
           </div>
         </div>
 
@@ -117,25 +104,23 @@ export function VisionSection() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-border">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-[2px] bg-border">
             {principles.map((principle, index) => (
               <div
                 key={principle.title}
-                className="group p-10 lg:p-12 bg-card hover:bg-primary transition-all duration-700 relative overflow-hidden"
+                className="group p-10 lg:p-12 bg-card hover:bg-foreground transition-all duration-600 relative overflow-hidden"
               >
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-gradient-to-br from-primary via-primary to-primary/90" />
-                <div className="relative">
-                  <div className="flex items-start justify-between mb-8">
-                    <principle.icon className="w-8 h-8 text-secondary transition-transform duration-500 group-hover:scale-110" />
-                    <span className="text-4xl font-serif text-foreground/[0.06] group-hover:text-primary-foreground/15 transition-colors duration-500">0{index + 1}</span>
-                  </div>
-                  <h4 className="font-serif text-xl text-foreground group-hover:text-primary-foreground mb-4 transition-colors duration-500">
-                    {principle.title}
-                  </h4>
-                  <p className="text-muted-foreground group-hover:text-primary-foreground/80 leading-relaxed text-sm transition-colors duration-500">
-                    {principle.description}
-                  </p>
+                <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-secondary/40 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-600 origin-left" />
+                <div className="flex items-start justify-between mb-8">
+                  <principle.icon className="w-8 h-8 text-secondary transition-transform duration-400 group-hover:scale-110" />
+                  <span className="text-4xl font-serif text-foreground/[0.12] group-hover:text-background/20 transition-colors duration-400">0{index + 1}</span>
                 </div>
+                <h4 className="font-serif text-xl text-foreground group-hover:text-background mb-4 transition-colors duration-400">
+                  {principle.title}
+                </h4>
+                <p className="text-muted-foreground group-hover:text-background/70 leading-relaxed text-sm transition-colors duration-400">
+                  {principle.description}
+                </p>
               </div>
             ))}
           </div>
