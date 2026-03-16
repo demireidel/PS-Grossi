@@ -7,6 +7,7 @@ import type { DeliveryArea } from "@/lib/types"
 import { SectionHeader } from "@/components/section-header"
 import { Blockquote } from "@/components/blockquote"
 import { DarkPanel } from "@/components/dark-panel"
+import { BLUR_DATA_URL } from "@/lib/constants"
 
 const deliveryAreas: DeliveryArea[] = [
   {
@@ -60,7 +61,7 @@ export function ForEverybodySection() {
     <section id="for-everybody" className="relative bg-muted overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background opacity-30" />
 
-      <div className="relative container mx-auto px-6 lg:px-20 py-32 lg:py-48">
+      <div className="relative container mx-auto px-6 md:px-12 lg:px-20 py-32 lg:py-48">
         <SectionHeader
           ref={headerAnim.ref}
           number="04"
@@ -84,6 +85,8 @@ export function ForEverybodySection() {
                 alt="Rafael Grossi with his IAEA delegation at the African Union headquarters in Addis Ababa after launching the Rays of Hope cancer care initiative, February 2022"
                 fill
                 quality={85}
+                placeholder="blur"
+                blurDataURL={BLUR_DATA_URL}
                 className="object-cover color-grade-warm"
                 sizes="100vw"
               />

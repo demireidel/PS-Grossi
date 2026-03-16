@@ -262,11 +262,25 @@ html {
   left: 0;
 }
 
+/* Clip-path reveal for cinematic images */
+.clip-reveal {
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 1.2s cubic-bezier(0.65, 0, 0.35, 1);
+}
+.clip-reveal.revealed {
+  clip-path: inset(0);
+}
+
 /* Accessibility: reduce motion for users who prefer it */
 @media (prefers-reduced-motion: reduce) {
   .ken-burns,
   .text-gradient-gold-shimmer {
     animation: none;
+  }
+
+  .clip-reveal {
+    clip-path: inset(0);
+    transition: none;
   }
 
   .hover-lift:hover {

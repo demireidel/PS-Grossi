@@ -7,6 +7,7 @@ import type { Commitment } from "@/lib/types"
 import { SectionHeader } from "@/components/section-header"
 import { Blockquote } from "@/components/blockquote"
 import { DarkPanel } from "@/components/dark-panel"
+import { BLUR_DATA_URL } from "@/lib/constants"
 
 const commitments: Commitment[] = [
   {
@@ -60,7 +61,7 @@ export function TransparencySection() {
 
   return (
     <section id="transparency" className="relative bg-background overflow-hidden">
-      <div className="container mx-auto px-6 lg:px-20 py-32 lg:py-48">
+      <div className="container mx-auto px-6 md:px-12 lg:px-20 py-32 lg:py-48">
         <SectionHeader
           ref={headerAnim.ref}
           number="05"
@@ -84,6 +85,8 @@ export function TransparencySection() {
                 alt="Rafael Grossi smiling during a Board of Governors session at IAEA headquarters in Vienna, demonstrating institutional leadership"
                 fill
                 quality={85}
+                placeholder="blur"
+                blurDataURL={BLUR_DATA_URL}
                 className="object-cover color-grade-cool"
                 sizes="100vw"
               />
@@ -113,7 +116,7 @@ export function TransparencySection() {
             {commitments.map((item, index) => (
               <div
                 key={item.title}
-                className={`group p-10 lg:p-12 bg-card hover:bg-foreground transition-[opacity,transform,background-color] duration-600 relative overflow-hidden ${commitAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'}`}
+                className={`group p-10 lg:p-12 bg-card hover:bg-foreground transition-[opacity,transform,background-color] duration-600 relative overflow-hidden ${commitAnim.inView ? 'opacity-100 scale-100' : 'opacity-0 scale-[0.96]'}`}
                 style={{ transitionDelay: commitAnim.inView ? `${index * 100}ms` : '0ms' }}
               >
                 <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-secondary/40 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-600 origin-left" />
@@ -136,6 +139,8 @@ export function TransparencySection() {
             alt="Rafael Grossi in IAEA field vest preparing for a mission near Zaporizhzhia, demonstrating hands-on leadership in crisis zones"
             fill
             quality={85}
+            placeholder="blur"
+            blurDataURL={BLUR_DATA_URL}
             className="object-cover transition-transform duration-600 group-hover:scale-105"
             sizes="100vw"
           />

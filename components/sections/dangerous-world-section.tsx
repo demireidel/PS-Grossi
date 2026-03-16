@@ -7,6 +7,7 @@ import type { Experience } from "@/lib/types"
 import { SectionHeader } from "@/components/section-header"
 import { Blockquote } from "@/components/blockquote"
 import { DarkPanel } from "@/components/dark-panel"
+import { BLUR_DATA_URL } from "@/lib/constants"
 
 const experiences: Experience[] = [
   {
@@ -44,7 +45,7 @@ export function DangerousWorldSection() {
     >
       <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-transparent to-background/50" />
 
-      <div className="container mx-auto px-6 lg:px-20 relative">
+      <div className="container mx-auto px-6 md:px-12 lg:px-20 relative">
         <SectionHeader
           ref={headerAnim.ref}
           number="02"
@@ -58,13 +59,15 @@ export function DangerousWorldSection() {
         {/* Hero Image - Cinematic */}
         <div
           ref={heroAnim.ref}
-          className={`relative aspect-[16/9] lg:aspect-cinema mb-32 overflow-hidden transition-[opacity] duration-800 ${heroAnim.inView ? 'opacity-100' : 'opacity-0'}`}
+          className={`relative aspect-[16/9] lg:aspect-cinema mb-32 overflow-hidden clip-reveal ${heroAnim.inView ? 'revealed' : ''}`}
         >
           <Image
             src="/images/grossi-zaporizhzhia.jpg"
             alt="IAEA Director General Rafael Grossi wearing combat helmet at the frontline crossing near Zaporizhzhia Nuclear Power Plant, September 2024"
             fill
             quality={85}
+            placeholder="blur"
+            blurDataURL={BLUR_DATA_URL}
             className="object-cover"
             sizes="100vw"
           />
@@ -102,6 +105,8 @@ export function DangerousWorldSection() {
               alt="Rafael Grossi in IAEA field vest during the first Support and Assistance Mission to Zaporizhzhia (ISAMZ), August 2022"
               fill
               quality={85}
+              placeholder="blur"
+              blurDataURL={BLUR_DATA_URL}
               className="object-cover transition-transform duration-600 group-hover:scale-105"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
@@ -117,6 +122,8 @@ export function DangerousWorldSection() {
               alt="Rafael Grossi briefing the press on IAEA verification activities in Iran, Vienna, May 2024"
               fill
               quality={85}
+              placeholder="blur"
+              blurDataURL={BLUR_DATA_URL}
               className="object-cover transition-transform duration-600 group-hover:scale-105"
               sizes="(max-width: 768px) 100vw, 50vw"
             />

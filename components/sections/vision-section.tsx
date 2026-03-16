@@ -4,10 +4,10 @@ import Image from "next/image"
 import { Target, Users, Gauge, RefreshCw } from "lucide-react"
 import { useInView } from "@/hooks/use-in-view"
 import type { Principle } from "@/lib/types"
+import { BLUR_DATA_URL } from "@/lib/constants"
 import { SectionHeader } from "@/components/section-header"
 import { Blockquote } from "@/components/blockquote"
 import { DarkPanel } from "@/components/dark-panel"
-import { DOT_PATTERN_SM, DOT_PATTERN_SIZE_LG } from "@/lib/constants"
 
 const principles: Principle[] = [
   {
@@ -44,9 +44,7 @@ export function VisionSection() {
 
   return (
     <section id="vision" className="py-32 lg:py-48 bg-background relative overflow-hidden">
-      <div className="absolute inset-0 opacity-[0.015]" style={{ backgroundImage: DOT_PATTERN_SM, backgroundSize: DOT_PATTERN_SIZE_LG }} />
-
-      <div className="container mx-auto px-6 lg:px-20 relative">
+      <div className="container mx-auto px-6 md:px-12 lg:px-20 relative">
         <SectionHeader
           ref={headerAnim.ref}
           number="01"
@@ -95,6 +93,8 @@ export function VisionSection() {
               alt="Rafael Grossi delivering a keynote address at the IAEA Nuclear Energy Summit podium with international flags, 2024"
               fill
               quality={85}
+              placeholder="blur"
+              blurDataURL={BLUR_DATA_URL}
               className="object-cover transition-transform duration-600 group-hover:scale-105"
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 100vw, 50vw"
             />
@@ -141,7 +141,7 @@ export function VisionSection() {
         {/* Why This Election Matters */}
         <div
           ref={ctaAnim.ref}
-          className={`transition-[opacity,transform] duration-800 ${ctaAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
+          className={`transition-[opacity] duration-800 ${ctaAnim.inView ? 'opacity-100' : 'opacity-0'}`}
         >
           <DarkPanel variant="primary" label="The Stakes">
               <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl mb-10 leading-[1.1]">
