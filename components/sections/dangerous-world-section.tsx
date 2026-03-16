@@ -6,7 +6,7 @@ import { useInView } from "@/hooks/use-in-view"
 import type { Experience } from "@/lib/types"
 import { SectionHeader } from "@/components/section-header"
 import { Blockquote } from "@/components/blockquote"
-import { DOT_PATTERN_SM, DOT_PATTERN_SIZE_SM } from "@/lib/constants"
+import { DarkPanel } from "@/components/dark-panel"
 
 const experiences: Experience[] = [
   {
@@ -219,15 +219,7 @@ export function DangerousWorldSection() {
           ref={doctrineAnim.ref}
           className={`transition-[opacity,transform] duration-800 ${doctrineAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
         >
-          <div className="bg-foreground text-background p-16 lg:p-24 relative overflow-hidden film-grain">
-            <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: DOT_PATTERN_SM, backgroundSize: DOT_PATTERN_SIZE_SM }} />
-
-            <div className="relative max-w-4xl">
-              <span className="inline-flex items-center gap-4 text-secondary text-[10px] uppercase tracking-[0.3em] font-medium mb-10">
-                <span className="w-8 h-px bg-secondary" />
-                The Fit
-              </span>
-
+          <DarkPanel label="The Fit">
               <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl mb-10 leading-[1.1]">
                 The Grossi <span className="text-secondary italic">Doctrine</span>
               </h3>
@@ -260,8 +252,7 @@ export function DangerousWorldSection() {
                 must be deployed, and solutions proposed as an impartial, but
                 not indifferent, interlocutor.&rdquo;
               </Blockquote>
-            </div>
-          </div>
+          </DarkPanel>
         </div>
       </div>
     </section>

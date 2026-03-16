@@ -6,7 +6,7 @@ import { useInView } from "@/hooks/use-in-view"
 import type { Commitment } from "@/lib/types"
 import { SectionHeader } from "@/components/section-header"
 import { Blockquote } from "@/components/blockquote"
-import { DOT_PATTERN_SM, DOT_PATTERN_SIZE_MD } from "@/lib/constants"
+import { DarkPanel } from "@/components/dark-panel"
 
 const commitments: Commitment[] = [
   {
@@ -234,15 +234,7 @@ export function TransparencySection() {
           ref={cultureAnim.ref}
           className={`relative mb-32 transition-[opacity,transform] duration-800 ${cultureAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
         >
-          <div className="bg-foreground text-background p-16 lg:p-24 relative overflow-hidden film-grain">
-            <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: DOT_PATTERN_SM, backgroundSize: DOT_PATTERN_SIZE_MD }} />
-
-            <div className="relative max-w-4xl">
-              <span className="inline-flex items-center gap-4 text-secondary text-[10px] uppercase tracking-[0.3em] font-medium mb-10">
-                <span className="w-8 h-px bg-secondary" />
-                The Culture
-              </span>
-
+          <DarkPanel label="The Culture" dotPatternSize="md">
               <h3 className="font-serif text-4xl md:text-5xl lg:text-6xl mb-12 leading-[1.1]">
                 Institutional Culture
                 <span className="block text-secondary">and Merit</span>
@@ -269,8 +261,7 @@ export function TransparencySection() {
                 &ldquo;I increased women in leadership from 28% to 52%. These
                 are facts, not words.&rdquo;
               </Blockquote>
-            </div>
-          </div>
+          </DarkPanel>
         </div>
 
         {/* Measuring Performance */}

@@ -4,7 +4,8 @@ import { Shield, Users, Zap, Building2, Globe, Scale } from "lucide-react"
 import { useInView } from "@/hooks/use-in-view"
 import type { PolicyArea } from "@/lib/types"
 import { SectionHeader } from "@/components/section-header"
-import { DOT_PATTERN_SM, DOT_PATTERN_SIZE_SM, DOT_PATTERN_SIZE_LG } from "@/lib/constants"
+import { DarkPanel } from "@/components/dark-panel"
+import { DOT_PATTERN_SM, DOT_PATTERN_SIZE_LG } from "@/lib/constants"
 
 const policyAreas: PolicyArea[] = [
   {
@@ -143,10 +144,7 @@ export function PolicyPlatformSection() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="bg-foreground text-background p-16 lg:p-24 text-center relative overflow-hidden film-grain">
-          <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: DOT_PATTERN_SM, backgroundSize: DOT_PATTERN_SIZE_SM }} />
-
-          <div className="relative max-w-3xl mx-auto">
+        <DarkPanel align="center" maxWidth="3xl">
             <h3 className="font-serif text-3xl md:text-4xl mb-8 leading-[1.1]">
               This Is Not a Manifesto. <span className="text-secondary italic">It Is a Track Record.</span>
             </h3>
@@ -156,8 +154,7 @@ export function PolicyPlatformSection() {
             <p className="text-lg opacity-70 leading-relaxed">
               The UN Secretary-General role is larger in scope. But the principles are the same. And unlike campaign promises, these have been tested under fire.
             </p>
-          </div>
-        </div>
+        </DarkPanel>
       </div>
     </section>
   )

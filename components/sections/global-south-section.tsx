@@ -5,7 +5,8 @@ import { useInView } from "@/hooks/use-in-view"
 import type { RegionalPerspective } from "@/lib/types"
 import { SectionHeader } from "@/components/section-header"
 import { Blockquote } from "@/components/blockquote"
-import { DOT_PATTERN_SM, DOT_PATTERN_SIZE_SM, DOT_PATTERN_SIZE_LG } from "@/lib/constants"
+import { DarkPanel } from "@/components/dark-panel"
+import { DOT_PATTERN_SM, DOT_PATTERN_SIZE_LG } from "@/lib/constants"
 
 const perspectives: RegionalPerspective[] = [
   {
@@ -67,17 +68,16 @@ export function GlobalSouthSection() {
         {/* Quote Block */}
         <div
           ref={quoteAnim.ref}
-          className={`bg-primary text-primary-foreground p-16 lg:p-24 mb-32 relative overflow-hidden film-grain transition-[opacity,transform] duration-800 ${quoteAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
+          className={`mb-32 transition-[opacity,transform] duration-800 ${quoteAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
         >
-          <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: DOT_PATTERN_SM, backgroundSize: DOT_PATTERN_SIZE_SM }} />
-          <div className="relative">
+          <DarkPanel variant="primary" align="center">
             <Blockquote variant="centered" size="large">
               &ldquo;What we need is a Secretary-General chosen for their merits. Someone should be chosen for their vision, not because after 80 years of men in the position it&apos;s time for a woman, or someone with blue eyes. You should be chosen for what you are, what you have done, what you can do.&rdquo;
             </Blockquote>
-            <cite className="block mt-8 text-sm opacity-60 not-italic text-center">
+            <cite className="block mt-8 text-sm opacity-60 not-italic">
               — Rafael Grossi, El País interview, December 2025
             </cite>
-          </div>
+          </DarkPanel>
         </div>
 
         {/* Stats Row */}

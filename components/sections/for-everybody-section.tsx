@@ -6,7 +6,7 @@ import { useInView } from "@/hooks/use-in-view"
 import type { DeliveryArea } from "@/lib/types"
 import { SectionHeader } from "@/components/section-header"
 import { Blockquote } from "@/components/blockquote"
-import { DOT_PATTERN_SM, DOT_PATTERN_SIZE_MD } from "@/lib/constants"
+import { DarkPanel } from "@/components/dark-panel"
 
 const deliveryAreas: DeliveryArea[] = [
   {
@@ -205,15 +205,7 @@ export function ForEverybodySection() {
           ref={ctaAnim.ref}
           className={`relative transition-[opacity,transform] duration-800 ${ctaAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
         >
-          <div className="bg-primary text-primary-foreground p-16 lg:p-24 relative overflow-hidden">
-            <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: DOT_PATTERN_SM, backgroundSize: DOT_PATTERN_SIZE_MD }} />
-
-            <div className="relative max-w-4xl">
-              <span className="inline-flex items-center gap-4 text-secondary text-[10px] uppercase tracking-[0.3em] font-medium mb-10">
-                <span className="w-8 h-px bg-secondary" />
-                The Connection
-              </span>
-
+          <DarkPanel variant="primary" label="The Connection" dotPatternSize="md">
               <h3 className="font-serif text-4xl md:text-5xl lg:text-6xl mb-12 leading-[1.1]">
                 Why This Matters
                 <span className="block text-secondary">to Member States</span>
@@ -235,8 +227,7 @@ export function ForEverybodySection() {
                 in Africa get treated. That combination is rare. It is what the
                 role requires.
               </p>
-            </div>
-          </div>
+          </DarkPanel>
         </div>
       </div>
     </section>
