@@ -154,7 +154,7 @@ export function GlobalSouthSection() {
               From Buenos Aires to Vienna
             </h3>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Born in Buenos Aires in 1961. Grandparents from Piedmont, Italy—Carbonara Scrivia made him honorary citizen in 2025. Joined Argentina&apos;s Foreign Service in 1985. Lived through the Falklands, hyperinflation, democratic transitions.
+              Born in Buenos Aires in 1961. Grandparents from Piedmont, Italy—Carbonara Scrivia made him honorary citizen in 2025. Joined Argentina&apos;s Foreign Service in 1985. Lived through economic crises, hyperinflation, democratic transitions.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
               This background matters. Grossi understands what smaller nations face when great powers clash. He knows how developing countries navigate international institutions designed by others. He has spent 40 years building bridges from that position.
