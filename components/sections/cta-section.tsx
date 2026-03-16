@@ -16,7 +16,7 @@ export function CtaSection() {
       <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: DOT_PATTERN_SM, backgroundSize: DOT_PATTERN_SIZE_SM }} />
 
       <div className="container mx-auto px-6 lg:px-20 relative">
-        <div className={`max-w-5xl mx-auto text-center transition-all duration-1000 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+        <div className={`max-w-5xl mx-auto text-center transition-[opacity,transform] duration-800 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
 
           <div className="flex items-center justify-center gap-6 mb-10">
             <span className="h-px w-16 bg-secondary" />
@@ -39,47 +39,49 @@ export function CtaSection() {
           </p>
 
           <blockquote className="font-serif text-3xl md:text-4xl lg:text-5xl italic leading-[1.2] mb-16 max-w-4xl mx-auto">
-            &ldquo;The UN needs a secretary with boots in the mud—not one who comments from a distance.&rdquo;
+            <span className="text-gradient-gold">&ldquo;</span>The UN needs a secretary with boots in the mud—not one who comments from a distance.<span className="text-gradient-gold">&rdquo;</span>
           </blockquote>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto mb-16">
-            <div className="p-8 border border-background/20 text-left">
-              <p className="text-secondary text-[10px] uppercase tracking-[0.3em] mb-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px max-w-2xl mx-auto mb-16 bg-background/10">
+            <div className="group p-10 bg-foreground text-left hover:bg-foreground/90 transition-[background-color] duration-400 relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-secondary/30 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-600 origin-left" />
+              <p className="text-secondary text-[10px] uppercase tracking-[0.3em] mb-4">
                 For Delegations
               </p>
-              <p className="text-lg opacity-80 mb-4">
+              <p className="text-lg opacity-80 mb-5">
                 Briefing materials and policy positions available upon request.
               </p>
               <Link
                 href="mailto:campaign@grossi2026.org"
-                className="inline-flex items-center gap-2 text-secondary hover:opacity-80 transition-opacity"
+                className="group/link inline-flex items-center gap-2 text-secondary hover:text-secondary/80 transition-colors duration-300"
               >
                 campaign@grossi2026.org
-                <ArrowUpRight className="w-4 h-4" />
+                <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
               </Link>
             </div>
-            <div className="p-8 border border-background/20 text-left">
-              <p className="text-secondary text-[10px] uppercase tracking-[0.3em] mb-3">
+            <div className="group p-10 bg-foreground text-left hover:bg-foreground/90 transition-[background-color] duration-400 relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-secondary/30 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-600 origin-left" />
+              <p className="text-secondary text-[10px] uppercase tracking-[0.3em] mb-4">
                 For Media
               </p>
-              <p className="text-lg opacity-80 mb-4">
+              <p className="text-lg opacity-80 mb-5">
                 Press inquiries, interview requests, and background briefings.
               </p>
               <Link
                 href="mailto:press@grossi2026.org"
-                className="inline-flex items-center gap-2 text-secondary hover:opacity-80 transition-opacity"
+                className="group/link inline-flex items-center gap-2 text-secondary hover:text-secondary/80 transition-colors duration-300"
               >
                 press@grossi2026.org
-                <ArrowUpRight className="w-4 h-4" />
+                <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
               </Link>
             </div>
           </div>
 
           <div className="pt-16 border-t border-background/10">
-            <p className="text-sm opacity-40 uppercase tracking-[0.2em] mb-4">
+            <p className="text-sm opacity-50 uppercase tracking-[0.2em] mb-4">
               Authorized by the Campaign for Rafael Grossi
             </p>
-            <p className="text-sm opacity-40">
+            <p className="text-sm opacity-50">
               For United Nations Secretary-General 2026
             </p>
           </div>

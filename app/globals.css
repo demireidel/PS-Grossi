@@ -130,16 +130,6 @@
   100% { transform: scale(1.08) translate(-1%, -1%); }
 }
 
-/* Slow pan effect */
-.slow-pan {
-  animation: slowPan 30s ease-in-out infinite alternate;
-}
-
-@keyframes slowPan {
-  0% { transform: scale(1.05) translateX(0); }
-  100% { transform: scale(1.05) translateX(-2%); }
-}
-
 /* Cinematic color grading */
 .color-grade-warm {
   filter: sepia(0.06) saturate(1.08) brightness(0.97) contrast(1.02);
@@ -149,18 +139,13 @@
   filter: saturate(0.92) brightness(0.96) contrast(1.04);
 }
 
-/* Cinematic aspect ratio */
+/* Cinematic aspect ratios */
 .aspect-cinema {
   aspect-ratio: 2.39 / 1;
 }
 
 .aspect-wide {
   aspect-ratio: 21 / 9;
-}
-
-/* Premium transitions */
-.transition-1200 {
-  transition-duration: 1200ms;
 }
 
 /* Selection styling */
@@ -171,19 +156,20 @@
 
 /* Premium scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 5px;
 }
 
 ::-webkit-scrollbar-track {
-  background: oklch(0.94 0.01 60);
+  background: oklch(0.12 0.02 250);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: oklch(0.65 0.12 45 / 0.4);
+  background: linear-gradient(180deg, oklch(0.62 0.14 65 / 0.6), oklch(0.55 0.12 65 / 0.4));
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: oklch(0.65 0.12 45 / 0.6);
+  background: linear-gradient(180deg, oklch(0.72 0.14 65 / 0.8), oklch(0.55 0.12 65 / 0.6));
 }
 
 /* Smooth scrolling */
@@ -199,48 +185,62 @@ html {
 
 /* Elegant hover lift */
 .hover-lift {
-  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
-              box-shadow 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .hover-lift:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.15);
+  transform: translateY(-6px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15),
+              0 12px 24px -8px rgba(0, 0, 0, 0.06);
 }
 
-/* Premium line animation */
-.line-reveal::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background: var(--secondary);
-  transition: width 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.line-reveal:hover::after {
-  width: 100%;
-}
-
-/* Elegant focus states */
+/* Focus states — visible on all backgrounds */
 :focus-visible {
   outline: 2px solid oklch(0.62 0.14 65);
   outline-offset: 4px;
-}
-
-/* Premium letter spacing */
-.tracking-premium {
-  letter-spacing: 0.15em;
+  box-shadow: 0 0 0 6px oklch(0.15 0.02 250 / 0.15);
 }
 
 /* Gradient text */
 .text-gradient-gold {
-  background: linear-gradient(135deg, oklch(0.72 0.14 65) 0%, oklch(0.55 0.12 65) 100%);
+  background: linear-gradient(135deg, oklch(0.75 0.15 65) 0%, oklch(0.62 0.14 55) 40%, oklch(0.72 0.16 70) 60%, oklch(0.55 0.12 65) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/* Animated gold shimmer */
+.text-gradient-gold-shimmer {
+  background: linear-gradient(
+    105deg,
+    oklch(0.55 0.12 65) 0%,
+    oklch(0.72 0.16 70) 25%,
+    oklch(0.82 0.14 75) 37%,
+    oklch(0.72 0.16 70) 50%,
+    oklch(0.55 0.12 65) 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: goldShimmer 6s ease-in-out 3;
+}
+
+@keyframes goldShimmer {
+  0%, 100% { background-position: 100% 50%; }
+  50% { background-position: 0% 50%; }
+}
+
+/* Premium glow on gold elements */
+.glow-gold {
+  box-shadow: 0 0 30px -5px oklch(0.62 0.14 65 / 0.15),
+              0 0 60px -10px oklch(0.62 0.14 65 / 0.08);
+}
+
+/* Overlay text shadow for readability on images */
+.text-shadow-overlay {
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6), 0 2px 8px rgba(0,0,0,0.3);
 }
 
 /* Skip to content link */
@@ -265,18 +265,12 @@ html {
 /* Accessibility: reduce motion for users who prefer it */
 @media (prefers-reduced-motion: reduce) {
   .ken-burns,
-  .slow-pan {
+  .text-gradient-gold-shimmer {
     animation: none;
   }
 
   .hover-lift:hover {
     transform: none;
-  }
-
-  * {
-    transition-duration: 0.01ms !important;
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
   }
 
   html {
