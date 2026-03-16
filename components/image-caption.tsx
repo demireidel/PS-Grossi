@@ -30,19 +30,19 @@ export function ImageCaption({
         quality={85}
         placeholder="blur"
         blurDataURL={BLUR_DATA_URL}
-        className="object-cover transition-transform duration-600 group-hover:scale-105"
+        className="object-cover transition-transform duration-700 group-hover:scale-105"
         sizes={sizes}
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent" />
       {(label || caption) && (
         <div className="absolute bottom-6 left-6 right-6">
           {label && (
-            <p className="text-[length:var(--text-label)] uppercase tracking-[var(--tracking-ultra)] text-white/60 text-shadow-overlay mb-1">
+            <p className="text-[length:var(--text-label)] uppercase tracking-[var(--tracking-ultra)] text-white/50 text-shadow-overlay mb-1.5">
               {label}
             </p>
           )}
           {caption && (
-            <p className="text-sm text-white/90 font-medium text-shadow-overlay">
+            <p className="text-sm text-white/85 font-medium text-shadow-overlay">
               {caption}
             </p>
           )}

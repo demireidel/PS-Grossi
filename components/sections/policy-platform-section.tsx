@@ -17,7 +17,7 @@ export function PolicyPlatformSection() {
       </Reveal>
 
       {/* Policy Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[2px] bg-border mb-32">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[2px] bg-border mb-36">
         {POLICY_AREAS.map((area, index) => (
           <Reveal key={area.title} direction="scale" delay={index * 120}>
             <ContentCard index={index}>
@@ -25,24 +25,24 @@ export function PolicyPlatformSection() {
                 <area.icon className="w-8 h-8 text-secondary" />
                 <CardNumber value={`0${index + 1}`} />
               </div>
-              <h3 className="font-serif text-xl text-foreground group-hover:text-background mb-2 transition-colors duration-400">
+              <h3 className="font-serif text-xl text-foreground group-hover:text-background mb-2 transition-colors duration-500">
                 {area.title}
               </h3>
-              <p className="text-secondary text-sm mb-6 group-hover:text-secondary/80 transition-colors duration-400">
+              <p className="text-secondary text-sm mb-6 group-hover:text-secondary/80 transition-colors duration-500">
                 {area.subtitle}
               </p>
               <ul className="space-y-3 mb-8">
                 {area.proposals.map((proposal, i) => (
                   <li
                     key={i}
-                    className="text-sm text-muted-foreground group-hover:text-background/70 leading-relaxed flex gap-3 transition-colors duration-400"
+                    className="text-sm text-muted-foreground group-hover:text-background/60 leading-relaxed flex gap-3 transition-colors duration-500"
                   >
                     <span className="text-secondary shrink-0 mt-1">—</span>
                     {proposal}
                   </li>
                 ))}
               </ul>
-              <blockquote className="text-sm italic text-muted-foreground/80 group-hover:text-background/60 border-l-2 border-secondary/30 pl-4 transition-colors duration-400">
+              <blockquote className="text-sm italic text-muted-foreground/70 group-hover:text-background/50 border-l-2 border-secondary/20 pl-4 transition-colors duration-500">
                 &ldquo;{area.quote}&rdquo;
               </blockquote>
             </ContentCard>
@@ -53,7 +53,7 @@ export function PolicyPlatformSection() {
       {/* Closing Statement */}
       <Reveal direction="up">
         <div className="text-center max-w-3xl mx-auto mt-20">
-          <p className="font-serif text-2xl md:text-3xl text-foreground leading-[1.2] mb-6">
+          <p className="font-serif text-2xl md:text-3xl text-foreground leading-[1.2] mb-8">
             This Is Not a Manifesto. <span className="text-secondary italic">It Is a Track Record.</span>
           </p>
           <p className="text-muted-foreground leading-relaxed mb-4">

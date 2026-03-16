@@ -25,7 +25,7 @@ export function TransparencySection() {
 
       {/* Cinematic Hero Image */}
       <Reveal direction="fade" threshold={0.05}>
-        <div className="relative mb-32">
+        <div className="relative mb-36">
           <CinematicImage
             src="/images/grossi-iaea-board.jpg"
             alt="Rafael Grossi smiling during a Board of Governors session at IAEA headquarters in Vienna, demonstrating institutional leadership"
@@ -38,8 +38,8 @@ export function TransparencySection() {
             overlayContent={
               <div className="px-8 lg:px-20 pb-[14%]">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-px bg-secondary" />
-                  <span className="text-white/60 text-[length:var(--text-label)] uppercase tracking-[var(--tracking-ultra)] text-shadow-overlay">Accountability</span>
+                  <div className="w-14 h-px bg-gradient-to-r from-secondary to-secondary/30" />
+                  <span className="text-white/50 text-[length:var(--text-label)] uppercase tracking-[var(--tracking-ultra)] text-shadow-overlay">Accountability</span>
                 </div>
                 <p className="text-white text-xl md:text-2xl lg:text-3xl font-light max-w-3xl leading-relaxed text-shadow-overlay">
                   Accountability is not a constraint on leadership. It is what gives leadership legitimacy.
@@ -51,10 +51,10 @@ export function TransparencySection() {
       </Reveal>
 
       {/* Transparency Commitments */}
-      <div className="mb-32">
+      <div className="mb-36">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[2px] bg-border">
           {COMMITMENTS.map((item, index) => (
-            <Reveal key={item.title} direction="scale" delay={index * 100}>
+            <Reveal key={item.title} direction="scale" delay={index * 120}>
               <ContentCard index={index}>
                 <CardIconLarge icon={item.icon} />
                 <div className="mt-8">
@@ -68,7 +68,7 @@ export function TransparencySection() {
       </div>
 
       {/* Governance in Practice Image */}
-      <div className="relative aspect-[16/9] overflow-hidden mb-32 group bg-black">
+      <div className="relative aspect-[16/9] overflow-hidden mb-36 group bg-black">
         <Image
           src="/images/transparency-governance.jpg"
           alt="Rafael Grossi in IAEA field vest preparing for a mission near Zaporizhzhia, demonstrating hands-on leadership in crisis zones"
@@ -76,21 +76,21 @@ export function TransparencySection() {
           quality={85}
           placeholder="blur"
           blurDataURL={BLUR_DATA_URL}
-          className="object-cover transition-transform duration-600 group-hover:scale-105"
+          className="object-cover transition-transform duration-700 group-hover:scale-105"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-transparent" />
         <div className="absolute bottom-8 left-8 right-8">
-          <p className="text-[length:var(--text-label)] uppercase tracking-[var(--tracking-ultra)] text-white/60 text-shadow-overlay mb-2">In the Field</p>
-          <p className="text-lg text-white/90 font-medium text-shadow-overlay">Leadership means being present where it matters.</p>
+          <p className="text-[length:var(--text-label)] uppercase tracking-[var(--tracking-ultra)] text-white/50 text-shadow-overlay mb-2">In the Field</p>
+          <p className="text-lg text-white/85 font-medium text-shadow-overlay">Leadership means being present where it matters.</p>
         </div>
       </div>
 
       {/* Management Discipline + Document Hub */}
-      <div className="grid lg:grid-cols-12 gap-20 items-start mb-32">
+      <div className="grid lg:grid-cols-12 gap-20 items-start mb-36">
         <Reveal direction="up" className="lg:col-span-6">
-          <div className="relative mb-8">
-            <span className="text-[150px] font-serif text-foreground/[0.12] absolute -top-20 -left-4 leading-none select-none" aria-hidden="true">05</span>
+          <div className="relative mb-10">
+            <span className="text-[clamp(8rem,12vw,10rem)] font-serif text-foreground/[0.03] absolute -top-16 -left-4 leading-none select-none pointer-events-none" aria-hidden="true">05</span>
             <h3 className="font-serif text-4xl md:text-5xl text-foreground leading-[1.1] relative">
               Management
               <span className="block text-secondary/70">Discipline</span>
@@ -113,7 +113,7 @@ export function TransparencySection() {
             {MANAGEMENT_PRIORITIES.map((item, i) => (
               <Reveal key={item} direction="right" delay={i * 100 + 300}>
                 <div className="flex items-center gap-5 p-5 bg-muted">
-                  <span className="w-12 h-12 bg-secondary/10 flex items-center justify-center text-secondary font-serif text-xl flex-shrink-0">
+                  <span className="w-12 h-12 bg-secondary/[0.08] flex items-center justify-center text-secondary font-serif text-xl flex-shrink-0">
                     {i + 1}
                   </span>
                   <span className="text-foreground">{item}</span>
@@ -127,7 +127,7 @@ export function TransparencySection() {
         <Reveal direction="right" delay={300} className="lg:col-span-6">
           <div className="bg-muted p-10 lg:p-14">
             <div className="flex items-center gap-4 mb-8">
-              <span className="w-8 h-px bg-secondary" />
+              <span className="w-10 h-px bg-gradient-to-r from-secondary to-secondary/30" />
               <h4 className="font-serif text-2xl text-foreground">Transparency Hub</h4>
             </div>
             <p className="text-muted-foreground mb-10">
@@ -137,15 +137,15 @@ export function TransparencySection() {
               {DOCUMENTS.map((doc) => (
                 <div
                   key={doc.title}
-                  className="group flex items-center justify-between p-5 bg-card border border-border hover:border-secondary hover:bg-secondary/5 transition-[border-color,background-color] duration-400 cursor-pointer"
+                  className="group/doc flex items-center justify-between p-5 bg-card border border-border hover:border-secondary/50 hover:bg-secondary/[0.03] transition-[border-color,background-color] duration-500 cursor-pointer"
                 >
                   <div className="flex items-center gap-4">
-                    <FileText className="w-5 h-5 text-muted-foreground group-hover:text-secondary transition-colors duration-400" />
-                    <span className="text-foreground group-hover:text-secondary transition-colors duration-400">{doc.title}</span>
+                    <FileText className="w-5 h-5 text-muted-foreground group-hover/doc:text-secondary transition-colors duration-500" />
+                    <span className="text-foreground group-hover/doc:text-secondary transition-colors duration-500">{doc.title}</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="text-xs text-muted-foreground uppercase tracking-wider">{doc.type}</span>
-                    <Download className="w-4 h-4 text-muted-foreground group-hover:text-secondary transition-colors duration-400" />
+                    <Download className="w-4 h-4 text-muted-foreground group-hover/doc:text-secondary transition-colors duration-500" />
                   </div>
                 </div>
               ))}
@@ -159,9 +159,9 @@ export function TransparencySection() {
 
       {/* Institutional Culture */}
       <Reveal direction="up">
-        <div className="mb-32">
+        <div className="mb-36">
           <DarkPanel label="The Culture">
-            <h3 className="font-serif text-4xl md:text-5xl lg:text-6xl mb-12 leading-[1.1]">
+            <h3 className="font-serif text-4xl md:text-5xl lg:text-6xl mb-14 leading-[1.1]">
               Institutional Culture
               <span className="block text-secondary">and Merit</span>
             </h3>
@@ -199,10 +199,10 @@ export function TransparencySection() {
       <Reveal direction="up">
         <div className="text-center max-w-4xl mx-auto">
           <span className="text-secondary text-[length:var(--text-label)] uppercase tracking-[var(--tracking-ultra)] font-medium mb-6 block">The Measure</span>
-          <h3 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-8 leading-[1.1]">
+          <h3 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-10 leading-[1.1]">
             How a Better-Run UN<br />Should Be Judged
           </h3>
-          <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-16 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6 max-w-2xl mx-auto">
             Not by the number of meetings held, but by crises averted. Not by
             statements issued, but by agreements reached. Not by budgets spent,
             but by outcomes delivered.
@@ -214,9 +214,9 @@ export function TransparencySection() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-[2px] bg-border">
             {METRICS.map((metric, index) => (
-              <Reveal key={metric.label} direction="up" delay={index * 100 + 200}>
+              <Reveal key={metric.label} direction="up" delay={index * 120 + 200}>
                 <ContentCard index={index} className="bg-muted hover:bg-foreground">
-                  <p className="text-5xl md:text-6xl font-serif text-secondary group-hover:text-secondary mb-4 transition-colors duration-400">
+                  <p className="text-5xl md:text-6xl font-serif text-secondary group-hover:text-secondary mb-4 transition-colors duration-500">
                     {metric.label}
                   </p>
                   <CardDescription>{metric.description}</CardDescription>

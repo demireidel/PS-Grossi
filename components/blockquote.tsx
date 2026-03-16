@@ -1,3 +1,5 @@
+import { cn } from "@/lib/utils"
+
 interface BlockquoteProps {
   children: React.ReactNode
   cite?: string
@@ -11,7 +13,7 @@ export function Blockquote({
   cite,
   size = "default",
   variant = "bordered",
-  borderColor = "border-secondary",
+  borderColor = "border-secondary/60",
 }: BlockquoteProps) {
   const textSize =
     size === "large"
@@ -20,12 +22,13 @@ export function Blockquote({
 
   if (variant === "centered") {
     return (
-      <blockquote className="text-center">
-        <p className={`font-serif italic leading-[1.2] ${textSize}`}>
+      <blockquote className="text-center relative">
+        <span className="block font-serif text-[6rem] leading-none text-secondary/[0.06] absolute -top-8 left-1/2 -translate-x-1/2 select-none pointer-events-none" aria-hidden="true">&ldquo;</span>
+        <p className={cn("font-serif italic leading-[1.2] relative", textSize)}>
           {children}
         </p>
         {cite && (
-          <cite className="block mt-6 text-sm opacity-60 not-italic">
+          <cite className="block mt-8 text-sm opacity-50 not-italic tracking-wide">
             {cite}
           </cite>
         )}
@@ -34,12 +37,12 @@ export function Blockquote({
   }
 
   return (
-    <blockquote className={`relative pl-8 border-l-2 ${borderColor}`}>
-      <p className={`font-serif italic leading-[1.3] ${textSize}`}>
+    <blockquote className={cn("relative pl-8 border-l-2", borderColor)}>
+      <p className={cn("font-serif italic leading-[1.3]", textSize)}>
         {children}
       </p>
       {cite && (
-        <cite className="block mt-6 text-sm opacity-60 not-italic">
+        <cite className="block mt-8 text-sm opacity-50 not-italic tracking-wide">
           {cite}
         </cite>
       )}

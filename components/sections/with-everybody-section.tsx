@@ -21,7 +21,7 @@ export function WithEverybodySection() {
       </Reveal>
 
       {/* Main Content Grid */}
-      <div className="grid lg:grid-cols-12 gap-20 mb-32">
+      <div className="grid lg:grid-cols-12 gap-20 mb-36">
         {/* Left Column — Dual Images */}
         <Reveal direction="left" className="lg:col-span-5">
           <div className="lg:sticky lg:top-32 space-y-6">
@@ -39,17 +39,17 @@ export function WithEverybodySection() {
               caption="With President Putin"
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 100vw, 40vw"
             />
-            <p className="text-center text-muted-foreground text-sm italic mt-4">
+            <p className="text-center text-muted-foreground text-sm italic mt-6">
               Diplomacy means talking to everyone.
             </p>
           </div>
         </Reveal>
 
         {/* Right Column — Content */}
-        <div className="lg:col-span-7 space-y-20">
+        <div className="lg:col-span-7 space-y-24">
           <Reveal direction="up" delay={300}>
-            <div className="relative mb-8">
-              <span className="text-[150px] font-serif text-foreground/[0.12] absolute -top-20 -left-4 leading-none select-none" aria-hidden="true">03</span>
+            <div className="relative mb-10">
+              <span className="text-[clamp(8rem,12vw,10rem)] font-serif text-foreground/[0.03] absolute -top-16 -left-4 leading-none select-none pointer-events-none" aria-hidden="true">03</span>
               <h3 className="font-serif text-4xl md:text-5xl text-foreground leading-[1.1] relative">
                 Impartiality as
                 <span className="block text-secondary/70">Effectiveness</span>
@@ -61,7 +61,7 @@ export function WithEverybodySection() {
               capacity to engage across every fault line—East and West,
               North and South, across ideological and geopolitical boundaries.
             </p>
-            <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6">
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-8">
               This is not about being neutral on values. The UN Charter is
               clear about human rights, sovereignty, and the peaceful
               settlement of disputes. It is about being available to all
@@ -71,7 +71,7 @@ export function WithEverybodySection() {
             <Blockquote size="default">
               &ldquo;If the price is criticism, so be it. My job requires dialogue with everyone.&rdquo;
             </Blockquote>
-            <p className="text-base md:text-lg text-muted-foreground leading-relaxed mt-6">
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed mt-8">
               Grossi has maintained working relationships with governments that are
               otherwise not speaking to each other. He has reported
               uncomfortable truths to capitals across the spectrum—and
@@ -81,12 +81,12 @@ export function WithEverybodySection() {
           </Reveal>
 
           {/* Principles */}
-          <div className="space-y-12">
+          <div className="space-y-14">
             {ENGAGEMENT_PRINCIPLES.map((principle, index) => (
               <Reveal key={principle.number} direction="right" delay={index * 150 + 400}>
-                <div className="flex gap-8 p-8 border-l-2 border-secondary/30 hover:border-secondary hover:bg-muted/50 transition-[border-color,background-color] duration-400">
+                <div className="flex gap-8 p-8 border-l-2 border-secondary/20 hover:border-secondary/70 hover:bg-muted/50 transition-[border-color,background-color] duration-500">
                   <div className="flex-shrink-0">
-                    <span className="font-serif text-5xl text-secondary/30">
+                    <span className="font-serif text-5xl text-secondary/25">
                       {principle.number}
                     </span>
                   </div>
@@ -107,7 +107,7 @@ export function WithEverybodySection() {
 
       {/* Track Record */}
       <Reveal direction="up">
-        <div className="mb-32">
+        <div className="mb-36">
           <div className="text-center max-w-3xl mx-auto mb-20">
             <span className="text-secondary text-[length:var(--text-label)] uppercase tracking-[var(--tracking-ultra)] font-medium mb-6 block">Proven Track Record</span>
             <h3 className="font-serif text-4xl md:text-5xl text-foreground leading-[1.1]">
@@ -116,12 +116,12 @@ export function WithEverybodySection() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-[2px] bg-border">
             {TRACK_RECORDS.map((record, index) => (
-              <Reveal key={record.title} direction="up" delay={index * 100}>
+              <Reveal key={record.title} direction="up" delay={index * 120}>
                 <ContentCard index={index} className="bg-muted hover:bg-foreground">
-                  <span className="text-6xl font-serif text-foreground/[0.12] group-hover:text-background/20 transition-colors duration-400 block mb-6" aria-hidden="true">
+                  <span className="text-6xl font-serif text-foreground/[0.06] group-hover:text-background/15 transition-colors duration-500 block mb-6" aria-hidden="true">
                     0{index + 1}
                   </span>
-                  <h4 className="font-serif text-2xl text-foreground group-hover:text-background mb-4 transition-colors duration-400">
+                  <h4 className="font-serif text-2xl text-foreground group-hover:text-background mb-4 transition-colors duration-500">
                     {record.title}
                   </h4>
                   <CardDescription>{record.description}</CardDescription>
@@ -135,7 +135,7 @@ export function WithEverybodySection() {
       {/* Why This Is UN Leadership */}
       <Reveal direction="fade">
         <DarkPanel label="The Essence">
-          <h3 className="font-serif text-4xl md:text-5xl lg:text-6xl mb-12 leading-[1.1]">
+          <h3 className="font-serif text-4xl md:text-5xl lg:text-6xl mb-14 leading-[1.1]">
             Why This Is
             <span className="block text-secondary italic">UN Leadership</span>
           </h3>

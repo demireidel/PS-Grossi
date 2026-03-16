@@ -70,9 +70,9 @@ export function CinematicImage({
         />
       </div>
 
-      {/* Gradient overlays */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-black/40" />
-      <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/40" />
+      {/* Gradient overlays — richer depth */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/15 to-black/30" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/35 via-transparent to-black/35" />
 
       {/* Letterbox bars */}
       {letterbox && (
@@ -85,8 +85,14 @@ export function CinematicImage({
       {/* Corner accent frames */}
       {cornerAccents && (
         <>
-          <div className="absolute top-[10%] left-8 w-16 h-16 border-l-2 border-t-2 border-white/20 z-10" />
-          <div className="absolute top-[10%] right-8 w-16 h-16 border-r-2 border-t-2 border-white/20 z-10" />
+          <div className="absolute top-[10%] left-8 w-16 h-16 z-10">
+            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-white/15 to-transparent" />
+            <div className="absolute top-0 left-0 w-px h-full bg-gradient-to-b from-white/15 to-transparent" />
+          </div>
+          <div className="absolute top-[10%] right-8 w-16 h-16 z-10">
+            <div className="absolute top-0 right-0 w-full h-px bg-gradient-to-l from-white/15 to-transparent" />
+            <div className="absolute top-0 right-0 w-px h-full bg-gradient-to-b from-white/15 to-transparent" />
+          </div>
         </>
       )}
 

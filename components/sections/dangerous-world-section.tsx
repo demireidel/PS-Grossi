@@ -23,7 +23,7 @@ export function DangerousWorldSection() {
 
       {/* Hero Image — Cinematic */}
       <Reveal direction="fade" threshold={0.05}>
-        <div className="relative aspect-[16/9] lg:aspect-cinema mb-32 overflow-hidden bg-black">
+        <div className="relative aspect-[16/9] lg:aspect-cinema mb-36 overflow-hidden bg-black">
           <div className="absolute inset-0 clip-reveal revealed">
             <Image
               src="/images/grossi-zaporizhzhia.jpg"
@@ -35,28 +35,34 @@ export function DangerousWorldSection() {
               className="object-cover"
               sizes="100vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/40" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-black/35" />
             <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-black/30" />
           </div>
           <div className="absolute top-0 left-0 right-0 h-[6%] bg-black z-10" />
           <div className="absolute bottom-0 left-0 right-0 h-[6%] bg-black z-10" />
           <div className="absolute bottom-[10%] left-0 right-0 px-8 lg:px-20 z-10">
             <div className="flex items-center gap-4 mb-4">
-              <span className="w-12 h-px bg-secondary" />
-              <span className="text-white/60 text-[length:var(--text-label)] uppercase tracking-[var(--tracking-ultra)] text-shadow-overlay">On the Ground</span>
+              <span className="w-14 h-px bg-gradient-to-r from-secondary to-secondary/30" />
+              <span className="text-white/50 text-[length:var(--text-label)] uppercase tracking-[var(--tracking-ultra)] text-shadow-overlay">On the Ground</span>
             </div>
-            <p className="text-white/90 text-xl md:text-2xl max-w-2xl font-light leading-relaxed text-shadow-overlay">
+            <p className="text-white/85 text-xl md:text-2xl max-w-2xl font-light leading-relaxed text-shadow-overlay">
               When crisis meets diplomacy, experience is not optional&mdash;it is essential.
             </p>
           </div>
-          <div className="absolute top-[10%] left-8 w-16 h-16 border-l-2 border-t-2 border-white/20 z-10" />
-          <div className="absolute top-[10%] right-8 w-16 h-16 border-r-2 border-t-2 border-white/20 z-10" />
+          <div className="absolute top-[10%] left-8 w-16 h-16 z-10">
+            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-white/15 to-transparent" />
+            <div className="absolute top-0 left-0 w-px h-full bg-gradient-to-b from-white/15 to-transparent" />
+          </div>
+          <div className="absolute top-[10%] right-8 w-16 h-16 z-10">
+            <div className="absolute top-0 right-0 w-full h-px bg-gradient-to-l from-white/15 to-transparent" />
+            <div className="absolute top-0 right-0 w-px h-full bg-gradient-to-b from-white/15 to-transparent" />
+          </div>
         </div>
       </Reveal>
 
       {/* Secondary Images */}
       <Reveal direction="up">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 mb-32">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 mb-36">
           <ImageCaption
             src="/images/crisis-diplomacy.jpg"
             alt="Rafael Grossi in IAEA field vest during the first Support and Assistance Mission to Zaporizhzhia (ISAMZ), August 2022"
@@ -74,9 +80,9 @@ export function DangerousWorldSection() {
 
       {/* The Stakes */}
       <Reveal direction="up">
-        <div className="grid lg:grid-cols-2 gap-16 items-start mb-32">
+        <div className="grid lg:grid-cols-2 gap-20 items-start mb-36">
           <div>
-            <h3 className="font-serif text-2xl md:text-3xl text-foreground mb-6">
+            <h3 className="font-serif text-2xl md:text-3xl text-foreground mb-8">
               &ldquo;A Fragmented and Volatile World&rdquo;
             </h3>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6">
@@ -108,11 +114,11 @@ export function DangerousWorldSection() {
               in—much less to threats.&rdquo;
             </p>
           </div>
-          <div className="space-y-8">
+          <div className="space-y-10">
             {EXPERIENCES.map((exp) => (
               <div key={exp.title} className="flex gap-6">
                 <div className="flex-shrink-0">
-                  <div className="w-14 h-14 bg-secondary/10 flex items-center justify-center">
+                  <div className="w-14 h-14 bg-secondary/[0.08] flex items-center justify-center">
                     <exp.icon className="w-8 h-8 text-secondary" />
                   </div>
                 </div>
@@ -128,10 +134,10 @@ export function DangerousWorldSection() {
 
       {/* Career Stats */}
       <Reveal direction="up">
-        <div className="mb-32">
+        <div className="mb-36">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-[2px] bg-border">
             {CAREER_STATS.map((card, index) => (
-              <Reveal key={card.title} direction="up" delay={index * 100}>
+              <Reveal key={card.title} direction="up" delay={index * 120}>
                 <ContentCard index={index}>
                   <CardStatLarge value={card.stat} label={card.title} />
                   <CardDescription>{card.description}</CardDescription>
@@ -145,7 +151,7 @@ export function DangerousWorldSection() {
       {/* The Grossi Doctrine */}
       <Reveal direction="up">
         <DarkPanel label="The Fit">
-          <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl mb-10 leading-[1.1]">
+          <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl mb-12 leading-[1.1]">
             The Grossi <span className="text-secondary italic">Doctrine</span>
           </h3>
           <p className="text-xl md:text-2xl leading-relaxed opacity-80 mb-8 font-light">
@@ -161,7 +167,7 @@ export function DangerousWorldSection() {
             bombardment, he went personally. When Iran closed doors, he found
             a way back in.
           </p>
-          <p className="text-lg leading-relaxed opacity-70 mb-12">
+          <p className="text-lg leading-relaxed opacity-70 mb-14">
             On accusations of bias: &ldquo;Some say I&apos;m a Zionist puppet,
             others say the opposite. One day the pro-Ukrainians claim I&apos;m
             in Putin&apos;s pocket, and when I meet with President Zelensky,
