@@ -212,18 +212,18 @@ export function WithEverybodySection() {
           ref={ctaAnim.ref}
           className={`relative transition-[opacity,transform] duration-800 ${ctaAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
         >
-          <div className="bg-secondary text-secondary-foreground p-16 lg:p-24 relative overflow-hidden">
-            <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: DOT_PATTERN_SM, backgroundSize: DOT_PATTERN_SIZE_MD }} />
+          <div className="bg-foreground text-background p-16 lg:p-24 relative overflow-hidden film-grain">
+            <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: DOT_PATTERN_SM, backgroundSize: DOT_PATTERN_SIZE_MD }} />
 
             <div className="relative max-w-4xl">
-              <span className="inline-flex items-center gap-4 text-secondary-foreground/60 text-[10px] uppercase tracking-[0.3em] font-medium mb-10">
-                <span className="w-8 h-px bg-secondary-foreground/30" />
+              <span className="inline-flex items-center gap-4 text-secondary text-[10px] uppercase tracking-[0.3em] font-medium mb-10">
+                <span className="w-8 h-px bg-secondary" />
                 The Essence
               </span>
 
               <h3 className="font-serif text-4xl md:text-5xl lg:text-6xl mb-12 leading-[1.1]">
                 Why This Is
-                <span className="block">UN Leadership</span>
+                <span className="block text-secondary italic">UN Leadership</span>
               </h3>
 
               <p className="text-xl md:text-2xl leading-relaxed opacity-80 mb-16 max-w-3xl font-light">
@@ -235,7 +235,6 @@ export function WithEverybodySection() {
               <Blockquote
                 size="large"
                 cite="— Rafael Grossi, El País, December 2025"
-                borderColor="border-secondary-foreground/30"
               >
                 &ldquo;My job requires dialogue with everyone. Active diplomacy
                 must be deployed as an impartial, but not indifferent,
