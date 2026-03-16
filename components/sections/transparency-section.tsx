@@ -58,14 +58,14 @@ export function TransparencySection() {
 
   return (
     <section id="transparency" className="relative bg-background overflow-hidden">
-      <div className="container mx-auto px-6 lg:px-20 py-40 lg:py-56">
+      <div className="container mx-auto px-6 lg:px-20 py-32 lg:py-48">
         {/* Section Header */}
         <div
           ref={headerAnim.ref}
           className={`max-w-6xl mb-24 transition-all duration-800 ${headerAnim.inView ? 'opacity-100' : 'opacity-0'}`}
         >
           <div className="flex items-center gap-6 mb-10">
-            <span className={`h-px bg-secondary transition-all duration-1000 delay-300 ${headerAnim.inView ? 'w-20' : 'w-0'}`} />
+            <span className={`h-px bg-secondary transition-all duration-800 delay-300 ${headerAnim.inView ? 'w-20' : 'w-0'}`} />
             <p className="text-secondary uppercase tracking-[0.4em] text-[10px] font-medium">
               Section 05
             </p>
@@ -76,13 +76,13 @@ export function TransparencySection() {
           </div>
 
           <div className="overflow-hidden">
-            <h2 className={`font-serif text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-foreground leading-[0.9] tracking-tight transition-all duration-1000 delay-200 ${headerAnim.inView ? 'translate-y-0' : 'translate-y-full'}`}>
+            <h2 className={`font-serif text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-foreground leading-[0.9] tracking-tight transition-all duration-800 delay-200 ${headerAnim.inView ? 'translate-y-0' : 'translate-y-full'}`}>
               Open to
               <span className="block text-secondary italic">Everybody</span>
             </h2>
           </div>
 
-          <p className={`text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mt-12 font-light transition-all duration-1000 delay-500 ${headerAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <p className={`text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mt-12 font-light transition-all duration-800 delay-500 ${headerAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             How he would run the institution with transparency and discipline.
           </p>
         </div>
@@ -124,7 +124,7 @@ export function TransparencySection() {
 
         {/* Transparency Commitments */}
         <div ref={commitAnim.ref} className="mb-40">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-[2px] bg-border">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[2px] bg-border">
             {commitments.map((item, index) => (
               <div
                 key={item.title}
@@ -151,7 +151,7 @@ export function TransparencySection() {
             alt="Rafael Grossi in IAEA field vest preparing for a mission near Zaporizhzhia, demonstrating hands-on leadership in crisis zones"
             fill
             quality={85}
-            className="object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+            className="object-cover transition-transform duration-600 group-hover:scale-105"
             sizes="100vw"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
@@ -166,7 +166,7 @@ export function TransparencySection() {
           ref={disciplineAnim.ref}
           className="grid lg:grid-cols-12 gap-20 items-start mb-40"
         >
-          <div className={`lg:col-span-6 transition-all duration-1000 ${disciplineAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+          <div className={`lg:col-span-6 transition-all duration-800 ${disciplineAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
             <div className="relative mb-8">
               <span className="text-[150px] font-serif text-foreground/[0.08] absolute -top-20 -left-4 leading-none select-none" aria-hidden="true">05</span>
               <h3 className="font-serif text-4xl md:text-5xl text-foreground leading-[1.1] relative">
@@ -199,7 +199,7 @@ export function TransparencySection() {
               {managementPriorities.map((item, i) => (
                 <div
                   key={item}
-                  className={`flex items-center gap-5 p-5 bg-muted transition-all duration-500 ${disciplineAnim.inView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}
+                  className={`flex items-center gap-5 p-5 bg-muted transition-all duration-400 ${disciplineAnim.inView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}
                   style={{ transitionDelay: disciplineAnim.inView ? `${i * 100 + 300}ms` : '0ms' }}
                 >
                   <span className="w-12 h-12 bg-secondary/10 flex items-center justify-center text-secondary font-serif text-xl flex-shrink-0">
@@ -308,7 +308,7 @@ export function TransparencySection() {
         {/* Measuring Performance */}
         <div
           ref={metricsAnim.ref}
-          className={`text-center max-w-4xl mx-auto transition-all duration-1000 ${metricsAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
+          className={`text-center max-w-4xl mx-auto transition-all duration-800 ${metricsAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
         >
           <span className="text-secondary text-[10px] uppercase tracking-[0.4em] font-medium mb-6 block">The Measure</span>
           <h3 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-8 leading-[1.1]">
@@ -325,7 +325,7 @@ export function TransparencySection() {
             make a difference?&rdquo; This is the only standard that matters.
           </p>
 
-          <div className="grid sm:grid-cols-3 gap-[2px] bg-border">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-[2px] bg-border">
             {metrics.map((metric, index) => (
               <div
                 key={metric.label}

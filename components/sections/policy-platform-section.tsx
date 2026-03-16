@@ -97,7 +97,7 @@ export function PolicyPlatformSection() {
         />
 
         {/* Policy Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-[2px] bg-border mb-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[2px] bg-border mb-24">
           {policyAreas.map((area, index) => (
             <div
               key={area.title}
@@ -108,7 +108,7 @@ export function PolicyPlatformSection() {
             >
               <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-secondary/40 via-secondary/10 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-600 origin-left" />
               <div className="flex items-start justify-between mb-6">
-                <area.icon className="w-7 h-7 text-secondary" />
+                <area.icon className="w-8 h-8 text-secondary" />
                 <span className="text-3xl font-serif text-foreground/[0.12] group-hover:text-background/20 transition-colors duration-400" aria-hidden="true">
                   0{index + 1}
                 </span>

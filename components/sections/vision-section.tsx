@@ -84,10 +84,10 @@ export function VisionSection() {
               alt="Rafael Grossi delivering a keynote address at the IAEA Nuclear Energy Summit podium with international flags, 2024"
               fill
               quality={85}
-              className="object-cover transition-transform duration-600 group-hover:scale-[1.03]"
+              className="object-cover transition-transform duration-600 group-hover:scale-105"
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 100vw, 50vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-600" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-600" />
           </div>
         </div>
 
@@ -104,7 +104,7 @@ export function VisionSection() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-[2px] bg-border">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[2px] bg-border">
             {principles.map((principle, index) => (
               <div
                 key={principle.title}
@@ -113,7 +113,7 @@ export function VisionSection() {
                 <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-secondary/40 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-600 origin-left" />
                 <div className="flex items-start justify-between mb-8">
                   <principle.icon className="w-8 h-8 text-secondary transition-transform duration-400 group-hover:scale-110" />
-                  <span className="text-4xl font-serif text-foreground/[0.12] group-hover:text-background/20 transition-colors duration-400">0{index + 1}</span>
+                  <span className="text-4xl font-serif text-foreground/[0.12] group-hover:text-background/20 transition-colors duration-400" aria-hidden="true">0{index + 1}</span>
                 </div>
                 <h4 className="font-serif text-xl text-foreground group-hover:text-background mb-4 transition-colors duration-400">
                   {principle.title}

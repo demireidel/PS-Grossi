@@ -75,14 +75,14 @@ export function DangerousWorldSection() {
         </div>
 
         {/* Secondary Image - Crisis Diplomacy */}
-        <div className="grid lg:grid-cols-2 gap-2 mb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 mb-24">
           <div className="relative aspect-[4/3] overflow-hidden group">
             <Image
               src="/images/crisis-diplomacy.jpg"
               alt="Rafael Grossi in IAEA field vest during the first Support and Assistance Mission to Zaporizhzhia (ISAMZ), August 2022"
               fill
               quality={85}
-              className="object-cover transition-transform duration-700 group-hover:scale-105"
+              className="object-cover transition-transform duration-600 group-hover:scale-105"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
@@ -97,7 +97,7 @@ export function DangerousWorldSection() {
               alt="Rafael Grossi briefing the press on IAEA verification activities in Iran, Vienna, May 2024"
               fill
               quality={85}
-              className="object-cover transition-transform duration-700 group-hover:scale-105"
+              className="object-cover transition-transform duration-600 group-hover:scale-105"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
@@ -149,7 +149,7 @@ export function DangerousWorldSection() {
               <div key={exp.title} className="flex gap-6">
                 <div className="flex-shrink-0">
                   <div className="w-14 h-14 bg-secondary/10 flex items-center justify-center">
-                    <exp.icon className="w-7 h-7 text-secondary" />
+                    <exp.icon className="w-8 h-8 text-secondary" />
                   </div>
                 </div>
                 <div>
@@ -166,7 +166,7 @@ export function DangerousWorldSection() {
         </div>
 
         {/* Grossi's Career */}
-        <div className="grid md:grid-cols-3 gap-[2px] bg-border mb-24">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-[2px] bg-border mb-24">
           <div className="group p-12 lg:p-16 bg-card hover:bg-foreground transition-all duration-600 relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-secondary/40 via-secondary/10 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-600 origin-left" />
             <p className="text-5xl md:text-6xl font-serif text-secondary mb-6">40</p>

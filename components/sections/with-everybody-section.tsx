@@ -52,7 +52,7 @@ export function WithEverybodySection() {
 
   return (
     <section id="with-everybody" className="relative bg-background overflow-hidden">
-      <div className="container mx-auto px-6 lg:px-20 py-40 lg:py-56">
+      <div className="container mx-auto px-6 lg:px-20 py-32 lg:py-48">
         {/* Section Header */}
         <div
           ref={headerAnim.ref}
@@ -95,10 +95,10 @@ export function WithEverybodySection() {
                   alt="Rafael Grossi in diplomatic meeting with Ukrainian President Volodymyr Zelensky discussing nuclear safety"
                   fill
                   quality={85}
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="object-cover transition-transform duration-600 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 100vw, 40vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6">
                   <p className="text-[10px] uppercase tracking-[0.3em] text-white/50 mb-1">Ukraine</p>
                   <p className="text-sm text-white/90 font-medium">With President Zelensky</p>
@@ -111,10 +111,10 @@ export function WithEverybodySection() {
                   alt="Rafael Grossi in diplomatic meeting with Russian President Vladimir Putin discussing nuclear security"
                   fill
                   quality={85}
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="object-cover transition-transform duration-600 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 100vw, 40vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6">
                   <p className="text-[10px] uppercase tracking-[0.3em] text-white/50 mb-1">Russia</p>
                   <p className="text-sm text-white/90 font-medium">With President Putin</p>
@@ -170,7 +170,7 @@ export function WithEverybodySection() {
               {engagementPrinciples.map((principle, index) => (
                 <div
                   key={principle.number}
-                  className={`flex gap-8 p-8 border-l-2 border-secondary/30 hover:border-secondary hover:bg-muted/50 transition-all duration-500 ${contentAnim.inView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}
+                  className={`flex gap-8 p-8 border-l-2 border-secondary/30 hover:border-secondary hover:bg-muted/50 transition-all duration-400 ${contentAnim.inView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}
                   style={{ transitionDelay: contentAnim.inView ? `${index * 150 + 400}ms` : '0ms' }}
                 >
                   <div className="flex-shrink-0">
@@ -201,7 +201,7 @@ export function WithEverybodySection() {
             </h3>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-[2px] bg-border">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-[2px] bg-border">
             {trackRecords.map((record, index) => (
               <div
                 key={record.title}

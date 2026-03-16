@@ -80,7 +80,7 @@ export function GlobalSouthSection() {
           {stats.map((stat, index) => (
             <div
               key={stat.label}
-              className={`group p-8 lg:p-10 bg-card text-center transition-all duration-600 relative overflow-hidden hover:bg-muted ${
+              className={`group p-8 lg:p-10 bg-card text-center transition-all duration-600 relative overflow-hidden hover:bg-foreground ${
                 contentInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
               style={{ transitionDelay: `${300 + index * 100}ms` }}
@@ -92,7 +92,7 @@ export function GlobalSouthSection() {
         </div>
 
         {/* Regional Perspectives */}
-        <div className="grid md:grid-cols-2 gap-[2px] bg-border mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-[2px] bg-border mb-20">
           {perspectives.map((perspective, index) => (
             <div
               key={perspective.region}
@@ -102,13 +102,13 @@ export function GlobalSouthSection() {
               style={{ transitionDelay: `${500 + index * 100}ms` }}
             >
               <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-secondary/40 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-600 origin-left" />
-              <p className="text-secondary text-[10px] uppercase tracking-[0.3em] mb-4 group-hover:text-secondary/80 transition-colors duration-500">
+              <p className="text-secondary text-[10px] uppercase tracking-[0.3em] mb-4 group-hover:text-secondary/80 transition-colors duration-400">
                 {perspective.region}
               </p>
-              <h3 className="font-serif text-2xl text-foreground group-hover:text-background mb-4 transition-colors duration-500">
+              <h3 className="font-serif text-2xl text-foreground group-hover:text-background mb-4 transition-colors duration-400">
                 {perspective.title}
               </h3>
-              <p className="text-muted-foreground group-hover:text-background/70 leading-relaxed transition-colors duration-500">
+              <p className="text-muted-foreground group-hover:text-background/60 leading-relaxed transition-colors duration-400">
                 {perspective.description}
               </p>
             </div>
@@ -122,7 +122,7 @@ export function GlobalSouthSection() {
             alt="Rafael Grossi chairing a high-level meeting at IAEA headquarters with international delegates"
             fill
             quality={85}
-            className="object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+            className="object-cover transition-transform duration-600 group-hover:scale-105"
             sizes="100vw"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-black/30" />

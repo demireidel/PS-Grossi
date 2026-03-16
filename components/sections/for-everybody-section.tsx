@@ -58,14 +58,14 @@ export function ForEverybodySection() {
     <section id="for-everybody" className="relative bg-muted overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background opacity-30" />
 
-      <div className="relative container mx-auto px-6 lg:px-20 py-40 lg:py-56">
+      <div className="relative container mx-auto px-6 lg:px-20 py-32 lg:py-48">
         {/* Section Header */}
         <div
           ref={headerAnim.ref}
           className={`max-w-6xl mb-24 transition-all duration-800 ${headerAnim.inView ? 'opacity-100' : 'opacity-0'}`}
         >
           <div className="flex items-center gap-6 mb-10">
-            <span className={`h-px bg-secondary transition-all duration-1000 delay-300 ${headerAnim.inView ? 'w-20' : 'w-0'}`} />
+            <span className={`h-px bg-secondary transition-all duration-800 delay-300 ${headerAnim.inView ? 'w-20' : 'w-0'}`} />
             <p className="text-secondary uppercase tracking-[0.4em] text-[10px] font-medium">
               Section 04
             </p>
@@ -76,13 +76,13 @@ export function ForEverybodySection() {
           </div>
 
           <div className="overflow-hidden">
-            <h2 className={`font-serif text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-foreground leading-[0.9] tracking-tight transition-all duration-1000 delay-200 ${headerAnim.inView ? 'translate-y-0' : 'translate-y-full'}`}>
+            <h2 className={`font-serif text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-foreground leading-[0.9] tracking-tight transition-all duration-800 delay-200 ${headerAnim.inView ? 'translate-y-0' : 'translate-y-full'}`}>
               For
               <span className="block text-secondary italic">Everybody</span>
             </h2>
           </div>
 
-          <p className={`text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mt-12 font-light transition-all duration-1000 delay-500 ${headerAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <p className={`text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mt-12 font-light transition-all duration-800 delay-500 ${headerAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             How leadership is judged by what it delivers for people.
           </p>
         </div>
@@ -131,7 +131,7 @@ export function ForEverybodySection() {
 
         {/* Delivery Areas Grid */}
         <div ref={gridAnim.ref} className="mb-40">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-[2px] bg-border">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[2px] bg-border">
             {deliveryAreas.map((area, index) => (
               <div
                 key={area.title}
@@ -140,20 +140,20 @@ export function ForEverybodySection() {
               >
                 <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-secondary/40 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-600 origin-left" />
                 <div className="flex items-start justify-between mb-8">
-                  <area.icon className="w-10 h-10 text-secondary transition-transform duration-500 group-hover:scale-110" />
+                  <area.icon className="w-10 h-10 text-secondary transition-transform duration-400 group-hover:scale-110" />
                   <div className="text-right">
-                    <p className="text-4xl font-serif text-secondary transition-colors duration-500">
+                    <p className="text-4xl font-serif text-secondary transition-colors duration-400">
                       {area.stat}
                     </p>
-                    <p className="text-xs text-muted-foreground group-hover:text-background/60 transition-colors duration-500 uppercase tracking-wider">
+                    <p className="text-xs text-muted-foreground group-hover:text-background/60 transition-colors duration-400 uppercase tracking-wider">
                       {area.statLabel}
                     </p>
                   </div>
                 </div>
-                <h4 className="font-serif text-xl text-foreground group-hover:text-background mb-4 transition-colors duration-500">
+                <h4 className="font-serif text-xl text-foreground group-hover:text-background mb-4 transition-colors duration-400">
                   {area.title}
                 </h4>
-                <p className="text-muted-foreground group-hover:text-background/70 leading-relaxed text-sm transition-colors duration-500">
+                <p className="text-muted-foreground group-hover:text-background/70 leading-relaxed text-sm transition-colors duration-400">
                   {area.description}
                 </p>
               </div>
@@ -166,7 +166,7 @@ export function ForEverybodySection() {
           ref={genderAnim.ref}
           className="grid lg:grid-cols-12 gap-20 items-center mb-40"
         >
-          <div className={`lg:col-span-6 transition-all duration-1000 ${genderAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+          <div className={`lg:col-span-6 transition-all duration-800 ${genderAnim.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
             <div className="relative mb-8">
               <span className="text-[150px] font-serif text-foreground/[0.08] absolute -top-20 -left-4 leading-none select-none" aria-hidden="true">04</span>
               <h3 className="font-serif text-4xl md:text-5xl text-foreground leading-[1.1] relative">
@@ -198,7 +198,7 @@ export function ForEverybodySection() {
               {genderAchievements.map((item, i) => (
                 <li
                   key={item}
-                  className={`flex items-center gap-4 text-foreground transition-all duration-500 ${genderAnim.inView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}
+                  className={`flex items-center gap-4 text-foreground transition-all duration-400 ${genderAnim.inView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}
                   style={{ transitionDelay: genderAnim.inView ? `${i * 100 + 300}ms` : '0ms' }}
                 >
                   <span className="w-3 h-3 bg-secondary flex-shrink-0" />

@@ -42,9 +42,9 @@ export function CtaSection() {
             <span className="text-gradient-gold">&ldquo;</span>The UN needs a secretary with boots in the mud—not one who comments from a distance.<span className="text-gradient-gold">&rdquo;</span>
           </blockquote>
 
-          <div className="grid md:grid-cols-2 gap-px max-w-2xl mx-auto mb-16 bg-background/10">
-            <div className="group p-10 bg-foreground text-left hover:bg-foreground/90 transition-all duration-500 relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-secondary/30 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px max-w-2xl mx-auto mb-16 bg-background/10">
+            <div className="group p-10 bg-foreground text-left hover:bg-foreground/90 transition-all duration-400 relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-secondary/30 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-600 origin-left" />
               <p className="text-secondary text-[10px] uppercase tracking-[0.3em] mb-4">
                 For Delegations
               </p>
@@ -59,8 +59,8 @@ export function CtaSection() {
                 <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
               </Link>
             </div>
-            <div className="group p-10 bg-foreground text-left hover:bg-foreground/90 transition-all duration-500 relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-secondary/30 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
+            <div className="group p-10 bg-foreground text-left hover:bg-foreground/90 transition-all duration-400 relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-secondary/30 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-600 origin-left" />
               <p className="text-secondary text-[10px] uppercase tracking-[0.3em] mb-4">
                 For Media
               </p>

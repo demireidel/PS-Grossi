@@ -96,10 +96,10 @@ export function HeroSection() {
         >
           <a
             href="#vision"
-            className="group inline-flex items-center gap-3 text-secondary/70 hover:text-secondary transition-colors duration-500"
+            className="group inline-flex items-center gap-3 text-secondary/70 hover:text-secondary transition-colors duration-400"
           >
             <span className="text-[10px] uppercase tracking-[0.3em] font-light">Explore the Vision</span>
-            <span className="w-8 h-px bg-secondary/40 group-hover:w-12 group-hover:bg-secondary transition-all duration-500" />
+            <span className="w-8 h-px bg-secondary/40 group-hover:w-12 group-hover:bg-secondary transition-all duration-400" />
           </a>
         </div>
       </div>
@@ -112,7 +112,7 @@ export function HeroSection() {
       >
         <a
           href="#vision"
-          className="group flex flex-col items-center text-white/30 hover:text-white/60 transition-colors duration-500"
+          className="group flex flex-col items-center text-white/30 hover:text-white/60 transition-colors duration-400"
           aria-label="Scroll to content"
         >
           <span className="text-[9px] uppercase tracking-[0.4em] mb-3 font-light">Scroll</span>

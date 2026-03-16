@@ -36,18 +36,18 @@ export function Navigation() {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-700",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-600",
         scrolled
           ? "bg-background/80 backdrop-blur-2xl backdrop-saturate-150 border-b border-border/30 shadow-[0_1px_30px_-10px_rgba(0,0,0,0.08)]"
           : "bg-gradient-to-b from-black/50 via-black/20 to-transparent"
       )}
     >
-      <nav className="container mx-auto px-6 lg:px-16" aria-label="Main navigation">
+      <nav className="container mx-auto px-6 lg:px-20" aria-label="Main navigation">
         <div className="flex items-center justify-between h-[76px]">
           <Link href="/" className="group flex flex-col">
             <span
               className={cn(
-                "font-serif text-xl font-semibold tracking-tight transition-all duration-500",
+                "font-serif text-xl font-semibold tracking-tight transition-all duration-400",
                 scrolled ? "text-foreground" : "text-white"
               )}
             >
@@ -55,7 +55,7 @@ export function Navigation() {
             </span>
             <span
               className={cn(
-                "text-[10px] uppercase tracking-[0.25em] transition-all duration-500",
+                "text-[10px] uppercase tracking-[0.25em] transition-all duration-400",
                 scrolled ? "text-muted-foreground" : "text-white/60"
               )}
             >
@@ -69,11 +69,11 @@ export function Navigation() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "relative text-[11px] uppercase tracking-[0.15em] font-medium transition-all duration-500 py-2",
+                  "relative text-[11px] uppercase tracking-[0.15em] font-medium transition-all duration-400 py-2",
                   scrolled
                     ? "text-foreground/50 hover:text-foreground"
                     : "text-white/50 hover:text-white",
-                  "after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-gradient-to-r after:from-secondary after:to-secondary/50 after:transition-all after:duration-500 hover:after:w-full"
+                  "after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-gradient-to-r after:from-secondary after:to-secondary/50 after:transition-all after:duration-400 hover:after:w-full"
                 )}
               >
                 {item.label}
